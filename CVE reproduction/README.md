@@ -107,13 +107,58 @@ task_unlock(task);
 
 The observed crash is consistent with a concurrency-sensitive access to `io_context` while another thread detaches/tears down that context. The experiment establishes the SEGV and source location; it does not independently prove every kernel-level lifetime detail.
 
-## Artifact status
+## Artifact Status
 
-This package includes the documentation, rerun script, and 12 original terminal screenshots. The eight original schedule files and unedited raw text logs still need to be copied from the WSL experiment directory into `schedules/` and `logs/`.
+This package includes:
 
-The compiled executable, bitcode, and generated analysis intermediates are not included.
+- The original 130-line CVE-2016-7911 benchmark source.
+- Eight original PERIOD-generated SEGV schedules.
+- Reproduction and schedule replay scripts.
+- Twelve experiment screenshots.
+- Experiment analysis and PERIOD version information.
+
+Not included:
+
+- Raw terminal execution logs (to be added).
+- Compiled executable and LLVM bitcode.
+- Generated static analysis intermediate files.
+
+The executable and intermediate files are generated during the reproduction process.
 
 ## References
 
 - Cheng Wen, Mengda He, Bohao Wu et al., *Controlled Concurrency Testing via Periodical Scheduling*, ICSE 2022.
 - Official PERIOD repository: https://github.com/wcventure/PERIOD
+
+## Additional Reproduction Artifacts
+
+### Benchmark Source
+
+The benchmark source is included at:
+`benchmark/2016-7911.cpp`
+
+### Original Error Schedules
+
+Eight original PERIOD-generated schedules are included in:
+`schedules/`
+
+### Schedule Replay
+
+After preparing the PERIOD environment and building the instrumented executable:
+
+    bash "CVE reproduction/scripts/replay.sh"
+
+To replay a specific schedule:
+
+    bash "CVE reproduction/scripts/replay.sh" 000002_0000004_SEGV
+
+### Python Environment
+
+Activate the Python environment:
+
+    source ~/venvs/period-env/bin/activate
+
+Initialize PERIOD:
+
+    cd ~/PERIOD
+    source tool/init_env.sh

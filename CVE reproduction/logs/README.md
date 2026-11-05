@@ -1,10 +1,7 @@
-# Raw logs
+# Experiment Logs
 
-Recommended raw text logs to preserve:
+This directory contains the written record of the CVE-2016-7911 experiment.
 
-1. Static analysis output.
-2. Instrumented compilation output.
-3. Full `run_PDS.py -d 3 ./2016-7911` output.
-4. Replay output for `000001_0000003_SEGV`.
+- `experiment_record.md`: Experiment commands, results, saved error schedules, and replay observations.
 
-Keep sanitizer output unedited. Terminal screenshots are supplementary evidence, but raw logs are easier to search and review.
+The record was organized from the terminal outputs captured during the experiment. It is not an unedited raw terminal log.

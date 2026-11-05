@@ -1,0 +1,25 @@
+Experiment: CVE-2016-7911
+Experiment date: 2026-11-05
+
+PERIOD upstream repository:
+https://github.com/wcventure/PERIOD
+
+PERIOD commit:
+cb8deb9a176e5bb292d70d46557dd61dc0e98069
+
+Benchmark:
+CVE-2016-7911
+
+Benchmark source:
+2016-7911.cpp
+
+Bug depth:
+3
+
+Recorded results:
+19 interleavings tested
+8 SEGV error interleavings
+0 timeout interleavings
+
+Replay:
+000001_0000003_SEGV reproduced an ASan SEGV.

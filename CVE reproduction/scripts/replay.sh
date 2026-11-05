@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+PERIOD_ROOT="${PERIOD_ROOT:-$HOME/PERIOD}"
+SCHEDULE="${1:-000001_0000003_SEGV}"
+
+source "$PERIOD_ROOT/tool/init_env.sh"
+
+BENCHMARK="$PERIOD_ROOT/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911"
+SCHEDULE_FILE="$REPO_ROOT/CVE reproduction/schedules/$SCHEDULE"
+
+if [[ ! -f "$SCHEDULE_FILE" ]]; then
+    echo "ERROR: Schedule not found: $SCHEDULE_FILE" >&2
+    exit 1
+fi
+
+if [[ ! -x "$BENCHMARK/2016-7911" ]]; then
+    echo "ERROR: Instrumented executable not found."
+    echo "Run the reproduction build procedure first."
+    exit 1
+fi
+
+cd "$BENCHMARK"
+
+"$PERIOD_ROOT/tool/DBDS/run_PDS.py" \
+    -r "$SCHEDULE_FILE" \
+    ./2016-7911
