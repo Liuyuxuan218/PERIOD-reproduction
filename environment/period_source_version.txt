@@ -1,0 +1,5 @@
+Project: PERIOD
+Repository: https://github.com/wcventure/PERIOD
+Git commit: b6f72a7b06d01ffa7114b640312873ec2578a5ea
+Working tree: clean
+Experiment: test/doubleFree

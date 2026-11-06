@@ -1,0 +1,21 @@
+===== PERIOD doubleFree Experiment Summary =====
+Experiment date:
+2026-11-06T08:06:44+00:00
+
+===== Error Interleavings =====
+Total Error Interleavings: 4
+
+===== Timeout Interleavings =====
+Total Timeouts Interleavings: 0
+
+===== Error Records =====
+000001_0000003_double-free
+000002_0000004_double-free
+000003_0000005_double-free
+000004_0000006_double-free
+
+===== Deterministic Replay =====
+==344==ERROR: AddressSanitizer: attempting double-free on 0x602000000010 in thread T2:
+SUMMARY: AddressSanitizer: double-free (/workdir/PERIOD/test/doubleFree/df+0x4941dd) 
+opts: [('-r', '/results/experiments/doubleFree/errors/000001_0000003_double-free')]
+reproduceFile: /results/experiments/doubleFree/errors/000001_0000003_double-free

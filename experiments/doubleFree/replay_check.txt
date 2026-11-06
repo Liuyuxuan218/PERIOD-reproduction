@@ -1,0 +1,3 @@
+000002_0000004_double-free: CONFIRMED double-free
+000003_0000005_double-free: CONFIRMED double-free
+000004_0000006_double-free: CONFIRMED double-free
