@@ -75,3 +75,31 @@ wheel (0.30.0)
 wllvm (1.1.6, /workdir/PERIOD/tool/wllvm)
 ===== Git Commit =====
 b6f72a7b06d01ffa7114b640312873ec2578a5ea
+
+===== Additional Environment Verification =====
+Verification date: 2026-11-07
+Container name: period-reproduction
+Container ID: 23952a74045380332030685d2deb00e6254b5b87d8bc1671b7785628700ad297
+Container persistence: Auto Remove = false
+
+===== Operating System =====
+Ubuntu 18.04.5 LTS
+VERSION_ID=18.04
+
+===== Compiler and Build Tools =====
+GCC: 7.5.0
+G++: 7.5.0
+GNU Make: 4.1
+CMake: 3.10.2
+GNU Binutils ld: 2.30
+
+===== Clang and LLVM =====
+Clang: 10.0.0
+LLVM: 10.0.0
+
+===== Python =====
+Python: 2.7.17
+
+===== PERIOD Source =====
+Git commit: b6f72a7b06d01ffa7114b640312873ec2578a5ea
+Working tree: clean

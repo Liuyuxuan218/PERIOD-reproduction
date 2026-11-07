@@ -1,2 +1,25 @@
-Experiment image: period:latest
-Container ID: 8fa44dc533c9
+===== Docker Image =====
+Image: period:latest
+Immutable image reference:
+period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+Image ID:
+sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+
+===== Current Container =====
+Container name: period-reproduction
+Container ID:
+23952a74045380332030685d2deb00e6254b5b87d8bc1671b7785628700ad297
+Auto Remove: false
+Created: 2026-11-07T06:36:09.383729977Z
+
+===== Previous Container =====
+Previous container ID: 8fa44dc533c9
+Status: No longer exists in Docker.
+Note: The exact removal mechanism has not been independently verified.
+The current container is a new persistent container.
+
+===== Experiment =====
+Project: PERIOD
+Experiment: doubleFree
+Bug type: double-free
+Original experiment results are documented in experiment_metadata.txt.
