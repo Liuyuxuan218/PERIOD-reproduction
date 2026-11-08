@@ -1,6 +1,0 @@
-Docker image: period:latest
-Experiment: PERIOD doubleFree
-Bug type: double-free
-Total error interleavings: 4
-Total timeout interleavings: 0
-Deterministic replay: 4/4 confirmed
