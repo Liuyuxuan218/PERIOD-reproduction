@@ -1,94 +1,146 @@
 # PERIOD Reproduction Environment
 
-This directory documents the software environment, Docker image, container configuration, and basic procedures used in the reproduction of the PERIOD project.
+This directory documents the environment configuration and experimental procedures used to reproduce PERIOD.
 
-The purpose of this documentation is to make the experimental environment easier to inspect, reuse, and reproduce.
+The purpose is to provide a clear reference for setting up the Docker environment, verifying dependencies, and running the DoubleFree benchmark.
 
-## 1. Directory Contents
+## 1. Environment Architecture
 
-This directory contains the following environment records:
+The reproduction environment consists of three main layers:
+
+```text
+Windows Host
+    |
+    v
+WSL2 (Ubuntu)
+    |
+    v
+Docker Desktop
+    |
+    v
+Docker Container (Ubuntu 18.04.5 LTS)
+    |
+    v
+PERIOD Reproduction Environment
+```
+
+The Docker container shares the Linux kernel provided by WSL2.
+
+The host environment and container environment are documented separately.
+
+## 2. Directory Contents
 
 | File | Description |
 |---|---|
-| `period_source_version.txt` | PERIOD source repository and Git commit used in the experiment |
-| `docker_image.txt` | Docker image identification and container information |
-| `container_environment.txt` | Operating system, compiler, build tools, and Python environment inside the container |
-| `host_environment.txt` | Host system and Docker installation information |
-| `experiment_metadata.txt` | Summary of the recorded experimental results |
+| `host_environment.txt` | Windows, WSL2, hardware, and Docker information |
+| `container_environment.txt` | Container OS, compiler, LLVM, and Python versions |
+| `docker_image.txt` | Docker image and container identification |
+| `period_source_version.txt` | PERIOD source repository and Git commit |
+| `experiment_metadata.txt` | Recorded experimental configuration and results |
+| `sched_deadline_verification.txt` | SCHED_DEADLINE system call verification |
 
-## 2. Docker Image
+## 3. Prerequisites
 
-The experiment uses the PERIOD Docker image.
+Before setting up the environment, ensure that the following components are available:
 
-- Image tag: `period:latest`
-- Immutable image reference:
+- Windows with WSL2 enabled.
+- Ubuntu installed under WSL2.
+- Docker Desktop installed and running.
+- WSL Integration enabled for the Ubuntu distribution in Docker Desktop.
+- Docker CLI accessible from the WSL Ubuntu terminal.
+- The PERIOD Docker image available locally.
 
-```text
-period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+### 3.1 Verify WSL2
+
+Run the following commands in Windows PowerShell:
+
+```powershell
+wsl --version
+wsl -l -v
 ```
 
-- Image ID:
+Make sure the Ubuntu distribution uses WSL2.
 
-```text
-sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+### 3.2 Verify Docker
+
+Run the following commands in the WSL Ubuntu terminal:
+
+```bash
+docker --version
+docker version
+docker info
 ```
 
-Using the immutable image reference helps identify the exact image used for the experiment.
+If Docker is unavailable, check:
 
-To inspect the local image:
+Docker Desktop -> Settings -> Resources -> WSL Integration
+
+Enable integration for the Ubuntu distribution.
+
+## 4. Docker Image Preparation
+
+The experiment uses the Docker image:
+
+```text
+period:latest
+```
+
+The recorded image identification information is available in `docker_image.txt`.
+
+Before creating a container, check whether the image exists locally:
 
 ```bash
 docker image inspect period:latest
 ```
 
-## 3. Docker Container Setup
+If the image is unavailable, obtain the exact recorded image from the project team or its documented original source before proceeding.
 
-A persistent Docker container named `period-reproduction` was created from the image.
+Do not assume that an image with the same tag necessarily contains the same environment.
 
-The container was created with `--privileged` and without `--rm`, so it is not automatically deleted when the container stops.
+## 5. Docker Container Setup
 
-The original creation command was:
+A persistent container named `period-reproduction` is used for the experiments.
+
+### 5.1 Create a New Container
+
+Only execute this command if the container does not already exist.
+
+Run in the WSL Ubuntu terminal:
 
 ```bash
 docker run --privileged -it \
   --name period-reproduction \
-  period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc \
+  period:latest \
   bash
 ```
 
-**Important:** This command is for initial container creation only. If the container already exists, do not run this command again with the same container name.
+The `--privileged` option is part of the recorded experimental configuration.
 
-## 4. Container Management
+It provides extended container privileges and should only be used when required by the experimental environment.
 
-The container is persistent. Exiting the interactive shell does not remove it.
+The container is persistent because `--rm` is not specified.
 
-### 4.1 Check Container Status
+### 5.2 Enter an Existing Container
+
+Check existing containers:
 
 ```bash
 docker ps -a
 ```
 
-### 4.2 Restart a Stopped Container
-
-When the container is stopped, start it and attach to its original interactive Bash session:
-
-```bash
-docker start -ai period-reproduction
-```
-
-This is the recommended way to restart and enter this container.
-
-### 4.3 Open an Additional Shell in a Running Container
-
-If the container is already running, you can open another Bash session:
+If the container is already running:
 
 ```bash
 docker exec -it period-reproduction bash
 ```
 
-This command requires the container to be running.
+If the container is stopped:
 
-### 4.4 Exit the Container
+```bash
+docker start -ai period-reproduction
+```
+
+### 5.3 Exit the Container
 
 Inside the container:
 
@@ -96,27 +148,101 @@ Inside the container:
 exit
 ```
 
-Exiting the original Bash session started by `docker start -ai` stops the container, but does not delete it. Exiting an additional shell opened with `docker exec` only ends that shell session.
+Exiting the original interactive Bash session stops the container but does not delete it.
 
-### 4.5 Stop the Container Manually
+Exiting an additional shell opened with `docker exec` only terminates that shell.
 
-From the host terminal:
+### 5.4 Stop the Container
+
+From the WSL Ubuntu terminal:
 
 ```bash
 docker stop period-reproduction
 ```
 
-The stopped container can be started again using `docker start -ai period-reproduction`.
+Avoid using `docker rm` if you intend to preserve the existing container.
 
-**Note:** Avoid using `docker rm` or `docker run --rm` if you intend to preserve this container.
+## 6. Environment Verification
 
-## 5. PERIOD Source Code
+After entering the Docker container, verify the operating system:
 
-The PERIOD source code used in this experiment is from:
+```bash
+cat /etc/os-release
+uname -a
+```
 
-Repository: https://github.com/wcventure/PERIOD
+Check compiler and build tools:
 
-Git commit:
+```bash
+gcc --version
+g++ --version
+make --version
+cmake --version
+ld --version
+```
+
+Check Clang and LLVM:
+
+```bash
+clang --version
+llvm-config --version
+```
+
+Check Python and dependencies:
+
+```bash
+python --version
+pip show wllvm
+pip show numpy
+```
+
+The expected software versions are documented in:
+
+- `container_environment.txt`
+- `host_environment.txt`
+
+Note that `uname -a` reports the Linux kernel provided by WSL2, not an independently installed container kernel.
+
+## 7. SCHED_DEADLINE Verification
+
+PERIOD uses Linux SCHED_DEADLINE for periodical scheduling.
+
+A standalone C test program was compiled and executed inside the Docker container to verify the availability of the scheduling system call.
+
+The test used the following parameters:
+
+| Parameter | Value |
+|---|---|
+| Scheduling Policy | SCHED_DEADLINE (6) |
+| Runtime | 1 ms |
+| Deadline | 10 ms |
+| Period | 10 ms |
+
+The recorded terminal output was:
+
+```text
+Testing SCHED_DEADLINE...
+Current scheduling policy: 6
+PASS: SCHED_DEADLINE is working.
+```
+
+The running test process was also observed with scheduling class `#6`.
+
+This confirms that the tested process can successfully use SCHED_DEADLINE in the current WSL2 and Docker environment.
+
+This standalone test does not independently establish that every PERIOD experiment uses SCHED_DEADLINE.
+
+For detailed verification information, see:
+
+`sched_deadline_verification.txt`
+
+## 8. PERIOD Source Code
+
+Original repository:
+
+https://github.com/wcventure/PERIOD
+
+Recorded Git commit:
 
 ```text
 b6f72a7b06d01ffa7114b640312873ec2578a5ea
@@ -128,95 +254,131 @@ The source code is located inside the container at:
 /workdir/PERIOD
 ```
 
-To enter the source directory:
+Enter the source directory:
 
 ```bash
 cd /workdir/PERIOD
 ```
 
-To verify the source version:
+Verify the source version:
 
 ```bash
 git rev-parse HEAD
 git status --short
 ```
 
-The recorded experiment used the source commit specified above with a clean working tree.
+The recorded source commit is specified in `period_source_version.txt`.
 
-## 6. Environment Information
+## 9. Reproducing the DoubleFree Experiment
 
-The experiment was conducted in a Docker container running Ubuntu 18.04.5 LTS.
+The current reproduction focuses on the DoubleFree benchmark.
 
-The main software versions inside the container include:
+### 9.1 Enter the Benchmark Directory
 
-| Component | Version |
-|---|---|
-| Ubuntu | 18.04.5 LTS |
-| GCC | 7.5.0 |
-| G++ | 7.5.0 |
-| GNU Make | 4.1 |
-| CMake | 3.10.2 |
-| GNU Binutils ld | 2.30 |
-| Clang | 10.0.0 |
-| LLVM | 10.0.0 |
-| Python | 2.7.17 |
-
-Additional package information and host-side configuration are recorded in `container_environment.txt` and `host_environment.txt`.
-
-## 7. Reproducing the DoubleFree Experiment
-
-The recorded experiment targets:
-
-```text
-/workdir/PERIOD/test/doubleFree
-```
-
-After entering the container, navigate to the test directory:
+Inside the Docker container:
 
 ```bash
 cd /workdir/PERIOD/test/doubleFree
 ```
 
-Build the test program:
+### 9.2 Build the Benchmark
 
 ```bash
 ./build.sh
 ```
 
-Run PERIOD:
+### 9.3 Run the Experiment
 
 ```bash
 /workdir/PERIOD/tool/DBDS/run_PDS.py -y -d 3 ./df
 ```
 
+### 9.4 Recorded Results
+
 The recorded experiment produced:
 
-- Total error interleavings: 4
-- Total timeout interleavings: 0
-- Deterministic replay confirmations: 4/4
-- Bug type: double-free
+| Metric | Result |
+|---|---:|
+| Error Interleavings | 4 |
+| Timeout Interleavings | 0 |
+| Deterministic Replay | 4/4 |
+| Bug Type | Double-free |
 
-These are the results of the recorded experiment. They are documented in `experiment_metadata.txt`.
+These results are documented in `experiment_metadata.txt`.
 
-For the detailed experimental artifacts, see:
+Detailed experimental logs and artifacts are stored in:
 
 ```text
 experiments/doubleFree/
 ```
 
-## 8. Previous Container
+The current reproduction covers the recorded DoubleFree benchmark and does not claim to reproduce the entire evaluation in the original paper.
 
-A previous container with the short ID `8fa44dc533c9` was used during the earlier experimental work.
+## 10. Troubleshooting
 
-That container no longer exists in Docker. The exact mechanism by which it was removed has not been independently verified.
+### 10.1 Docker Command Not Found
 
-The current persistent container, `period-reproduction`, was created as a replacement to provide a reusable environment for subsequent work.
+If the WSL terminal reports:
 
-## 9. Reproducibility Notes
+```text
+bash: docker: command not found
+```
 
-- Use the recorded immutable Docker image reference when identifying the experimental image.
-- Use the recorded PERIOD Git commit when checking the source version.
-- Keep the existing persistent container if you want to reuse its environment.
-- Exiting the container does not delete it.
-- The environment records distinguish between the host system and the software environment inside the Docker container.
-- Experimental results should be interpreted together with the corresponding experiment metadata and artifacts.
+Check that Docker Desktop is running and WSL Integration is enabled for Ubuntu.
+
+Close and reopen the WSL terminal, then execute:
+
+```bash
+docker --version
+```
+
+### 10.2 Container Already Exists
+
+If Docker reports that the container name is already in use, do not create another container with the same name.
+
+Check its status:
+
+```bash
+docker ps -a
+```
+
+Use `docker start -ai` or `docker exec -it` as appropriate.
+
+### 10.3 Container Is Not Running
+
+Start the existing container:
+
+```bash
+docker start -ai period-reproduction
+```
+
+### 10.4 SCHED_DEADLINE Permission Error
+
+If the test program reports:
+
+```text
+Operation not permitted
+```
+
+Check the container privileges and scheduling configuration.
+
+Do not immediately conclude that the WSL2 kernel lacks SCHED_DEADLINE support.
+
+Refer to `sched_deadline_verification.txt` for the recorded test results.
+
+## 11. Reproducibility Notes
+
+- Use the recorded Docker image identification information when preparing the environment.
+- Use the specified PERIOD Git commit when checking the source version.
+- Keep the existing persistent container if you intend to reuse its environment.
+- Do not remove the container unless its contents have been backed up.
+- Distinguish host-side software versions from container-side software versions.
+- Preserve experiment logs and artifacts for verification.
+- Document differences between the reproduction environment and the original paper's environment.
+
+## 12. References
+
+- Original PERIOD repository: https://github.com/wcventure/PERIOD
+- Linux SCHED_DEADLINE documentation: https://docs.kernel.org/scheduler/sched-deadline.html
+- Docker documentation: https://docs.docker.com/
+- Microsoft WSL documentation: https://learn.microsoft.com/en-us/windows/wsl/

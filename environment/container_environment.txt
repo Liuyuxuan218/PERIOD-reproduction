@@ -1,105 +1,41 @@
-===== Experiment Date =====
-2026-11-05T10:15:26+00:00
-===== Operating System =====
-NAME="Ubuntu"
-VERSION="18.04.5 LTS (Bionic Beaver)"
-ID=ubuntu
-ID_LIKE=debian
-PRETTY_NAME="Ubuntu 18.04.5 LTS"
-VERSION_ID="18.04"
-HOME_URL="https://www.ubuntu.com/"
-SUPPORT_URL="https://help.ubuntu.com/"
-BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
-PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-VERSION_CODENAME=bionic
-UBUNTU_CODENAME=bionic
-===== Kernel =====
-Linux 8fa44dc533c9 6.18.54.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Tue Oct  6 19:13:07 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
-===== CPU =====
-Architecture:        x86_64
-CPU op-mode(s):      32-bit, 64-bit
-Byte Order:          Little Endian
-CPU(s):              32
-On-line CPU(s) list: 0-31
-Thread(s) per core:  2
-Core(s) per socket:  16
-Socket(s):           1
-NUMA node(s):        1
-Vendor ID:           GenuineIntel
-CPU family:          6
-Model:               183
-Model name:          Intel(R) Core(TM) i9-14900HX
-Stepping:            1
-CPU MHz:             2419.199
-BogoMIPS:            4838.39
-Virtualization:      VT-x
-Hypervisor vendor:   Microsoft
-Virtualization type: full
-L1d cache:           48K
-L1i cache:           32K
-L2 cache:            2048K
-L3 cache:            36864K
-NUMA node0 CPU(s):   0-31
-Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities
-===== Memory =====
-              total        used        free      shared  buff/cache   available
-Mem:            15G        813M         13G         50M        806M         14G
-Swap:          4.0G          0B        4.0G
-===== Clang =====
-clang version 10.0.0 
-Target: x86_64-unknown-linux-gnu
-Thread model: posix
-InstalledDir: /workdir/PERIOD/clang+llvm/bin
-===== LLVM =====
-10.0.0
-===== Python =====
-Python 2.7.17
-===== Python Packages =====
-DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
-asn1crypto (0.24.0)
-cryptography (2.1.4)
-enum34 (1.1.6)
-idna (2.6)
-ipaddress (1.0.17)
-keyring (10.6.0)
-keyrings.alt (3.0)
-numpy (1.16.6)
-pip (9.0.1)
-pycrypto (2.6.1)
-pygobject (3.26.1)
-pyxdg (0.25)
-SecretStorage (2.3.1)
-setuptools (39.0.1)
-six (1.11.0)
-wheel (0.30.0)
-wllvm (1.1.6, /workdir/PERIOD/tool/wllvm)
-===== Git Commit =====
-b6f72a7b06d01ffa7114b640312873ec2578a5ea
+# Docker Container Environment
 
-===== Additional Environment Verification =====
-Verification date: 2026-11-07
-Container name: period-reproduction
-Container ID: 23952a74045380332030685d2deb00e6254b5b87d8bc1671b7785628700ad297
-Container persistence: Auto Remove = false
+## Operating System
 
-===== Operating System =====
-Ubuntu 18.04.5 LTS
-VERSION_ID=18.04
+| Component | Version |
+|---|---|
+| OS | Ubuntu 18.04.5 LTS |
+| Architecture | x86_64 |
+| Linux Kernel | 6.18.54.1-microsoft-standard-WSL2 |
 
-===== Compiler and Build Tools =====
-GCC: 7.5.0
-G++: 7.5.0
-GNU Make: 4.1
-CMake: 3.10.2
-GNU Binutils ld: 2.30
+Note: Docker containers share the Linux kernel provided by WSL2.
 
-===== Clang and LLVM =====
-Clang: 10.0.0
-LLVM: 10.0.0
+## Compiler and Build Tools
 
-===== Python =====
-Python: 2.7.17
+| Component | Version |
+|---|---|
+| GCC | 7.5.0 |
+| G++ | 7.5.0 |
+| GNU Make | 4.1 |
+| CMake | 3.10.2 |
+| GNU Binutils ld | 2.30 |
+| Clang | 10.0.0 |
+| LLVM | 10.0.0 |
 
-===== PERIOD Source =====
-Git commit: b6f72a7b06d01ffa7114b640312873ec2578a5ea
-Working tree: clean
+## Python Environment
+
+| Component | Version |
+|---|---|
+| Python | 2.7.17 |
+| wllvm | 1.1.6 |
+| NumPy | 1.16.6 |
+
+## LLVM Installation
+
+Installation directory:
+
+/workdir/PERIOD/clang+llvm
+
+## Notes
+
+These versions describe the recorded Docker container environment.

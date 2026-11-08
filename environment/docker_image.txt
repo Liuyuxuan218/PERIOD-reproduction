@@ -1,25 +1,37 @@
-===== Docker Image =====
-Image: period:latest
-Immutable image reference:
-period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
-Image ID:
-sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+# Docker Image and Container Information
 
-===== Current Container =====
-Container name: period-reproduction
-Container ID:
-23952a74045380332030685d2deb00e6254b5b87d8bc1671b7785628700ad297
-Auto Remove: false
-Created: 2026-11-07T06:36:09.383729977Z
+## Docker Image
 
-===== Previous Container =====
-Previous container ID: 8fa44dc533c9
-Status: No longer exists in Docker.
-Note: The exact removal mechanism has not been independently verified.
-The current container is a new persistent container.
+| Component | Value |
+|---|---|
+| Image Name | period |
+| Image Tag | latest |
+| Image ID | sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc |
+| Operating System | Linux |
+| Architecture | amd64 |
+| Image Creation Date | 2022-01-17 |
 
-===== Experiment =====
-Project: PERIOD
-Experiment: doubleFree
-Bug type: double-free
-Original experiment results are documented in experiment_metadata.txt.
+## Docker Container
+
+| Component | Value |
+|---|---|
+| Container Name | period-reproduction |
+| Container ID (short) | 23952a740453 |
+| Image ID | sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc |
+| Privileged Mode | Enabled |
+| Container Memory Limit | Unlimited (0) |
+
+## Container Access
+
+Enter the existing container:
+
+docker exec -it period-reproduction bash
+
+List containers:
+
+docker ps -a
+
+## Reproducibility Note
+
+The image ID should be used to identify the recorded local image.
+The mutable latest tag alone is not sufficient to guarantee reproducibility.
