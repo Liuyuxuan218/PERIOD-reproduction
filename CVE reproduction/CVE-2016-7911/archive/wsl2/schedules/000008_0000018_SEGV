@@ -1,0 +1,21 @@
+[[1, 0, 2, 0], [0, 0, 2, 0]]
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==1513==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x0000004ddfcf bp 0x7e6c369feeb0 sp 0x7e6c369fedb0 T1)
+==1513==The signal is caused by a READ memory access.
+==1513==Hint: address points to the zero page.
+    #0 0x4ddfcf  (/home/lyx/PERIOD/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911/2016-7911+0x4ddfcf)
+    #1 0x4ddf0f  (/home/lyx/PERIOD/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911/2016-7911+0x4ddf0f)
+    #2 0x7e6c396a3df9  (/usr/lib/x86_64-linux-gnu/libc.so.6+0xa3df9)
+    #3 0x7e6c397375cb  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x1375cb)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/lyx/PERIOD/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911/2016-7911+0x4ddfcf) 
+Thread T1 created by T0 here:
+    #0 0x48baca  (/home/lyx/PERIOD/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911/2016-7911+0x48baca)
+    #1 0x4de1c8  (/home/lyx/PERIOD/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911/2016-7911+0x4de1c8)
+    #2 0x7e6c3962a600  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a600)
+    #3 0x7e6c3962a717  (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a717)
+    #4 0x4285d4  (/home/lyx/PERIOD/evaluation/ConVul-CVE-Benchmarks/CVE-2016-7911/2016-7911+0x4285d4)
+
+==1513==ABORTING
