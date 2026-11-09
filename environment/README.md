@@ -6,15 +6,17 @@ This document describes how to prepare the PERIOD reproduction environment using
 
 The setup follows the official PERIOD repository and provides additional instructions for WSL2 and Docker Desktop users.
 
+
 ## 1. Requirements
 
 Before installing PERIOD, make sure that your machine satisfies the following requirements.
 
 ### 1.1 Hardware Requirements
 
-- A multi-core processor.
+- A workstation or PC with a multi-core processor.
 - Sufficient memory and disk space for Docker images, source code, and experimental data.
-- Multi-core processors are recommended for concurrency testing.
+
+Multi-core processors are recommended because PERIOD is a concurrency testing tool.
 
 ### 1.2 Operating System Requirements
 
@@ -25,7 +27,14 @@ Before installing PERIOD, make sure that your machine satisfies the following re
 ### 1.3 Docker Requirements
 
 - Docker version higher than 18.09.7.
-- Docker must be running and accessible from the Ubuntu terminal.
+- Docker must be installed, running, and accessible from the Ubuntu terminal.
+
+For Linux users installing Docker directly on Ubuntu, Docker can be installed using:
+
+```bash
+sudo apt-get update
+sudo apt-get install docker.io
+```
 
 For Windows users, Docker Desktop with WSL2 integration is recommended.
 
@@ -36,16 +45,27 @@ Official installation resources:
 - [Docker Desktop WSL2 Backend](https://docs.docker.com/desktop/features/wsl/)
 - [Microsoft WSL Installation Guide](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-For Windows users, make sure that WSL2 integration is enabled for the Ubuntu distribution in Docker Desktop.
+Windows users should enable WSL2 integration for their Ubuntu distribution in Docker Desktop.
 
-Verify the installation:
+### 1.4 Verify the Host Environment
 
-```bash
+For Windows users, open PowerShell and check the WSL configuration:
+
+```powershell
 wsl --version
 wsl -l -v
+```
+
+Make sure that the Ubuntu distribution is running under WSL 2.
+
+Then open the WSL Ubuntu terminal and verify Docker:
+
+```bash
 docker --version
 docker info
 ```
+
+If Docker is not accessible, check that Docker Desktop is running and WSL2 integration is enabled.
 
 ## 2. Clone the Official PERIOD Repository
 
@@ -82,44 +102,69 @@ This environment variable is used in subsequent commands to avoid hard-coded use
 
 The source commit used in our reproduction is recorded separately in `period_source_version.txt` in the reproduction repository.
 
-## 3. Prepare the Docker Image
 
-The official PERIOD documentation provides instructions for running the project using Docker.
+## 3. Install the PERIOD Docker Image
 
-The expected image name is:
+The official PERIOD project provides two ways to prepare the Docker image.
 
-```text
-period:latest
+### 3.1 Option A: Pull the Official Pre-built Image (Recommended)
+
+Download the official PERIOD image from Docker Hub:
+
+```bash
+docker pull wcventure/period:stable
 ```
 
-Check whether the image is available:
+Tag the downloaded image as `period:latest`:
+
+```bash
+docker tag wcventure/period:stable period:latest
+```
+
+This is the recommended method because the official image already contains the configured PERIOD environment.
+
+### 3.2 Option B: Build the Docker Image from Source
+
+Alternatively, users can build their own Docker image using the Dockerfile provided in the official PERIOD repository.
+
+First, enter the root directory of the cloned repository:
+
+```bash
+cd "$PERIOD_ROOT"
+```
+
+Build the image:
+
+```bash
+docker build -t period:latest --no-cache ./
+```
+
+The `--no-cache` option prevents Docker from reusing previously cached build layers.
+
+### 3.3 Verify the Docker Image
+
+After completing either installation method, verify that the image is available:
 
 ```bash
 docker image inspect period:latest
 ```
 
-If the image is not available, prepare it using the official image distribution or the Docker build instructions provided by the original PERIOD repository.
-
-If the official repository provides a Dockerfile in the directory used for building the image, build it from that directory:
-
-```bash
-docker build -t period:latest .
-```
-
-After preparing the image, verify it:
-
-```bash
-docker image inspect period:latest
-```
-
-Record the image ID and digest for reproducibility:
+Display the image ID:
 
 ```bash
 docker image inspect --format '{{.Id}}' period:latest
+```
+
+Display the repository digest, if available:
+
+```bash
 docker image inspect --format '{{json .RepoDigests}}' period:latest
 ```
 
-Note that `latest` is a mutable image tag. The image ID and digest should be recorded when documenting the experimental environment.
+The image should be available locally with the tag `period:latest`.
+
+The two installation methods are alternatives. Only one is required.
+
 
 ## 4. Create and Run the Docker Container
 
@@ -129,26 +174,17 @@ The official PERIOD documentation provides the following basic Docker command:
 docker run --privileged -it period:latest /bin/bash
 ```
 
-This command starts an interactive container with privileged permissions.
+This command creates a new container and opens an interactive Bash shell.
 
-For repeated experiments, a persistent container is recommended.
+For repeated experiments and persistent data storage, we recommend creating a named container with a mounted host directory. The complete procedure is described in Section 5.
 
 ### 4.1 Create a Persistent Container
 
-A persistent container allows the experimental environment to be reused without creating a new container every time.
+For the recommended setup, create the experiment data directory first, as described in Section 5. Then create the container with the required mount configuration.
 
-The container can be created using:
+The recommended container is named `period-container`.
 
-```bash
-docker run --privileged -it \
-  --name period-container \
-  period:latest \
-  /bin/bash
-```
-
-The container name is `period-container`.
-
-The container is persistent because the `--rm` option is not specified.
+The container is persistent because the `--rm` option is not used.
 
 ### 4.2 Enter an Existing Container
 
@@ -158,13 +194,13 @@ Check the container status:
 docker ps -a
 ```
 
-If the container is running:
+If the container is running, open another Bash session:
 
 ```bash
 docker exec -it period-container bash
 ```
 
-If the container is stopped:
+If the container is stopped, restart it:
 
 ```bash
 docker start -ai period-container
@@ -178,28 +214,29 @@ Exit the container:
 exit
 ```
 
-Stop the container manually:
+To stop the container manually from the WSL terminal:
 
 ```bash
 docker stop period-container
 ```
 
-The container can be restarted without rebuilding the image.
+The container can be restarted without rebuilding the Docker image.
 
 Important:
 
 - Do not use `--rm` when creating a persistent container.
 - Exiting a container does not necessarily delete it.
 - Removing a container deletes its writable layer.
-- Files stored in a separately mounted host directory remain available after the container is removed.
+- Files stored in a separately mounted host directory remain available even after the container is removed.
+
 
 ## 5. Experiment Data Persistence and Directory Mounting
 
 During PERIOD experiments, intermediate files, execution logs, and generated results may be produced inside the Docker container.
 
-To preserve experimental data independently of the container lifecycle, we use a directory in WSL Ubuntu and mount it into Docker.
+To preserve these files independently of the container lifecycle, we use a directory in WSL Ubuntu and mount it into Docker.
 
-### 5.1 Prepare the Experiment Data Directory
+### 5.1 Create the Experiment Data Directory
 
 Return to the WSL Ubuntu terminal.
 
@@ -209,19 +246,17 @@ Create the experiment data directory:
 mkdir -p "$HOME/period-reproduction"
 ```
 
-The directory is used to store experimental records and generated data.
+This directory is used to store experimental records, logs, intermediate files, and generated results.
 
-The current reproduction environment already uses this directory to preserve experimental files.
+If the directory already exists and contains experimental data, keep its existing contents. Do not delete or overwrite the directory.
 
-Its existing contents should be retained.
-
-### 5.2 Configure the Directory Mount
+### 5.2 Create a Container with the Data Directory Mounted
 
 Docker Bind Mounts must be configured when a container is created.
 
 An existing container that was created without a mount cannot have a new Bind Mount added directly.
 
-Therefore, when creating a container with persistent experimental data storage, use the following command:
+Create a persistent container with the experiment data directory mounted:
 
 ```bash
 docker run --privileged -it \
@@ -231,7 +266,12 @@ docker run --privileged -it \
   /bin/bash
 ```
 
-This command mounts the WSL directory into the Docker container.
+This command:
+
+- Creates a container named `period-container`.
+- Enables privileged mode for the PERIOD environment.
+- Mounts the WSL experiment data directory into the container.
+- Opens an interactive Bash shell.
 
 The directory mapping is:
 
@@ -239,11 +279,11 @@ The directory mapping is:
 |---|---|
 | `$HOME/period-reproduction` | `/experiment-data` |
 
-The same files can be accessed from both WSL Ubuntu and the Docker container.
+Files written to `/experiment-data` inside the container are stored directly in the WSL host directory.
 
-If a container with the same name already exists, do not execute the creation command again. A new container name or an appropriately backed-up replacement container is required.
+Note: If a container named `period-container` already exists, Docker cannot create another container with the same name. Check existing containers using `docker ps -a` and choose an unused container name if necessary.
 
-### 5.3 Verify the Mount
+### 5.3 Verify the Directory Mount
 
 After entering the container, check the mounted directory:
 
@@ -251,9 +291,9 @@ After entering the container, check the mounted directory:
 ls -la /experiment-data
 ```
 
-The existing WSL experimental data should be visible inside the container.
+The existing files in the WSL experiment data directory should be visible inside the container.
 
-Create a test file:
+To verify that the mount works correctly, create a test file:
 
 ```bash
 echo "Docker mount test" > /experiment-data/mount_test.txt
@@ -265,7 +305,7 @@ Exit the container:
 exit
 ```
 
-Return to WSL Ubuntu and check the file:
+Return to the WSL Ubuntu terminal and check the test file:
 
 ```bash
 cat "$HOME/period-reproduction/mount_test.txt"
@@ -279,7 +319,7 @@ Docker mount test
 
 If the expected output appears, the directory mount is working correctly.
 
-After verification, the test file can be removed:
+Remove the test file after verification:
 
 ```bash
 rm "$HOME/period-reproduction/mount_test.txt"
@@ -289,19 +329,19 @@ rm "$HOME/period-reproduction/mount_test.txt"
 
 Files written to `/experiment-data` are stored in the WSL host directory.
 
-For example, save an experiment log using:
+For example, redirect an experiment's output to a log file:
 
 ```bash
 your_experiment_command > /experiment-data/run.log 2>&1
 ```
 
-Append additional output to an existing log:
+To append output to an existing log:
 
 ```bash
 your_experiment_command >> /experiment-data/run.log 2>&1
 ```
 
-To copy generated experiment files into the persistent data directory:
+To copy generated experimental files into the persistent data directory:
 
 ```bash
 cp -r /path/to/generated/results /experiment-data/
@@ -309,12 +349,19 @@ cp -r /path/to/generated/results /experiment-data/
 
 Replace the example source path with the actual location of the generated results.
 
+The corresponding files can be accessed directly from WSL Ubuntu under:
+
+```text
+~/period-reproduction/
+```
+
 Important:
 
 - Files written inside `/experiment-data` are preserved independently of the container.
 - Files written elsewhere inside the container are not automatically saved in the WSL data directory.
 - If the container is removed, files that were not stored in a mounted directory may be lost.
-- The existing WSL experiment data directory should not be deleted when recreating containers.
+- The WSL experiment data directory should not be deleted when recreating containers.
+- Do not use the `--rm` option if you want to preserve the container itself.
 
 ## 6. Environment Verification
 
