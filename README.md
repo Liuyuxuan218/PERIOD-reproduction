@@ -19,4 +19,4 @@ Additionally, a separate reproduction attempt was conducted using WSL2 (preserve
 
 ## SCTBench (1240019547 邱洋)
 
-1240019547 邱洋 ran the SCTBench programs from Table 2 of the PERIOD paper with the official image, bug depth 3, and three repetitions. The clone and run instructions for that work are in [SCTBench/README.md](SCTBench/README.md).
+1240019547 邱洋 reproduced the SCTBench programs from Table 2 of the PERIOD paper. The instructions and measured results are in [SCTBench reproduction/README.md](SCTBench%20reproduction/README.md).

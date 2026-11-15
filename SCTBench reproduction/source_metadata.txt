@@ -1,0 +1,37 @@
+Benchmark: SCTBench (Table 2)
+
+Original Repository:
+https://github.com/wcventure/PERIOD
+
+Original Source Path:
+evaluation/CB
+evaluation/CS
+evaluation/Chess
+evaluation/Inspect_benchmarks
+evaluation/SafeStack
+evaluation/Splash2
+evaluation/RADBench
+
+Starting Commit:
+b6f72a7b06d01ffa7114b640312873ec2578a5ea
+
+Image:
+wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+
+Repository Usage Statement:
+The PERIOD project states that its code and data are free for
+Research and Education Use ONLY.
+
+Source Modification Status:
+The benchmark programs were used from the image at the starting commit.
+The reproduction scripts in this directory are additional files.
+
+Modified Original Files:
+None.
+
+Reproduction Configuration:
+Bug Depth: 3
+Schedule limit: 10000
+Schedule limit for CS.twostage_100_bad: 100000
+Repetitions: 3
+Contributor: 1240019547 邱洋

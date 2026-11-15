@@ -21,7 +21,8 @@ Upstream tool: https://github.com/wcventure/PERIOD
 | `paper_table2.json` | PERIOD columns of Table 2 |
 | `scripts/run_sctbench.py` | Builds each program and runs the three repetitions |
 | `scripts/analyze.py` | Builds the mean and sample standard deviation tables |
-| `measurements/` | Per-repetition `metrics.json` files from our runs |
+| `source_metadata.txt` | Upstream repository, commit, and reproduction configuration |
+| `results/cases/` | Per-repetition `metrics.json` files from our runs |
 | `results/summary.csv` | Aggregate of those repetitions |
 | `results/per_run.csv` | One row for each repetition |
 
@@ -72,8 +73,8 @@ docker run --rm --privileged wcventure/period@sha256:8f47d8b9148f2db579627842026
 ```bash
 export SCT_DATA="${HOME}/sctbench-data"
 mkdir -p "${SCT_DATA}/sctbench/scripts"
-cp "${REPO}/SCTBench/manifest.json" "${SCT_DATA}/sctbench/manifest.json"
-cp "${REPO}/SCTBench/scripts/run_sctbench.py" "${SCT_DATA}/sctbench/scripts/run_sctbench.py"
+cp "${REPO}/SCTBench reproduction/manifest.json" "${SCT_DATA}/sctbench/manifest.json"
+cp "${REPO}/SCTBench reproduction/scripts/run_sctbench.py" "${SCT_DATA}/sctbench/scripts/run_sctbench.py"
 ```
 
 ### Step 4. Start the Container
@@ -122,10 +123,10 @@ cat "${SCT_DATA}/sctbench/status.md"
 ### Step 7. Build the Result Tables
 
 ```bash
-python3 "${REPO}/SCTBench/scripts/analyze.py" "${SCT_DATA}/sctbench/cases"
+python3 "${REPO}/SCTBench reproduction/scripts/analyze.py" "${SCT_DATA}/sctbench/cases"
 ```
 
-The script writes `SCTBench/results/summary.csv` and `SCTBench/results/per_run.csv`.
+The script writes `SCTBench reproduction/results/summary.csv` and `SCTBench reproduction/results/per_run.csv`.
 
 Each repetition records:
 
@@ -141,7 +142,9 @@ For the deadlock programs, the timeout count is the buggy-schedule result. `CS.d
 
 ## 5. Results
 
-The values below are mean ± sample standard deviation across the repetitions stored in `measurements/`. A standard deviation of 0 is shown as a single number.
+The repetition counts below are the finished runs stored in `results/cases/`. `CS.twostage_100_bad` has two finished repetitions in this snapshot. Its third repetition is still running on the experiment machine. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two finished repetitions. `CS.queue_bad` has one finished repetition. `CS.account_bad` and `RADBench.bug4` have no finished repetition in this snapshot.
+
+The values are mean ± sample standard deviation. A standard deviation of 0 is shown as a single number.
 
 | Program | Repetitions | Schedules | Error interleavings | First bug | Timeouts |
 |---|---:|---:|---:|---:|---:|
@@ -181,3 +184,5 @@ The values below are mean ± sample standard deviation across the repetitions st
 | RADBench.bug6 | 3 | 3131.7 ± 12.4 | 0 |  | 330.0 ± 11.5 |
 
 `CS.reorder_3_bad` matches Table 2 on all three PERIOD figures: the first bug is at schedule 6, 27 schedules are explored, and 6 of them are errors. `CS.reorder_4_bad`, `CS.reorder_5_bad`, `CS.reorder_10_bad`, `CS.lazy01_bad`, `CS.twostage_bad`, and `CS.wronglock_bad` likewise match the published schedule total. `RADBench.bug5` reaches the 10,000-schedule budget with no AddressSanitizer error, which is the same outcome the paper reports for that program.
+
+The image digest, flag meanings, and the difference from the paper’s workstation are recorded in [source_metadata.txt](source_metadata.txt), [SHARED_SETUP.md](SHARED_SETUP.md), [docs/IMAGE.md](docs/IMAGE.md), and [docs/FLAG_SEMANTICS.md](docs/FLAG_SEMANTICS.md).

@@ -34,6 +34,7 @@ def main():
     else:
         cases = None
         for candidate in (
+            ROOT / "results" / "cases",
             Path("/experiment-data/sctbench/cases"),
             Path.home() / "sctbench-data" / "sctbench" / "cases",
         ):
