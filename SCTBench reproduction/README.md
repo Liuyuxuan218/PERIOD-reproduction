@@ -1,12 +1,16 @@
-# SCTBench Reproduction with PERIOD
+# SCTBench Reproduction
 
-## 1. Overview
+## 1. Objective
 
 This project reproduces the SCTBench programs in Table 2 of Wen et al., “Controlled Concurrency Testing via Periodical Scheduling,” ICSE 2022, using PERIOD.
 
-Contributor: 1240019547 邱洋.
+**Contributor:** 1240019547 邱洋
 
-The experiment builds each program with the scripts in the official PERIOD image, then performs periodical scheduling at bug depth 3. Each program is run for three repetitions. The schedule budget is 10,000, and 100,000 for `CS.twostage_100_bad`. The recorded measurements are in `measurements/`, and the aggregate table is in `results/summary.csv`.
+**Current status:** 97 valid runs across 36 programs. Thirty programs have three completed runs, four have one or two, and two have none.
+
+Each program is built using the scripts in the official PERIOD image and tested at bug depth 3. The target is three repetitions per program. The configured schedule budget is 10,000 per run, or 100,000 for `CS.twostage_100_bad`.
+
+The individual run records are in [`results/cases/`](results/cases/), and the aggregate results are in [`results/summary.csv`](results/summary.csv).
 
 Paper: https://wcventure.github.io/pdf/ICSE2022_PERIOD.pdf
 
@@ -22,11 +26,18 @@ Upstream tool: https://github.com/wcventure/PERIOD
 | `scripts/run_sctbench.py` | Builds each program and runs the three repetitions |
 | `scripts/analyze.py` | Builds the mean and sample standard deviation tables |
 | `source_metadata.txt` | Upstream repository, commit, and reproduction configuration |
+| [`SHARED_SETUP.md`](SHARED_SETUP.md) | Shared software setup and host environment |
+| [`docs/`](docs/) | Notes on the image and scheduling flags |
 | `results/cases/` | Per-repetition `metrics.json` files from our runs |
 | `results/summary.csv` | Aggregate of those repetitions |
 | `results/per_run.csv` | One row for each repetition |
 
-## 3. Environment
+## 3. Source Information
+
+- Original repository: [wcventure/PERIOD](https://github.com/wcventure/PERIOD)
+- Starting commit: `b6f72a7b06d01ffa7114b640312873ec2578a5ea`
+- Benchmark paths: [`manifest.json`](manifest.json)
+- Host and shared setup: [`SHARED_SETUP.md`](SHARED_SETUP.md)
 
 The experiment uses the official PERIOD Docker image.
 
@@ -43,7 +54,7 @@ The experiment uses the official PERIOD Docker image.
 
 The container uses the host Linux kernel. PERIOD’s scheduler uses `SCHED_DEADLINE`, which is present on kernel 4.x and later.
 
-## 4. Reproduction Procedure
+## 4. Reproduction Procedure and Results
 
 Run the commands in Ubuntu or in Ubuntu on WSL2. Docker Engine newer than 18.09.7 is required, with permission to start a privileged container. The full 36-program suite takes about one to two days. Small programs finish in seconds. `CB.pbzip2` takes about one hour per repetition. A 10,000-schedule RADBench run takes about four and a half hours.
 
@@ -61,7 +72,7 @@ export REPO="$(pwd)"
 docker pull wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
 ```
 
-Confirm that the host kernel provides `SCHED_DEADLINE`:
+List the scheduling policies and check whether `SCHED_DEADLINE` is listed:
 
 ```bash
 docker run --rm --privileged wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc \
@@ -138,16 +149,19 @@ Each repetition records:
 | `timeout_interleavings` | Schedules that reached the per-schedule time limit |
 | `elapsed_sec` | Wall-clock time of that repetition |
 
-For the deadlock programs, the timeout count is the buggy-schedule result. `CS.deadlock01_bad` explored 14 schedules and recorded 6 timeouts. `CS.carter01_bad` explored 42 schedules and recorded 10 or 11 timeouts.
+The table reports timeouts separately. The submitted measurements do not independently confirm each timeout as a deadlock. `CS.deadlock01_bad` explored 14 schedules and recorded 6 timeouts. `CS.carter01_bad` explored 42 schedules and recorded 10 or 11 timeouts.
 
-## 5. Results
+## 5. Experimental Results
 
-The repetition counts below are the finished runs stored in `results/cases/`. `CS.twostage_100_bad` has three finished repetitions, each at the 100,000-schedule budget. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two finished repetitions. `CS.queue_bad` has one finished repetition. `CS.account_bad` and `RADBench.bug4` have no finished repetition in this snapshot.
+See the [summary CSV](results/summary.csv) for all 36 programs and the [per-run CSV](results/per_run.csv) for individual measurements.
+
+`CS.twostage_100_bad` has three completed runs, each at the configured 100,000-schedule budget. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` each have two completed runs. `CS.queue_bad` has one. `CS.account_bad` and `RADBench.bug4` have none.
 
 The values are mean ± sample standard deviation. A standard deviation of 0 is shown as a single number.
 
 | Program | Repetitions | Schedules | Error interleavings | First bug | Timeouts |
 |---|---:|---:|---:|---:|---:|
+| CS.account_bad | 0 |  |  |  |  |
 | CS.bluetooth_driver_bad | 3 | 205 | 6.7 ± 0.6 | 9 | 0 |
 | CS.carter01_bad | 3 | 42 | 0 |  | 10.3 ± 0.6 |
 | CS.circular_buffer_bad | 3 | 544.7 ± 2.3 | 57.3 ± 2.1 | 16.7 ± 0.6 | 0 |
@@ -180,9 +194,12 @@ The values are mean ± sample standard deviation. A standard deviation of 0 is s
 | Splash2.lu | 3 | 10001 | 4740.3 ± 384.7 | 2 | 0.3 ± 0.6 |
 | RADBench.bug2 | 3 | 8476.7 ± 141.4 | 8.7 ± 0.6 | 2472 | 0 |
 | RADBench.bug3 | 2 | 10001.5 ± 0.7 | 3811.0 ± 1.4 | 31.5 ± 2.1 | 1 |
+| RADBench.bug4 | 0 |  |  |  |  |
 | RADBench.bug5 | 3 | 10001.3 ± 0.6 | 0 |  | 2.7 ± 0.6 |
 | RADBench.bug6 | 3 | 3131.7 ± 12.4 | 0 |  | 330.0 ± 11.5 |
 
-`CS.reorder_3_bad` matches Table 2 on all three PERIOD figures: the first bug is at schedule 6, 27 schedules are explored, and 6 of them are errors. `CS.reorder_4_bad`, `CS.reorder_5_bad`, `CS.reorder_10_bad`, `CS.lazy01_bad`, `CS.twostage_bad`, and `CS.wronglock_bad` likewise match the published schedule total. `RADBench.bug5` reaches the 10,000-schedule budget with no AddressSanitizer error, which is the same outcome the paper reports for that program.
+### Comparison with Table 2
+
+`CS.reorder_3_bad` matches Table 2 on all three PERIOD figures: the first bug is at schedule 6, 27 schedules are explored, and 6 of them are errors. `CS.reorder_4_bad`, `CS.reorder_5_bad`, `CS.reorder_10_bad`, `CS.lazy01_bad`, `CS.twostage_bad`, and `CS.wronglock_bad` likewise match the published schedule total. `RADBench.bug5` reached the configured schedule budget without a recorded error, consistent with the paper’s no-bug-found outcome. Some recorded schedule counts exceed the configured budget. These values are shown as recorded and should be checked against the original logs before being interpreted as exact counts of executed schedules.
 
 The image digest, flag meanings, and the difference from the paper’s workstation are recorded in [source_metadata.txt](source_metadata.txt), [SHARED_SETUP.md](SHARED_SETUP.md), [docs/IMAGE.md](docs/IMAGE.md), and [docs/FLAG_SEMANTICS.md](docs/FLAG_SEMANTICS.md).
