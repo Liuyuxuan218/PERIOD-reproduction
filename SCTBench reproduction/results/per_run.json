@@ -1822,6 +1822,56 @@
     "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_100_bad\\rep02\\metrics.json"
   },
   {
+    "bare_test_lines": [
+      100001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 89,
+        "first_schedule": 690
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 89,
+        "first_schedule": 690
+      }
+    },
+    "case": "CS.twostage_100_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "100000",
+      "./twostage_100_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 7357.209,
+    "end_testing": true,
+    "ended": "2026-11-15T04:03:53Z",
+    "error_interleavings": 89,
+    "exit_code": 0,
+    "first_bug_schedule": 690,
+    "output_dirs": [
+      "out_twostage_100_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 100001,
+    "schedule_limit": 100000,
+    "schedules_explored": 100000,
+    "started": "2026-11-15T02:01:13Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 26,
+    "valid": true,
+    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_100_bad\\rep03\\metrics.json"
+  },
+  {
     "bare_test_lines": [],
     "bug_depth": 3,
     "bug_found": true,

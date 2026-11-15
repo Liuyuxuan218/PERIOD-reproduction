@@ -142,7 +142,7 @@ For the deadlock programs, the timeout count is the buggy-schedule result. `CS.d
 
 ## 5. Results
 
-The repetition counts below are the finished runs stored in `results/cases/`. `CS.twostage_100_bad` has two finished repetitions in this snapshot. Its third repetition is still running on the experiment machine. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two finished repetitions. `CS.queue_bad` has one finished repetition. `CS.account_bad` and `RADBench.bug4` have no finished repetition in this snapshot.
+The repetition counts below are the finished runs stored in `results/cases/`. `CS.twostage_100_bad` has three finished repetitions, each at the 100,000-schedule budget. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two finished repetitions. `CS.queue_bad` has one finished repetition. `CS.account_bad` and `RADBench.bug4` have no finished repetition in this snapshot.
 
 The values are mean ± sample standard deviation. A standard deviation of 0 is shown as a single number.
 
@@ -161,7 +161,7 @@ The values are mean ± sample standard deviation. A standard deviation of 0 is s
 | CS.reorder_5_bad | 3 | 225 | 20 | 12 | 0 |
 | CS.stack_bad | 3 | 918 | 117.7 ± 32.3 | 5.7 ± 1.5 | 0 |
 | CS.token_ring_bad | 3 | 232 | 53.3 ± 1.5 | 2.3 ± 0.6 | 0 |
-| CS.twostage_100_bad | 2 | 100000 | 124.5 ± 0.7 | 984.5 ± 416.5 | 15.5 ± 3.5 |
+| CS.twostage_100_bad | 3 | 100000 | 112.7 ± 20.5 | 886.3 ± 340.1 | 19.0 ± 6.6 |
 | CS.twostage_bad | 3 | 33 | 2 | 4 | 0 |
 | CS.wronglock_3_bad | 3 | 172 | 42.3 ± 0.6 | 6 | 0 |
 | CS.wronglock_bad | 3 | 1464 | 217.7 ± 2.1 | 10 | 0 |

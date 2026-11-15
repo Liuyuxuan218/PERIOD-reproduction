@@ -35,3 +35,4 @@
 | RADBench.bug5 | ok | 3 | budget | 10002 | 0 | None | 2 |
 | RADBench.bug3 | ok | 2 | incomplete | 0 | 0 | None | None |
 | RADBench.bug2 | ok | 3 | completed | 8370 | 9 | 2472 | 0 |
+| CS.twostage_100_bad | ok | 3 | budget | 100000 | 89 | 690 | 26 |
