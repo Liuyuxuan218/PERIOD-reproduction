@@ -18,8 +18,8 @@ These measurements were produced by 1240019547 邱洋. The host and the containe
 | Python used by `run_PDS.py` | Container | 3.6.9 |
 | NumPy used with that Python | Container | 1.19.5 |
 
-The host row is the 邱洋 column of [shared_setup.md](shared_setup.md). The paper's workstation is an Intel Xeon Silver 4214. `environment/host_environment.txt` in the repository root records 赵士锦's Intel Core i9-14900HX and is a separate host record.
+The paper reports its workstation as an Intel Xeon Silver 4214. The measurements in this directory were taken on the host in the table above.
 
-The container is privileged so `SCHED_DEADLINE` is available. The executed code is the image commit. Commit `cb8deb9a176e5bb292d70d46557dd61dc0e98069` changes only documentation. The image check is in [image.md](image.md). The meanings of `-d`, `-f`, `-y`, and `-t` are in [flag_semantics.md](flag_semantics.md).
+The container is privileged so `SCHED_DEADLINE` is available. The executed code is the image commit `b6f72a7b06d01ffa7114b640312873ec2578a5ea`. Commit `cb8deb9a176e5bb292d70d46557dd61dc0e98069` changes only documentation. The image identifiers are in [image.md](image.md). The flag meanings for these runs are in [flag_semantics.md](flag_semantics.md).
 
-Bug depth for this group is 3. The configured schedule budget is 10,000 per repetition. The target is three repetitions. Workload arguments are the `argv` values in [manifest.json](manifest.json). `CB.pbzip2` is the only program whose manifest sets a 15-second per-schedule timeout; every other program uses 5 seconds.
+Bug depth is 3. The configured schedule budget is 10,000 per repetition. The target is three repetitions. The per-schedule timeout is 5 seconds, except `CB.pbzip2`, which uses 15 seconds. Workload arguments are the `argv` values in [manifest.json](manifest.json).

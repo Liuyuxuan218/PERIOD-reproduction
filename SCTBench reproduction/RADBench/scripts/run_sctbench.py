@@ -392,39 +392,6 @@ def summarize_case(case_id, reps):
     }
 
 
-def pilot(env, manifest):
-    case = None
-    for item in manifest["cases"]:
-        if item["id"] == "CS.account_bad":
-            case = item
-            break
-    if case is None:
-        raise SystemExit("account case missing")
-    ok, how = build_case(case, env)
-    pilot_dir = os.path.join(DATA, "pilot")
-    ensure_dir(pilot_dir)
-    if not ok:
-        write_json(os.path.join(pilot_dir, "result.json"), {"ok": False, "stage": how})
-        return False
-    saved_id = case["id"]
-    case = dict(case)
-    case["id"] = "PILOT_account_f4"
-    # Run under pilot directory by temporarily redirecting case_dir via id.
-    result = run_one(case, 1, env, limit_override=4)
-    # run_one writes under cases/PILOT_account_f4. Copy the verdict up.
-    verdict = {
-        "ok": result.get("valid") and result.get("schedules_explored") == 4,
-        "schedules_explored": result.get("schedules_explored"),
-        "round_footer_total": result.get("round_footer_total"),
-        "bare_test_lines": result.get("bare_test_lines"),
-        "stop_reason": result.get("stop_reason"),
-        "exit_code": result.get("exit_code"),
-        "expected_executed": 4,
-    }
-    write_json(os.path.join(pilot_dir, "result.json"), verdict)
-    print(json.dumps(verdict))
-    return verdict["ok"]
-
 
 def suite(env, manifest):
     rows = []
@@ -473,10 +440,6 @@ def main():
             raise SystemExit("commit mismatch: %s" % head)
     env = tool_env()
     ensure_dir(DATA)
-    has_pilot = any(item["id"] == "CS.account_bad" for item in manifest["cases"])
-    if mode == "--pilot" and has_pilot:
-        ok = pilot(env, manifest)
-        raise SystemExit(0 if ok else 1)
     if mode == "--suite":
         suite(env, manifest)
         return

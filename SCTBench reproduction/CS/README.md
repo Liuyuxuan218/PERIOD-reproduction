@@ -59,7 +59,7 @@ The host and the container used for these measurements are:
 | Python used by `run_PDS.py` | Container | 3.6.9 |
 | NumPy used with that Python | Container | 1.19.5 |
 
-The same record, with the distinction from the paper workstation and from the other contributor's host file, is in [environment.md](environment.md) and [shared_setup.md](shared_setup.md). The image digest is checked in [image.md](image.md). Flag meanings are in [flag_semantics.md](flag_semantics.md). The upstream paths and the modification statement are in [source_metadata.txt](source_metadata.txt).
+The host and container record is in [environment.md](environment.md). The image digest is in [image.md](image.md). Flag meanings for these runs are in [flag_semantics.md](flag_semantics.md). The upstream paths and the modification statement are in [source_metadata.txt](source_metadata.txt).
 
 The shared settings are bug depth 3 (`-d 3`), a configured schedule budget of 10,000 (`-f 10000`), except 100,000 for `CS.twostage_100_bad`, and three repetitions. The per-schedule timeout is 5 seconds except where the table gives another value. Every submitted metrics command in this group records those settings. A recorded schedule total above the configured budget is kept as measured. The workload arguments are:
 
@@ -89,7 +89,7 @@ The shared settings are bug depth 3 (`-d 3`), a configured schedule budget of 10
 ## 4. Reproduction Instructions
 
 
-The commands below use this directory by itself. They do not read another group's files. Run the host commands in Ubuntu or in Ubuntu on WSL2. Docker Engine newer than 18.09.7 must be able to start a privileged container.
+The commands below use this directory by itself. Run the host commands in Ubuntu or in Ubuntu on WSL2. Docker Engine newer than 18.09.7 must be able to start a privileged container.
 
 ### Obtain this directory
 
@@ -153,7 +153,7 @@ docker exec period-sctbench python3 /experiment-data/sctbench/CS/scripts/run_sct
   /experiment-data/sctbench/CS/manifest.json --suite
 ```
 
-The runner accepts `--suite` and, only when the manifest contains `CS.account_bad`, `--pilot`. It refuses a manifest program from another group. There is no flag that selects a single program. Each program is built with its manifest build command and then run as `run_PDS.py -y -d 3 -f <schedule budget>` plus that program's arguments. New output is written to `${SCT_DATA}/sctbench/CS/cases/<program>/repNN/`.
+The runner accepts `--suite` and, only when the manifest contains `CS.account_bad`, `--pilot`. It runs only the programs listed in this directory's manifest. There is no flag that selects a single program. Each program is built with its manifest build command and then run as `run_PDS.py -y -d 3 -f <schedule budget>` plus that program's arguments. New output is written to `${SCT_DATA}/sctbench/CS/cases/<program>/repNN/`.
 
 This group includes the 4-schedule pilot for `CS.account_bad`. Run it inside the container before the suite:
 

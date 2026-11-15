@@ -1,25 +1,15 @@
 #!/usr/bin/env python3
-"""Aggregate one SCTBench group's repetition metrics.
+"""Aggregate this group's repetition metrics.
 
-Paths are resolved from this file's location, not from the current directory.
-The runner writes new work under /experiment-data/sctbench/<group>/cases/.
-The original combined suite, if it is still present, remains at
-/experiment-data/sctbench/cases/ and is not deleted.
-
-With no arguments, this script reads only <group>/results/cases/ and writes:
-
-    <group>/results/summary.csv
-    <group>/results/per_run.csv
-
-Passing a flat cases directory aggregates that directory in place, keeping
-only programs listed in this group's manifest. It does not move those files.
-
-Copy completed records into this group's submission directory with:
+Paths are resolved from this file's location.
+With no arguments, read results/cases in this group and write
+results/summary.csv and results/per_run.csv.
 
     python3 analyze.py --collect /path/to/cases
 
---collect copies this group's programs only. It leaves the source in place
-and refuses to overwrite a destination file whose bytes differ.
+copies programs named in this group's manifest into results/cases.
+The source directory is left in place. A destination file with different
+bytes is not overwritten.
 """
 import csv
 import json
@@ -48,8 +38,9 @@ def mean_sd(values):
 def paper_limit(program, schedules):
     if schedules != "L":
         return schedules
-    if program == "CS.twostage_100_bad":
-        return 100000
+    for case in load_manifest()["cases"]:
+        if case["id"] == program:
+            return case["schedule_limit"]
     return 10000
 
 
