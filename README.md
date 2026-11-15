@@ -20,15 +20,14 @@ Additionally, a separate reproduction attempt was conducted using WSL2 (preserve
 ### Week 2 – SCTBench Reproduction
 
 - Reproduced PERIOD on the 36 SCTBench programs in Table 2: CS (18), CB (3), Chess (4), Inspect (2), Misc (1), Splash2 (3), and RADBench (5). Three repetitions were the target.
-- `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad` match Table 2 on schedules, error interleavings, and first-bug schedule. A matching schedule total can still come with a different error count. Where Table 2 labels a program DL, these runs record timeouts beside 0 error interleavings. Schedule totals recorded above the 10,000 budget are kept as measured.
 - Runs used `wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc` (Ubuntu 18.04.5, GCC 7.5.0, Clang/LLVM 10.0.0, Python 3.6.9, commit `b6f72a7`), bug depth 3, and a 10,000-schedule budget, or 100,000 for `CS.twostage_100_bad`, on an i7-13650HX under WSL2.
-- CS: the small reorder programs reproduce Table 2 exactly. `CS.reorder_3_bad` is 27 schedules, 6 errors, and the first bug at schedule 6. `CS.deadlock01_bad` matches the 14 schedules and records 6 timeouts with 0 errors, against Table 2's 6 buggy schedules.
-- CB: `CB.stringbuffer` matches the published 163 schedules, with 4 errors and the first bug at 121 against Table 2's 16 and 12. `CB.pbzip2` uses a 15-second timeout. Table 2 splits it into BOF, NPD, and UAF rows; the measured error count is the one combined total, 104 ± 8.9.
-- Chess: `Chess.WSQ` matches Table 2's 15 error interleavings, with 320.3 ± 23.1 schedules against 434. `Chess.SWSQ` and `Chess.IWSQWS` are the cases Table 2 marks L; both recorded 10001 schedules, and each has two published bug rows, which are not averaged.
-- Inspect: both programs recorded 10001 schedules. `Inspect.qsort_mt` places the first bug at schedule 27, matching Table 2, whose schedule total is 8643. `Inspect.boundedbuffer` is marked L and recorded 714.3 ± 28.4 errors against 1514.
-- Misc: Table 2 marks `Misc.safestack` as no bug found. These runs also recorded 0 errors, in 135 schedules. Table 2 lists 6519 schedules.
-- Splash2: barnes, fft, and lu all place the first bug at schedule 2, matching Table 2, and then record 10001 schedules. For `Splash2.lu`, Table 2 lists 6129 schedules and 2848 buggy schedules; these runs recorded 4740.3 ± 384.7 errors.
-- RADBench: `RADBench.bug5` matches Table 2's no-bug result, with 0 errors at the schedule cap. `RADBench.bug6`, labeled DL, recorded 0 errors and 330 ± 11.5 timeouts against Table 2's 340 buggy schedules. `RADBench.bug2` stopped before the budget, with the first bug at 2472 against 1985, while Table 2 marks that schedule cell L.
+- CS: 18 programs from `evaluation/CS`, 2–100 threads. Table 2 labels most AF and two DL, at published depths 1 or 2. `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad` match Table 2. `CS.deadlock01_bad` matches 14 schedules, with 6 timeouts and 0 errors.
+- CB: aget, stringbuffer, and pbzip2 from `evaluation/CB`. aget and stringbuffer are AF; pbzip2 has BOF, NPD, and UAF rows. `CB.stringbuffer` matches the published 163 schedules. `CB.pbzip2` recorded 104 ± 8.9 errors.
+- Chess: four 3-thread work-stealing queues from `evaluation/Chess`. WSQ and IWSQ are AF at depth 3. SWSQ and IWSQWS each have BOF and AF, and Table 2 marks their schedules L. `Chess.WSQ` matches 15 errors. `Chess.SWSQ` and `Chess.IWSQWS` recorded 10001 schedules.
+- Inspect: `qsort_mt` (3 threads) and `boundedBuffer` (4 threads) from `evaluation/Inspect_benchmarks`, both AF at depth 2. `Inspect.qsort_mt` found the first bug at schedule 27, matching Table 2. Both recorded 10001 schedules.
+- Misc: SafeStack, 3 threads, from `evaluation/SafeStack`. Table 2 labels it AF, marks the depth not applicable, and records no bug over 6519 schedules. These runs recorded 0 errors in 135 schedules.
+- Splash2: barnes, fft, and lu from `evaluation/Splash2`, each 2 threads, AF, depth 1. Table 2 marks barnes and fft L and lists 6129 schedules for lu. The first bug is at schedule 2 for all three. The runs recorded 10001 schedules.
+- RADBench: five 2-thread programs from `evaluation/RADBench`. bug2–bug4 are AF; bug5 and bug6 are DL. Table 2 marks bug2–bug5 L and lists 2950 schedules for bug6. `RADBench.bug5` recorded 0 errors. `RADBench.bug6` recorded 330 ± 11.5 timeouts against 340 buggy schedules.
 
 Contributor: 1240019547 邱洋.
 
