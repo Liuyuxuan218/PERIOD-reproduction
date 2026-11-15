@@ -17,6 +17,8 @@ This repository records our weekly work on setting up, understanding, and reprod
 
 Additionally, a separate reproduction attempt was conducted using WSL2 (preserved in the archive).
 
+Contributors: 1240033600 赵士锦, 1240016737 刘语萱.
+
 ### Week 2 – SCTBench Reproduction
 
 - This experiment reproduces the 36 SCTBench programs in Table 2. The programs belong to seven groups: CS (18), CB (3), Chess (4), Inspect (2), Misc (1), Splash2 (3), and RADBench (5). The target was three repetitions per program.
