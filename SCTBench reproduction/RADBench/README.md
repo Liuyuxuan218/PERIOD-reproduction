@@ -45,7 +45,7 @@ This group uses that common container and host. It does not have a separate tool
 
 ## 4. Reproduction Procedure and Results
 
-These programs are entries in the shared manifest. The runner is [`../scripts/run_sctbench.py`](../scripts/run_sctbench.py). It has no option that selects only the RADBench group. The suite command in [`../README.md`](../README.md) builds every manifest program and runs it.
+These programs are entries in the shared manifest. The runner is [`../scripts/run_sctbench.py`](../scripts/run_sctbench.py). It has no option that selects only the RADBench group. The suite command in [`../docs/REPRODUCTION.md`](../docs/REPRODUCTION.md) builds every manifest program and runs it.
 
 For each program, the runner executes the build command in the upstream directory, then runs `run_PDS.py` with `-y -d 3 -f` set to that program's schedule budget. If the manifest sets `exec_timeout`, the runner inserts `-t` with that value. It then appends the arguments in the table above. The repetition target is 3. A repetition that already has `valid: true` in its metrics file is left unchanged. Before each repetition the runner removes System V shared-memory key 1111 and runs one repetition at a time.
 

@@ -71,7 +71,7 @@ This group uses that common container and host. It does not have a separate tool
 
 ## 4. Reproduction Procedure and Results
 
-These programs are entries in the shared manifest. The runner is [`../scripts/run_sctbench.py`](../scripts/run_sctbench.py). It has no option that selects only the CS group. The suite command in [`../README.md`](../README.md) builds every manifest program and runs it.
+These programs are entries in the shared manifest. The runner is [`../scripts/run_sctbench.py`](../scripts/run_sctbench.py). It has no option that selects only the CS group. The suite command in [`../docs/REPRODUCTION.md`](../docs/REPRODUCTION.md) builds every manifest program and runs it.
 
 For each program, the runner executes the build command in the upstream directory, then runs `run_PDS.py` with `-y -d 3 -f` set to that program's schedule budget. If the manifest sets `exec_timeout`, the runner inserts `-t` with that value. It then appends the arguments in the table above. The repetition target is 3. A repetition that already has `valid: true` in its metrics file is left unchanged. Before each repetition the runner removes System V shared-memory key 1111 and runs one repetition at a time.
 
@@ -89,7 +89,7 @@ After the external cases tree has been copied into this `results/` directory, th
 | CS.circular_buffer_bad | 3 | 544.7 ± 2.3 | 57.3 ± 2.1 | 16.7 ± 0.6 | 0 ± 0 | 37.3 ± 1.2 |
 | CS.deadlock01_bad | 3 | 14 ± 0 | 0 ± 0 | No error detected | 6 ± 0 | 31.5 ± 0.2 |
 | CS.lazy01_bad | 3 | 39 ± 0 | 12 ± 0 | 8 ± 0 | 0 ± 0 | 5.2 ± 0.9 |
-| CS.queue_bad | 1 | 1048; sample standard deviation undefined | 114; sample standard deviation undefined | 4; sample standard deviation undefined | 0; sample standard deviation undefined | 71.8; sample standard deviation undefined |
+| CS.queue_bad | 1 | 1048; sample standard deviation unavailable | 114; sample standard deviation unavailable | 4; sample standard deviation unavailable | 0; sample standard deviation unavailable | 71.8; sample standard deviation unavailable |
 | CS.reorder_10_bad | 3 | 2350 ± 0 | 90 ± 2 | 27 ± 0 | 0 ± 0 | 212 ± 23 |
 | CS.reorder_20_bad | 3 | 10000 ± 0 | 2848.7 ± 30.9 | 39 ± 0 | 12.3 ± 6.1 | 6523.5 ± 375.9 |
 | CS.reorder_3_bad | 3 | 27 ± 0 | 6 ± 0 | 6 ± 0 | 0 ± 0 | 2.8 ± 0.2 |
@@ -136,7 +136,7 @@ The published values are the PERIOD columns in [`../paper_table2.json`](../paper
 
 **CS.lazy01_bad.** Table 2 lists 39 schedules. It labels the row AF, lists 12 buggy schedules, and lists the first bug at schedule 3. All three repetitions recorded 39 schedules. All three repetitions recorded 12 error interleavings. All three repetitions recorded 8 for the first-bug schedule. The schedule total matches Table 2. The error count matches the published buggy-schedule count. The first-bug schedule differs from Table 2. The metrics do not establish the cause.
 
-**CS.queue_bad.** Table 2 lists 998 schedules. It labels the row AF, lists 119 buggy schedules, and lists the first bug at schedule 25. The one valid repetition recorded 1048 schedules. The sample standard deviation is undefined. The one valid repetition recorded 114 error interleavings. The sample standard deviation is undefined. The one valid repetition recorded 4 for the first-bug schedule. The sample standard deviation is undefined. The schedule total differs from Table 2. The metrics do not establish the cause. The error count differs from the published buggy-schedule count of 119. The metrics do not establish the cause. The first-bug schedule differs from Table 2. The metrics do not establish the cause. `CS.queue_bad` has valid repetitions rep01. [`../results/status.md`](../results/status.md) lists the last attempt as incomplete, with explored 0. That incomplete attempt has no metrics file in this submission, and the cause is not established.
+**CS.queue_bad.** Table 2 lists 998 schedules. It labels the row AF, lists 119 buggy schedules, and lists the first bug at schedule 25. The one valid repetition recorded 1048 schedules. The sample standard deviation is unavailable. The one valid repetition recorded 114 error interleavings. The sample standard deviation is unavailable. The one valid repetition recorded 4 for the first-bug schedule. The sample standard deviation is unavailable. The schedule total differs from Table 2. The metrics do not establish the cause. The error count differs from the published buggy-schedule count of 119. The metrics do not establish the cause. The first-bug schedule differs from Table 2. The metrics do not establish the cause. `CS.queue_bad` has valid repetitions rep01. [`../results/status.md`](../results/status.md) lists the last attempt as incomplete, with explored 0. That incomplete attempt has no metrics file in this submission, and the cause is not established.
 
 **CS.reorder_10_bad.** Table 2 lists 2350 schedules. It labels the row AF, lists 89 buggy schedules, and lists the first bug at schedule 27. All three repetitions recorded 2350 schedules. The three repetitions recorded 88, 92, 90 error interleavings (90 ± 2). All three repetitions recorded 27 for the first-bug schedule. The schedule total matches Table 2. The error count differs from the published buggy-schedule count of 89. The metrics do not establish the cause. The first-bug schedule matches Table 2.
 
