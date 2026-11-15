@@ -1,0 +1,244 @@
+{
+  "source": "ICSE2022_PERIOD.pdf page 9, Table 2, PERIOD columns",
+  "markers": {
+    "L": "schedule limit reached: 10000, except CS.twostage_100_bad uses 100000",
+    "%": "no bug found",
+    "-": "bug depth not applicable in the table"
+  },
+  "programs": [
+    {
+      "program": "CS.account_bad",
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 1,
+          "to_bug": 2,
+          "buggy": 26
+        }
+      ],
+      "schedules": 65
+    },
+    {
+      "program": "CS.bluetooth_driver_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 9,
+          "buggy": 9
+        }
+      ],
+      "schedules": 205
+    },
+    {
+      "program": "CS.carter01_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "DL",
+          "depth": 2,
+          "to_bug": 5,
+          "buggy": 11
+        }
+      ],
+      "schedules": 42
+    },
+    {
+      "program": "CS.circular_buffer_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 17,
+          "buggy": 207
+        }
+      ],
+      "schedules": 871
+    },
+    {
+      "program": "CS.deadlock01_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "DL",
+          "depth": 2,
+          "to_bug": 3,
+          "buggy": 6
+        }
+      ],
+      "schedules": 14
+    },
+    {
+      "program": "CS.lazy01_bad",
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 1,
+          "to_bug": 3,
+          "buggy": 12
+        }
+      ],
+      "schedules": 39
+    },
+    {
+      "program": "CS.queue_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 25,
+          "buggy": 119
+        }
+      ],
+      "schedules": 998
+    },
+    {
+      "program": "CS.reorder_10_bad",
+      "threads": 10,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 27,
+          "buggy": 89
+        }
+      ],
+      "schedules": 2350
+    },
+    {
+      "program": "CS.reorder_20_bad",
+      "threads": 20,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 39,
+          "buggy": 2870
+        }
+      ],
+      "schedules": "L"
+    },
+    {
+      "program": "CS.reorder_3_bad",
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 6,
+          "buggy": 6
+        }
+      ],
+      "schedules": 27
+    },
+    {
+      "program": "CS.reorder_4_bad",
+      "threads": 4,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 9,
+          "buggy": 12
+        }
+      ],
+      "schedules": 100
+    },
+    {
+      "program": "CS.reorder_5_bad",
+      "threads": 5,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 12,
+          "buggy": 20
+        }
+      ],
+      "schedules": 225
+    },
+    {
+      "program": "CS.stack_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 3,
+          "buggy": 144
+        }
+      ],
+      "schedules": 918
+    },
+    {
+      "program": "CS.token_ring_bad",
+      "threads": 4,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 1,
+          "to_bug": 2,
+          "buggy": 58
+        }
+      ],
+      "schedules": 232
+    },
+    {
+      "program": "CS.twostage_100_bad",
+      "threads": 100,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 690,
+          "buggy": 141
+        }
+      ],
+      "schedules": "L"
+    },
+    {
+      "program": "CS.twostage_bad",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 4,
+          "buggy": 3
+        }
+      ],
+      "schedules": 33
+    },
+    {
+      "program": "CS.wronglock_3_bad",
+      "threads": 4,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 6,
+          "buggy": 42
+        }
+      ],
+      "schedules": 172
+    },
+    {
+      "program": "CS.wronglock_bad",
+      "threads": 8,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 10,
+          "buggy": 210
+        }
+      ],
+      "schedules": 1464
+    }
+  ]
+}

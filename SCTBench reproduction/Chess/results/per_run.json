@@ -1,0 +1,662 @@
+[
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 15,
+        "first_schedule": 92
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 15,
+        "first_schedule": 92
+      }
+    },
+    "case": "Chess.WSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./WorkStealQueue",
+      "1",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 9.575,
+    "end_testing": true,
+    "ended": "2026-11-13T10:51:24Z",
+    "error_interleavings": 15,
+    "exit_code": 0,
+    "first_bug_schedule": 92,
+    "output_dirs": [
+      "out_WorkStealQueue_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 307,
+    "schedule_limit": 10000,
+    "schedules_explored": 307,
+    "started": "2026-11-13T10:51:14Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.WSQ/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 15,
+        "first_schedule": 92
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 15,
+        "first_schedule": 92
+      }
+    },
+    "case": "Chess.WSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./WorkStealQueue",
+      "1",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 10.701,
+    "end_testing": true,
+    "ended": "2026-11-13T10:51:34Z",
+    "error_interleavings": 15,
+    "exit_code": 0,
+    "first_bug_schedule": 92,
+    "output_dirs": [
+      "out_WorkStealQueue_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 307,
+    "schedule_limit": 10000,
+    "schedules_explored": 307,
+    "started": "2026-11-13T10:51:24Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.WSQ/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 15,
+        "first_schedule": 102
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 15,
+        "first_schedule": 102
+      }
+    },
+    "case": "Chess.WSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./WorkStealQueue",
+      "1",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 10.841,
+    "end_testing": true,
+    "ended": "2026-11-13T10:51:45Z",
+    "error_interleavings": 15,
+    "exit_code": 0,
+    "first_bug_schedule": 102,
+    "output_dirs": [
+      "out_WorkStealQueue_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 347,
+    "schedule_limit": 10000,
+    "schedules_explored": 347,
+    "started": "2026-11-13T10:51:34Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.WSQ/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 17,
+        "first_schedule": 120
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 17,
+        "first_schedule": 120
+      }
+    },
+    "case": "Chess.IWSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./InterlockedWorkStealQueue",
+      "1",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 23.586,
+    "end_testing": true,
+    "ended": "2026-11-13T10:52:10Z",
+    "error_interleavings": 17,
+    "exit_code": 0,
+    "first_bug_schedule": 120,
+    "output_dirs": [
+      "out_InterlockedWorkStealQueue_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 707,
+    "schedule_limit": 10000,
+    "schedules_explored": 707,
+    "started": "2026-11-13T10:51:46Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.IWSQ/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 16,
+        "first_schedule": 124
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 16,
+        "first_schedule": 124
+      }
+    },
+    "case": "Chess.IWSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./InterlockedWorkStealQueue",
+      "1",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 24.85,
+    "end_testing": true,
+    "ended": "2026-11-13T10:52:35Z",
+    "error_interleavings": 16,
+    "exit_code": 0,
+    "first_bug_schedule": 124,
+    "output_dirs": [
+      "out_InterlockedWorkStealQueue_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 688,
+    "schedule_limit": 10000,
+    "schedules_explored": 688,
+    "started": "2026-11-13T10:52:10Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.IWSQ/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 16,
+        "first_schedule": 118
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 16,
+        "first_schedule": 118
+      }
+    },
+    "case": "Chess.IWSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./InterlockedWorkStealQueue",
+      "1",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 25.465,
+    "end_testing": true,
+    "ended": "2026-11-13T10:53:00Z",
+    "error_interleavings": 16,
+    "exit_code": 0,
+    "first_bug_schedule": 118,
+    "output_dirs": [
+      "out_InterlockedWorkStealQueue_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 657,
+    "schedule_limit": 10000,
+    "schedules_explored": 657,
+    "started": "2026-11-13T10:52:35Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.IWSQ/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "Exception": {
+        "count": 18,
+        "first_schedule": 1500
+      },
+      "assertion-failed": {
+        "count": 16,
+        "first_schedule": 1502
+      }
+    },
+    "by_type_log": {
+      "Exception": {
+        "count": 18,
+        "first_schedule": 1500
+      },
+      "assertion": {
+        "count": 16,
+        "first_schedule": 1502
+      }
+    },
+    "case": "Chess.SWSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./StateWorkStealQueue",
+      "2",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2411.206,
+    "end_testing": true,
+    "ended": "2026-11-14T01:20:28Z",
+    "error_interleavings": 34,
+    "exit_code": 0,
+    "first_bug_schedule": 1500,
+    "output_dirs": [
+      "out_StateWorkStealQueue_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 10189,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T00:40:17Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 2,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.SWSQ/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "Exception": {
+        "count": 20,
+        "first_schedule": 66
+      },
+      "assertion-failed": {
+        "count": 13,
+        "first_schedule": 2091
+      }
+    },
+    "by_type_log": {
+      "Exception": {
+        "count": 20,
+        "first_schedule": 66
+      },
+      "assertion": {
+        "count": 13,
+        "first_schedule": 2091
+      }
+    },
+    "case": "Chess.SWSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./StateWorkStealQueue",
+      "2",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2518.661,
+    "end_testing": true,
+    "ended": "2026-11-14T02:02:27Z",
+    "error_interleavings": 33,
+    "exit_code": 0,
+    "first_bug_schedule": 66,
+    "output_dirs": [
+      "out_StateWorkStealQueue_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10205,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T01:20:28Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.SWSQ/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "Exception": {
+        "count": 16,
+        "first_schedule": 1704
+      },
+      "assertion-failed": {
+        "count": 16,
+        "first_schedule": 1706
+      }
+    },
+    "by_type_log": {
+      "Exception": {
+        "count": 16,
+        "first_schedule": 1704
+      },
+      "assertion": {
+        "count": 16,
+        "first_schedule": 1706
+      }
+    },
+    "case": "Chess.SWSQ",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./StateWorkStealQueue",
+      "2",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2317.311,
+    "end_testing": true,
+    "ended": "2026-11-14T02:41:04Z",
+    "error_interleavings": 32,
+    "exit_code": 0,
+    "first_bug_schedule": 1704,
+    "output_dirs": [
+      "out_StateWorkStealQueue_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10199,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T02:02:27Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.SWSQ/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "Exception": {
+        "count": 20,
+        "first_schedule": 2415
+      },
+      "assertion-failed": {
+        "count": 15,
+        "first_schedule": 2417
+      }
+    },
+    "by_type_log": {
+      "Exception": {
+        "count": 20,
+        "first_schedule": 2415
+      },
+      "assertion": {
+        "count": 15,
+        "first_schedule": 2417
+      }
+    },
+    "case": "Chess.IWSQWS",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./InterlockedWorkStealQueueWithState",
+      "2",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2462.385,
+    "end_testing": true,
+    "ended": "2026-11-14T03:22:09Z",
+    "error_interleavings": 35,
+    "exit_code": 0,
+    "first_bug_schedule": 2415,
+    "output_dirs": [
+      "out_InterlockedWorkStealQueueWithState_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 10186,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T02:41:07Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.IWSQWS/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "Exception": {
+        "count": 19,
+        "first_schedule": 1438
+      },
+      "assertion-failed": {
+        "count": 15,
+        "first_schedule": 1440
+      }
+    },
+    "by_type_log": {
+      "Exception": {
+        "count": 19,
+        "first_schedule": 1438
+      },
+      "assertion": {
+        "count": 15,
+        "first_schedule": 1440
+      }
+    },
+    "case": "Chess.IWSQWS",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./InterlockedWorkStealQueueWithState",
+      "2",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2262.6,
+    "end_testing": true,
+    "ended": "2026-11-14T03:59:52Z",
+    "error_interleavings": 34,
+    "exit_code": 0,
+    "first_bug_schedule": 1438,
+    "output_dirs": [
+      "out_InterlockedWorkStealQueueWithState_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10170,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T03:22:09Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.IWSQWS/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "Exception": {
+        "count": 20,
+        "first_schedule": 2160
+      },
+      "assertion-failed": {
+        "count": 14,
+        "first_schedule": 2162
+      }
+    },
+    "by_type_log": {
+      "Exception": {
+        "count": 20,
+        "first_schedule": 2160
+      },
+      "assertion": {
+        "count": 14,
+        "first_schedule": 2162
+      }
+    },
+    "case": "Chess.IWSQWS",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./InterlockedWorkStealQueueWithState",
+      "2",
+      "4",
+      "2"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2322.867,
+    "end_testing": true,
+    "ended": "2026-11-14T04:38:35Z",
+    "error_interleavings": 34,
+    "exit_code": 0,
+    "first_bug_schedule": 2160,
+    "output_dirs": [
+      "out_InterlockedWorkStealQueueWithState_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10199,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T03:59:52Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Chess.IWSQWS/rep03/metrics.json"
+  }
+]

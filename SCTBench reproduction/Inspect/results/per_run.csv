@@ -1,0 +1,7 @@
+case,repetition,valid,stop_reason,schedules_explored,round_footer_total,error_interleavings,timeout_interleavings,first_bug_schedule,bug_found,elapsed_sec,exit_code,metrics_path
+Inspect.qsort_mt,1,True,budget,10001,10046,140,0,27,True,436.297,0,results/cases/Inspect.qsort_mt/rep01/metrics.json
+Inspect.qsort_mt,2,True,budget,10001,10061,136,0,27,True,415.167,0,results/cases/Inspect.qsort_mt/rep02/metrics.json
+Inspect.qsort_mt,3,True,budget,10001,10068,140,0,27,True,419.904,0,results/cases/Inspect.qsort_mt/rep03/metrics.json
+Inspect.boundedbuffer,1,True,budget,10001,10195,747,0,14,True,773.79,0,results/cases/Inspect.boundedbuffer/rep01/metrics.json
+Inspect.boundedbuffer,2,True,budget,10001,10186,701,0,9,True,773.774,0,results/cases/Inspect.boundedbuffer/rep02/metrics.json
+Inspect.boundedbuffer,3,True,budget,10001,10190,695,1,18,True,781.105,0,results/cases/Inspect.boundedbuffer/rep03/metrics.json

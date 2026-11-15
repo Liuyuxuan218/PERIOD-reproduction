@@ -1,0 +1,13 @@
+case,repetition,valid,stop_reason,schedules_explored,round_footer_total,error_interleavings,timeout_interleavings,first_bug_schedule,bug_found,elapsed_sec,exit_code,metrics_path
+Chess.WSQ,1,True,completed,307,307,15,0,92,True,9.575,0,results/cases/Chess.WSQ/rep01/metrics.json
+Chess.WSQ,2,True,completed,307,307,15,0,92,True,10.701,0,results/cases/Chess.WSQ/rep02/metrics.json
+Chess.WSQ,3,True,completed,347,347,15,0,102,True,10.841,0,results/cases/Chess.WSQ/rep03/metrics.json
+Chess.IWSQ,1,True,completed,707,707,17,0,120,True,23.586,0,results/cases/Chess.IWSQ/rep01/metrics.json
+Chess.IWSQ,2,True,completed,688,688,16,0,124,True,24.85,0,results/cases/Chess.IWSQ/rep02/metrics.json
+Chess.IWSQ,3,True,completed,657,657,16,0,118,True,25.465,0,results/cases/Chess.IWSQ/rep03/metrics.json
+Chess.SWSQ,1,True,budget,10001,10189,34,2,1500,True,2411.206,0,results/cases/Chess.SWSQ/rep01/metrics.json
+Chess.SWSQ,2,True,budget,10001,10205,33,0,66,True,2518.661,0,results/cases/Chess.SWSQ/rep02/metrics.json
+Chess.SWSQ,3,True,budget,10001,10199,32,1,1704,True,2317.311,0,results/cases/Chess.SWSQ/rep03/metrics.json
+Chess.IWSQWS,1,True,budget,10001,10186,35,1,2415,True,2462.385,0,results/cases/Chess.IWSQWS/rep01/metrics.json
+Chess.IWSQWS,2,True,budget,10001,10170,34,0,1438,True,2262.6,0,results/cases/Chess.IWSQWS/rep02/metrics.json
+Chess.IWSQWS,3,True,budget,10001,10199,34,0,2160,True,2322.867,0,results/cases/Chess.IWSQWS/rep03/metrics.json

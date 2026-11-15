@@ -1,0 +1,54 @@
+{
+  "upstream_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+  "image_id": "sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "bug_depth": 3,
+  "repetitions": 3,
+  "cases": [
+    {
+      "id": "CB.stringbuffer",
+      "workdir": "evaluation/CB/stringbuffer-jdk1.4",
+      "build": "./build.sh",
+      "argv": [
+        "./main"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 2
+    },
+    {
+      "id": "CB.pbzip2",
+      "workdir": "evaluation/CB/pbzip2-0.9.4",
+      "build": "./build.sh",
+      "argv": [
+        "./pbzip2-0.9.4-src/pbzip2",
+        "-k",
+        "-f",
+        "-p3",
+        "test.tar"
+      ],
+      "schedule_limit": 10000,
+      "exec_timeout": 15,
+      "paper_threads": 4,
+      "paper_type": "BOF+NPD+UAF",
+      "paper_depth": "2/2/1",
+      "notes": "Artifact README sets -t 15. The -f after the binary is pbzip2's force flag. Scheduler cap is the earlier -f 10000."
+    },
+    {
+      "id": "CB.aget-bug",
+      "workdir": "evaluation/CB/aget-bug2",
+      "build": "./build.sh",
+      "argv": [
+        "./aget-devel/aget",
+        "-l",
+        "dl.txt",
+        "http://www.gnu.org/licenses/gpl.txt"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 3,
+      "paper_type": "AF",
+      "paper_depth": 2,
+      "notes": "Primary artifact command. The alternate LOOP_UNWINDED_NUM=2 command is not used."
+    }
+  ]
+}

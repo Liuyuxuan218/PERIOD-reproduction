@@ -1,0 +1,32 @@
+[
+  {
+    "program": "Misc.safestack",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 0,
+    "explored_mean": 135,
+    "explored_sd": 0.0,
+    "errors_mean": 0,
+    "errors_sd": 0.0,
+    "first_bug_mean": null,
+    "first_bug_sd": null,
+    "first_bug_n": 0,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 6519,
+    "paper_schedules_numeric": 6519,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": "-",
+        "to_bug": "%",
+        "buggy": 0
+      }
+    ],
+    "stop_reasons": [
+      "completed_no_bug"
+    ],
+    "explored_abs_diff": -6384,
+    "explored_rel_diff": -0.9792913023469857
+  }
+]

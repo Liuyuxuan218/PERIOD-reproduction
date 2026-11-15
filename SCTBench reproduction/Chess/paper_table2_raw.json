@@ -1,0 +1,102 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "Chess.WSQ",
+      "y": 358.89,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "105",
+        "period_schedules": "434",
+        "period_buggy": "15"
+      }
+    },
+    {
+      "program": "Chess.IWSQ",
+      "y": 367.26,
+      "rows": [
+        {
+          "bug_type": "BOF",
+          "bug_depth": "3",
+          "period_to_bug": "1628",
+          "period_buggy": "11"
+        }
+      ],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "108",
+        "period_schedules": "711",
+        "period_buggy": "17"
+      }
+    },
+    {
+      "program": "Chess.SWSQ",
+      "y": 380.34,
+      "rows": [
+        {
+          "bug_type": "AF",
+          "bug_depth": "3",
+          "period_to_bug": "1630"
+        },
+        {
+          "period_schedules": "L"
+        },
+        {
+          "period_buggy": "13"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+          "bug_type": "BOF",
+          "bug_depth": "3",
+          "period_to_bug": "1661",
+          "period_buggy": "11"
+        }
+      ],
+      "shared": {
+        "threads": "3"
+      }
+    },
+    {
+      "program": "Chess.IWSQWS",
+      "y": 396.67,
+      "rows": [
+        {
+          "bug_type": "AF",
+          "bug_depth": "3",
+          "period_to_bug": "1663"
+        },
+        {
+          "period_schedules": "L"
+        },
+        {
+          "period_buggy": "13"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "shared": {
+        "threads": "3"
+      }
+    }
+  ]
+}

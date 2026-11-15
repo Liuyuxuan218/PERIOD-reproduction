@@ -1,0 +1,54 @@
+{
+  "upstream_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+  "image_id": "sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "bug_depth": 3,
+  "repetitions": 3,
+  "cases": [
+    {
+      "id": "Splash2.lu",
+      "workdir": "evaluation/Splash2/lu",
+      "build": "./build.sh",
+      "argv": [
+        "./LU",
+        "-p2",
+        "-n2",
+        "-b1"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 1
+    },
+    {
+      "id": "Splash2.barnes",
+      "workdir": "evaluation/Splash2/barnes",
+      "build": "./build.sh",
+      "argv": [
+        "./BARNES"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 1,
+      "notes": "Artifact --no-prefix -d 2 is not used."
+    },
+    {
+      "id": "Splash2.fft",
+      "workdir": "evaluation/Splash2/fft",
+      "build": "./build.sh",
+      "argv": [
+        "LOOP_UNWINDED_NUM=3",
+        "./FFT",
+        "-p2",
+        "-m2",
+        "-n4",
+        "-l4"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 1,
+      "notes": "LOOP_UNWINDED_NUM=3 is the artifact workload setting. --no-prefix is not used."
+    }
+  ]
+}

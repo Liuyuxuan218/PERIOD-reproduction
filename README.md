@@ -30,4 +30,10 @@ Additionally, a separate reproduction attempt was conducted using WSL2 (preserve
 
 Contributor: 1240019547 邱洋.
 
-The procedure, the seven group results, and the combined tables are in [SCTBench reproduction/README.md](SCTBench%20reproduction/README.md).
+- [CS](SCTBench%20reproduction/CS/README.md)
+- [CB](SCTBench%20reproduction/CB/README.md)
+- [Chess](SCTBench%20reproduction/Chess/README.md)
+- [Inspect](SCTBench%20reproduction/Inspect/README.md)
+- [Misc](SCTBench%20reproduction/Misc/README.md)
+- [Splash2](SCTBench%20reproduction/Splash2/README.md)
+- [RADBench](SCTBench%20reproduction/RADBench/README.md)

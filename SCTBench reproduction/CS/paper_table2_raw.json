@@ -1,0 +1,239 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "CS.account_bad",
+      "y": 167.32,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "65",
+        "period_buggy": "26"
+      }
+    },
+    {
+      "program": "CS.bluetooth_driver_bad",
+      "y": 175.68,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "9",
+        "period_schedules": "205",
+        "period_buggy": "9"
+      }
+    },
+    {
+      "program": "CS.carter01_bad",
+      "y": 184.05,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "5",
+        "period_schedules": "42",
+        "period_buggy": "11"
+      }
+    },
+    {
+      "program": "CS.circular_buffer_bad",
+      "y": 192.41,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "17",
+        "period_schedules": "871",
+        "period_buggy": "207"
+      }
+    },
+    {
+      "program": "CS.deadlock01_bad",
+      "y": 200.77,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "3",
+        "period_schedules": "14",
+        "period_buggy": "6"
+      }
+    },
+    {
+      "program": "CS.lazy01_bad",
+      "y": 209.14,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "3",
+        "period_schedules": "39",
+        "period_buggy": "12"
+      }
+    },
+    {
+      "program": "CS.queue_bad",
+      "y": 217.5,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "25",
+        "period_schedules": "998",
+        "period_buggy": "119"
+      }
+    },
+    {
+      "program": "CS.reorder_10_bad",
+      "y": 225.87,
+      "rows": [],
+      "shared": {
+        "threads": "10",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "27",
+        "period_schedules": "2350",
+        "period_buggy": "89"
+      }
+    },
+    {
+      "program": "CS.reorder_20_bad",
+      "y": 234.23,
+      "rows": [],
+      "shared": {
+        "threads": "20",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "39",
+        "period_schedules": "L",
+        "period_buggy": "2870"
+      }
+    },
+    {
+      "program": "CS.reorder_3_bad",
+      "y": 242.59,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "6",
+        "period_schedules": "27",
+        "period_buggy": "6"
+      }
+    },
+    {
+      "program": "CS.reorder_4_bad",
+      "y": 250.96,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "9",
+        "period_schedules": "100",
+        "period_buggy": "12"
+      }
+    },
+    {
+      "program": "CS.reorder_5_bad",
+      "y": 259.32,
+      "rows": [],
+      "shared": {
+        "threads": "5",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "12",
+        "period_schedules": "225",
+        "period_buggy": "20"
+      }
+    },
+    {
+      "program": "CS.stack_bad",
+      "y": 267.69,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "3",
+        "period_schedules": "918",
+        "period_buggy": "144"
+      }
+    },
+    {
+      "program": "CS.token_ring_bad",
+      "y": 276.05,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "232",
+        "period_buggy": "58"
+      }
+    },
+    {
+      "program": "CS.twostage_100_bad",
+      "y": 284.41,
+      "rows": [],
+      "shared": {
+        "threads": "100",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "690",
+        "period_schedules": "L",
+        "period_buggy": "141"
+      }
+    },
+    {
+      "program": "CS.twostage_bad",
+      "y": 292.78,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "4",
+        "period_schedules": "33",
+        "period_buggy": "3"
+      }
+    },
+    {
+      "program": "CS.wronglock_3_bad",
+      "y": 301.14,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "6",
+        "period_schedules": "172",
+        "period_buggy": "42"
+      }
+    },
+    {
+      "program": "CS.wronglock_bad",
+      "y": 309.51,
+      "rows": [],
+      "shared": {
+        "threads": "8",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "10",
+        "period_schedules": "1464",
+        "period_buggy": "210"
+      }
+    }
+  ]
+}

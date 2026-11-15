@@ -1,0 +1,44 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "Splash2.barnes",
+      "y": 433.37,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "L",
+        "period_buggy": "1186"
+      }
+    },
+    {
+      "program": "Splash2.fft",
+      "y": 441.74,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "L",
+        "period_buggy": "3963"
+      }
+    },
+    {
+      "program": "Splash2.lu",
+      "y": 450.1,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "6129",
+        "period_buggy": "2848"
+      }
+    }
+  ]
+}

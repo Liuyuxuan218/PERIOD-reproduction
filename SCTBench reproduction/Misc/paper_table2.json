@@ -1,0 +1,23 @@
+{
+  "source": "ICSE2022_PERIOD.pdf page 9, Table 2, PERIOD columns",
+  "markers": {
+    "L": "schedule limit reached: 10000, except CS.twostage_100_bad uses 100000",
+    "%": "no bug found",
+    "-": "bug depth not applicable in the table"
+  },
+  "programs": [
+    {
+      "program": "Misc.safestack",
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": "-",
+          "to_bug": "%",
+          "buggy": 0
+        }
+      ],
+      "schedules": 6519
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+case,repetition,valid,stop_reason,schedules_explored,round_footer_total,error_interleavings,timeout_interleavings,first_bug_schedule,bug_found,elapsed_sec,exit_code,metrics_path
+Misc.safestack,1,True,completed_no_bug,135,135,0,0,,False,8.33,0,results/cases/Misc.safestack/rep01/metrics.json
+Misc.safestack,2,True,completed_no_bug,135,135,0,0,,False,8.064,0,results/cases/Misc.safestack/rep02/metrics.json
+Misc.safestack,3,True,completed_no_bug,135,135,0,0,,False,7.291,0,results/cases/Misc.safestack/rep03/metrics.json

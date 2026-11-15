@@ -1,0 +1,31 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "Inspect.qsort_mt",
+      "y": 408.28,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "27",
+        "period_schedules": "8643",
+        "period_buggy": "135"
+      }
+    },
+    {
+      "program": "Inspect.boundedbuffer",
+      "y": 416.64,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "20",
+        "period_schedules": "L",
+        "period_buggy": "1514"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "Misc.safestack",
+      "y": 425.01,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "-",
+        "period_to_bug": "%",
+        "period_schedules": "6519",
+        "period_buggy": "0"
+      }
+    }
+  ]
+}

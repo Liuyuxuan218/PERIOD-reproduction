@@ -1,0 +1,538 @@
+[
+  {
+    "program": "CS.account_bad",
+    "valid_reps": 0,
+    "attempted_reps": 0,
+    "detection_count": 0,
+    "explored_mean": null,
+    "explored_sd": null,
+    "errors_mean": null,
+    "errors_sd": null,
+    "first_bug_mean": null,
+    "first_bug_sd": null,
+    "first_bug_n": 0,
+    "timeouts_mean": null,
+    "timeouts_sd": null,
+    "paper_schedules": 65,
+    "paper_schedules_numeric": 65,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 1,
+        "to_bug": 2,
+        "buggy": 26
+      }
+    ],
+    "stop_reasons": []
+  },
+  {
+    "program": "CS.bluetooth_driver_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 205,
+    "explored_sd": 0.0,
+    "errors_mean": 6.666666666666667,
+    "errors_sd": 0.5773502691896257,
+    "first_bug_mean": 9,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 205,
+    "paper_schedules_numeric": 205,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 9,
+        "buggy": 9
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.carter01_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 0,
+    "explored_mean": 42,
+    "explored_sd": 0.0,
+    "errors_mean": 0,
+    "errors_sd": 0.0,
+    "first_bug_mean": null,
+    "first_bug_sd": null,
+    "first_bug_n": 0,
+    "timeouts_mean": 10.333333333333334,
+    "timeouts_sd": 0.5773502691896257,
+    "paper_schedules": 42,
+    "paper_schedules_numeric": 42,
+    "paper_bugs": [
+      {
+        "type": "DL",
+        "depth": 2,
+        "to_bug": 5,
+        "buggy": 11
+      }
+    ],
+    "stop_reasons": [
+      "completed_no_bug"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.circular_buffer_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 544.6666666666666,
+    "explored_sd": 2.309401076758503,
+    "errors_mean": 57.333333333333336,
+    "errors_sd": 2.0816659994661326,
+    "first_bug_mean": 16.666666666666668,
+    "first_bug_sd": 0.5773502691896257,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 871,
+    "paper_schedules_numeric": 871,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 17,
+        "buggy": 207
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": -326.33333333333337,
+    "explored_rel_diff": -0.3746651358591658
+  },
+  {
+    "program": "CS.deadlock01_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 0,
+    "explored_mean": 14,
+    "explored_sd": 0.0,
+    "errors_mean": 0,
+    "errors_sd": 0.0,
+    "first_bug_mean": null,
+    "first_bug_sd": null,
+    "first_bug_n": 0,
+    "timeouts_mean": 6,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 14,
+    "paper_schedules_numeric": 14,
+    "paper_bugs": [
+      {
+        "type": "DL",
+        "depth": 2,
+        "to_bug": 3,
+        "buggy": 6
+      }
+    ],
+    "stop_reasons": [
+      "completed_no_bug"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.lazy01_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 39,
+    "explored_sd": 0.0,
+    "errors_mean": 12,
+    "errors_sd": 0.0,
+    "first_bug_mean": 8,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 39,
+    "paper_schedules_numeric": 39,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 1,
+        "to_bug": 3,
+        "buggy": 12
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.queue_bad",
+    "valid_reps": 1,
+    "attempted_reps": 1,
+    "detection_count": 1,
+    "explored_mean": 1048,
+    "explored_sd": 0.0,
+    "errors_mean": 114,
+    "errors_sd": 0.0,
+    "first_bug_mean": 4,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 1,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 998,
+    "paper_schedules_numeric": 998,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 25,
+        "buggy": 119
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 50,
+    "explored_rel_diff": 0.050100200400801605
+  },
+  {
+    "program": "CS.reorder_10_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 2350,
+    "explored_sd": 0.0,
+    "errors_mean": 90,
+    "errors_sd": 2.0,
+    "first_bug_mean": 27,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 2350,
+    "paper_schedules_numeric": 2350,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 27,
+        "buggy": 89
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.reorder_20_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 10000,
+    "explored_sd": 0.0,
+    "errors_mean": 2848.6666666666665,
+    "errors_sd": 30.89228598426043,
+    "first_bug_mean": 39,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 12.333333333333334,
+    "timeouts_sd": 6.110100926607787,
+    "paper_schedules": "L",
+    "paper_schedules_numeric": 10000,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 39,
+        "buggy": 2870
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.reorder_3_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 27,
+    "explored_sd": 0.0,
+    "errors_mean": 6,
+    "errors_sd": 0.0,
+    "first_bug_mean": 6,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 27,
+    "paper_schedules_numeric": 27,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 6,
+        "buggy": 6
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.reorder_4_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 100,
+    "explored_sd": 0.0,
+    "errors_mean": 12,
+    "errors_sd": 0.0,
+    "first_bug_mean": 9,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 100,
+    "paper_schedules_numeric": 100,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 9,
+        "buggy": 12
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.reorder_5_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 225,
+    "explored_sd": 0.0,
+    "errors_mean": 20,
+    "errors_sd": 0.0,
+    "first_bug_mean": 12,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 225,
+    "paper_schedules_numeric": 225,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 12,
+        "buggy": 20
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.stack_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 918,
+    "explored_sd": 0.0,
+    "errors_mean": 117.66666666666667,
+    "errors_sd": 32.34707611722168,
+    "first_bug_mean": 5.666666666666667,
+    "first_bug_sd": 1.5275252316519468,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 918,
+    "paper_schedules_numeric": 918,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 3,
+        "buggy": 144
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.token_ring_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 232,
+    "explored_sd": 0.0,
+    "errors_mean": 53.333333333333336,
+    "errors_sd": 1.5275252316519468,
+    "first_bug_mean": 2.3333333333333335,
+    "first_bug_sd": 0.5773502691896257,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 232,
+    "paper_schedules_numeric": 232,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 1,
+        "to_bug": 2,
+        "buggy": 58
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.twostage_100_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 100000,
+    "explored_sd": 0.0,
+    "errors_mean": 112.66666666666667,
+    "errors_sd": 20.50203241957571,
+    "first_bug_mean": 886.3333333333334,
+    "first_bug_sd": 340.0593085526896,
+    "first_bug_n": 3,
+    "timeouts_mean": 19,
+    "timeouts_sd": 6.557438524302,
+    "paper_schedules": "L",
+    "paper_schedules_numeric": 100000,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 690,
+        "buggy": 141
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.twostage_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 33,
+    "explored_sd": 0.0,
+    "errors_mean": 2,
+    "errors_sd": 0.0,
+    "first_bug_mean": 4,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 33,
+    "paper_schedules_numeric": 33,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 4,
+        "buggy": 3
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.wronglock_3_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 172,
+    "explored_sd": 0.0,
+    "errors_mean": 42.333333333333336,
+    "errors_sd": 0.5773502691896257,
+    "first_bug_mean": 6,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 172,
+    "paper_schedules_numeric": 172,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 6,
+        "buggy": 42
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  },
+  {
+    "program": "CS.wronglock_bad",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 1464,
+    "explored_sd": 0.0,
+    "errors_mean": 217.66666666666666,
+    "errors_sd": 2.0816659994661326,
+    "first_bug_mean": 10,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 1464,
+    "paper_schedules_numeric": 1464,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 2,
+        "to_bug": 10,
+        "buggy": 210
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "program": "Splash2.barnes",
+    "valid_reps": 2,
+    "attempted_reps": 2,
+    "detection_count": 2,
+    "explored_mean": 10001,
+    "explored_sd": 0.0,
+    "errors_mean": 1365,
+    "errors_sd": 149.90663761154806,
+    "first_bug_mean": 2,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 2,
+    "timeouts_mean": 1,
+    "timeouts_sd": 0.0,
+    "paper_schedules": "L",
+    "paper_schedules_numeric": 10000,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 1,
+        "to_bug": 2,
+        "buggy": 1186
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 1,
+    "explored_rel_diff": 0.0001
+  },
+  {
+    "program": "Splash2.fft",
+    "valid_reps": 2,
+    "attempted_reps": 2,
+    "detection_count": 2,
+    "explored_mean": 10001,
+    "explored_sd": 0.0,
+    "errors_mean": 3850.5,
+    "errors_sd": 16.263455967290593,
+    "first_bug_mean": 2,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 2,
+    "timeouts_mean": 0.5,
+    "timeouts_sd": 0.7071067811865476,
+    "paper_schedules": "L",
+    "paper_schedules_numeric": 10000,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 1,
+        "to_bug": 2,
+        "buggy": 3963
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 1,
+    "explored_rel_diff": 0.0001
+  },
+  {
+    "program": "Splash2.lu",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 10001,
+    "explored_sd": 0.0,
+    "errors_mean": 4740.333333333333,
+    "errors_sd": 384.73020850114347,
+    "first_bug_mean": 2,
+    "first_bug_sd": 0.0,
+    "first_bug_n": 3,
+    "timeouts_mean": 0.3333333333333333,
+    "timeouts_sd": 0.5773502691896257,
+    "paper_schedules": 6129,
+    "paper_schedules_numeric": 6129,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 1,
+        "to_bug": 2,
+        "buggy": 2848
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 3872,
+    "explored_rel_diff": 0.6317506934247022
+  }
+]

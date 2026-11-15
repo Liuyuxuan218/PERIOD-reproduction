@@ -1,0 +1,2306 @@
+[
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 7,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 7,
+        "first_schedule": 9
+      }
+    },
+    "case": "CS.bluetooth_driver_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./bluetooth_driver_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 10.824,
+    "end_testing": true,
+    "ended": "2026-11-13T10:48:23Z",
+    "error_interleavings": 7,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_bluetooth_driver_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 205,
+    "schedule_limit": 10000,
+    "schedules_explored": 205,
+    "started": "2026-11-13T10:48:12Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.bluetooth_driver_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 7,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 7,
+        "first_schedule": 9
+      }
+    },
+    "case": "CS.bluetooth_driver_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./bluetooth_driver_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 9.375,
+    "end_testing": true,
+    "ended": "2026-11-13T10:48:32Z",
+    "error_interleavings": 7,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_bluetooth_driver_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 205,
+    "schedule_limit": 10000,
+    "schedules_explored": 205,
+    "started": "2026-11-13T10:48:23Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.bluetooth_driver_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 6,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 6,
+        "first_schedule": 9
+      }
+    },
+    "case": "CS.bluetooth_driver_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./bluetooth_driver_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 11.866,
+    "end_testing": true,
+    "ended": "2026-11-13T10:48:44Z",
+    "error_interleavings": 6,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_bluetooth_driver_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 205,
+    "schedule_limit": 10000,
+    "schedules_explored": 205,
+    "started": "2026-11-13T10:48:32Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.bluetooth_driver_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "CS.carter01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./carter01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 58.586,
+    "end_testing": true,
+    "ended": "2026-11-13T10:44:19Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_carter01_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 42,
+    "schedule_limit": 10000,
+    "schedules_explored": 42,
+    "started": "2026-11-13T10:43:20Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 11,
+    "valid": true,
+    "metrics_path": "results/cases/CS.carter01_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "CS.carter01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./carter01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 53.337,
+    "end_testing": true,
+    "ended": "2026-11-13T10:45:12Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_carter01_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 42,
+    "schedule_limit": 10000,
+    "schedules_explored": 42,
+    "started": "2026-11-13T10:44:19Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 10,
+    "valid": true,
+    "metrics_path": "results/cases/CS.carter01_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "CS.carter01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./carter01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 53.843,
+    "end_testing": true,
+    "ended": "2026-11-13T10:46:06Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_carter01_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 42,
+    "schedule_limit": 10000,
+    "schedules_explored": 42,
+    "started": "2026-11-13T10:45:12Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 10,
+    "valid": true,
+    "metrics_path": "results/cases/CS.carter01_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 58,
+        "first_schedule": 17
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 58,
+        "first_schedule": 17
+      }
+    },
+    "case": "CS.circular_buffer_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./circular_buffer_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 38.544,
+    "end_testing": true,
+    "ended": "2026-11-13T10:53:40Z",
+    "error_interleavings": 58,
+    "exit_code": 0,
+    "first_bug_schedule": 17,
+    "output_dirs": [
+      "out_circular_buffer_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 546,
+    "schedule_limit": 10000,
+    "schedules_explored": 546,
+    "started": "2026-11-13T10:53:01Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.circular_buffer_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 59,
+        "first_schedule": 16
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 59,
+        "first_schedule": 16
+      }
+    },
+    "case": "CS.circular_buffer_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./circular_buffer_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 36.075,
+    "end_testing": true,
+    "ended": "2026-11-13T10:54:16Z",
+    "error_interleavings": 59,
+    "exit_code": 0,
+    "first_bug_schedule": 16,
+    "output_dirs": [
+      "out_circular_buffer_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 546,
+    "schedule_limit": 10000,
+    "schedules_explored": 546,
+    "started": "2026-11-13T10:53:40Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.circular_buffer_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 55,
+        "first_schedule": 17
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 55,
+        "first_schedule": 17
+      }
+    },
+    "case": "CS.circular_buffer_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./circular_buffer_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 37.418,
+    "end_testing": true,
+    "ended": "2026-11-13T10:54:53Z",
+    "error_interleavings": 55,
+    "exit_code": 0,
+    "first_bug_schedule": 17,
+    "output_dirs": [
+      "out_circular_buffer_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 542,
+    "schedule_limit": 10000,
+    "schedules_explored": 542,
+    "started": "2026-11-13T10:54:16Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.circular_buffer_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "CS.deadlock01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./deadlock01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 31.713,
+    "end_testing": true,
+    "ended": "2026-11-13T10:41:43Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_deadlock01_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 14,
+    "schedule_limit": 10000,
+    "schedules_explored": 14,
+    "started": "2026-11-13T10:41:11Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 6,
+    "valid": true,
+    "metrics_path": "results/cases/CS.deadlock01_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "CS.deadlock01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./deadlock01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 31.422,
+    "end_testing": true,
+    "ended": "2026-11-13T10:42:14Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_deadlock01_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 14,
+    "schedule_limit": 10000,
+    "schedules_explored": 14,
+    "started": "2026-11-13T10:41:43Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 6,
+    "valid": true,
+    "metrics_path": "results/cases/CS.deadlock01_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "CS.deadlock01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./deadlock01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 31.454,
+    "end_testing": true,
+    "ended": "2026-11-13T10:42:46Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_deadlock01_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 14,
+    "schedule_limit": 10000,
+    "schedules_explored": 14,
+    "started": "2026-11-13T10:42:14Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 6,
+    "valid": true,
+    "metrics_path": "results/cases/CS.deadlock01_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 12,
+        "first_schedule": 8
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 12,
+        "first_schedule": 8
+      }
+    },
+    "case": "CS.lazy01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./lazy01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 5.018,
+    "end_testing": true,
+    "ended": "2026-11-13T10:43:08Z",
+    "error_interleavings": 12,
+    "exit_code": 0,
+    "first_bug_schedule": 8,
+    "output_dirs": [
+      "out_lazy01_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 39,
+    "schedule_limit": 10000,
+    "schedules_explored": 39,
+    "started": "2026-11-13T10:43:03Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.lazy01_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 12,
+        "first_schedule": 8
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 12,
+        "first_schedule": 8
+      }
+    },
+    "case": "CS.lazy01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./lazy01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 6.114,
+    "end_testing": true,
+    "ended": "2026-11-13T10:43:15Z",
+    "error_interleavings": 12,
+    "exit_code": 0,
+    "first_bug_schedule": 8,
+    "output_dirs": [
+      "out_lazy01_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 39,
+    "schedule_limit": 10000,
+    "schedules_explored": 39,
+    "started": "2026-11-13T10:43:08Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.lazy01_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 12,
+        "first_schedule": 8
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 12,
+        "first_schedule": 8
+      }
+    },
+    "case": "CS.lazy01_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./lazy01_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 4.44,
+    "end_testing": true,
+    "ended": "2026-11-13T10:43:19Z",
+    "error_interleavings": 12,
+    "exit_code": 0,
+    "first_bug_schedule": 8,
+    "output_dirs": [
+      "out_lazy01_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 39,
+    "schedule_limit": 10000,
+    "schedules_explored": 39,
+    "started": "2026-11-13T10:43:15Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.lazy01_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 114,
+        "first_schedule": 4
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 114,
+        "first_schedule": 4
+      }
+    },
+    "case": "CS.queue_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./queue_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 71.802,
+    "end_testing": true,
+    "ended": "2026-11-13T10:59:37Z",
+    "error_interleavings": 114,
+    "exit_code": 0,
+    "first_bug_schedule": 4,
+    "output_dirs": [
+      "out_queue_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 1048,
+    "schedule_limit": 10000,
+    "schedules_explored": 1048,
+    "started": "2026-11-13T10:58:25Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.queue_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 88,
+        "first_schedule": 27
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 88,
+        "first_schedule": 27
+      }
+    },
+    "case": "CS.reorder_10_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_10_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 193.477,
+    "end_testing": true,
+    "ended": "2026-11-13T13:53:36Z",
+    "error_interleavings": 88,
+    "exit_code": 0,
+    "first_bug_schedule": 27,
+    "output_dirs": [
+      "out_reorder_10_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 2350,
+    "schedule_limit": 10000,
+    "schedules_explored": 2350,
+    "started": "2026-11-13T13:50:23Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_10_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 92,
+        "first_schedule": 27
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 92,
+        "first_schedule": 27
+      }
+    },
+    "case": "CS.reorder_10_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_10_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 204.782,
+    "end_testing": true,
+    "ended": "2026-11-13T13:57:01Z",
+    "error_interleavings": 92,
+    "exit_code": 0,
+    "first_bug_schedule": 27,
+    "output_dirs": [
+      "out_reorder_10_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 2350,
+    "schedule_limit": 10000,
+    "schedules_explored": 2350,
+    "started": "2026-11-13T13:53:36Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_10_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 90,
+        "first_schedule": 27
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 90,
+        "first_schedule": 27
+      }
+    },
+    "case": "CS.reorder_10_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_10_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 237.709,
+    "end_testing": true,
+    "ended": "2026-11-13T14:00:59Z",
+    "error_interleavings": 90,
+    "exit_code": 0,
+    "first_bug_schedule": 27,
+    "output_dirs": [
+      "out_reorder_10_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 2350,
+    "schedule_limit": 10000,
+    "schedules_explored": 2350,
+    "started": "2026-11-13T13:57:01Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_10_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [
+      10001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 2882,
+        "first_schedule": 39
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 2882,
+        "first_schedule": 39
+      }
+    },
+    "case": "CS.reorder_20_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_20_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 6089.815,
+    "end_testing": true,
+    "ended": "2026-11-13T20:55:29Z",
+    "error_interleavings": 2882,
+    "exit_code": 0,
+    "first_bug_schedule": 39,
+    "output_dirs": [
+      "out_reorder_20_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 10001,
+    "schedule_limit": 10000,
+    "schedules_explored": 10000,
+    "started": "2026-11-13T19:14:00Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 7,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_20_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [
+      10001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 2821,
+        "first_schedule": 39
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 2821,
+        "first_schedule": 39
+      }
+    },
+    "case": "CS.reorder_20_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_20_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 6756.623,
+    "end_testing": true,
+    "ended": "2026-11-13T22:48:06Z",
+    "error_interleavings": 2821,
+    "exit_code": 0,
+    "first_bug_schedule": 39,
+    "output_dirs": [
+      "out_reorder_20_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10001,
+    "schedule_limit": 10000,
+    "schedules_explored": 10000,
+    "started": "2026-11-13T20:55:30Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 19,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_20_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [
+      10001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 2843,
+        "first_schedule": 39
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 2843,
+        "first_schedule": 39
+      }
+    },
+    "case": "CS.reorder_20_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_20_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 6724.031,
+    "end_testing": true,
+    "ended": "2026-11-14T00:40:11Z",
+    "error_interleavings": 2843,
+    "exit_code": 0,
+    "first_bug_schedule": 39,
+    "output_dirs": [
+      "out_reorder_20_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10001,
+    "schedule_limit": 10000,
+    "schedules_explored": 10000,
+    "started": "2026-11-13T22:48:07Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 11,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_20_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 6,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 6,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.reorder_3_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_3_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 3.008,
+    "end_testing": true,
+    "ended": "2026-11-13T10:42:50Z",
+    "error_interleavings": 6,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_reorder_3_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 27,
+    "schedule_limit": 10000,
+    "schedules_explored": 27,
+    "started": "2026-11-13T10:42:47Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_3_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 6,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 6,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.reorder_3_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_3_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2.905,
+    "end_testing": true,
+    "ended": "2026-11-13T10:42:53Z",
+    "error_interleavings": 6,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_reorder_3_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 27,
+    "schedule_limit": 10000,
+    "schedules_explored": 27,
+    "started": "2026-11-13T10:42:50Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_3_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 6,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 6,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.reorder_3_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_3_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2.63,
+    "end_testing": true,
+    "ended": "2026-11-13T10:42:55Z",
+    "error_interleavings": 6,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_reorder_3_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 27,
+    "schedule_limit": 10000,
+    "schedules_explored": 27,
+    "started": "2026-11-13T10:42:53Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_3_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 12,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 12,
+        "first_schedule": 9
+      }
+    },
+    "case": "CS.reorder_4_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_4_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 9.824,
+    "end_testing": true,
+    "ended": "2026-11-13T10:46:17Z",
+    "error_interleavings": 12,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_reorder_4_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 100,
+    "schedule_limit": 10000,
+    "schedules_explored": 100,
+    "started": "2026-11-13T10:46:07Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_4_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 12,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 12,
+        "first_schedule": 9
+      }
+    },
+    "case": "CS.reorder_4_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_4_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 8.981,
+    "end_testing": true,
+    "ended": "2026-11-13T10:46:26Z",
+    "error_interleavings": 12,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_reorder_4_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 100,
+    "schedule_limit": 10000,
+    "schedules_explored": 100,
+    "started": "2026-11-13T10:46:17Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_4_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 12,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 12,
+        "first_schedule": 9
+      }
+    },
+    "case": "CS.reorder_4_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_4_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 9.061,
+    "end_testing": true,
+    "ended": "2026-11-13T10:46:35Z",
+    "error_interleavings": 12,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_reorder_4_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 100,
+    "schedule_limit": 10000,
+    "schedules_explored": 100,
+    "started": "2026-11-13T10:46:26Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_4_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 20,
+        "first_schedule": 12
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 20,
+        "first_schedule": 12
+      }
+    },
+    "case": "CS.reorder_5_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_5_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 20.581,
+    "end_testing": true,
+    "ended": "2026-11-13T10:49:06Z",
+    "error_interleavings": 20,
+    "exit_code": 0,
+    "first_bug_schedule": 12,
+    "output_dirs": [
+      "out_reorder_5_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 225,
+    "schedule_limit": 10000,
+    "schedules_explored": 225,
+    "started": "2026-11-13T10:48:45Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_5_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 20,
+        "first_schedule": 12
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 20,
+        "first_schedule": 12
+      }
+    },
+    "case": "CS.reorder_5_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_5_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 19.201,
+    "end_testing": true,
+    "ended": "2026-11-13T10:49:25Z",
+    "error_interleavings": 20,
+    "exit_code": 0,
+    "first_bug_schedule": 12,
+    "output_dirs": [
+      "out_reorder_5_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 225,
+    "schedule_limit": 10000,
+    "schedules_explored": 225,
+    "started": "2026-11-13T10:49:06Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_5_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 20,
+        "first_schedule": 12
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 20,
+        "first_schedule": 12
+      }
+    },
+    "case": "CS.reorder_5_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./reorder_5_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 18.12,
+    "end_testing": true,
+    "ended": "2026-11-13T10:49:43Z",
+    "error_interleavings": 20,
+    "exit_code": 0,
+    "first_bug_schedule": 12,
+    "output_dirs": [
+      "out_reorder_5_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 225,
+    "schedule_limit": 10000,
+    "schedules_explored": 225,
+    "started": "2026-11-13T10:49:25Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.reorder_5_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 155,
+        "first_schedule": 4
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 155,
+        "first_schedule": 4
+      }
+    },
+    "case": "CS.stack_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./stack_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 64.43,
+    "end_testing": true,
+    "ended": "2026-11-13T10:55:59Z",
+    "error_interleavings": 155,
+    "exit_code": 0,
+    "first_bug_schedule": 4,
+    "output_dirs": [
+      "out_stack_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 918,
+    "schedule_limit": 10000,
+    "schedules_explored": 918,
+    "started": "2026-11-13T10:54:54Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.stack_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 100,
+        "first_schedule": 7
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 100,
+        "first_schedule": 7
+      }
+    },
+    "case": "CS.stack_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./stack_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 73.866,
+    "end_testing": true,
+    "ended": "2026-11-13T10:57:13Z",
+    "error_interleavings": 100,
+    "exit_code": 0,
+    "first_bug_schedule": 7,
+    "output_dirs": [
+      "out_stack_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 918,
+    "schedule_limit": 10000,
+    "schedules_explored": 918,
+    "started": "2026-11-13T10:55:59Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.stack_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 98,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 98,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.stack_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./stack_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 71.427,
+    "end_testing": true,
+    "ended": "2026-11-13T10:58:24Z",
+    "error_interleavings": 98,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_stack_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 918,
+    "schedule_limit": 10000,
+    "schedules_explored": 918,
+    "started": "2026-11-13T10:57:13Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.stack_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 53,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 53,
+        "first_schedule": 2
+      }
+    },
+    "case": "CS.token_ring_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./token_ring_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 29.728,
+    "end_testing": true,
+    "ended": "2026-11-13T10:50:14Z",
+    "error_interleavings": 53,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_token_ring_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 232,
+    "schedule_limit": 10000,
+    "schedules_explored": 232,
+    "started": "2026-11-13T10:49:45Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.token_ring_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 55,
+        "first_schedule": 3
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 55,
+        "first_schedule": 3
+      }
+    },
+    "case": "CS.token_ring_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./token_ring_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 33.3,
+    "end_testing": true,
+    "ended": "2026-11-13T10:50:48Z",
+    "error_interleavings": 55,
+    "exit_code": 0,
+    "first_bug_schedule": 3,
+    "output_dirs": [
+      "out_token_ring_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 232,
+    "schedule_limit": 10000,
+    "schedules_explored": 232,
+    "started": "2026-11-13T10:50:14Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.token_ring_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 52,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 52,
+        "first_schedule": 2
+      }
+    },
+    "case": "CS.token_ring_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./token_ring_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 24.747,
+    "end_testing": true,
+    "ended": "2026-11-13T10:51:12Z",
+    "error_interleavings": 52,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_token_ring_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 232,
+    "schedule_limit": 10000,
+    "schedules_explored": 232,
+    "started": "2026-11-13T10:50:48Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.token_ring_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [
+      100001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 124,
+        "first_schedule": 690
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 124,
+        "first_schedule": 690
+      }
+    },
+    "case": "CS.twostage_100_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "100000",
+      "./twostage_100_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 7590.885,
+    "end_testing": true,
+    "ended": "2026-11-15T00:00:58Z",
+    "error_interleavings": 124,
+    "exit_code": 0,
+    "first_bug_schedule": 690,
+    "output_dirs": [
+      "out_twostage_100_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 100001,
+    "schedule_limit": 100000,
+    "schedules_explored": 100000,
+    "started": "2026-11-14T21:54:26Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 13,
+    "valid": true,
+    "metrics_path": "results/cases/CS.twostage_100_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [
+      100001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 125,
+        "first_schedule": 1279
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 125,
+        "first_schedule": 1279
+      }
+    },
+    "case": "CS.twostage_100_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "100000",
+      "./twostage_100_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 7214.467,
+    "end_testing": true,
+    "ended": "2026-11-15T02:01:13Z",
+    "error_interleavings": 125,
+    "exit_code": 0,
+    "first_bug_schedule": 1279,
+    "output_dirs": [
+      "out_twostage_100_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 100001,
+    "schedule_limit": 100000,
+    "schedules_explored": 100000,
+    "started": "2026-11-15T00:00:58Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 18,
+    "valid": true,
+    "metrics_path": "results/cases/CS.twostage_100_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [
+      100001
+    ],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 89,
+        "first_schedule": 690
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 89,
+        "first_schedule": 690
+      }
+    },
+    "case": "CS.twostage_100_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "100000",
+      "./twostage_100_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 7357.209,
+    "end_testing": true,
+    "ended": "2026-11-15T04:03:53Z",
+    "error_interleavings": 89,
+    "exit_code": 0,
+    "first_bug_schedule": 690,
+    "output_dirs": [
+      "out_twostage_100_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 100001,
+    "schedule_limit": 100000,
+    "schedules_explored": 100000,
+    "started": "2026-11-15T02:01:13Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 26,
+    "valid": true,
+    "metrics_path": "results/cases/CS.twostage_100_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 2,
+        "first_schedule": 4
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 2,
+        "first_schedule": 4
+      }
+    },
+    "case": "CS.twostage_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./twostage_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2.081,
+    "end_testing": true,
+    "ended": "2026-11-13T10:42:58Z",
+    "error_interleavings": 2,
+    "exit_code": 0,
+    "first_bug_schedule": 4,
+    "output_dirs": [
+      "out_twostage_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 33,
+    "schedule_limit": 10000,
+    "schedules_explored": 33,
+    "started": "2026-11-13T10:42:56Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.twostage_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 2,
+        "first_schedule": 4
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 2,
+        "first_schedule": 4
+      }
+    },
+    "case": "CS.twostage_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./twostage_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2.126,
+    "end_testing": true,
+    "ended": "2026-11-13T10:43:01Z",
+    "error_interleavings": 2,
+    "exit_code": 0,
+    "first_bug_schedule": 4,
+    "output_dirs": [
+      "out_twostage_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 33,
+    "schedule_limit": 10000,
+    "schedules_explored": 33,
+    "started": "2026-11-13T10:42:58Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.twostage_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 2,
+        "first_schedule": 4
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 2,
+        "first_schedule": 4
+      }
+    },
+    "case": "CS.twostage_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./twostage_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1.97,
+    "end_testing": true,
+    "ended": "2026-11-13T10:43:02Z",
+    "error_interleavings": 2,
+    "exit_code": 0,
+    "first_bug_schedule": 4,
+    "output_dirs": [
+      "out_twostage_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 33,
+    "schedule_limit": 10000,
+    "schedules_explored": 33,
+    "started": "2026-11-13T10:43:01Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.twostage_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 42,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 42,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.wronglock_3_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./wronglock_3_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 20.416,
+    "end_testing": true,
+    "ended": "2026-11-13T10:47:27Z",
+    "error_interleavings": 42,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_wronglock_3_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 172,
+    "schedule_limit": 10000,
+    "schedules_explored": 172,
+    "started": "2026-11-13T10:47:06Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.wronglock_3_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 43,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 43,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.wronglock_3_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./wronglock_3_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 23.357,
+    "end_testing": true,
+    "ended": "2026-11-13T10:47:50Z",
+    "error_interleavings": 43,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_wronglock_3_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 172,
+    "schedule_limit": 10000,
+    "schedules_explored": 172,
+    "started": "2026-11-13T10:47:27Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.wronglock_3_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 42,
+        "first_schedule": 6
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 42,
+        "first_schedule": 6
+      }
+    },
+    "case": "CS.wronglock_3_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./wronglock_3_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 20.864,
+    "end_testing": true,
+    "ended": "2026-11-13T10:48:11Z",
+    "error_interleavings": 42,
+    "exit_code": 0,
+    "first_bug_schedule": 6,
+    "output_dirs": [
+      "out_wronglock_3_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 172,
+    "schedule_limit": 10000,
+    "schedules_explored": 172,
+    "started": "2026-11-13T10:47:50Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.wronglock_3_bad/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 216,
+        "first_schedule": 10
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 216,
+        "first_schedule": 10
+      }
+    },
+    "case": "CS.wronglock_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./wronglock_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 201.034,
+    "end_testing": true,
+    "ended": "2026-11-13T11:02:59Z",
+    "error_interleavings": 216,
+    "exit_code": 0,
+    "first_bug_schedule": 10,
+    "output_dirs": [
+      "out_wronglock_bad_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 1464,
+    "schedule_limit": 10000,
+    "schedules_explored": 1464,
+    "started": "2026-11-13T10:59:38Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.wronglock_bad/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 220,
+        "first_schedule": 10
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 220,
+        "first_schedule": 10
+      }
+    },
+    "case": "CS.wronglock_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./wronglock_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 199.999,
+    "end_testing": true,
+    "ended": "2026-11-13T11:06:19Z",
+    "error_interleavings": 220,
+    "exit_code": 0,
+    "first_bug_schedule": 10,
+    "output_dirs": [
+      "out_wronglock_bad_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 1464,
+    "schedule_limit": 10000,
+    "schedules_explored": 1464,
+    "started": "2026-11-13T11:02:59Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.wronglock_bad/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 217,
+        "first_schedule": 10
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 217,
+        "first_schedule": 10
+      }
+    },
+    "case": "CS.wronglock_bad",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./wronglock_bad"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 191.992,
+    "end_testing": true,
+    "ended": "2026-11-13T11:09:31Z",
+    "error_interleavings": 217,
+    "exit_code": 0,
+    "first_bug_schedule": 10,
+    "output_dirs": [
+      "out_wronglock_bad_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 1464,
+    "schedule_limit": 10000,
+    "schedules_explored": 1464,
+    "started": "2026-11-13T11:06:19Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CS.wronglock_bad/rep03/metrics.json"
+  }
+]

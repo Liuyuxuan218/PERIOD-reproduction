@@ -1,0 +1,134 @@
+[
+  {
+    "program": "Chess.WSQ",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 320.3333333333333,
+    "explored_sd": 23.09401076758503,
+    "errors_mean": 15,
+    "errors_sd": 0.0,
+    "first_bug_mean": 95.33333333333333,
+    "first_bug_sd": 5.773502691896257,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 434,
+    "paper_schedules_numeric": 434,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 3,
+        "to_bug": 105,
+        "buggy": 15
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": -113.66666666666669,
+    "explored_rel_diff": -0.261904761904762
+  },
+  {
+    "program": "Chess.IWSQ",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 684,
+    "explored_sd": 25.238858928247925,
+    "errors_mean": 16.333333333333332,
+    "errors_sd": 0.5773502691896257,
+    "first_bug_mean": 120.66666666666667,
+    "first_bug_sd": 3.0550504633038935,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "paper_schedules": 711,
+    "paper_schedules_numeric": 711,
+    "paper_bugs": [
+      {
+        "type": "AF",
+        "depth": 3,
+        "to_bug": 108,
+        "buggy": 17
+      }
+    ],
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": -27,
+    "explored_rel_diff": -0.0379746835443038
+  },
+  {
+    "program": "Chess.SWSQ",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 10001,
+    "explored_sd": 0.0,
+    "errors_mean": 33,
+    "errors_sd": 1.0,
+    "first_bug_mean": 1090,
+    "first_bug_sd": 892.6567089312666,
+    "first_bug_n": 3,
+    "timeouts_mean": 1,
+    "timeouts_sd": 1.0,
+    "paper_schedules": "L",
+    "paper_schedules_numeric": 10000,
+    "paper_bugs": [
+      {
+        "type": "BOF",
+        "depth": 3,
+        "to_bug": 1628,
+        "buggy": 11
+      },
+      {
+        "type": "AF",
+        "depth": 3,
+        "to_bug": 1630,
+        "buggy": 13
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 1,
+    "explored_rel_diff": 0.0001
+  },
+  {
+    "program": "Chess.IWSQWS",
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 10001,
+    "explored_sd": 0.0,
+    "errors_mean": 34.333333333333336,
+    "errors_sd": 0.5773502691896257,
+    "first_bug_mean": 2004.3333333333333,
+    "first_bug_sd": 506.7606272524863,
+    "first_bug_n": 3,
+    "timeouts_mean": 0.3333333333333333,
+    "timeouts_sd": 0.5773502691896257,
+    "paper_schedules": "L",
+    "paper_schedules_numeric": 10000,
+    "paper_bugs": [
+      {
+        "type": "BOF",
+        "depth": 3,
+        "to_bug": 1661,
+        "buggy": 11
+      },
+      {
+        "type": "AF",
+        "depth": 3,
+        "to_bug": 1663,
+        "buggy": 13
+      }
+    ],
+    "stop_reasons": [
+      "budget"
+    ],
+    "explored_abs_diff": 1,
+    "explored_rel_diff": 0.0001
+  }
+]

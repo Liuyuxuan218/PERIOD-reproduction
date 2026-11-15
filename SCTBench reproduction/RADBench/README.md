@@ -1,59 +1,18 @@
 # RADBench Reproduction
 
-## 1. Objective
+## 1. Experiment Overview
 
-This directory records the PERIOD measurements for the RADBench programs in Table 2 of Wen et al., “Controlled Concurrency Testing via Periodical Scheduling,” ICSE 2022. The group contains 5 programs: `RADBench.bug2`, `RADBench.bug3`, `RADBench.bug4`, `RADBench.bug5`, `RADBench.bug6`.
+This directory records the PERIOD reproduction of the 5 RADBench programs in Table 2 of Wen et al., “Controlled Concurrency Testing via Periodical Scheduling,” ICSE 2022. The objective is to measure those programs with PERIOD and compare the measurements with the PERIOD columns of Table 2.
 
-The purpose is to run each program at bug depth 3 under the schedule budget in the manifest, repeat that run three times, and compare the recorded schedules, error interleavings, and first-bug schedule with the PERIOD columns of Table 2. Three repetitions are the target. The counts below are the repetitions that have a valid metrics record.
+Each program is built with the build command in [manifest.json](manifest.json), using the compilers in the official PERIOD image. PERIOD then explores schedules with `run_PDS.py`. The target is three repetitions per program. Each repetition records the schedules explored, the error interleavings, the first bug schedule, the timeout interleavings, and the elapsed time in seconds.
 
-## 2. Files
+The programs are `RADBench.bug2`, `RADBench.bug3`, `RADBench.bug4`, `RADBench.bug5`, `RADBench.bug6`. Their upstream paths and workload arguments are listed in Section 3. This directory does not contain a separate description of each program's concurrency behavior beyond the manifest and [paper_table2.json](paper_table2.json), so this report does not expand abbreviations or infer a confirmed bug type from a program name.
 
-This directory contains the group report and the metrics records for the programs that have a completed run.
+## 2. Experimental Results
 
-| Path | Description |
-|---|---|
-| [`README.md`](README.md) | This report |
-| [`results/RADBench.bug2/`](results/RADBench.bug2/) | 3 valid repetition directories, each containing `metrics.json` |
-| [`results/RADBench.bug3/`](results/RADBench.bug3/) | 2 valid repetition directories, each containing `metrics.json` |
-| `RADBench.bug4` | No result directory. No completed run was submitted. |
-| [`results/RADBench.bug5/`](results/RADBench.bug5/) | 3 valid repetition directories, each containing `metrics.json` |
-| [`results/RADBench.bug6/`](results/RADBench.bug6/) | 3 valid repetition directories, each containing `metrics.json` |
+3 of the 5 programs have three valid repetitions. This group has 11 valid repetitions.
 
-The combined 36-program tables are [`../results/summary.csv`](../results/summary.csv) and [`../results/per_run.csv`](../results/per_run.csv). The runner's last-attempt snapshot, which is not the mean table, is [`../results/status.md`](../results/status.md).
-
-## 3. Source Information
-
-The benchmark sources are the upstream paths in [`../manifest.json`](../manifest.json). They were used from the official image at the commit recorded in [`../source_metadata.txt`](../source_metadata.txt).
-
-| Program | Upstream path | Build | Schedule budget | Per-schedule timeout (s) | Arguments |
-|---|---|---|---:|---:|---|
-| `RADBench.bug2` | `evaluation/RADBench/bug2` | `make` | 10000 | 5 | `LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/ LOOP_UNWINDED_NUM=1 /workdir/PERIOD/evaluation/RADBench/bug2/bin/main` |
-| `RADBench.bug3` | `evaluation/RADBench/bug3` | `make` | 10000 | 5 | `LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug3/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug3/bin/install/lib bin/main` |
-| `RADBench.bug4` | `evaluation/RADBench/bug4` | `make` | 10000 | 5 | `bin/main` |
-| `RADBench.bug5` | `evaluation/RADBench/bug5` | `make` | 10000 | 5 | `LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/ bin/main` |
-| `RADBench.bug6` | `evaluation/RADBench/bug6` | `make` | 10000 | 5 | `bin/main` |
-
-The image, the PERIOD commit, the host that produced these measurements, and the flag meanings are recorded once for all seven groups:
-
-- [`../source_metadata.txt`](../source_metadata.txt)
-- [`../SHARED_SETUP.md`](../SHARED_SETUP.md)
-- [`../docs/IMAGE.md`](../docs/IMAGE.md)
-- [`../docs/FLAG_SEMANTICS.md`](../docs/FLAG_SEMANTICS.md)
-- [`../paper_table2.json`](../paper_table2.json), the PERIOD columns of Table 2
-
-This group uses that common container and host. It does not have a separate toolchain.
-
-## 4. Reproduction Procedure and Results
-
-These programs are entries in the shared manifest. The runner is [`../scripts/run_sctbench.py`](../scripts/run_sctbench.py). It has no option that selects only the RADBench group. The suite command in [`../docs/REPRODUCTION.md`](../docs/REPRODUCTION.md) builds every manifest program and runs it.
-
-For each program, the runner executes the build command in the upstream directory, then runs `run_PDS.py` with `-y -d 3 -f` set to that program's schedule budget. If the manifest sets `exec_timeout`, the runner inserts `-t` with that value. It then appends the arguments in the table above. The repetition target is 3. A repetition that already has `valid: true` in its metrics file is left unchanged. Before each repetition the runner removes System V shared-memory key 1111 and runs one repetition at a time.
-
-The per-schedule timeout is 5 seconds except where the table above gives another value. `-d 3` is the Table 2 bug-depth bound. The schedule budget is the configured cap. A larger number in `schedules_explored` is the recorded count, not a change to that cap.
-
-After the external cases tree has been copied into this `results/` directory, the tables below are produced by [`../scripts/analyze.py`](../scripts/analyze.py), as described in the common procedure. The first-bug mean uses only repetitions that recorded a bug. In this group, every valid repetition of a program either recorded a bug or recorded none, so a printed first-bug value uses the same observation count as the valid-repetition count unless the cell says otherwise.
-
-**Actual experimental results:**
+A results cell with two or more repetitions is the mean ± the sample standard deviation, rounded to one decimal place when the value is not an integer. A single observation is the measured value, and the sample standard deviation is unavailable. `No completed run` means the program has no valid metrics file. `No error detected` means the valid runs finished without an error interleaving. A measured error count of 0 is a real zero. `Measurement unavailable` would mean a valid record omitted the field. In these records, every valid repetition of a program either recorded a bug or recorded none, so a printed first-bug number uses the same observation count as the valid-repetition count. [results/summary.csv](results/summary.csv) stores 0.0 in a standard-deviation column for a one-repetition program. That 0.0 is the script's placeholder, not a sample standard deviation.
 
 | Program | Valid repetitions | Schedules explored | Error interleavings | First bug schedule | Timeout interleavings | Elapsed time (s) |
 |---|---:|---|---|---|---|---|
@@ -63,46 +22,154 @@ After the external cases tree has been copied into this `results/` directory, th
 | RADBench.bug5 | 3 | 10001.3 ± 0.6 | 0 ± 0 | No error detected | 2.7 ± 0.6 | 16039.7 ± 452 |
 | RADBench.bug6 | 3 | 3131.7 ± 12.4 | 0 ± 0 | No error detected | 330 ± 11.5 | 1806.7 ± 60.1 |
 
-A value with two or more repetitions is the mean ± sample standard deviation, rounded to one decimal place when it is not an integer. A single measured value has no sample standard deviation; the cell says so. `No completed run` means the program has no valid metrics file. `No error detected` means the valid runs finished without an error interleaving. `Missing measurement` would mean a valid record omitted the field. Unrounded schedule, error, first-bug, and timeout values are in [`../results/summary.csv`](../results/summary.csv) and [`../results/summary.json`](../results/summary.json). Each `elapsed_sec` is kept to three decimal places in its metrics file. When `summary.csv` shows 0.0 in a standard-deviation column for a program with one valid repetition, that 0.0 is the script's one-observation placeholder, not a sample standard deviation.
+3 of the 5 programs have three valid repetitions. This group contributes 11 valid repetitions. `RADBench.bug3` has 2 valid repetitions (`rep01, rep02`); `RADBench.bug4` has no completed run. The cause of each missing repetition is not established by the submitted records. Table 2 labels `RADBench.bug5` and `RADBench.bug6` as DL. Those runs recorded 0 error interleavings. Their timeout counts stay in the timeout column and are not treated as confirmed deadlocks. `RADBench.bug3` and `RADBench.bug5` recorded a schedule total above the configured budget. The table keeps the recorded totals. `RADBench.bug2` ended before the configured budget. Table 2 marks that schedule cell L.
 
-The evidence submitted for each repetition is a metrics record, `metrics.json`. This directory does not contain the raw scheduler log or a replay log. A representative record is [`results/RADBench.bug2/rep01/metrics.json`](results/RADBench.bug2/rep01/metrics.json), repetition 1 of `RADBench.bug2`:
+The per-program records are in [results/cases/](results/cases/). The group tables are [results/summary.csv](results/summary.csv) and [results/per_run.csv](results/per_run.csv). The runner's last-attempt snapshot for these programs is [results/status.md](results/status.md); its explored column is the last attempt, not the mean. No raw scheduler log is stored here, so this report does not quote one and does not claim that a schedule was replayed.
 
-```text
-command: python3 /workdir/PERIOD/tool/DBDS/run_PDS.py -y -d 3 -f 10000 LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/ LOOP_UNWINDED_NUM=1 /workdir/PERIOD/evaluation/RADBench/bug2/bin/main
-schedules_explored: 8423
-error_interleavings: 8
-first_bug_schedule: 2472
-timeout_interleavings: 0
-elapsed_sec: 1777.262
-stop_reason: completed
-valid: true
+## 3. Environment and Configuration
+
+The host and the container used for these measurements are:
+
+| Item | Applies to | Value |
+|---|---|---|
+| CPU | Host | Intel Core i7-13650HX |
+| Logical processors | Host | 20 (14 cores) |
+| Memory visible to the experiment | Host, as reported by WSL | about 11 GiB of the host's 24 GiB |
+| System and kernel | Host | WSL2, kernel 6.18.58.1-microsoft-standard-WSL2 |
+| Docker Engine | Host | 29.1.3 |
+| Docker image | Container | `wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc` |
+| Operating system | Container | Ubuntu 18.04.5 LTS |
+| PERIOD source commit | Container | `b6f72a7b06d01ffa7114b640312873ec2578a5ea` |
+| GCC | Container | 7.5.0 |
+| Clang | Container | 10.0.0 |
+| LLVM | Container | 10.0.0 |
+| Python used by `run_PDS.py` | Container | 3.6.9 |
+| NumPy used with that Python | Container | 1.19.5 |
+
+The same record, with the distinction from the paper workstation and from the other contributor's host file, is in [environment.md](environment.md) and [shared_setup.md](shared_setup.md). The image digest is checked in [image.md](image.md). Flag meanings are in [flag_semantics.md](flag_semantics.md). The upstream paths and the modification statement are in [source_metadata.txt](source_metadata.txt).
+
+The shared settings are bug depth 3 (`-d 3`), a configured schedule budget of 10,000 (`-f 10000`), and three repetitions. The per-schedule timeout is 5 seconds except where the table gives another value. Every submitted metrics command in this group records those settings. A recorded schedule total above the configured budget is kept as measured. The workload arguments are:
+
+| Program | Upstream path | Build | Schedule budget | Per-schedule timeout (s) | Arguments |
+|---|---|---|---:|---:|---|
+| `RADBench.bug2` | `evaluation/RADBench/bug2` | `make` | 10000 | 5 | `LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/ LOOP_UNWINDED_NUM=1 /workdir/PERIOD/evaluation/RADBench/bug2/bin/main` |
+| `RADBench.bug3` | `evaluation/RADBench/bug3` | `make` | 10000 | 5 | `LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug3/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug3/bin/install/lib bin/main` |
+| `RADBench.bug4` | `evaluation/RADBench/bug4` | `make` | 10000 | 5 | `bin/main` |
+| `RADBench.bug5` | `evaluation/RADBench/bug5` | `make` | 10000 | 5 | `LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/ bin/main` |
+| `RADBench.bug6` | `evaluation/RADBench/bug6` | `make` | 10000 | 5 | `bin/main` |
+
+The build command for every RADBench program is `make`. Several argument lists begin with an `LD_LIBRARY_PATH=...` token, stored as an argument in the manifest and in the metrics commands. `RADBench.bug2` also includes the token `LOOP_UNWINDED_NUM=1`.
+
+## 4. Reproduction Instructions
+
+
+The commands below use this directory by itself. They do not read another group's files. Run the host commands in Ubuntu or in Ubuntu on WSL2. Docker Engine newer than 18.09.7 must be able to start a privileged container.
+
+### Obtain this directory
+
+On the host:
+
+```bash
+git clone https://github.com/Liuyuxuan218/PERIOD-reproduction.git
+cd PERIOD-reproduction
+export REPO="$(pwd)"
+export GROUP="${REPO}/SCTBench reproduction/RADBench"
 ```
 
-The lines above are the fields stored in that file. The same fields are present in every repetition directory linked in this group.
+### Prepare the environment
+
+On the host, download the pinned image and confirm `SCHED_DEADLINE`:
+
+```bash
+docker pull wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
+docker run --rm --privileged wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc \
+  chrt -m | grep SCHED_DEADLINE
+```
+
+Prepare this group's external data directory and copy its manifest and runner. The runner writes under `/experiment-data/sctbench/RADBench`, which the bind mount exposes from `${SCT_DATA}/sctbench/RADBench`.
+
+```bash
+export SCT_DATA="${HOME}/sctbench-data"
+mkdir -p "${SCT_DATA}/sctbench/RADBench/scripts"
+cp "${GROUP}/manifest.json" "${SCT_DATA}/sctbench/RADBench/manifest.json"
+cp "${GROUP}/scripts/run_sctbench.py" "${SCT_DATA}/sctbench/RADBench/scripts/run_sctbench.py"
+```
+
+Start the container on the host, if it is not already running:
+
+```bash
+docker run -d --privileged --name period-sctbench \
+  --mount "type=bind,source=${SCT_DATA},target=/experiment-data" \
+  wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc \
+  sleep infinity
+docker exec period-sctbench git -C /workdir/PERIOD rev-parse HEAD
+```
+
+The printed commit is `b6f72a7b06d01ffa7114b640312873ec2578a5ea`.
+
+### Reuse completed repetitions
+
+The submitted repetitions are in `"${GROUP}/results/cases"`. Copy them into the external tree before a new suite. `run_sctbench.py` leaves a repetition unchanged when its `metrics.json` already has `"valid": true`, so those runs are not repeated and their files are not overwritten.
+
+```bash
+mkdir -p "${SCT_DATA}/sctbench/RADBench/cases"
+cp -a "${GROUP}/results/cases/." "${SCT_DATA}/sctbench/RADBench/cases/"
+```
+
+An earlier combined suite, if it is still on this machine, is at `${SCT_DATA}/sctbench/cases`. That directory is not the output path of this group's runner.
+
+### Build and run
+
+Inside the container, through `docker exec`:
+
+```bash
+docker exec period-sctbench python3 /experiment-data/sctbench/RADBench/scripts/run_sctbench.py \
+  /experiment-data/sctbench/RADBench/manifest.json --suite
+```
+
+The runner accepts `--suite`. This group's manifest has no pilot program, so `--pilot` is not an entry point. It refuses a manifest program from another group. There is no flag that selects a single program. Each program is built with its manifest build command and then run as `run_PDS.py -y -d 3 -f <schedule budget>` plus that program's arguments. New output is written to `${SCT_DATA}/sctbench/RADBench/cases/<program>/repNN/`.
+
+### Collect the records and build the tables
+
+On the host, copy finished external records into this directory. The command copies only programs named in this group's manifest, leaves the source tree in place, and does not replace a destination file whose bytes differ.
+
+```bash
+python3 "${GROUP}/scripts/analyze.py" --collect "${SCT_DATA}/sctbench/RADBench/cases"
+```
+
+The same command accepts the original combined tree and still copies only this group:
+
+```bash
+python3 "${GROUP}/scripts/analyze.py" --collect "${SCT_DATA}/sctbench/cases"
+```
+
+Generate this group's tables from the records already stored in `results/cases`. The script locates that directory from its own path, so the current directory does not matter. It writes `results/summary.csv` and `results/per_run.csv` inside this group only.
+
+```bash
+python3 "${GROUP}/scripts/analyze.py"
+```
+
+To aggregate an external cases directory without copying it, pass that directory. Programs from other groups are ignored, and the external files stay where they are:
+
+```bash
+python3 "${GROUP}/scripts/analyze.py" "${SCT_DATA}/sctbench/cases"
+```
 
 
-### Comparison with the Official Reference
+## 5. Comparison with Table 2
 
-The published values are the PERIOD columns in [`../paper_table2.json`](../paper_table2.json). Paper values and measured values are labeled in each paragraph.
+Published values are the PERIOD columns in [paper_table2.json](paper_table2.json). `L` means the configured schedule budget. Measured cells use the same rules as Section 2.
 
-**RADBench.bug2.** Table 2 marks the schedule column L, the configured budget of 10000. It labels the row AF, lists 9 buggy schedules, and lists the first bug at schedule 1985. The three repetitions recorded 8423, 8637, 8370 schedules (8476.7 ± 141.4). The three repetitions recorded 8, 9, 9 error interleavings (8.7 ± 0.6). All three repetitions recorded 2472 for the first-bug schedule. The error count differs from the published buggy-schedule count of 9. The metrics do not establish the cause. The first-bug schedule differs from Table 2. The metrics do not establish the cause. The runs ended before the configured budget of 10000. The recorded stop reason is completed. The metrics do not establish why the search stopped short of the budget Table 2 marks as L.
+| Program | Table 2 schedules | Measured schedules | Table 2 buggy schedules | Measured error interleavings | Table 2 first bug | Measured first bug |
+|---|---|---|---|---|---|---|
+| RADBench.bug2 | L (budget 10000) | 8476.7 ± 141.4 | 9 | 8.7 ± 0.6 | 1985 | 2472 ± 0 |
+| RADBench.bug3 | L (budget 10000) | 10001.5 ± 0.7 | 3478 | 3811 ± 1.4 | 42 | 31.5 ± 2.1 |
+| RADBench.bug4 | L (budget 10000) | No completed run | 6 | No completed run | 259 | No completed run |
+| RADBench.bug5 | L (budget 10000) | 10001.3 ± 0.6 | 0 | 0 ± 0 | no bug found (%) | No error detected |
+| RADBench.bug6 | 2950 | 3131.7 ± 12.4 | 340 | 0 ± 0 | 24 | No error detected |
 
-**RADBench.bug3.** Table 2 marks the schedule column L, the configured budget of 10000. It labels the row AF, lists 3478 buggy schedules, and lists the first bug at schedule 42. The two repetitions recorded 10002, 10001 schedules (10001.5 ± 0.7). The two repetitions recorded 3812, 3810 error interleavings (3811 ± 1.4). The two repetitions recorded 30, 33 for the first-bug schedule (31.5 ± 2.1). The error count differs from the published buggy-schedule count of 3478. The metrics do not establish the cause. The first-bug schedule differs from Table 2. The metrics do not establish the cause. Both repetitions recorded 1 timeout interleavings. Timeouts are reported separately from error interleavings and are not treated as confirmed deadlocks. The recorded schedule count is above the configured budget of 10000. Every submitted repetition has an empty bare_test_lines list. The metrics store round_footer_total separately (10008, 10008). The raw scheduler log is not in this submission, so the extra executed count remains unresolved. `RADBench.bug3` has valid repetitions rep01, rep02. [`../results/status.md`](../results/status.md) lists the last attempt as incomplete, with explored 0. That incomplete attempt has no metrics file in this submission, and the cause is not established.
-
-**RADBench.bug4.** Table 2 marks the schedule column L, the configured budget of 10000. It labels the row AF, lists 6 buggy schedules, and lists the first bug at schedule 259. No completed run was submitted. There is no measured comparison. `RADBench.bug4` has no result directory. [`../results/status.md`](../results/status.md) lists the build column as ok, 0 valid repetitions, last stop incomplete, and explored 0. The cause of the missing run is not established by the submitted records.
-
-**RADBench.bug5.** Table 2 marks the schedule column L, the configured budget of 10000. It labels the row DL, lists 0 buggy schedules, and marks the first bug as %, which this transcription records as no bug found. The three repetitions recorded 10001, 10001, 10002 schedules (10001.3 ± 0.6). All three repetitions recorded 0 error interleavings. No repetition recorded an error interleaving, so the first-bug schedule is not defined for these runs. The error count matches the published buggy-schedule count. Table 2 marks no bug found, and these runs likewise recorded no error interleaving. The three repetitions recorded 3, 3, 2 timeout interleavings (2.7 ± 0.6). The same runs recorded 0 error interleavings. A timeout is the per-schedule time limit. It is reported separately and is not treated as a confirmed deadlock. The recorded schedule count is above the configured budget of 10000. Every submitted repetition has an empty bare_test_lines list. The metrics store round_footer_total separately (10039, 10031, 10025). The raw scheduler log is not in this submission, so the extra executed count remains unresolved.
-
-**RADBench.bug6.** Table 2 lists 2950 schedules. It labels the row DL, lists 340 buggy schedules, and lists the first bug at schedule 24. The three repetitions recorded 3146, 3124, 3125 schedules (3131.7 ± 12.4). All three repetitions recorded 0 error interleavings. No repetition recorded an error interleaving, so the first-bug schedule is not defined for these runs. The schedule total differs from Table 2. The metrics do not establish the cause. Table 2 lists 340 buggy schedules. These runs recorded no error interleaving. The metrics do not establish the cause. Table 2 lists the first bug at schedule 24. These runs have no first-bug schedule because they recorded no error interleaving. The three repetitions recorded 342, 329, 319 timeout interleavings (330 ± 11.5). The same runs recorded 0 error interleavings. A timeout is the per-schedule time limit. It is reported separately and is not treated as a confirmed deadlock.
+Some compared columns match, and others differ, for `RADBench.bug5`. The table above is the column-by-column record. The metrics do not establish the cause of a differing column. The compared columns differ for `RADBench.bug2`, `RADBench.bug3`, and `RADBench.bug6`. There is no measured comparison for `RADBench.bug4`, because no valid repetition was submitted. The configured limit and the recorded schedule total are different quantities for `RADBench.bug3` and `RADBench.bug5`. The recorded totals exceed the limit and are left unchanged. Their interpretation remains unresolved; the raw scheduler logs are not in this submission. `RADBench.bug2` stopped before the configured budget, while Table 2 marks the schedule cell L. The metrics do not establish why the search stopped short of that budget.
 
 ### Final Result
 
-The RADBench group has 5 programs and 11 valid repetitions in the submitted metrics. 3 of the 5 programs have the intended three repetitions.
-
-`RADBench.bug3` has valid repetitions rep01, rep02. [`../results/status.md`](../results/status.md) lists the last attempt as incomplete, with explored 0. That incomplete attempt has no metrics file in this submission, and the cause is not established. `RADBench.bug4` has no result directory. [`../results/status.md`](../results/status.md) lists the build column as ok, 0 valid repetitions, last stop incomplete, and explored 0. The cause of the missing run is not established by the submitted records.
-
-No program in this group matches Table 2 on the schedule figure, the error count, and the first-bug figure together. The individual differences are stated above.
-
-`RADBench.bug3` and `RADBench.bug5` have a recorded schedule total above the configured budget. That difference remains unresolved.
-
-Timeout interleavings stay separate from error interleavings. The group evidence is the metrics records linked above. Raw scheduler logs and replay logs were not submitted, so this report does not claim replay confirmation.
+The submitted evidence establishes 11 valid repetitions in this group and three completed repetitions for 3 of the 5 programs. Unfinished measurements remain for `RADBench.bug3` and `RADBench.bug4`. No program in this group matches Table 2 on the schedule total, the error count, and the first-bug schedule together. Recorded schedule totals above the configured budget are kept as measured. Other numeric differences remain unresolved. Timeout interleavings are not confirmed bugs.

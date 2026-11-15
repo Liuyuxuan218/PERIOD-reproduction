@@ -1,0 +1,74 @@
+{
+  "source": "ICSE2022_PERIOD.pdf page 9, Table 2, PERIOD columns",
+  "markers": {
+    "L": "schedule limit reached: 10000, except CS.twostage_100_bad uses 100000",
+    "%": "no bug found",
+    "-": "bug depth not applicable in the table"
+  },
+  "programs": [
+    {
+      "program": "Chess.WSQ",
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 3,
+          "to_bug": 105,
+          "buggy": 15
+        }
+      ],
+      "schedules": 434
+    },
+    {
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 3,
+          "to_bug": 108,
+          "buggy": 17
+        }
+      ],
+      "schedules": 711,
+      "program": "Chess.IWSQ"
+    },
+    {
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "BOF",
+          "depth": 3,
+          "to_bug": 1628,
+          "buggy": 11
+        },
+        {
+          "type": "AF",
+          "depth": 3,
+          "to_bug": 1630,
+          "buggy": 13
+        }
+      ],
+      "schedules": "L",
+      "program": "Chess.SWSQ"
+    },
+    {
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "BOF",
+          "depth": 3,
+          "to_bug": 1661,
+          "buggy": 11
+        },
+        {
+          "type": "AF",
+          "depth": 3,
+          "to_bug": 1663,
+          "buggy": 13
+        }
+      ],
+      "schedules": "L",
+      "program": "Chess.IWSQWS"
+    }
+  ]
+}

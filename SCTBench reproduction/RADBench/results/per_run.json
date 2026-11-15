@@ -1,0 +1,481 @@
+[
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "SEGV": {
+        "count": 8,
+        "first_schedule": 2472
+      }
+    },
+    "by_type_log": {
+      "SEGV": {
+        "count": 8,
+        "first_schedule": 2472
+      }
+    },
+    "case": "RADBench.bug2",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/",
+      "LOOP_UNWINDED_NUM=1",
+      "/workdir/PERIOD/evaluation/RADBench/bug2/bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1777.262,
+    "end_testing": true,
+    "ended": "2026-11-14T20:53:35Z",
+    "error_interleavings": 8,
+    "exit_code": 0,
+    "first_bug_schedule": 2472,
+    "output_dirs": [
+      "out__1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 8423,
+    "schedule_limit": 10000,
+    "schedules_explored": 8423,
+    "started": "2026-11-14T20:23:58Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug2/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "SEGV": {
+        "count": 9,
+        "first_schedule": 2472
+      }
+    },
+    "by_type_log": {
+      "SEGV": {
+        "count": 9,
+        "first_schedule": 2472
+      }
+    },
+    "case": "RADBench.bug2",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/",
+      "LOOP_UNWINDED_NUM=1",
+      "/workdir/PERIOD/evaluation/RADBench/bug2/bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1861.167,
+    "end_testing": true,
+    "ended": "2026-11-14T21:24:36Z",
+    "error_interleavings": 9,
+    "exit_code": 0,
+    "first_bug_schedule": 2472,
+    "output_dirs": [
+      "out__1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 8637,
+    "schedule_limit": 10000,
+    "schedules_explored": 8637,
+    "started": "2026-11-14T20:53:35Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug2/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "SEGV": {
+        "count": 9,
+        "first_schedule": 2472
+      }
+    },
+    "by_type_log": {
+      "SEGV": {
+        "count": 9,
+        "first_schedule": 2472
+      }
+    },
+    "case": "RADBench.bug2",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/",
+      "LOOP_UNWINDED_NUM=1",
+      "/workdir/PERIOD/evaluation/RADBench/bug2/bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1787.809,
+    "end_testing": true,
+    "ended": "2026-11-14T21:54:24Z",
+    "error_interleavings": 9,
+    "exit_code": 0,
+    "first_bug_schedule": 2472,
+    "output_dirs": [
+      "out__1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 8370,
+    "schedule_limit": 10000,
+    "schedules_explored": 8370,
+    "started": "2026-11-14T21:24:36Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug2/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 3812,
+        "first_schedule": 30
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 3812,
+        "first_schedule": 30
+      }
+    },
+    "case": "RADBench.bug3",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug3/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug3/bin/install/lib",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1487.185,
+    "end_testing": true,
+    "ended": "2026-11-14T19:58:49Z",
+    "error_interleavings": 3812,
+    "exit_code": 0,
+    "first_bug_schedule": 30,
+    "output_dirs": [
+      "out_lib_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 10008,
+    "schedule_limit": 10000,
+    "schedules_explored": 10002,
+    "started": "2026-11-14T19:34:02Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug3/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 3810,
+        "first_schedule": 33
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 3810,
+        "first_schedule": 33
+      }
+    },
+    "case": "RADBench.bug3",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug3/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug3/bin/install/lib",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1458.037,
+    "end_testing": true,
+    "ended": "2026-11-14T20:23:08Z",
+    "error_interleavings": 3810,
+    "exit_code": 0,
+    "first_bug_schedule": 33,
+    "output_dirs": [
+      "out_lib_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10008,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T19:58:50Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug3/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "RADBench.bug5",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 15584.287,
+    "end_testing": true,
+    "ended": "2026-11-14T10:30:38Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out__1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 10039,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T06:10:54Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 3,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug5/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "RADBench.bug5",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 16046.732,
+    "end_testing": true,
+    "ended": "2026-11-14T14:58:05Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out__1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10031,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-14T10:30:38Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 3,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug5/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "RADBench.bug5",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 16488.141,
+    "end_testing": true,
+    "ended": "2026-11-14T19:32:53Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out__1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10025,
+    "schedule_limit": 10000,
+    "schedules_explored": 10002,
+    "started": "2026-11-14T14:58:05Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 2,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug5/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "RADBench.bug6",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1865.979,
+    "end_testing": true,
+    "ended": "2026-11-14T05:10:28Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_main_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 3146,
+    "schedule_limit": 10000,
+    "schedules_explored": 3146,
+    "started": "2026-11-14T04:39:22Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 342,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug6/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "RADBench.bug6",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1808.223,
+    "end_testing": true,
+    "ended": "2026-11-14T05:40:36Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_main_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 3124,
+    "schedule_limit": 10000,
+    "schedules_explored": 3124,
+    "started": "2026-11-14T05:10:28Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 329,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug6/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": false,
+    "by_type_files": {},
+    "by_type_log": {},
+    "case": "RADBench.bug6",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "bin/main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1745.851,
+    "end_testing": true,
+    "ended": "2026-11-14T06:09:42Z",
+    "error_interleavings": 0,
+    "exit_code": 0,
+    "first_bug_schedule": null,
+    "output_dirs": [
+      "out_main_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 3125,
+    "schedule_limit": 10000,
+    "schedules_explored": 3125,
+    "started": "2026-11-14T05:40:36Z",
+    "stop_reason": "completed_no_bug",
+    "timeout_interleavings": 319,
+    "valid": true,
+    "metrics_path": "results/cases/RADBench.bug6/rep03/metrics.json"
+  }
+]

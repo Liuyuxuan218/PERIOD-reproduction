@@ -1,0 +1,75 @@
+{
+  "source": "ICSE2022_PERIOD.pdf page 9, Table 2, PERIOD columns",
+  "markers": {
+    "L": "schedule limit reached: 10000, except CS.twostage_100_bad uses 100000",
+    "%": "no bug found",
+    "-": "bug depth not applicable in the table"
+  },
+  "programs": [
+    {
+      "program": "RADBench.bug2",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 3,
+          "to_bug": 1985,
+          "buggy": 9
+        }
+      ],
+      "schedules": "L"
+    },
+    {
+      "program": "RADBench.bug3",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 42,
+          "buggy": 3478
+        }
+      ],
+      "schedules": "L"
+    },
+    {
+      "program": "RADBench.bug4",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 3,
+          "to_bug": 259,
+          "buggy": 6
+        }
+      ],
+      "schedules": "L"
+    },
+    {
+      "program": "RADBench.bug5",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "DL",
+          "depth": 2,
+          "to_bug": "%",
+          "buggy": 0
+        }
+      ],
+      "schedules": "L"
+    },
+    {
+      "program": "RADBench.bug6",
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "DL",
+          "depth": 2,
+          "to_bug": 24,
+          "buggy": 340
+        }
+      ],
+      "schedules": 2950
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "source": "ICSE2022_PERIOD.pdf page 9, Table 2, PERIOD columns",
+  "markers": {
+    "L": "schedule limit reached: 10000, except CS.twostage_100_bad uses 100000",
+    "%": "no bug found",
+    "-": "bug depth not applicable in the table"
+  },
+  "programs": [
+    {
+      "program": "CB.aget-bug",
+      "threads": 3,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 9,
+          "buggy": 679
+        }
+      ],
+      "schedules": 3279
+    },
+    {
+      "threads": 2,
+      "bugs": [
+        {
+          "type": "AF",
+          "depth": 2,
+          "to_bug": 12,
+          "buggy": 16
+        }
+      ],
+      "schedules": 163,
+      "program": "CB.stringbuffer"
+    },
+    {
+      "threads": 4,
+      "bugs": [
+        {
+          "type": "BOF",
+          "depth": 2,
+          "to_bug": 41,
+          "buggy": 14
+        },
+        {
+          "type": "NPD",
+          "depth": 2,
+          "to_bug": 52,
+          "buggy": 41
+        },
+        {
+          "type": "UAF",
+          "depth": 1,
+          "to_bug": 53,
+          "buggy": 24
+        }
+      ],
+      "schedules": 1626,
+      "program": "CB.pbzip2"
+    }
+  ]
+}

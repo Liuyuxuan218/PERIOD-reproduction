@@ -1,0 +1,68 @@
+{
+  "upstream_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+  "image_id": "sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "bug_depth": 3,
+  "repetitions": 3,
+  "cases": [
+    {
+      "id": "Chess.WSQ",
+      "workdir": "evaluation/Chess/WorkStealQueue",
+      "build": "./build.sh",
+      "argv": [
+        "./WorkStealQueue",
+        "1",
+        "4",
+        "2"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 3,
+      "paper_type": "AF",
+      "paper_depth": 3
+    },
+    {
+      "id": "Chess.IWSQ",
+      "workdir": "evaluation/Chess/InterlockedWorkStealQueue",
+      "build": "./build.sh",
+      "argv": [
+        "./InterlockedWorkStealQueue",
+        "1",
+        "4",
+        "2"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 3,
+      "paper_type": "AF",
+      "paper_depth": 3
+    },
+    {
+      "id": "Chess.SWSQ",
+      "workdir": "evaluation/Chess/StateWorkStealQueue",
+      "build": "./build.sh",
+      "argv": [
+        "./StateWorkStealQueue",
+        "2",
+        "4",
+        "2"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 3,
+      "paper_type": "BOF+AF",
+      "paper_depth": 3
+    },
+    {
+      "id": "Chess.IWSQWS",
+      "workdir": "evaluation/Chess/InterlockedWorkStealQueueWithState",
+      "build": "./build.sh",
+      "argv": [
+        "./InterlockedWorkStealQueueWithState",
+        "2",
+        "4",
+        "2"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 3,
+      "paper_type": "BOF+AF",
+      "paper_depth": 3
+    }
+  ]
+}

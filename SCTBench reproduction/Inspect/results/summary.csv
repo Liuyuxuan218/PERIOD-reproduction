@@ -1,0 +1,3 @@
+program,valid_reps,detection_count,explored_mean,explored_sd,errors_mean,errors_sd,first_bug_mean,first_bug_sd,first_bug_n,timeouts_mean,paper_schedules,explored_abs_diff,explored_rel_diff
+Inspect.qsort_mt,3,3,10001,0.0,138.66666666666666,2.309401076758503,27,0.0,3,0,8643,1358,0.15712136989471248
+Inspect.boundedbuffer,3,3,10001,0.0,714.3333333333334,28.448784391135824,13.666666666666666,4.509249752822894,3,0.3333333333333333,L,1,0.0001

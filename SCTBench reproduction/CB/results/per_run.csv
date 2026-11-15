@@ -1,0 +1,10 @@
+case,repetition,valid,stop_reason,schedules_explored,round_footer_total,error_interleavings,timeout_interleavings,first_bug_schedule,bug_found,elapsed_sec,exit_code,metrics_path
+CB.aget-bug,1,True,completed,3945,3945,715,0,9,True,800.037,0,results/cases/CB.aget-bug/rep01/metrics.json
+CB.aget-bug,2,True,completed,3945,3945,692,1,9,True,778.609,0,results/cases/CB.aget-bug/rep02/metrics.json
+CB.aget-bug,3,True,completed,3945,3945,701,0,9,True,782.57,0,results/cases/CB.aget-bug/rep03/metrics.json
+CB.stringbuffer,1,True,completed,163,163,4,0,121,True,9.295,0,results/cases/CB.stringbuffer/rep01/metrics.json
+CB.stringbuffer,2,True,completed,163,163,4,0,121,True,8.799,0,results/cases/CB.stringbuffer/rep02/metrics.json
+CB.stringbuffer,3,True,completed,163,163,4,0,121,True,9.588,0,results/cases/CB.stringbuffer/rep03/metrics.json
+CB.pbzip2,1,True,completed,1464,1464,94,0,41,True,2889.984,0,results/cases/CB.pbzip2/rep01/metrics.json
+CB.pbzip2,2,True,completed,1838,1838,111,0,50,True,3686.826,0,results/cases/CB.pbzip2/rep02/metrics.json
+CB.pbzip2,3,True,completed,1526,1526,107,0,52,True,3069.066,0,results/cases/CB.pbzip2/rep03/metrics.json

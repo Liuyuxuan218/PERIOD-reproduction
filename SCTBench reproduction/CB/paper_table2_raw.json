@@ -1,0 +1,71 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "CB.aget-bug",
+      "y": 317.87,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "9",
+        "period_schedules": "3279",
+        "period_buggy": "679"
+      }
+    },
+    {
+      "program": "CB.stringbuffer",
+      "y": 326.23,
+      "rows": [
+        {
+          "bug_type": "BOF",
+          "bug_depth": "2",
+          "period_to_bug": "41",
+          "period_buggy": "14"
+        }
+      ],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "12",
+        "period_schedules": "163",
+        "period_buggy": "16"
+      }
+    },
+    {
+      "program": "CB.pbzip2",
+      "y": 342.56,
+      "rows": [
+        {
+          "bug_type": "UAF",
+          "bug_depth": "1",
+          "period_to_bug": "53"
+        },
+        {
+          "period_schedules": "1626"
+        },
+        {
+          "period_buggy": "24"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "shared": {
+        "threads": "4",
+        "bug_type": "NPD",
+        "bug_depth": "2",
+        "period_to_bug": "52",
+        "period_buggy": "41"
+      }
+    }
+  ]
+}

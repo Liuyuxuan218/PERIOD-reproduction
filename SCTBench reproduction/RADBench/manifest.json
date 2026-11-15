@@ -1,0 +1,111 @@
+{
+  "upstream_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+  "image_id": "sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "bug_depth": 3,
+  "repetitions": 3,
+  "cases": [
+    {
+      "id": "RADBench.bug6",
+      "workdir": "evaluation/RADBench/bug6",
+      "build": "make",
+      "argv": [
+        "bin/main"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "DL",
+      "paper_depth": 2,
+      "fetch": [
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8/src/nspr-4.8.tar.gz",
+          "dest": "src/nspr-4.8.tar.gz"
+        }
+      ]
+    },
+    {
+      "id": "RADBench.bug4",
+      "workdir": "evaluation/RADBench/bug4",
+      "build": "make",
+      "argv": [
+        "bin/main"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 3,
+      "fetch": [
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.6.4/src/nspr-4.6.4.tar.gz",
+          "dest": "src/nspr-4.6.4.tar.gz"
+        }
+      ]
+    },
+    {
+      "id": "RADBench.bug5",
+      "workdir": "evaluation/RADBench/bug5",
+      "build": "make",
+      "argv": [
+        "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/",
+        "bin/main"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "DL",
+      "paper_depth": 2,
+      "fetch": [
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8.6/src/nspr-4.8.6.tar.gz",
+          "dest": "src/nspr-4.8.6.tar.gz"
+        }
+      ]
+    },
+    {
+      "id": "RADBench.bug3",
+      "workdir": "evaluation/RADBench/bug3",
+      "build": "make",
+      "argv": [
+        "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug3/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug3/bin/install/lib",
+        "bin/main"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 2,
+      "fetch": [
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.3/src/nspr-4.7.3.tar.gz",
+          "dest": "src/nspr-4.7.3.tar.gz"
+        },
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz",
+          "dest": "src/js-1.8.0-rc1.tar.gz"
+        }
+      ]
+    },
+    {
+      "id": "RADBench.bug2",
+      "workdir": "evaluation/RADBench/bug2",
+      "build": "make",
+      "argv": [
+        "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/",
+        "LOOP_UNWINDED_NUM=1",
+        "/workdir/PERIOD/evaluation/RADBench/bug2/bin/main"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 2,
+      "paper_type": "AF",
+      "paper_depth": 3,
+      "fetch": [
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.6.7/src/nspr-4.6.7.tar.gz",
+          "dest": "src/nspr-4.6.7.tar.gz"
+        },
+        {
+          "url": "https://ftp.mozilla.org/pub/mozilla.org/js/js-1.7.0.tar.gz",
+          "dest": "src/js-1.7.0.tar.gz"
+        }
+      ],
+      "notes": "LOOP_UNWINDED_NUM=1 and LD_LIBRARY_PATH are the artifact run command. --no-prefix is not used."
+    }
+  ]
+}

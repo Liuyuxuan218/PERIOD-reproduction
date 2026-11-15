@@ -1,0 +1,357 @@
+[
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 1471,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 1471,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.barnes",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./BARNES"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2418.024,
+    "end_testing": true,
+    "ended": "2026-11-13T17:44:38Z",
+    "error_interleavings": 1471,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_BARNES_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10007,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T17:04:20Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.barnes/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 1259,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 1259,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.barnes",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./BARNES"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2431.015,
+    "end_testing": true,
+    "ended": "2026-11-13T18:25:10Z",
+    "error_interleavings": 1259,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_BARNES_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10007,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T17:44:39Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.barnes/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 3839,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 3839,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.fft",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LOOP_UNWINDED_NUM=3",
+      "./FFT",
+      "-p2",
+      "-m2",
+      "-n4",
+      "-l4"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1453.946,
+    "end_testing": true,
+    "ended": "2026-11-13T18:49:25Z",
+    "error_interleavings": 3839,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_LOOP_UNWINDED_NUM=3_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10020,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T18:25:11Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.fft/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 3862,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 3862,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.fft",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "LOOP_UNWINDED_NUM=3",
+      "./FFT",
+      "-p2",
+      "-m2",
+      "-n4",
+      "-l4"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1473.172,
+    "end_testing": true,
+    "ended": "2026-11-13T19:13:59Z",
+    "error_interleavings": 3862,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_LOOP_UNWINDED_NUM=3_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10024,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T18:49:25Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.fft/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 4627,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 4627,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.lu",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./LU",
+      "-p2",
+      "-n2",
+      "-b1"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1644.906,
+    "end_testing": true,
+    "ended": "2026-11-13T15:07:50Z",
+    "error_interleavings": 4627,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_LU_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 10047,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T14:40:26Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.lu/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 4425,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 4425,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.lu",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./LU",
+      "-p2",
+      "-n2",
+      "-b1"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1580.874,
+    "end_testing": true,
+    "ended": "2026-11-13T15:34:12Z",
+    "error_interleavings": 4425,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_LU_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 10044,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T15:07:51Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.lu/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 5169,
+        "first_schedule": 2
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 5169,
+        "first_schedule": 2
+      }
+    },
+    "case": "Splash2.lu",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./LU",
+      "-p2",
+      "-n2",
+      "-b1"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 1778.275,
+    "end_testing": true,
+    "ended": "2026-11-13T16:03:50Z",
+    "error_interleavings": 5169,
+    "exit_code": 0,
+    "first_bug_schedule": 2,
+    "output_dirs": [
+      "out_LU_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 10039,
+    "schedule_limit": 10000,
+    "schedules_explored": 10001,
+    "started": "2026-11-13T15:34:12Z",
+    "stop_reason": "budget",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/Splash2.lu/rep03/metrics.json"
+  }
+]

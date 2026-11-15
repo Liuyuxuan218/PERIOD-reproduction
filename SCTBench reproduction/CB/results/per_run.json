@@ -1,0 +1,509 @@
+[
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 715,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 715,
+        "first_schedule": 9
+      }
+    },
+    "case": "CB.aget-bug",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./aget-devel/aget",
+      "-l",
+      "dl.txt",
+      "http://www.gnu.org/licenses/gpl.txt"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 800.037,
+    "end_testing": true,
+    "ended": "2026-11-13T14:14:22Z",
+    "error_interleavings": 715,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_aget_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 3945,
+    "schedule_limit": 10000,
+    "schedules_explored": 3945,
+    "started": "2026-11-13T14:01:02Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.aget-bug/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 692,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 692,
+        "first_schedule": 9
+      }
+    },
+    "case": "CB.aget-bug",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./aget-devel/aget",
+      "-l",
+      "dl.txt",
+      "http://www.gnu.org/licenses/gpl.txt"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 778.609,
+    "end_testing": true,
+    "ended": "2026-11-13T14:27:21Z",
+    "error_interleavings": 692,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_aget_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 3945,
+    "schedule_limit": 10000,
+    "schedules_explored": 3945,
+    "started": "2026-11-13T14:14:22Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 1,
+    "valid": true,
+    "metrics_path": "results/cases/CB.aget-bug/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 701,
+        "first_schedule": 9
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 701,
+        "first_schedule": 9
+      }
+    },
+    "case": "CB.aget-bug",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./aget-devel/aget",
+      "-l",
+      "dl.txt",
+      "http://www.gnu.org/licenses/gpl.txt"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 782.57,
+    "end_testing": true,
+    "ended": "2026-11-13T14:40:24Z",
+    "error_interleavings": 701,
+    "exit_code": 0,
+    "first_bug_schedule": 9,
+    "output_dirs": [
+      "out_aget_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 3945,
+    "schedule_limit": 10000,
+    "schedules_explored": 3945,
+    "started": "2026-11-13T14:27:21Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.aget-bug/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 4,
+        "first_schedule": 121
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 4,
+        "first_schedule": 121
+      }
+    },
+    "case": "CB.stringbuffer",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 9.295,
+    "end_testing": true,
+    "ended": "2026-11-13T10:46:46Z",
+    "error_interleavings": 4,
+    "exit_code": 0,
+    "first_bug_schedule": 121,
+    "output_dirs": [
+      "out_main_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 163,
+    "schedule_limit": 10000,
+    "schedules_explored": 163,
+    "started": "2026-11-13T10:46:37Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.stringbuffer/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 4,
+        "first_schedule": 121
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 4,
+        "first_schedule": 121
+      }
+    },
+    "case": "CB.stringbuffer",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 8.799,
+    "end_testing": true,
+    "ended": "2026-11-13T10:46:55Z",
+    "error_interleavings": 4,
+    "exit_code": 0,
+    "first_bug_schedule": 121,
+    "output_dirs": [
+      "out_main_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 163,
+    "schedule_limit": 10000,
+    "schedules_explored": 163,
+    "started": "2026-11-13T10:46:46Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.stringbuffer/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "assertion-failed": {
+        "count": 4,
+        "first_schedule": 121
+      }
+    },
+    "by_type_log": {
+      "assertion": {
+        "count": 4,
+        "first_schedule": 121
+      }
+    },
+    "case": "CB.stringbuffer",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "./main"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 9.588,
+    "end_testing": true,
+    "ended": "2026-11-13T10:47:05Z",
+    "error_interleavings": 4,
+    "exit_code": 0,
+    "first_bug_schedule": 121,
+    "output_dirs": [
+      "out_main_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 163,
+    "schedule_limit": 10000,
+    "schedules_explored": 163,
+    "started": "2026-11-13T10:46:55Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.stringbuffer/rep03/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "SEGV": {
+        "count": 65,
+        "first_schedule": 52
+      },
+      "heap-buffer-overflow": {
+        "count": 7,
+        "first_schedule": 41
+      },
+      "heap-use-after-free": {
+        "count": 22,
+        "first_schedule": 53
+      }
+    },
+    "by_type_log": {
+      "SEGV": {
+        "count": 65,
+        "first_schedule": 52
+      },
+      "heap-buffer-overflow": {
+        "count": 7,
+        "first_schedule": 41
+      },
+      "heap-use-after-free": {
+        "count": 22,
+        "first_schedule": 53
+      }
+    },
+    "case": "CB.pbzip2",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "-t",
+      "15",
+      "./pbzip2-0.9.4-src/pbzip2",
+      "-k",
+      "-f",
+      "-p3",
+      "test.tar"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 2889.984,
+    "end_testing": true,
+    "ended": "2026-11-13T11:57:44Z",
+    "error_interleavings": 94,
+    "exit_code": 0,
+    "first_bug_schedule": 41,
+    "output_dirs": [
+      "out_pbzip2_1"
+    ],
+    "repetition": 1,
+    "round_footer_last": 0,
+    "round_footer_total": 1464,
+    "schedule_limit": 10000,
+    "schedules_explored": 1464,
+    "started": "2026-11-13T11:09:34Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.pbzip2/rep01/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "SEGV": {
+        "count": 69,
+        "first_schedule": 61
+      },
+      "heap-buffer-overflow": {
+        "count": 7,
+        "first_schedule": 50
+      },
+      "heap-use-after-free": {
+        "count": 35,
+        "first_schedule": 62
+      }
+    },
+    "by_type_log": {
+      "SEGV": {
+        "count": 69,
+        "first_schedule": 61
+      },
+      "heap-buffer-overflow": {
+        "count": 7,
+        "first_schedule": 50
+      },
+      "heap-use-after-free": {
+        "count": 35,
+        "first_schedule": 62
+      }
+    },
+    "case": "CB.pbzip2",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "-t",
+      "15",
+      "./pbzip2-0.9.4-src/pbzip2",
+      "-k",
+      "-f",
+      "-p3",
+      "test.tar"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 3686.826,
+    "end_testing": true,
+    "ended": "2026-11-13T12:59:11Z",
+    "error_interleavings": 111,
+    "exit_code": 0,
+    "first_bug_schedule": 50,
+    "output_dirs": [
+      "out_pbzip2_1"
+    ],
+    "repetition": 2,
+    "round_footer_last": 0,
+    "round_footer_total": 1838,
+    "schedule_limit": 10000,
+    "schedules_explored": 1838,
+    "started": "2026-11-13T11:57:44Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.pbzip2/rep02/metrics.json"
+  },
+  {
+    "bare_test_lines": [],
+    "bug_depth": 3,
+    "bug_found": true,
+    "by_type_files": {
+      "SEGV": {
+        "count": 70,
+        "first_schedule": 52
+      },
+      "heap-buffer-overflow": {
+        "count": 5,
+        "first_schedule": 818
+      },
+      "heap-use-after-free": {
+        "count": 32,
+        "first_schedule": 53
+      }
+    },
+    "by_type_log": {
+      "SEGV": {
+        "count": 70,
+        "first_schedule": 52
+      },
+      "heap-buffer-overflow": {
+        "count": 5,
+        "first_schedule": 818
+      },
+      "heap-use-after-free": {
+        "count": 32,
+        "first_schedule": 53
+      }
+    },
+    "case": "CB.pbzip2",
+    "command": [
+      "python3",
+      "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+      "-y",
+      "-d",
+      "3",
+      "-f",
+      "10000",
+      "-t",
+      "15",
+      "./pbzip2-0.9.4-src/pbzip2",
+      "-k",
+      "-f",
+      "-p3",
+      "test.tar"
+    ],
+    "configuration": "table2-period",
+    "elapsed_sec": 3069.066,
+    "end_testing": true,
+    "ended": "2026-11-13T13:50:20Z",
+    "error_interleavings": 107,
+    "exit_code": 0,
+    "first_bug_schedule": 52,
+    "output_dirs": [
+      "out_pbzip2_1"
+    ],
+    "repetition": 3,
+    "round_footer_last": 0,
+    "round_footer_total": 1526,
+    "schedule_limit": 10000,
+    "schedules_explored": 1526,
+    "started": "2026-11-13T12:59:11Z",
+    "stop_reason": "completed",
+    "timeout_interleavings": 0,
+    "valid": true,
+    "metrics_path": "results/cases/CB.pbzip2/rep03/metrics.json"
+  }
+]

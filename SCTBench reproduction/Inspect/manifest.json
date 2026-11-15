@@ -1,0 +1,41 @@
+{
+  "upstream_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+  "image_id": "sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "bug_depth": 3,
+  "repetitions": 3,
+  "cases": [
+    {
+      "id": "Inspect.qsort_mt",
+      "workdir": "evaluation/Inspect_benchmarks/qsort_mt",
+      "build": "./build.sh",
+      "argv": [
+        "./qsort_mt",
+        "-n",
+        "32",
+        "-f",
+        "4",
+        "-h",
+        "3",
+        "-v"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 3,
+      "paper_type": "AF",
+      "paper_depth": 2,
+      "notes": "The -f 4 after the binary is a qsort_mt argument. Artifact --no-prefix is not used."
+    },
+    {
+      "id": "Inspect.boundedbuffer",
+      "workdir": "evaluation/Inspect_benchmarks/boundedBuffer",
+      "build": "./build.sh",
+      "argv": [
+        "./boundedBuffer"
+      ],
+      "schedule_limit": 10000,
+      "paper_threads": 4,
+      "paper_type": "AF",
+      "paper_depth": 2,
+      "notes": "Artifact --no-prefix is not used."
+    }
+  ]
+}

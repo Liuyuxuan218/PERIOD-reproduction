@@ -1,0 +1,76 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "RADBench.bug2",
+      "y": 458.46,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "1985",
+        "period_schedules": "L",
+        "period_buggy": "9"
+      }
+    },
+    {
+      "program": "RADBench.bug3",
+      "y": 466.83,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "42",
+        "period_schedules": "L",
+        "period_buggy": "3478"
+      }
+    },
+    {
+      "program": "RADBench.bug4",
+      "y": 475.19,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "259",
+        "period_schedules": "L",
+        "period_buggy": "6"
+      }
+    },
+    {
+      "program": "RADBench.bug5",
+      "y": 483.56,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "%",
+        "period_schedules": "L",
+        "period_buggy": "0"
+      }
+    },
+    {
+      "program": "RADBench.bug6",
+      "y": 491.92,
+      "rows": [
+        {
+          "threads": "(Buggy",
+          "bug_type": "Programs)",
+          "period_schedules": "38 (34)"
+        }
+      ],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "24",
+        "period_schedules": "2950",
+        "period_buggy": "340"
+      }
+    }
+  ]
+}
