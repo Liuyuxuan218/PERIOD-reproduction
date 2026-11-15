@@ -11,6 +11,8 @@ import sys
 import time
 
 ROOT = "/workdir/PERIOD"
+# Live runs stay in this external tree. analyze.py --collect copies finished
+# program directories into the seven <group>/results/ submission directories.
 DATA = "/experiment-data/sctbench"
 PDS = os.path.join(ROOT, "tool", "DBDS", "run_PDS.py")
 ANSI = re.compile(r"\x1b\[[0-9;]*m")

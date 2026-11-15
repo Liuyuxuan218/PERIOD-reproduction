@@ -45,7 +45,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.bluetooth_driver_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.bluetooth_driver_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -93,7 +93,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.bluetooth_driver_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.bluetooth_driver_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -141,7 +141,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.bluetooth_driver_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.bluetooth_driver_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -179,7 +179,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 11,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.carter01_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.carter01_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -217,7 +217,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 10,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.carter01_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.carter01_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -255,7 +255,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 10,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.carter01_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.carter01_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -303,7 +303,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.circular_buffer_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.circular_buffer_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -351,7 +351,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.circular_buffer_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.circular_buffer_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -399,7 +399,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.circular_buffer_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.circular_buffer_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -437,7 +437,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 6,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.deadlock01_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.deadlock01_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -475,7 +475,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 6,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.deadlock01_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.deadlock01_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -513,7 +513,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 6,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.deadlock01_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.deadlock01_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -561,7 +561,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.lazy01_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.lazy01_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -609,7 +609,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.lazy01_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.lazy01_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -657,7 +657,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.lazy01_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.lazy01_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -705,7 +705,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.queue_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.queue_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -753,7 +753,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_10_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_10_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -801,7 +801,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_10_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_10_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -849,7 +849,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_10_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_10_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [
@@ -899,7 +899,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 7,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_20_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_20_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [
@@ -949,7 +949,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 19,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_20_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_20_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [
@@ -999,7 +999,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 11,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_20_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_20_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1047,7 +1047,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_3_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_3_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1095,7 +1095,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_3_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_3_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1143,7 +1143,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_3_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_3_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1191,7 +1191,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_4_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_4_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1239,7 +1239,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_4_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_4_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1287,7 +1287,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_4_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_4_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1335,7 +1335,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_5_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_5_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1383,7 +1383,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_5_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_5_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1431,7 +1431,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.reorder_5_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.reorder_5_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1479,7 +1479,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.stack_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.stack_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1527,7 +1527,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.stack_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.stack_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1575,7 +1575,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.stack_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.stack_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1623,7 +1623,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.token_ring_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.token_ring_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1671,7 +1671,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.token_ring_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.token_ring_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1719,7 +1719,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.token_ring_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.token_ring_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [
@@ -1769,7 +1769,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 13,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_100_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.twostage_100_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [
@@ -1819,7 +1819,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 18,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_100_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.twostage_100_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [
@@ -1869,7 +1869,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 26,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_100_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.twostage_100_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1917,7 +1917,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.twostage_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -1965,7 +1965,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.twostage_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2013,7 +2013,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.twostage_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.twostage_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2061,7 +2061,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.wronglock_3_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.wronglock_3_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2109,7 +2109,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.wronglock_3_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.wronglock_3_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2157,7 +2157,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.wronglock_3_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.wronglock_3_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2205,7 +2205,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.wronglock_bad\\rep01\\metrics.json"
+    "metrics_path": "CS/results/CS.wronglock_bad/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2253,7 +2253,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.wronglock_bad\\rep02\\metrics.json"
+    "metrics_path": "CS/results/CS.wronglock_bad/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2301,7 +2301,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CS.wronglock_bad\\rep03\\metrics.json"
+    "metrics_path": "CS/results/CS.wronglock_bad/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2352,7 +2352,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.aget-bug\\rep01\\metrics.json"
+    "metrics_path": "CB/results/CB.aget-bug/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2403,7 +2403,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.aget-bug\\rep02\\metrics.json"
+    "metrics_path": "CB/results/CB.aget-bug/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2454,7 +2454,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.aget-bug\\rep03\\metrics.json"
+    "metrics_path": "CB/results/CB.aget-bug/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2502,7 +2502,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.stringbuffer\\rep01\\metrics.json"
+    "metrics_path": "CB/results/CB.stringbuffer/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2550,7 +2550,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.stringbuffer\\rep02\\metrics.json"
+    "metrics_path": "CB/results/CB.stringbuffer/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2598,7 +2598,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.stringbuffer\\rep03\\metrics.json"
+    "metrics_path": "CB/results/CB.stringbuffer/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2668,7 +2668,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.pbzip2\\rep01\\metrics.json"
+    "metrics_path": "CB/results/CB.pbzip2/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2738,7 +2738,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.pbzip2\\rep02\\metrics.json"
+    "metrics_path": "CB/results/CB.pbzip2/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2808,7 +2808,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\CB.pbzip2\\rep03\\metrics.json"
+    "metrics_path": "CB/results/CB.pbzip2/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2859,7 +2859,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.WSQ\\rep01\\metrics.json"
+    "metrics_path": "Chess/results/Chess.WSQ/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2910,7 +2910,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.WSQ\\rep02\\metrics.json"
+    "metrics_path": "Chess/results/Chess.WSQ/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -2961,7 +2961,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.WSQ\\rep03\\metrics.json"
+    "metrics_path": "Chess/results/Chess.WSQ/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3012,7 +3012,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.IWSQ\\rep01\\metrics.json"
+    "metrics_path": "Chess/results/Chess.IWSQ/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3063,7 +3063,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.IWSQ\\rep02\\metrics.json"
+    "metrics_path": "Chess/results/Chess.IWSQ/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3114,7 +3114,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.IWSQ\\rep03\\metrics.json"
+    "metrics_path": "Chess/results/Chess.IWSQ/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3173,7 +3173,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 2,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.SWSQ\\rep01\\metrics.json"
+    "metrics_path": "Chess/results/Chess.SWSQ/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3232,7 +3232,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.SWSQ\\rep02\\metrics.json"
+    "metrics_path": "Chess/results/Chess.SWSQ/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3291,7 +3291,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.SWSQ\\rep03\\metrics.json"
+    "metrics_path": "Chess/results/Chess.SWSQ/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3350,7 +3350,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.IWSQWS\\rep01\\metrics.json"
+    "metrics_path": "Chess/results/Chess.IWSQWS/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3409,7 +3409,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.IWSQWS\\rep02\\metrics.json"
+    "metrics_path": "Chess/results/Chess.IWSQWS/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3468,7 +3468,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Chess.IWSQWS\\rep03\\metrics.json"
+    "metrics_path": "Chess/results/Chess.IWSQWS/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3523,7 +3523,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Inspect.qsort_mt\\rep01\\metrics.json"
+    "metrics_path": "Inspect/results/Inspect.qsort_mt/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3578,7 +3578,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Inspect.qsort_mt\\rep02\\metrics.json"
+    "metrics_path": "Inspect/results/Inspect.qsort_mt/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3633,7 +3633,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Inspect.qsort_mt\\rep03\\metrics.json"
+    "metrics_path": "Inspect/results/Inspect.qsort_mt/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3681,7 +3681,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Inspect.boundedbuffer\\rep01\\metrics.json"
+    "metrics_path": "Inspect/results/Inspect.boundedbuffer/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3729,7 +3729,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Inspect.boundedbuffer\\rep02\\metrics.json"
+    "metrics_path": "Inspect/results/Inspect.boundedbuffer/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3777,7 +3777,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Inspect.boundedbuffer\\rep03\\metrics.json"
+    "metrics_path": "Inspect/results/Inspect.boundedbuffer/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3815,7 +3815,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Misc.safestack\\rep01\\metrics.json"
+    "metrics_path": "Misc/results/Misc.safestack/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3853,7 +3853,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Misc.safestack\\rep02\\metrics.json"
+    "metrics_path": "Misc/results/Misc.safestack/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3891,7 +3891,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Misc.safestack\\rep03\\metrics.json"
+    "metrics_path": "Misc/results/Misc.safestack/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3939,7 +3939,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.barnes\\rep02\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.barnes/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -3987,7 +3987,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.barnes\\rep03\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.barnes/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4040,7 +4040,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.fft\\rep02\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.fft/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4093,7 +4093,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.fft\\rep03\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.fft/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4144,7 +4144,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.lu\\rep01\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.lu/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4195,7 +4195,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.lu\\rep02\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.lu/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4246,7 +4246,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\Splash2.lu\\rep03\\metrics.json"
+    "metrics_path": "Splash2/results/Splash2.lu/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4296,7 +4296,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug2\\rep01\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug2/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4346,7 +4346,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug2\\rep02\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug2/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4396,7 +4396,7 @@
     "stop_reason": "completed",
     "timeout_interleavings": 0,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug2\\rep03\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug2/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4445,7 +4445,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug3\\rep01\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug3/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4494,7 +4494,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 1,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug3\\rep02\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug3/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4533,7 +4533,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 3,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug5\\rep01\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug5/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4572,7 +4572,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 3,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug5\\rep02\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug5/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4611,7 +4611,7 @@
     "stop_reason": "budget",
     "timeout_interleavings": 2,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug5\\rep03\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug5/rep03/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4649,7 +4649,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 342,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug6\\rep01\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug6/rep01/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4687,7 +4687,7 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 329,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug6\\rep02\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug6/rep02/metrics.json"
   },
   {
     "bare_test_lines": [],
@@ -4725,6 +4725,6 @@
     "stop_reason": "completed_no_bug",
     "timeout_interleavings": 319,
     "valid": true,
-    "metrics_path": "C:\\Users\\LOQ\\os\\PERIOD-reproduction\\SCTBench reproduction\\results\\cases\\RADBench.bug6\\rep03\\metrics.json"
+    "metrics_path": "RADBench/results/RADBench.bug6/rep03/metrics.json"
   }
 ]

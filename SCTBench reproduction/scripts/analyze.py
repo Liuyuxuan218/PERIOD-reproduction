@@ -1,14 +1,39 @@
 #!/usr/bin/env python3
-"""Aggregate SCTBench repetition logs and compare them with Table 2."""
+"""Aggregate SCTBench repetition metrics and compare them with Table 2.
+
+The runner in run_sctbench.py writes each program under the external
+experiment-data tree, at /experiment-data/sctbench/cases/<program>/.
+This script does not move that live tree.
+
+Submission copies live in the seven group directories:
+
+    <group>/results/<program>/repNN/metrics.json
+
+With no arguments, those seven directories are the only source, and the
+combined tables are written to results/summary.csv and results/per_run.csv.
+Passing a flat cases directory aggregates that directory in place. That mode
+is for the external experiment-data layout; it does not copy files.
+
+Copy completed external records into the submission directories with:
+
+    python3 analyze.py --collect /path/to/sctbench/cases
+
+--collect copies manifest programs only. It leaves the source in place.
+It does not overwrite a destination file whose bytes differ.
+"""
 import csv
 import json
+import os
+import shutil
 import statistics
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "paper_table2.json"
+MANIFEST = ROOT / "manifest.json"
 OUT = ROOT / "results"
+GROUPS = ["CS", "CB", "Chess", "Inspect", "Misc", "Splash2", "RADBench"]
 
 
 def mean_sd(values):
@@ -28,35 +53,164 @@ def paper_limit(program, schedules):
     return 10000
 
 
+def load_paper():
+    return json.loads(PAPER.read_text(encoding="utf-8"))
+
+
+def load_manifest():
+    return json.loads(MANIFEST.read_text(encoding="utf-8"))
+
+
+def group_of(program):
+    prefix = program.split(".", 1)[0]
+    if prefix not in GROUPS:
+        raise SystemExit("program is outside the seven groups: %s" % program)
+    return prefix
+
+
+def metrics_path_for(metrics):
+    try:
+        return metrics.resolve().relative_to(ROOT.resolve()).as_posix()
+    except ValueError:
+        return str(metrics)
+
+
+def flat_program_dirs(cases):
+    found = {}
+    extras = []
+    if not cases.is_dir():
+        raise SystemExit("not a directory: %s" % cases)
+    for child in sorted(cases.iterdir()):
+        if not child.is_dir():
+            continue
+        found[child.name] = child
+    return found, extras
+
+
+def submission_program_dirs():
+    found = {}
+    for group in GROUPS:
+        base = ROOT / group / "results"
+        if not base.is_dir():
+            continue
+        for child in sorted(base.iterdir()):
+            if not child.is_dir():
+                continue
+            if child.name in found:
+                raise SystemExit("duplicate program directory: %s" % child.name)
+            found[child.name] = child
+    return found
+
+
+def program_dirs_for_analysis(cases):
+    paper = load_paper()
+    known = [prog["program"] for prog in paper["programs"]]
+    known_set = set(known)
+    if cases is None:
+        found = submission_program_dirs()
+        if not found:
+            for candidate in (
+                ROOT / "results" / "cases",
+                Path("/experiment-data/sctbench/cases"),
+                Path.home() / "sctbench-data" / "sctbench" / "cases",
+            ):
+                if candidate.is_dir():
+                    found, _extras = flat_program_dirs(candidate)
+                    break
+        if not found:
+            raise SystemExit("usage: analyze.py [/path/to/sctbench/cases]")
+        unknown = sorted(name for name in found if name not in known_set)
+        if unknown:
+            raise SystemExit("submission directory is not a Table 2 program: %s" % ", ".join(unknown))
+        return {name: found.get(name) for name in known}
+    found, _extras = flat_program_dirs(cases)
+    unknown = sorted(name for name in found if name not in known_set)
+    if unknown:
+        print("ignoring directories that are not Table 2 programs: %s" % ", ".join(unknown), file=sys.stderr)
+    return {name: found.get(name) for name in known}
+
+
+def files_differ(src, dest):
+    if src.stat().st_size != dest.stat().st_size:
+        return True
+    with src.open("rb") as left, dest.open("rb") as right:
+        while True:
+            a = left.read(1024 * 1024)
+            b = right.read(1024 * 1024)
+            if a != b:
+                return True
+            if not a:
+                return False
+
+
+def copy_new_files(src, dest):
+    copied = 0
+    for dirpath, _dirnames, filenames in os.walk(src):
+        rel = Path(dirpath).relative_to(src)
+        target_dir = dest / rel
+        target_dir.mkdir(parents=True, exist_ok=True)
+        for name in filenames:
+            source = Path(dirpath) / name
+            target = target_dir / name
+            if target.exists():
+                if files_differ(source, target):
+                    raise SystemExit("refusing to overwrite a different file: %s" % target)
+                continue
+            shutil.copy2(str(source), str(target))
+            copied += 1
+    return copied
+
+
+def collect(cases):
+    manifest = load_manifest()
+    if not cases.is_dir():
+        raise SystemExit("not a directory: %s" % cases)
+    copied_programs = 0
+    copied_files = 0
+    missing = []
+    for case in manifest["cases"]:
+        program = case["id"]
+        source = cases / program
+        if not source.is_dir():
+            missing.append(program)
+            continue
+        dest = ROOT / group_of(program) / "results" / program
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        copied_files += copy_new_files(source, dest)
+        copied_programs += 1
+    print("collected programs", copied_programs, "new files", copied_files)
+    if missing:
+        print("no source directory for: %s" % ", ".join(missing))
+
+
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "--collect":
+        if len(sys.argv) != 3:
+            raise SystemExit("usage: analyze.py --collect /path/to/sctbench/cases")
+        collect(Path(sys.argv[2]))
+        return
     if len(sys.argv) > 1:
         cases = Path(sys.argv[1])
     else:
         cases = None
-        for candidate in (
-            ROOT / "results" / "cases",
-            Path("/experiment-data/sctbench/cases"),
-            Path.home() / "sctbench-data" / "sctbench" / "cases",
-        ):
-            if candidate.is_dir():
-                cases = candidate
-                break
-        if cases is None:
-            raise SystemExit("usage: analyze.py /path/to/sctbench/cases")
-    global CASES
-    CASES = cases
-    paper = json.loads(PAPER.read_text(encoding="utf-8"))
+    dirs = program_dirs_for_analysis(cases)
+    paper = load_paper()
     OUT.mkdir(exist_ok=True)
     per_run = []
     summary = []
+    seen_metrics = set()
     for prog in paper["programs"]:
         name = prog["program"]
-        rep_dir = CASES / name
+        rep_dir = dirs.get(name)
         reps = []
-        if rep_dir.exists():
+        if rep_dir is not None and rep_dir.exists():
             for metrics in sorted(rep_dir.glob("rep*/metrics.json")):
+                key = str(metrics.resolve())
+                if key in seen_metrics:
+                    raise SystemExit("duplicate metrics file: %s" % metrics)
+                seen_metrics.add(key)
                 item = json.loads(metrics.read_text(encoding="utf-8"))
-                item["metrics_path"] = str(metrics)
+                item["metrics_path"] = metrics_path_for(metrics)
                 reps.append(item)
                 per_run.append(item)
         valid = [r for r in reps if r.get("valid")]

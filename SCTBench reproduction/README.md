@@ -1,76 +1,75 @@
 # SCTBench Reproduction
 
-### Week 2 – SCTBench Reproduction
-
-- Set up the SCTBench runs in the official PERIOD Docker image `wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc`. The guest is Ubuntu 18.04.5 LTS with GCC 7.5.0, Clang 10.0.0, LLVM 10.0.0, Python 3.6.9, and PERIOD commit `b6f72a7b06d01ffa7114b640312873ec2578a5ea`. The container is privileged so `SCHED_DEADLINE` can be used.
-- Built the 36 SCTBench programs in Table 2 with the build scripts in that image. Each program was run with `run_PDS.py` at bug depth 3 (`-d 3`). The schedule budget was 10,000 per run, and 100,000 for `CS.twostage_100_bad`. The target was three repetitions.
-- Completed three repetitions for 30 programs. For `CS.reorder_3_bad`, identified 6 error interleavings among 27 schedules, with the first bug at schedule 6, matching Table 2.
-- `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two completed repetitions. `CS.queue_bad` has one completed repetition. `CS.account_bad` and `RADBench.bug4` have none.
-- Saved the schedule count, error interleavings, first bug schedule, timeouts, and elapsed time for each run under `SCTBench reproduction/results/`.
-
-Contributor: 1240019547 邱洋.
-
-The image check, clone-and-run commands, and the full result table are in the sections below.
-
 ## 1. Objective
 
-This project reproduces the SCTBench programs in Table 2 of Wen et al., “Controlled Concurrency Testing via Periodical Scheduling,” ICSE 2022, using PERIOD.
+This experiment reproduces the PERIOD results for the 36 SCTBench programs in Table 2 of Wen et al., “Controlled Concurrency Testing via Periodical Scheduling,” ICSE 2022. The programs are organized into seven benchmark groups: CS (18), CB (3), Chess (4), Inspect (2), Misc (1), Splash2 (3), and RADBench (5).
 
-**Contributor:** 1240019547 邱洋
+Each program is built from the official PERIOD image and tested at bug depth 3. The intended measurement is three repetitions per program. The schedule budget configured for those runs is 10,000, except `CS.twostage_100_bad`, whose configured budget is 100,000. Section 4 reports how many valid repetitions were submitted for each group.
 
-**Current status:** 97 valid runs across 36 programs. Thirty programs have three completed runs, four have one or two, and two have none.
-
-Each program is built using the scripts in the official PERIOD image and tested at bug depth 3. The target is three repetitions per program. The configured schedule budget is 10,000 per run, or 100,000 for `CS.twostage_100_bad`.
-
-The individual run records are in [`results/cases/`](results/cases/), and the aggregate results are in [`results/summary.csv`](results/summary.csv).
-
-Paper: https://wcventure.github.io/pdf/ICSE2022_PERIOD.pdf
-
-Upstream tool: https://github.com/wcventure/PERIOD
+The measurements were produced by 1240019547 邱洋.
 
 ## 2. Files
 
-| File or Directory | Description |
+Individual records are stored under the group that owns the program. Combined tables for all 36 programs are stored in `results/`.
+
+| Path | Description |
 |---|---|
-| `README.md` | Reproduction instructions and experimental results |
-| `manifest.json` | The 36 SCTBench programs, with upstream path, build command, arguments, and schedule limit |
-| `paper_table2.json` | PERIOD columns of Table 2 |
-| `scripts/run_sctbench.py` | Builds each program and runs the three repetitions |
-| `scripts/analyze.py` | Builds the mean and sample standard deviation tables |
-| `source_metadata.txt` | Upstream repository, commit, and reproduction configuration |
-| [`SHARED_SETUP.md`](SHARED_SETUP.md) | Shared software setup and host environment |
-| [`docs/`](docs/) | Notes on the image and scheduling flags |
-| `results/cases/` | Per-repetition `metrics.json` files from our runs |
-| `results/summary.csv` | Aggregate of those repetitions |
-| `results/per_run.csv` | One row for each repetition |
+| [`README.md`](README.md) | This report: objective, source, procedure, and group-level results |
+| [`CS/README.md`](CS/README.md) | CS, 18 programs, and its per-program results |
+| [`CB/README.md`](CB/README.md) | CB, 3 programs, and its per-program results |
+| [`Chess/README.md`](Chess/README.md) | Chess, 4 programs, and its per-program results |
+| [`Inspect/README.md`](Inspect/README.md) | Inspect, 2 programs, and its per-program results |
+| [`Misc/README.md`](Misc/README.md) | Misc, 1 program, and its per-program results |
+| [`Splash2/README.md`](Splash2/README.md) | Splash2, 3 programs, and its per-program results |
+| [`RADBench/README.md`](RADBench/README.md) | RADBench, 5 programs, and its per-program results |
+| [`manifest.json`](manifest.json) | The 36 programs, upstream paths, build commands, arguments, and schedule budgets |
+| [`paper_table2.json`](paper_table2.json) | PERIOD columns of Table 2 used for the comparison |
+| [`source_metadata.txt`](source_metadata.txt) | Upstream repository, executed commit, image, and run configuration |
+| [`SHARED_SETUP.md`](SHARED_SETUP.md) | Shared image and the distinction between this host and the container |
+| [`docs/IMAGE.md`](docs/IMAGE.md) | Image digest check |
+| [`docs/FLAG_SEMANTICS.md`](docs/FLAG_SEMANTICS.md) | Meanings of `-d`, `-f`, `-y`, and `-t` at the executed commit |
+| [`scripts/run_sctbench.py`](scripts/run_sctbench.py) | Builds each program and runs the repetitions in the external data directory |
+| [`scripts/analyze.py`](scripts/analyze.py) | Copies finished records into the group directories and writes the combined tables |
+| [`results/summary.csv`](results/summary.csv) | One aggregate row for each of the 36 programs |
+| [`results/per_run.csv`](results/per_run.csv) | One row for each submitted repetition |
+| [`results/status.md`](results/status.md) | Runner snapshot. The explored column is the last attempt, not the mean |
+
+Other files in `scripts/` record image checks and the host commands used to start a container. The procedure below uses `run_sctbench.py` and `analyze.py`. `results/summary.json` and `results/per_run.json` carry the same aggregates as the CSV files. `summary.json` also stores the sample standard deviation of the timeout counts.
 
 ## 3. Source Information
 
-- Original repository: [wcventure/PERIOD](https://github.com/wcventure/PERIOD)
-- Starting commit: `b6f72a7b06d01ffa7114b640312873ec2578a5ea`
-- Benchmark paths: [`manifest.json`](manifest.json)
-- Host and shared setup: [`SHARED_SETUP.md`](SHARED_SETUP.md)
+The benchmark source is the official PERIOD repository, [wcventure/PERIOD](https://github.com/wcventure/PERIOD). The paper is Wen et al., ICSE 2022, [Controlled Concurrency Testing via Periodical Scheduling](https://wcventure.github.io/pdf/ICSE2022_PERIOD.pdf). The PERIOD columns of Table 2 are transcribed in [`paper_table2.json`](paper_table2.json). In that file, `L` means the schedule budget was reached and `%` means no bug was found.
 
-The experiment uses the official PERIOD Docker image.
+The code that executed is the Git checkout inside the official image, commit `b6f72a7b06d01ffa7114b640312873ec2578a5ea` (`fix run_PDS.py`, 2022-01-17). The later GitHub commit `cb8deb9a176e5bb292d70d46557dd61dc0e98069` changes `AdvancedUsage.md`, `INSTALL.md`, `README.md`, and `STATUS.md`. `tool/DBDS/run_PDS.py` is the same file at both commits. These runs used the image commit, not a patched scheduler. Upstream paths for the 36 programs are in [`manifest.json`](manifest.json). No benchmark source was modified.
 
-| Component | Version |
+The container environment and the host environment are recorded separately.
+
+| Item | Value |
 |---|---|
 | Docker image | `wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc` |
-| Operating system | Ubuntu 18.04.5 LTS |
+| Container operating system | Ubuntu 18.04.5 LTS |
 | GCC | 7.5.0 |
 | Clang | 10.0.0 |
 | LLVM | 10.0.0 |
-| Python 3 | 3.6.9 |
-| NumPy | 1.19.5 |
-| PERIOD commit | `b6f72a7b06d01ffa7114b640312873ec2578a5ea` |
+| Python for `run_PDS.py` | 3.6.9 |
+| NumPy for that Python | 1.19.5 |
+| PERIOD commit in the image | `b6f72a7b06d01ffa7114b640312873ec2578a5ea` |
+| Measurement host | Intel Core i7-13650HX, 14 cores / 20 threads, recorded for 1240019547 邱洋 |
+| Host memory | 24 GiB, of which WSL reports about 11 GiB |
+| WSL kernel | 6.18.58.1-microsoft-standard-WSL2 |
+| Docker Engine on that host | 29.1.3 |
 
-The container uses the host Linux kernel. PERIOD’s scheduler uses `SCHED_DEADLINE`, which is present on kernel 4.x and later.
+The container uses the host kernel. PERIOD's scheduler requires `SCHED_DEADLINE`, so the container is started privileged. `run_PDS.py` is executed with `python3`. The image also contains Python 2.7.17; the search commands in the metrics files call `python3`.
+
+The host above is the 邱洋 column of [`SHARED_SETUP.md`](SHARED_SETUP.md). The paper reports its own workstation as an Intel Xeon Silver 4214. `environment/host_environment.txt` records 赵士锦's Intel Core i9-14900HX, which is a separate host record.
 
 ## 4. Reproduction Procedure and Results
 
-Run the commands in Ubuntu or in Ubuntu on WSL2. Docker Engine newer than 18.09.7 is required, with permission to start a privileged container. The full 36-program suite takes about one to two days. Small programs finish in seconds. `CB.pbzip2` takes about one hour per repetition. A 10,000-schedule RADBench run takes about four and a half hours.
+Run the commands below on Ubuntu, or on Ubuntu under WSL2. Docker Engine newer than 18.09.7 is required, with permission to start a privileged container. The suite runs one repetition at a time. Small programs finish in seconds. `CB.pbzip2` takes about one hour per repetition, and a 10,000-schedule RADBench run takes several hours. The 36-program suite takes about one to two days.
 
-### Step 1. Clone the Repository
+### Step 1. Clone the repository
+
+Run on the host:
 
 ```bash
 git clone https://github.com/Liuyuxuan218/PERIOD-reproduction.git
@@ -78,20 +77,21 @@ cd PERIOD-reproduction
 export REPO="$(pwd)"
 ```
 
-### Step 2. Download the PERIOD Image
+### Step 2. Download the PERIOD image
+
+Run on the host:
 
 ```bash
 docker pull wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc
-```
-
-List the scheduling policies and check whether `SCHED_DEADLINE` is listed:
-
-```bash
 docker run --rm --privileged wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc \
   chrt -m | grep SCHED_DEADLINE
 ```
 
-### Step 3. Prepare the Result Directory
+The second command prints `SCHED_DEADLINE` when the host kernel exposes that policy to the privileged container.
+
+### Step 3. Prepare the external data directory
+
+Run on the host. The runner writes here, not into the seven group directories:
 
 ```bash
 export SCT_DATA="${HOME}/sctbench-data"
@@ -100,118 +100,104 @@ cp "${REPO}/SCTBench reproduction/manifest.json" "${SCT_DATA}/sctbench/manifest.
 cp "${REPO}/SCTBench reproduction/scripts/run_sctbench.py" "${SCT_DATA}/sctbench/scripts/run_sctbench.py"
 ```
 
-### Step 4. Start the Container
+### Step 4. Start the container and confirm the commit
+
+Run on the host:
 
 ```bash
 docker run -d --privileged --name period-sctbench \
   --mount "type=bind,source=${SCT_DATA},target=/experiment-data" \
   wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc \
   sleep infinity
-```
-
-The PERIOD checkout inside the container is:
-
-```bash
 docker exec period-sctbench git -C /workdir/PERIOD rev-parse HEAD
 ```
 
-The printed commit is `b6f72a7b06d01ffa7114b640312873ec2578a5ea`.
+The printed commit is `b6f72a7b06d01ffa7114b640312873ec2578a5ea`. The container's working directory for the tool is `/workdir/PERIOD`. The bind mount makes `${SCT_DATA}` appear as `/experiment-data`.
 
-### Step 5. Run the Pilot
+### Step 5. Run the pilot
 
-The pilot builds `CS.account_bad` and explores 4 schedules.
+Run inside the container, through `docker exec`. The pilot builds `CS.account_bad` and explores 4 schedules:
 
 ```bash
 docker exec period-sctbench python3 /experiment-data/sctbench/scripts/run_sctbench.py \
   /experiment-data/sctbench/manifest.json --pilot
 ```
 
-A successful pilot writes `schedules_explored` equal to 4 in `${SCT_DATA}/sctbench/pilot/result.json`.
+A successful pilot writes `schedules_explored` equal to 4 in `${SCT_DATA}/sctbench/pilot/result.json`. The pilot program directory is `${SCT_DATA}/sctbench/cases/PILOT_account_f4`. It is not one of the 36 Table 2 programs, and the collection step does not copy it into a group directory.
 
-### Step 6. Run the SCTBench Suite
+### Step 6. Run the 36-program suite
+
+Run inside the container:
 
 ```bash
 docker exec period-sctbench python3 /experiment-data/sctbench/scripts/run_sctbench.py \
   /experiment-data/sctbench/manifest.json --suite
 ```
 
-The same command continues a suite that was already started. Completed repetitions remain in `${SCT_DATA}/sctbench/cases/`.
+The runner builds each program with the build command in the manifest, then runs `run_PDS.py -y -d 3 -f <schedule budget>` and that program's arguments. `CS.twostage_100_bad` uses `-f 100000`. `CB.pbzip2` also receives `-t 15`. Every other program uses the tool's 5-second per-schedule timeout. There is no flag that selects one benchmark group.
 
-Progress is written to:
+Each repetition is written under `${SCT_DATA}/sctbench/cases/<program>/repNN/`. A repetition whose `metrics.json` already contains `"valid": true` is not run again. The same command therefore continues a suite that was already started. The runner rewrites `${SCT_DATA}/sctbench/status.md` after each program. The copy of that snapshot submitted with these measurements is [`results/status.md`](results/status.md). Its explored column is the last attempt, not the mean.
 
-```bash
-cat "${SCT_DATA}/sctbench/status.md"
-```
+### Step 7. Copy completed records into the seven group directories
 
-### Step 7. Build the Result Tables
+Run on the host, after the suite has written the external cases tree:
 
 ```bash
-python3 "${REPO}/SCTBench reproduction/scripts/analyze.py" "${SCT_DATA}/sctbench/cases"
+python3 "${REPO}/SCTBench reproduction/scripts/analyze.py" --collect "${SCT_DATA}/sctbench/cases"
 ```
 
-The script writes `SCTBench reproduction/results/summary.csv` and `SCTBench reproduction/results/per_run.csv`.
+`--collect` copies each manifest program that has a directory under the external `cases` path into `SCTBench reproduction/<group>/results/<program>/`. The external tree stays where the runner wrote it. A file that is already present with different bytes is not overwritten. A manifest program with no source directory is not given an empty result directory. That is why `CS.account_bad` and `RADBench.bug4` have no directory in this submission.
 
-Each repetition records:
+### Step 8. Build the combined tables
 
-| Field | Meaning |
-|---|---|
-| `schedules_explored` | Schedules that ran |
-| `error_interleavings` | Total Error Interleavings reported by PERIOD |
-| `first_bug_schedule` | Schedule number of the first recorded bug |
-| `timeout_interleavings` | Schedules that reached the per-schedule time limit |
-| `elapsed_sec` | Wall-clock time of that repetition |
+Run on the host, with no path argument. The script reads only the seven `<group>/results/` directories, counts each metrics file once, and writes the combined tables:
 
-The table reports timeouts separately. The submitted measurements do not independently confirm each timeout as a deadlock. `CS.deadlock01_bad` explored 14 schedules and recorded 6 timeouts. `CS.carter01_bad` explored 42 schedules and recorded 10 or 11 timeouts.
+```bash
+python3 "${REPO}/SCTBench reproduction/scripts/analyze.py"
+```
 
-## 5. Experimental Results
+The outputs are:
 
-See the [summary CSV](results/summary.csv) for all 36 programs and the [per-run CSV](results/per_run.csv) for individual measurements.
+- [`results/summary.csv`](results/summary.csv) and [`results/summary.json`](results/summary.json), one row per program
+- [`results/per_run.csv`](results/per_run.csv) and [`results/per_run.json`](results/per_run.json), one row per repetition
 
-`CS.twostage_100_bad` has three completed runs, each at the configured 100,000-schedule budget. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` each have two completed runs. `CS.queue_bad` has one. `CS.account_bad` and `RADBench.bug4` have none.
+`metrics_path` in the per-run files is the path relative to `SCTBench reproduction/`. The mean is the arithmetic mean. The standard deviation is the sample standard deviation. Programs with one valid repetition store 0.0 in the CSV standard-deviation columns because that is the existing one-observation placeholder in `analyze.py`. That placeholder is not a sample standard deviation. The group tables print the single measured value and say the sample standard deviation is undefined.
 
-The values are mean ± sample standard deviation. A standard deviation of 0 is shown as a single number.
+Passing the external cases directory, `python3 analyze.py "${SCT_DATA}/sctbench/cases"`, aggregates that live tree in place and writes the same combined files. It does not copy files into the group directories. The tables committed here were produced from the seven group directories after collection, so the submitted numbers have one source.
 
-| Program | Repetitions | Schedules | Error interleavings | First bug | Timeouts |
-|---|---:|---:|---:|---:|---:|
-| CS.account_bad | 0 |  |  |  |  |
-| CS.bluetooth_driver_bad | 3 | 205 | 6.7 ± 0.6 | 9 | 0 |
-| CS.carter01_bad | 3 | 42 | 0 |  | 10.3 ± 0.6 |
-| CS.circular_buffer_bad | 3 | 544.7 ± 2.3 | 57.3 ± 2.1 | 16.7 ± 0.6 | 0 |
-| CS.deadlock01_bad | 3 | 14 | 0 |  | 6 |
-| CS.lazy01_bad | 3 | 39 | 12 | 8 | 0 |
-| CS.queue_bad | 1 | 1048 | 114 | 4 | 0 |
-| CS.reorder_10_bad | 3 | 2350 | 90.0 ± 2.0 | 27 | 0 |
-| CS.reorder_20_bad | 3 | 10000 | 2848.7 ± 30.9 | 39 | 12.3 ± 6.1 |
-| CS.reorder_3_bad | 3 | 27 | 6 | 6 | 0 |
-| CS.reorder_4_bad | 3 | 100 | 12 | 9 | 0 |
-| CS.reorder_5_bad | 3 | 225 | 20 | 12 | 0 |
-| CS.stack_bad | 3 | 918 | 117.7 ± 32.3 | 5.7 ± 1.5 | 0 |
-| CS.token_ring_bad | 3 | 232 | 53.3 ± 1.5 | 2.3 ± 0.6 | 0 |
-| CS.twostage_100_bad | 3 | 100000 | 112.7 ± 20.5 | 886.3 ± 340.1 | 19.0 ± 6.6 |
-| CS.twostage_bad | 3 | 33 | 2 | 4 | 0 |
-| CS.wronglock_3_bad | 3 | 172 | 42.3 ± 0.6 | 6 | 0 |
-| CS.wronglock_bad | 3 | 1464 | 217.7 ± 2.1 | 10 | 0 |
-| CB.aget-bug | 3 | 3945 | 702.7 ± 11.6 | 9 | 0.3 ± 0.6 |
-| CB.stringbuffer | 3 | 163 | 4 | 121 | 0 |
-| CB.pbzip2 | 3 | 1609.3 ± 200.4 | 104.0 ± 8.9 | 47.7 ± 5.9 | 0 |
-| Chess.WSQ | 3 | 320.3 ± 23.1 | 15 | 95.3 ± 5.8 | 0 |
-| Chess.IWSQ | 3 | 684.0 ± 25.2 | 16.3 ± 0.6 | 120.7 ± 3.1 | 0 |
-| Chess.SWSQ | 3 | 10001 | 33.0 ± 1.0 | 1090.0 ± 892.7 | 1.0 ± 1.0 |
-| Chess.IWSQWS | 3 | 10001 | 34.3 ± 0.6 | 2004.3 ± 506.8 | 0.3 ± 0.6 |
-| Inspect.qsort_mt | 3 | 10001 | 138.7 ± 2.3 | 27 | 0 |
-| Inspect.boundedbuffer | 3 | 10001 | 714.3 ± 28.4 | 13.7 ± 4.5 | 0.3 ± 0.6 |
-| Misc.safestack | 3 | 135 | 0 |  | 0 |
-| Splash2.barnes | 2 | 10001 | 1365.0 ± 149.9 | 2 | 1 |
-| Splash2.fft | 2 | 10001 | 3850.5 ± 16.3 | 2 | 0.5 ± 0.7 |
-| Splash2.lu | 3 | 10001 | 4740.3 ± 384.7 | 2 | 0.3 ± 0.6 |
-| RADBench.bug2 | 3 | 8476.7 ± 141.4 | 8.7 ± 0.6 | 2472 | 0 |
-| RADBench.bug3 | 2 | 10001.5 ± 0.7 | 3811.0 ± 1.4 | 31.5 ± 2.1 | 1 |
-| RADBench.bug4 | 0 |  |  |  |  |
-| RADBench.bug5 | 3 | 10001.3 ± 0.6 | 0 |  | 2.7 ± 0.6 |
-| RADBench.bug6 | 3 | 3131.7 ± 12.4 | 0 |  | 330.0 ± 11.5 |
 
-### Comparison with Table 2
+**Actual experimental results:**
 
-`CS.reorder_3_bad` matches Table 2 on all three PERIOD figures: the first bug is at schedule 6, 27 schedules are explored, and 6 of them are errors. `CS.reorder_4_bad`, `CS.reorder_5_bad`, `CS.reorder_10_bad`, `CS.lazy01_bad`, `CS.twostage_bad`, and `CS.wronglock_bad` likewise match the published schedule total. `RADBench.bug5` reached the configured schedule budget without a recorded error, consistent with the paper’s no-bug-found outcome. Some recorded schedule counts exceed the configured budget. These values are shown as recorded and should be checked against the original logs before being interpreted as exact counts of executed schedules.
+The values below are counted from the metrics files now stored in the seven group directories.
 
-The image digest, flag meanings, and the difference from the paper’s workstation are recorded in [source_metadata.txt](source_metadata.txt), [SHARED_SETUP.md](SHARED_SETUP.md), [docs/IMAGE.md](docs/IMAGE.md), and [docs/FLAG_SEMANTICS.md](docs/FLAG_SEMANTICS.md).
+| Group | Number of programs | Programs with three completed repetitions | Total valid repetitions |
+|---|---:|---:|---:|
+| [CS](CS/README.md) | 18 | 16 | 49 |
+| [CB](CB/README.md) | 3 | 3 | 9 |
+| [Chess](Chess/README.md) | 4 | 4 | 12 |
+| [Inspect](Inspect/README.md) | 2 | 2 | 6 |
+| [Misc](Misc/README.md) | 1 | 1 | 3 |
+| [Splash2](Splash2/README.md) | 3 | 1 | 7 |
+| [RADBench](RADBench/README.md) | 5 | 3 | 11 |
+
+Across all seven groups there are 97 valid repetitions. 30 programs have three completed repetitions.
+
+### Comparison with the Official Reference
+
+The comparison uses [`paper_table2.json`](paper_table2.json). Each group report repeats it program by program. This section states only the matches that hold on the submitted records and the differences that remain open.
+
+On every submitted repetition, 14 programs match a numeric Table 2 schedule total: `CS.bluetooth_driver_bad`, `CS.carter01_bad`, `CS.deadlock01_bad`, `CS.lazy01_bad`, `CS.reorder_10_bad`, `CS.reorder_3_bad`, `CS.reorder_4_bad`, `CS.reorder_5_bad`, `CS.stack_bad`, `CS.token_ring_bad`, `CS.twostage_bad`, `CS.wronglock_3_bad`, `CS.wronglock_bad`, and `CB.stringbuffer`. `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad` also match the published buggy-schedule count and the published first-bug schedule.
+
+`CS.reorder_20_bad` and `CS.twostage_100_bad` recorded exactly the configured schedule budget on every repetition. Table 2 marks that outcome as L.
+
+The other numeric differences are left as differences. Several programs match the schedule total and differ in the error count or the first-bug schedule. `Misc.safestack` recorded 135 schedules and 0 error interleavings on every repetition (sample standard deviation 0); Table 2 lists 6519 schedules and 0 buggy schedules, with the first bug marked %. Programs whose recorded schedule count is above the configured budget are `Chess.SWSQ`, `Chess.IWSQWS`, `Inspect.qsort_mt`, `Inspect.boundedbuffer`, `Splash2.barnes`, `Splash2.fft`, `Splash2.lu`, `RADBench.bug3`, and `RADBench.bug5`. `docs/FLAG_SEMANTICS.md` explains that the footer Round total can be larger than the number of executed schedules. The totals in these tables are `schedules_explored`. For the programs just named, that executed count itself is above the configured `-f` limit, and the raw logs that would show the extra test line are not in this submission. The group reports give the stored footer values.
+
+Timeout interleavings are not counted as error interleavings. For the programs Table 2 labels DL, the paper's buggy-schedule count is sometimes close to the timeout count, and the metrics still record 0 error interleavings. Those timeouts are not treated as confirmed deadlocks. `CS.deadlock01_bad` is the clearest case: every repetition explored 14 schedules, recorded 0 error interleavings, and recorded 6 timeout interleavings. Table 2 lists 14 schedules and 6 buggy schedules for that program.
+
+### Final Result
+
+The submitted metrics contain 97 valid repetitions from 34 programs. 30 programs have the intended three repetitions. `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two. `CS.queue_bad` has one. `CS.account_bad` and `RADBench.bug4` have no completed run. The Table 2 reproduction is therefore incomplete.
+
+`results/status.md` lists the missing attempts as incomplete, or, for `Splash2.barnes` and `Splash2.fft`, does not record a cause for the absent repetition. The cause is not established by the submitted metrics. The schedule totals above the configured budget are also unresolved. Differences between the measured error counts and Table 2 are unresolved except where a group report says the figures match. Replay was not confirmed from logs in this submission, because the submitted evidence is the metrics records.
+
+The per-program tables and the remaining differences are in the seven group reports linked above.

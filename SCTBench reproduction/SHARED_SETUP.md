@@ -98,7 +98,7 @@ Every submitted result is one execution. No file reports a repetition count, a m
 
 `environment/host_environment.txt` was written with 赵士锦's environment commits. It is not this machine.
 
-| | 赵士锦, `environment/host_environment.txt` | 刘语萱, CVE-2016-7911 Docker record | This machine, 邱洋, not yet used for Table 2 |
+| | 赵士锦, `environment/host_environment.txt` | 刘语萱, CVE-2016-7911 Docker record | This machine, 邱洋, used for the Table 2 measurements |
 |---|---|---|---|
 | CPU | Intel Core i9-14900HX, 16 cores / 32 threads | not recorded | Intel Core i7-13650HX, 14 cores / 20 threads |
 | Memory seen by the Linux side | about 15 GiB, 4 GiB swap | not recorded | WSL reports 11 GiB of the host's 24 GiB |
@@ -106,7 +106,7 @@ Every submitted result is one execution. No file reports a repetition count, a m
 | Docker Engine | 29.9.2 (Docker Desktop 4.96.3) | image ID matches | 29.1.3, image ID matches |
 | Paper workstation | Intel Xeon Silver 4214, Ubuntu 18.04 host | same paper target | same paper target |
 
-SCTBench results will be labeled with this machine. `environment/host_environment.txt` stays 赵士锦's record.
+The SCTBench Table 2 measurements are labeled with this machine. `environment/host_environment.txt` stays 赵士锦's record.
 
 ## What SCTBench keeps from the paper
 
