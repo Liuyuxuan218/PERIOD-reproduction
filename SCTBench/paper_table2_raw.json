@@ -1,0 +1,551 @@
+{
+  "page": 9,
+  "programs": [
+    {
+      "program": "CS.account_bad",
+      "y": 167.32,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "65",
+        "period_buggy": "26"
+      }
+    },
+    {
+      "program": "CS.bluetooth_driver_bad",
+      "y": 175.68,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "9",
+        "period_schedules": "205",
+        "period_buggy": "9"
+      }
+    },
+    {
+      "program": "CS.carter01_bad",
+      "y": 184.05,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "5",
+        "period_schedules": "42",
+        "period_buggy": "11"
+      }
+    },
+    {
+      "program": "CS.circular_buffer_bad",
+      "y": 192.41,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "17",
+        "period_schedules": "871",
+        "period_buggy": "207"
+      }
+    },
+    {
+      "program": "CS.deadlock01_bad",
+      "y": 200.77,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "3",
+        "period_schedules": "14",
+        "period_buggy": "6"
+      }
+    },
+    {
+      "program": "CS.lazy01_bad",
+      "y": 209.14,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "3",
+        "period_schedules": "39",
+        "period_buggy": "12"
+      }
+    },
+    {
+      "program": "CS.queue_bad",
+      "y": 217.5,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "25",
+        "period_schedules": "998",
+        "period_buggy": "119"
+      }
+    },
+    {
+      "program": "CS.reorder_10_bad",
+      "y": 225.87,
+      "rows": [],
+      "shared": {
+        "threads": "10",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "27",
+        "period_schedules": "2350",
+        "period_buggy": "89"
+      }
+    },
+    {
+      "program": "CS.reorder_20_bad",
+      "y": 234.23,
+      "rows": [],
+      "shared": {
+        "threads": "20",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "39",
+        "period_schedules": "L",
+        "period_buggy": "2870"
+      }
+    },
+    {
+      "program": "CS.reorder_3_bad",
+      "y": 242.59,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "6",
+        "period_schedules": "27",
+        "period_buggy": "6"
+      }
+    },
+    {
+      "program": "CS.reorder_4_bad",
+      "y": 250.96,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "9",
+        "period_schedules": "100",
+        "period_buggy": "12"
+      }
+    },
+    {
+      "program": "CS.reorder_5_bad",
+      "y": 259.32,
+      "rows": [],
+      "shared": {
+        "threads": "5",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "12",
+        "period_schedules": "225",
+        "period_buggy": "20"
+      }
+    },
+    {
+      "program": "CS.stack_bad",
+      "y": 267.69,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "3",
+        "period_schedules": "918",
+        "period_buggy": "144"
+      }
+    },
+    {
+      "program": "CS.token_ring_bad",
+      "y": 276.05,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "232",
+        "period_buggy": "58"
+      }
+    },
+    {
+      "program": "CS.twostage_100_bad",
+      "y": 284.41,
+      "rows": [],
+      "shared": {
+        "threads": "100",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "690",
+        "period_schedules": "L",
+        "period_buggy": "141"
+      }
+    },
+    {
+      "program": "CS.twostage_bad",
+      "y": 292.78,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "4",
+        "period_schedules": "33",
+        "period_buggy": "3"
+      }
+    },
+    {
+      "program": "CS.wronglock_3_bad",
+      "y": 301.14,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "6",
+        "period_schedules": "172",
+        "period_buggy": "42"
+      }
+    },
+    {
+      "program": "CS.wronglock_bad",
+      "y": 309.51,
+      "rows": [],
+      "shared": {
+        "threads": "8",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "10",
+        "period_schedules": "1464",
+        "period_buggy": "210"
+      }
+    },
+    {
+      "program": "CB.aget-bug",
+      "y": 317.87,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "9",
+        "period_schedules": "3279",
+        "period_buggy": "679"
+      }
+    },
+    {
+      "program": "CB.stringbuffer",
+      "y": 326.23,
+      "rows": [
+        {
+          "bug_type": "BOF",
+          "bug_depth": "2",
+          "period_to_bug": "41",
+          "period_buggy": "14"
+        }
+      ],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "12",
+        "period_schedules": "163",
+        "period_buggy": "16"
+      }
+    },
+    {
+      "program": "CB.pbzip2",
+      "y": 342.56,
+      "rows": [
+        {
+          "bug_type": "UAF",
+          "bug_depth": "1",
+          "period_to_bug": "53"
+        },
+        {
+          "period_schedules": "1626"
+        },
+        {
+          "period_buggy": "24"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "shared": {
+        "threads": "4",
+        "bug_type": "NPD",
+        "bug_depth": "2",
+        "period_to_bug": "52",
+        "period_buggy": "41"
+      }
+    },
+    {
+      "program": "Chess.WSQ",
+      "y": 358.89,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "105",
+        "period_schedules": "434",
+        "period_buggy": "15"
+      }
+    },
+    {
+      "program": "Chess.IWSQ",
+      "y": 367.26,
+      "rows": [
+        {
+          "bug_type": "BOF",
+          "bug_depth": "3",
+          "period_to_bug": "1628",
+          "period_buggy": "11"
+        }
+      ],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "108",
+        "period_schedules": "711",
+        "period_buggy": "17"
+      }
+    },
+    {
+      "program": "Chess.SWSQ",
+      "y": 380.34,
+      "rows": [
+        {
+          "bug_type": "AF",
+          "bug_depth": "3",
+          "period_to_bug": "1630"
+        },
+        {
+          "period_schedules": "L"
+        },
+        {
+          "period_buggy": "13"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+          "bug_type": "BOF",
+          "bug_depth": "3",
+          "period_to_bug": "1661",
+          "period_buggy": "11"
+        }
+      ],
+      "shared": {
+        "threads": "3"
+      }
+    },
+    {
+      "program": "Chess.IWSQWS",
+      "y": 396.67,
+      "rows": [
+        {
+          "bug_type": "AF",
+          "bug_depth": "3",
+          "period_to_bug": "1663"
+        },
+        {
+          "period_schedules": "L"
+        },
+        {
+          "period_buggy": "13"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "shared": {
+        "threads": "3"
+      }
+    },
+    {
+      "program": "Inspect.qsort_mt",
+      "y": 408.28,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "27",
+        "period_schedules": "8643",
+        "period_buggy": "135"
+      }
+    },
+    {
+      "program": "Inspect.boundedbuffer",
+      "y": 416.64,
+      "rows": [],
+      "shared": {
+        "threads": "4",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "20",
+        "period_schedules": "L",
+        "period_buggy": "1514"
+      }
+    },
+    {
+      "program": "Misc.safestack",
+      "y": 425.01,
+      "rows": [],
+      "shared": {
+        "threads": "3",
+        "bug_type": "AF",
+        "bug_depth": "-",
+        "period_to_bug": "%",
+        "period_schedules": "6519",
+        "period_buggy": "0"
+      }
+    },
+    {
+      "program": "Splash2.barnes",
+      "y": 433.37,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "L",
+        "period_buggy": "1186"
+      }
+    },
+    {
+      "program": "Splash2.fft",
+      "y": 441.74,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "L",
+        "period_buggy": "3963"
+      }
+    },
+    {
+      "program": "Splash2.lu",
+      "y": 450.1,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "1",
+        "period_to_bug": "2",
+        "period_schedules": "6129",
+        "period_buggy": "2848"
+      }
+    },
+    {
+      "program": "RADBench.bug2",
+      "y": 458.46,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "1985",
+        "period_schedules": "L",
+        "period_buggy": "9"
+      }
+    },
+    {
+      "program": "RADBench.bug3",
+      "y": 466.83,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "2",
+        "period_to_bug": "42",
+        "period_schedules": "L",
+        "period_buggy": "3478"
+      }
+    },
+    {
+      "program": "RADBench.bug4",
+      "y": 475.19,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "AF",
+        "bug_depth": "3",
+        "period_to_bug": "259",
+        "period_schedules": "L",
+        "period_buggy": "6"
+      }
+    },
+    {
+      "program": "RADBench.bug5",
+      "y": 483.56,
+      "rows": [],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "%",
+        "period_schedules": "L",
+        "period_buggy": "0"
+      }
+    },
+    {
+      "program": "RADBench.bug6",
+      "y": 491.92,
+      "rows": [
+        {
+          "threads": "(Buggy",
+          "bug_type": "Programs)",
+          "period_schedules": "38 (34)"
+        }
+      ],
+      "shared": {
+        "threads": "2",
+        "bug_type": "DL",
+        "bug_depth": "2",
+        "period_to_bug": "24",
+        "period_schedules": "2950",
+        "period_buggy": "340"
+      }
+    }
+  ]
+}

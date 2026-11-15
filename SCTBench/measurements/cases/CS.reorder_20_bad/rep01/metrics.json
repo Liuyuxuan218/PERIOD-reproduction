@@ -1,0 +1,49 @@
+{
+  "bare_test_lines": [
+    10001
+  ],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "assertion-failed": {
+      "count": 2882,
+      "first_schedule": 39
+    }
+  },
+  "by_type_log": {
+    "assertion": {
+      "count": 2882,
+      "first_schedule": 39
+    }
+  },
+  "case": "CS.reorder_20_bad",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./reorder_20_bad"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 6089.815,
+  "end_testing": true,
+  "ended": "2026-11-13T20:55:29Z",
+  "error_interleavings": 2882,
+  "exit_code": 0,
+  "first_bug_schedule": 39,
+  "output_dirs": [
+    "out_reorder_20_bad_1"
+  ],
+  "repetition": 1,
+  "round_footer_last": 0,
+  "round_footer_total": 10001,
+  "schedule_limit": 10000,
+  "schedules_explored": 10000,
+  "started": "2026-11-13T19:14:00Z",
+  "stop_reason": "budget",
+  "timeout_interleavings": 7,
+  "valid": true
+}

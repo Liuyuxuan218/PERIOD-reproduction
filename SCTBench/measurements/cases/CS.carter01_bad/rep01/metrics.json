@@ -1,0 +1,37 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": false,
+  "by_type_files": {},
+  "by_type_log": {},
+  "case": "CS.carter01_bad",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./carter01_bad"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 58.586,
+  "end_testing": true,
+  "ended": "2026-11-13T10:44:19Z",
+  "error_interleavings": 0,
+  "exit_code": 0,
+  "first_bug_schedule": null,
+  "output_dirs": [
+    "out_carter01_bad_1"
+  ],
+  "repetition": 1,
+  "round_footer_last": 0,
+  "round_footer_total": 42,
+  "schedule_limit": 10000,
+  "schedules_explored": 42,
+  "started": "2026-11-13T10:43:20Z",
+  "stop_reason": "completed_no_bug",
+  "timeout_interleavings": 11,
+  "valid": true
+}

@@ -1,0 +1,50 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "assertion-failed": {
+      "count": 15,
+      "first_schedule": 102
+    }
+  },
+  "by_type_log": {
+    "assertion": {
+      "count": 15,
+      "first_schedule": 102
+    }
+  },
+  "case": "Chess.WSQ",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./WorkStealQueue",
+    "1",
+    "4",
+    "2"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 10.841,
+  "end_testing": true,
+  "ended": "2026-11-13T10:51:45Z",
+  "error_interleavings": 15,
+  "exit_code": 0,
+  "first_bug_schedule": 102,
+  "output_dirs": [
+    "out_WorkStealQueue_1"
+  ],
+  "repetition": 3,
+  "round_footer_last": 0,
+  "round_footer_total": 347,
+  "schedule_limit": 10000,
+  "schedules_explored": 347,
+  "started": "2026-11-13T10:51:34Z",
+  "stop_reason": "completed",
+  "timeout_interleavings": 0,
+  "valid": true
+}

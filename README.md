@@ -16,3 +16,7 @@ This repository records our weekly work on setting up, understanding, and reprod
 - Organized the benchmark source code, schedules, logs, and reproduction scripts.
 
 Additionally, a separate reproduction attempt was conducted using WSL2 (preserved in the archive).
+
+## SCTBench (1240019547 邱洋)
+
+1240019547 邱洋 ran the SCTBench programs from Table 2 of the PERIOD paper with the official image, bug depth 3, and three repetitions. The clone and run instructions for that work are in [SCTBench/README.md](SCTBench/README.md).

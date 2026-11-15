@@ -1,0 +1,69 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "SEGV": {
+      "count": 70,
+      "first_schedule": 52
+    },
+    "heap-buffer-overflow": {
+      "count": 5,
+      "first_schedule": 818
+    },
+    "heap-use-after-free": {
+      "count": 32,
+      "first_schedule": 53
+    }
+  },
+  "by_type_log": {
+    "SEGV": {
+      "count": 70,
+      "first_schedule": 52
+    },
+    "heap-buffer-overflow": {
+      "count": 5,
+      "first_schedule": 818
+    },
+    "heap-use-after-free": {
+      "count": 32,
+      "first_schedule": 53
+    }
+  },
+  "case": "CB.pbzip2",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "-t",
+    "15",
+    "./pbzip2-0.9.4-src/pbzip2",
+    "-k",
+    "-f",
+    "-p3",
+    "test.tar"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 3069.066,
+  "end_testing": true,
+  "ended": "2026-11-13T13:50:20Z",
+  "error_interleavings": 107,
+  "exit_code": 0,
+  "first_bug_schedule": 52,
+  "output_dirs": [
+    "out_pbzip2_1"
+  ],
+  "repetition": 3,
+  "round_footer_last": 0,
+  "round_footer_total": 1526,
+  "schedule_limit": 10000,
+  "schedules_explored": 1526,
+  "started": "2026-11-13T12:59:11Z",
+  "stop_reason": "completed",
+  "timeout_interleavings": 0,
+  "valid": true
+}

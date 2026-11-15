@@ -1,0 +1,49 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "SEGV": {
+      "count": 8,
+      "first_schedule": 2472
+    }
+  },
+  "by_type_log": {
+    "SEGV": {
+      "count": 8,
+      "first_schedule": 2472
+    }
+  },
+  "case": "RADBench.bug2",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ:/workdir/PERIOD/evaluation/RADBench/bug2/src/nspr-4.6.7/target/dist/lib/",
+    "LOOP_UNWINDED_NUM=1",
+    "/workdir/PERIOD/evaluation/RADBench/bug2/bin/main"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 1777.262,
+  "end_testing": true,
+  "ended": "2026-11-14T20:53:35Z",
+  "error_interleavings": 8,
+  "exit_code": 0,
+  "first_bug_schedule": 2472,
+  "output_dirs": [
+    "out__1"
+  ],
+  "repetition": 1,
+  "round_footer_last": 0,
+  "round_footer_total": 8423,
+  "schedule_limit": 10000,
+  "schedules_explored": 8423,
+  "started": "2026-11-14T20:23:58Z",
+  "stop_reason": "completed",
+  "timeout_interleavings": 0,
+  "valid": true
+}

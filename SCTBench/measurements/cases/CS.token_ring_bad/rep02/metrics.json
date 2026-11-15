@@ -1,0 +1,47 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "assertion-failed": {
+      "count": 55,
+      "first_schedule": 3
+    }
+  },
+  "by_type_log": {
+    "assertion": {
+      "count": 55,
+      "first_schedule": 3
+    }
+  },
+  "case": "CS.token_ring_bad",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./token_ring_bad"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 33.3,
+  "end_testing": true,
+  "ended": "2026-11-13T10:50:48Z",
+  "error_interleavings": 55,
+  "exit_code": 0,
+  "first_bug_schedule": 3,
+  "output_dirs": [
+    "out_token_ring_bad_1"
+  ],
+  "repetition": 2,
+  "round_footer_last": 0,
+  "round_footer_total": 232,
+  "schedule_limit": 10000,
+  "schedules_explored": 232,
+  "started": "2026-11-13T10:50:14Z",
+  "stop_reason": "completed",
+  "timeout_interleavings": 0,
+  "valid": true
+}
