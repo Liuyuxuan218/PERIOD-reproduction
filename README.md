@@ -19,10 +19,10 @@ Additionally, a separate reproduction attempt was conducted using WSL2 (preserve
 
 ### Week 2 – SCTBench Reproduction
 
-- Finished three repetitions for 30 of the 36 SCTBench programs in Table 2, using the official PERIOD image at commit `b6f72a7b06d01ffa7114b640312873ec2578a5ea`, bug depth 3, and a schedule budget of 10,000 (100,000 for `CS.twostage_100_bad`).
-- `CS.reorder_3_bad` matches Table 2: the first bug is at schedule 6, 27 schedules were explored, and 6 were error interleavings.
-- `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two completed repetitions. `CS.queue_bad` has one. `CS.account_bad` and `RADBench.bug4` have none.
+- Reproduced the SCTBench programs in Table 2 using PERIOD with a bug depth of 3.
+- Completed three repetitions for 30 programs. For `CS.reorder_3_bad`, identified 6 error interleavings among 27 schedules, with the first bug at schedule 6, matching Table 2.
+- `Splash2.barnes`, `Splash2.fft`, and `RADBench.bug3` have two completed repetitions. `CS.queue_bad` has one completed repetition.
 
 Contributor: 1240019547 邱洋.
 
-The 97 valid runs are in [SCTBench reproduction/README.md](SCTBench%20reproduction/README.md).
+The measurements are in [SCTBench reproduction/README.md](SCTBench%20reproduction/README.md).
