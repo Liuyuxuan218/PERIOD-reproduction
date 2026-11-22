@@ -1,0 +1,442 @@
+{
+  "cases": [
+    {
+      "case": "Inspect.qsort_mt",
+      "worker_threads": 3,
+      "pct_n": 4,
+      "pct_k": 512,
+      "pct_depth": 3,
+      "pct_smoke_observed_steps": 55,
+      "arguments": [
+        "-n",
+        "32",
+        "-f",
+        "4",
+        "-h",
+        "3",
+        "-v"
+      ],
+      "assertion_rules": [
+        {
+          "file": "qsort_mt.c",
+          "line": 477
+        },
+        {
+          "file": "qsort_mt.c",
+          "line": 649
+        }
+      ],
+      "source_sha256": {
+        "qsort_mt.c": "e23cf7a23a8986c9cd8d64da4447ca122f37d986b9f05be439a22d32e487121c"
+      },
+      "compile_command": [
+        "clang",
+        "-g",
+        "-O0",
+        "-pthread",
+        "-emit-llvm",
+        "-c",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.c",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc"
+      ],
+      "native_link_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt-native",
+        "-lpthread",
+        "-ldl"
+      ],
+      "period_link_command": [
+        "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt",
+        "-lpthread",
+        "-ldl"
+      ],
+      "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt-native",
+      "native_binary_sha256": "5373b85edb1444ca950e0a789648996793b0229cf7a1b77f5671e0d311694210",
+      "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt",
+      "period_binary_sha256": "f9eb829b8bb309d65f29e36a03f940e234ba9deabc6939e1139fcdac11872b95",
+      "bitcode_sha256": "4750db54f8f804aab12b8f0fc8a4a7f747945a438810b9793498ff08a464f78d"
+    },
+    {
+      "case": "Chess.WSQ",
+      "worker_threads": 2,
+      "pct_n": 3,
+      "pct_k": 1024,
+      "pct_depth": 3,
+      "pct_smoke_observed_steps": 90,
+      "arguments": [
+        "1",
+        "4",
+        "2"
+      ],
+      "assertion_rules": [
+        {
+          "file": "WorkStealQueue.cpp",
+          "line": 53
+        },
+        {
+          "file": "WorkStealQueue.h",
+          "line": 359
+        },
+        {
+          "file": "WorkStealQueue.h",
+          "line": 373
+        }
+      ],
+      "source_sha256": {
+        "WorkStealQueue.cpp": "e0e486a5d1ee366fb9730a00b03826775647b20a2ba4b0c936f5265a6417abd0",
+        "WorkStealQueue.h": "66d4789c3fe93c5452421f69781e72fd825532f59eab46065b48d5cdb9245891"
+      },
+      "compile_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-pthread",
+        "-std=c++0x",
+        "-emit-llvm",
+        "-c",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.cpp",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc"
+      ],
+      "native_link_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue-native",
+        "-lpthread",
+        "-ldl"
+      ],
+      "period_link_command": [
+        "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue",
+        "-lpthread",
+        "-ldl"
+      ],
+      "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue-native",
+      "native_binary_sha256": "60aeea08b5bf5c2f4a6294f88de69fdfc925e22ca4b91101d554c47ede096ae6",
+      "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue",
+      "period_binary_sha256": "9aa9fb12b8595aefb69f6a5b855bdb5bc0063847ebe367f10b39661d1d7511e0",
+      "bitcode_sha256": "2c1cc368e37d8ef7ecd18f43c409e5bb02f7bd34f9d8b8ae839a3347d0db3e6c"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "worker_threads": 2,
+      "pct_n": 3,
+      "pct_k": 1024,
+      "pct_depth": 3,
+      "pct_smoke_observed_steps": 93,
+      "arguments": [
+        "1",
+        "4",
+        "2"
+      ],
+      "assertion_rules": [
+        {
+          "file": "InterlockedWorkStealQueue.cpp",
+          "line": 57
+        },
+        {
+          "file": "WorkStealQueue.h",
+          "line": 359
+        },
+        {
+          "file": "WorkStealQueue.h",
+          "line": 373
+        }
+      ],
+      "source_sha256": {
+        "InterlockedWorkStealQueue.cpp": "d06d886f4e37b6c098a04944e5f2dde64682ef6a7eca7c35e92eaed938dab97f",
+        "WorkStealQueue.h": "66d4789c3fe93c5452421f69781e72fd825532f59eab46065b48d5cdb9245891"
+      },
+      "compile_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-pthread",
+        "-std=c++0x",
+        "-emit-llvm",
+        "-c",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.cpp",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc"
+      ],
+      "native_link_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue-native",
+        "-lpthread",
+        "-ldl"
+      ],
+      "period_link_command": [
+        "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue",
+        "-lpthread",
+        "-ldl"
+      ],
+      "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue-native",
+      "native_binary_sha256": "3b8c8f1a291f86f5fa0901362e9fec05927c4af90672e4cfcbcc76d7ab12351d",
+      "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue",
+      "period_binary_sha256": "88303172b71a43fd402a5d3f16ac574c83c09e5e7914f70e97439733e85d21f3",
+      "bitcode_sha256": "0acf50c5bd56f84a4be9525c17bdcfe20dede318353f430ce8c9f129f8b15e56"
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "worker_threads": 3,
+      "pct_n": 4,
+      "pct_k": 16384,
+      "pct_depth": 3,
+      "pct_smoke_observed_steps": 1512,
+      "arguments": [
+        "2",
+        "4",
+        "2"
+      ],
+      "assertion_rules": [
+        {
+          "file": "InterlockedWorkStealQueueWithState.cpp",
+          "line": 59
+        },
+        {
+          "file": "WorkStealQueueWithState.h",
+          "line": 72
+        },
+        {
+          "file": "WorkStealQueueWithState.h",
+          "line": 79
+        },
+        {
+          "file": "WorkStealQueueWithState.h",
+          "line": 567
+        },
+        {
+          "file": "WorkStealQueueWithState.h",
+          "line": 592
+        }
+      ],
+      "source_sha256": {
+        "InterlockedWorkStealQueueWithState.cpp": "36bd8afe44101be31a33bef3efc5e85b37ec9ac1333c88f090aa5ac8bca3b0cf",
+        "WorkStealQueueWithState.h": "d27ca3c52fc5fbadc6d19ec0b0d4ee082496474b76225839a3113d06fb573bda"
+      },
+      "compile_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-pthread",
+        "-std=c++0x",
+        "-emit-llvm",
+        "-c",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.cpp",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc"
+      ],
+      "native_link_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState-native",
+        "-lpthread",
+        "-ldl"
+      ],
+      "period_link_command": [
+        "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState",
+        "-lpthread",
+        "-ldl"
+      ],
+      "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState-native",
+      "native_binary_sha256": "1cd71e015a6b7fbdc802e5f8f2aff51707609d0c460a39743fa28c8be13db485",
+      "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState",
+      "period_binary_sha256": "5ba6545d562a53587809b345782acc5fd517fca7d8e7f3614cbc59168589369f",
+      "bitcode_sha256": "e57f4c30a5c62e8793ccd2df664454ee8322c0f3fc7096433c122df1770d746b"
+    },
+    {
+      "case": "Misc.safestack",
+      "worker_threads": 3,
+      "pct_n": 4,
+      "pct_k": 1024,
+      "pct_depth": 3,
+      "pct_smoke_observed_steps": 101,
+      "arguments": [],
+      "assertion_rules": [
+        {
+          "file": "SafeStack.cpp",
+          "line": 100
+        },
+        {
+          "file": "SafeStackRelacy.cpp",
+          "line": 100
+        },
+        {
+          "file": "SafeStack_simplify.cpp",
+          "line": 95
+        },
+        {
+          "file": "SafeStack_sleep.cpp",
+          "line": 229
+        },
+        {
+          "file": "SafeStack_sleep.cpp",
+          "line": 254
+        },
+        {
+          "file": "SafeStack_sleep.cpp",
+          "line": 283
+        }
+      ],
+      "source_sha256": {
+        "SafeStack.cpp": "41bba45743a27a1b590d9d885c3e0e5a72c66c55c64312b4ea4f48700855f68e",
+        "SafeStackRelacy.cpp": "8cca4c4b8a9baac60f31d1a010011b496d42bef441d7be6feb4ddfff49ef0804",
+        "SafeStack_simplify.cpp": "01ded1a223b74cc3eac0511b68e99148e8ccaec3e8b66eacfc2ff231bb887a3a",
+        "SafeStack_sleep.cpp": "2fccddc94878eadae7cbd77056fd974c5d4e1d84b3caadea084c4b146e1b6e96",
+        "relacy/atomic.hpp": "2b404b4a70fb0b75f79202f0c03be3b591706b6b21e0704e400428132e9134dc",
+        "relacy/atomic_events.hpp": "0d7fc4b7eec58fc0431395d984b09434e1ce1c24627ecf55b10accc920a3c6f5",
+        "relacy/atomic_fence.hpp": "5a26525c837c50cb2c154b344bd531d7cf99f73f0fc956c4cac2cb203a9ceb73",
+        "relacy/backoff.hpp": "625d769ba760689fc24f4409eaa7f90ce3785d7a4a2aaee2e1deec2f1da2ab50",
+        "relacy/base.hpp": "3926980f449748d0bfb96daafd05929bfa1517cb6fa7dbd07018a539b02ab1af",
+        "relacy/cli.hpp": "6333645f9869d7fb84a7154a3f8ceef20fb83859e03f255a37c8121b6d126194",
+        "relacy/cli_interlocked.hpp": "e7a320b8249095c4e972f620f4a6cbc11b5b2d9226b57491f67806078e78e912",
+        "relacy/cli_var.hpp": "d307324c16b2f3b9ed02190171b239c3d0832921f2c966e32aa72c0f77855053",
+        "relacy/cli_volatile.hpp": "65a9871a58799dbf8f49008fcca747b9d5299782dd6e7fb43e3ff6f433a9a30a",
+        "relacy/context.hpp": "8e19827ca4bb8540c08fd0e7ae6a61c360d92cf4ebb2915a20eec86ce3deb4dd",
+        "relacy/context_addr_hash.hpp": "b1615662bf2e35e42e0eaf6debb18cec937b8af8e9b924e9730655de9fd9a34e",
+        "relacy/context_base.hpp": "0fc2c10c4075611c6b89bc885d86ed730271b067dbebfd05c293de7a24c899f2",
+        "relacy/context_base_impl.hpp": "2bbb96c6444fefc92c94b8f4f7aee6ac05e07e4bdbd27279874fb25b6ccbff2e",
+        "relacy/context_bound_scheduler.hpp": "243b43c7569c0591eb64b06c1c3f87faac33b60998467358dc1186f7029128a3",
+        "relacy/defs.hpp": "738759adca7f0c08ee6b78b0dffb4d78256b9d646544317d29078b2fe656c99f",
+        "relacy/dyn_thread.hpp": "6031de062726e1a08cf4683e9474d0de0fea3d10428b9d3b66e3d89027a0ce85",
+        "relacy/dyn_thread_ctx.hpp": "c9669e2f781f3ff1c07e612eba540fb3027dcbd044af6c2869702209b96b30f6",
+        "relacy/foreach.hpp": "e3441eb6150b3d4fdb1588acd54c07ef2267c6c0e3b1a8441c1dc4689fd4e881",
+        "relacy/full_search_scheduler.hpp": "419e8c61a12841194286dc1f755699e3911f7fa98e76eb0b52718d220ce5a682",
+        "relacy/history.hpp": "a79057b55928da3d11a06138339448b6316553569e494dd85bf272af57a937ab",
+        "relacy/java.hpp": "f730b0aca33583452c6df5773dd1a6748b5ec5b1e86a9eaa88367766484dd198",
+        "relacy/java_atomic.hpp": "6e3e386a16ed1ece3f99b45ed0a4486c9fde428ab394b2e7c15ab2aba6ea5fa6",
+        "relacy/java_var.hpp": "41c4bc11f8144aa0e7fecd0a5e1bf60c875a450dcfe214f73733738506fcdc1a",
+        "relacy/java_volatile.hpp": "7816fc19d37804dd0122a3b074c6dbb4eb7440619fb1d16ed05d755e83b327a3",
+        "relacy/memory.hpp": "4e2411285bea187b7ea00399db241b5c57a5cb6ce5ffb33be2b81b7a4ca826fd",
+        "relacy/memory_order.hpp": "5eb0f6138480aa26ed2258a75c8e6fb5953d192cfc0bdce5889e64ab95def035",
+        "relacy/pch.hpp": "bd91d8192721dab5f1c0d2aad6ebfcc7acf00a81826ed396b7e0a96bfab9e520",
+        "relacy/platform.hpp": "b3c37b6eff3e302b178807d75a196e24acce1b5d913c49702922899688801dbb",
+        "relacy/pthread.h": "43f712830dee8b224c4053e486e3da89fe924f196f7daf04e9525a311ee4a356",
+        "relacy/random.hpp": "7636e80b101230f5e3f96512192061b12268748675d37c2a4214f89bf0f76fc3",
+        "relacy/random_scheduler.hpp": "d6fe2a1f85c5a5500df069e13361a4c47c71b53edc53658f1e4dbb1e962f0b2e",
+        "relacy/relacy.hpp": "7bbb903982b6c9ce5bb740ec69d53612a85008f2990595aed9fd0954374d479b",
+        "relacy/relacy_cli.hpp": "3f9576faa50eed5cae5d3af47a476bfbd59d2e953633d104d47a5fd95f7d7b75",
+        "relacy/relacy_java.hpp": "63c98be54e8725ba16b79642f0c85e7fe9b2b8589510c54a0960a3283c0646d5",
+        "relacy/relacy_std.hpp": "cabf21a4fff2583d7b3390fff4071ad46efa33f24e0dbe5f66edb31444552ce2",
+        "relacy/rmw.hpp": "cab3877003f4de6b62f28668d5e0260252ed9078e0225403fd9bd3edceeb0f84",
+        "relacy/scheduler.hpp": "28b24fb5634b53d554184fd0f11fe4298ea99a2e385efc78f7274cbb326e099a",
+        "relacy/signature.hpp": "d83a74c146ded9aae582ab3cca091eb97d41cc173524afccaac5c4393e8df80e",
+        "relacy/slab_allocator.hpp": "ffce2af0e930b74d2d5e7051037e64f780f8af883b2671385ff88c3ef72c5dbc",
+        "relacy/stdlib/condition_variable.hpp": "353710dadca8859878eac840d383250ee6da4d52fa6e87a80b8f9baff72d25b4",
+        "relacy/stdlib/event.hpp": "36371028064e6ab8f4c39702aa5b0be807c4db1cf9ba9e990caecde2a0265257",
+        "relacy/stdlib/mutex.hpp": "9472bd9af9a8995c07432a74fc2b4aa4e13b972e32581de36b2640e5d9799702",
+        "relacy/stdlib/pthread.hpp": "9328764581394d1a6999383771d2959394e11c03aa848c20c8b79d4d84bc3178",
+        "relacy/stdlib/semaphore.hpp": "ded8de0f27884f9679d29b23c55cc362c6240df31d6c554fa95882a0c1ba841c",
+        "relacy/stdlib/windows.hpp": "89216d5706c7dfc355e12bde1922f4765418f7e424e12bee6d0e6f8b4e63880a",
+        "relacy/sync_var.hpp": "109a16fe15772c85d607841be8aed336c42b792a2c34cb6a6c5b2eb1014d17dc",
+        "relacy/test_params.hpp": "1e1879d79941caa0977dcec43d3094266760d718bafb5a9c4dcd6d174d170746",
+        "relacy/test_result.hpp": "f75b1380e2da8e65f7c75e8ecc7344842ed93d465e1d968faec1a8692b0411f3",
+        "relacy/test_suite.hpp": "fea403518adbab46602bc2490d9fad1455d31a536cbe5424c7c164eb22d3e7bd",
+        "relacy/thread.hpp": "48efa27c3f3875ade7236275793830b4ba456b49f76e3ec1f31e6b2c9cbb0f88",
+        "relacy/thread_base.hpp": "8767b777a22688e121b3d75dd1ec670285c3a0932d203601332402b0d75e60aa",
+        "relacy/thread_local.hpp": "41a21dce7f14cd98db2fa9da4ec24bb12151e41d7401fbffe182f61393e0b1b7",
+        "relacy/thread_local_ctx.hpp": "9b2c04980e1314647b8c609e280400199758229e56e01566371b9d9450836799",
+        "relacy/var.hpp": "2e6ee30585bb3b44b955bc2e640c2e81fe5fa931d646c00bdec1d8f34a7c5758",
+        "relacy/volatile.hpp": "9604d82f2d8132a6617fbf795b78376504d163e2b7871cf106947ec9f55a5207",
+        "relacy/waitset.hpp": "707222d448b2fad933f1a6d194d09580da5639b290f5a7027862d057d99fe8a7",
+        "relacy/windows.h": "dcc2c1efabc687094e21b684e7b94aaae10d67773718d038c983167ddd76864e"
+      },
+      "compile_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-pthread",
+        "-std=c++0x",
+        "-emit-llvm",
+        "-c",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.cpp",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc"
+      ],
+      "native_link_command": [
+        "clang++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack-native",
+        "-lpthread",
+        "-ldl"
+      ],
+      "period_link_command": [
+        "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+        "-g",
+        "-O0",
+        "-no-pie",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc",
+        "-o",
+        "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack",
+        "-lpthread",
+        "-ldl"
+      ],
+      "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack-native",
+      "native_binary_sha256": "4c6857f6f46c3f4abf8558adf803bd6a1db2de05a04cef17d0b73d8cadd2abea",
+      "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack",
+      "period_binary_sha256": "8a2e7cd0ca9decf3b4ec2b816b61744a76cab2853e02bfa856e6a661a99776b6",
+      "bitcode_sha256": "e9f25ecb3cf34d251ce623bbe030f83d9784d08b4624651cfa987a2c2a692781"
+    }
+  ],
+  "source_build_directory": "/workdir/rq3-cross-family-screen-o5n8qz",
+  "audited_source_archive_sha256": "b53c88e09439e7b19a6f5d4f484ad373a312a7cbef10b4c9b910a56a9537da77",
+  "host_audit_sha256": "5db2c8fcdc5325c8b72a6a6fe07ce3b0dae4151c82674cad15d29aebb3e261ff",
+  "excluded_special_cases": [
+    "Chess.SWSQ",
+    "Inspect.boundedbuffer"
+  ],
+  "period_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+  "selected_before_formal_measurement": true,
+  "systematic_bounds": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

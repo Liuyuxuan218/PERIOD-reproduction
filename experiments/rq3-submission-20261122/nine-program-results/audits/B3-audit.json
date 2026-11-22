@@ -1,0 +1,260 @@
+{
+  "source_batch": "five-extra-repair-20261120T231039Z-b86dea",
+  "archive_sha256": "0e4c7b2c202f052dfe182c533bb58975686e9b68e73f5b69063073f16297377b",
+  "raw_logs_of_completed_groups_read": 50,
+  "additional_raw_logs_read": 35,
+  "additional_log_categories": {
+    "profiling": 1,
+    "partial_group": 0,
+    "observer_selfcheck": 34
+  },
+  "completed_groups": 5,
+  "complete_paired_blocks": 1,
+  "complete_paired_children": 50,
+  "target_assertions": [],
+  "timing_flags": [],
+  "quality": [
+    {
+      "group": 1,
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "Native",
+      "host_seconds": 0.3426644000000181,
+      "child_seconds": 0.1929566850012634,
+      "flagged": false
+    },
+    {
+      "group": 2,
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "PERIOD",
+      "host_seconds": 2.0586225999999783,
+      "child_seconds": 1.3459942789850174,
+      "flagged": false
+    },
+    {
+      "group": 3,
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "IPB",
+      "host_seconds": 119.8888265,
+      "child_seconds": 119.72532111300097,
+      "flagged": false
+    },
+    {
+      "group": 4,
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "IDB",
+      "host_seconds": 125.10370319999998,
+      "child_seconds": 124.87082712700067,
+      "flagged": false
+    },
+    {
+      "group": 5,
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "PCT",
+      "host_seconds": 123.69690270000001,
+      "child_seconds": 123.48526185699302,
+      "flagged": false
+    }
+  ],
+  "partial_PERIOD_group": null,
+  "preservation": {
+    "changed_files": [],
+    "checked_files": 594
+  },
+  "original_deliverable_files_checked": 27,
+  "problems": [],
+  "stats": [
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "Native",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "PERIOD",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "IPB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "IDB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "PCT",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "Native",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "PERIOD",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "IPB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "IDB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "PCT",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "Native",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "PERIOD",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "IPB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "IDB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "PCT",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "Native",
+      "paired_repetitions": 1,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "PERIOD",
+      "paired_repetitions": 1,
+      "slowdown_mean": 6.9756291624527265,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "IPB",
+      "paired_repetitions": 1,
+      "slowdown_mean": 620.4777052021653,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "IDB",
+      "paired_repetitions": 1,
+      "slowdown_mean": 647.1443429191535,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "PCT",
+      "paired_repetitions": 1,
+      "slowdown_mean": 639.9636366896773,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "Native",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "PERIOD",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "IPB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "IDB",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "PCT",
+      "paired_repetitions": 0,
+      "slowdown_mean": null,
+      "slowdown_sample_sd": null
+    }
+  ],
+  "timing": {
+    "measurements_complete": true,
+    "planned_groups": 5,
+    "host_elapsed_seconds": 505.98087619999995,
+    "ended_utc": "2026-11-20T23:19:05.4990162Z",
+    "selection": "repair-iwsqws-rep3",
+    "started_utc": "2026-11-20T23:10:39.5113601Z",
+    "required_clocksource": "kvm-clock",
+    "planned_launches": 50,
+    "command_exit_code": 0
+  },
+  "original_failures": [],
+  "archive_extracted_to": "C:\\Users\\Lyufan\\Documents\\Codex\\2026-11-15\\new-chat\\work\\rq3-legacy-vm\\extracted-five-extra-repair-20261120T231039Z-b86dea"
+}

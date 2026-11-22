@@ -1,0 +1,11 @@
+﻿{
+    "measurements_complete":  true,
+    "planned_groups":  15,
+    "host_elapsed_seconds":  1206.8368071999998,
+    "ended_utc":  "2026-11-21T02:21:17.9340939Z",
+    "selection":  "swsq",
+    "started_utc":  "2026-11-21T02:01:11.0902822Z",
+    "required_clocksource":  "kvm-clock",
+    "planned_launches":  150,
+    "command_exit_code":  0
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "batch": "four-cs-formal-20261120T122804Z",
+    "archive_sha256": "7e81cecdfed972a3d79a11622c92e09d99a91c1098b3526b30631c377c0485b7",
+    "timing": {
+      "started_utc": "2026-11-20T12:28:04.5477273Z",
+      "ended_utc": "2026-11-20T13:02:03.6896971Z",
+      "host_elapsed_seconds": 2039.1380735999999,
+      "host_elapsed_minutes": 33.98563456,
+      "wall_clock_seconds": 2039.1419698,
+      "planned_groups": 60,
+      "planned_launches": 600,
+      "repair": false,
+      "pilot": false,
+      "required_clocksource": "kvm-clock",
+      "selection": "all",
+      "measurements_complete": true,
+      "command_exit_code": 0,
+      "sleep_inhibition_requested": true,
+      "source_batch": "none"
+    },
+    "original_batch_complete": true,
+    "adopted_groups": 60,
+    "evidence_archive": "work/rq3-legacy-vm/four-cs-formal-20261120T122804Z/evidence.tar.gz"
+  },
+  {
+    "batch": "five-extra-formal-20261120T151904Z-b3d307",
+    "archive_sha256": "139fcd474eec08a8b905cbf732b69b9c5d36383602aec7145499f12df600c188",
+    "timing": {
+      "planned_launches": 750,
+      "host_elapsed_seconds": 3528.0604906,
+      "measurements_complete": false,
+      "planned_groups": 75,
+      "required_clocksource": "kvm-clock",
+      "command_exit_code": 1,
+      "started_utc": "2026-11-20T15:19:04.4438204Z",
+      "ended_utc": "2026-11-20T16:17:52.5106639Z"
+    },
+    "original_batch_complete": false,
+    "adopted_groups": 70,
+    "evidence_archive": "work/rq3-legacy-vm/five-extra-formal-20261120T151904Z-b3d307/evidence.tar.gz"
+  },
+  {
+    "batch": "five-extra-repair-20261120T231039Z-b86dea",
+    "archive_sha256": "0e4c7b2c202f052dfe182c533bb58975686e9b68e73f5b69063073f16297377b",
+    "timing": {
+      "measurements_complete": true,
+      "planned_groups": 5,
+      "host_elapsed_seconds": 505.98087619999995,
+      "ended_utc": "2026-11-20T23:19:05.4990162Z",
+      "selection": "repair-iwsqws-rep3",
+      "started_utc": "2026-11-20T23:10:39.5113601Z",
+      "required_clocksource": "kvm-clock",
+      "planned_launches": 50,
+      "command_exit_code": 0
+    },
+    "original_batch_complete": true,
+    "adopted_groups": 5,
+    "evidence_archive": "work/rq3-legacy-vm/five-extra-repair-20261120T231039Z-b86dea/evidence.tar.gz"
+  }
+]

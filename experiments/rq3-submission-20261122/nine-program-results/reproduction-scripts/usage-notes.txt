@@ -1,0 +1,4 @@
+These files snapshot the scripts used in this workspace. Exact executed versions are also retained in each evidence archive.
+The current local environment paths are captured, not a portable clean-machine setup package. Repository integration and clean-machine instructions remain pending user review.
+The analysis source builders were executed from outputs/rq3-legacy-vm (merge/audit) and work/rq3-expanded-build (workbook/report); their relative-root calculation assumes those workspace locations.
+The spreadsheet uses @oai/artifact-tool; the report/figure use ReportLab and Poppler. Never run old CS or full five-program scripts merely to review these results.

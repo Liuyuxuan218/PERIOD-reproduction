@@ -1,0 +1,386 @@
+{
+  "batch": "swsq-formal-20261121T020111Z-49a91f",
+  "archive_sha256": "06e8da8c8fda1266e81657247bc656e51894777add0dee9038a360afbec32c3c",
+  "audit_passed": true,
+  "measured_logs_read": 150,
+  "excluded_profile_logs_read": 3,
+  "excluded_selfcheck_logs_read": 34,
+  "groups": [
+    {
+      "repetition": 1,
+      "method": "Native",
+      "mean_seconds": 0.02409401100012474
+    },
+    {
+      "repetition": 1,
+      "method": "PERIOD",
+      "mean_seconds": 0.13680113480004366
+    },
+    {
+      "repetition": 1,
+      "method": "IPB",
+      "mean_seconds": 12.235949050797354
+    },
+    {
+      "repetition": 1,
+      "method": "IDB",
+      "mean_seconds": 12.066230877298949
+    },
+    {
+      "repetition": 1,
+      "method": "PCT",
+      "mean_seconds": 12.164320351999049
+    },
+    {
+      "repetition": 2,
+      "method": "PERIOD",
+      "mean_seconds": 0.16233949070010567
+    },
+    {
+      "repetition": 2,
+      "method": "IPB",
+      "mean_seconds": 12.033356376700976
+    },
+    {
+      "repetition": 2,
+      "method": "IDB",
+      "mean_seconds": 12.064385531299195
+    },
+    {
+      "repetition": 2,
+      "method": "PCT",
+      "mean_seconds": 12.05440615879852
+    },
+    {
+      "repetition": 2,
+      "method": "Native",
+      "mean_seconds": 0.018423510998400162
+    },
+    {
+      "repetition": 3,
+      "method": "IPB",
+      "mean_seconds": 11.949732473800395
+    },
+    {
+      "repetition": 3,
+      "method": "IDB",
+      "mean_seconds": 12.27746314610049
+    },
+    {
+      "repetition": 3,
+      "method": "PCT",
+      "mean_seconds": 12.127404119299172
+    },
+    {
+      "repetition": 3,
+      "method": "Native",
+      "mean_seconds": 0.01672487099931459
+    },
+    {
+      "repetition": 3,
+      "method": "PERIOD",
+      "mean_seconds": 0.13769732959917746
+    }
+  ],
+  "stats": [
+    {
+      "method": "Native",
+      "mean_seconds": 0.019747464332613162,
+      "sample_sd_seconds": 0.0038588463834759406,
+      "paired_slowdown_mean": 1.0,
+      "paired_slowdown_sample_sd": 0.0,
+      "paired_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "method": "PERIOD",
+      "mean_seconds": 0.1456126516997756,
+      "sample_sd_seconds": 0.014492796434322844,
+      "paired_slowdown_mean": 7.574144523696131,
+      "paired_slowdown_sample_sd": 1.6675505040137344,
+      "paired_slowdowns": [
+        5.677806605107611,
+        8.811539272519918,
+        8.233087693460865
+      ]
+    },
+    {
+      "method": "IPB",
+      "mean_seconds": 12.073012633766242,
+      "sample_sd_seconds": 0.14717148596207,
+      "paired_slowdown_mean": 625.1609594340971,
+      "paired_slowdown_sample_sd": 106.12897919210072,
+      "paired_slowdowns": [
+        507.84193012670266,
+        653.1521802628127,
+        714.4887679127758
+      ]
+    },
+    {
+      "method": "IDB",
+      "mean_seconds": 12.136026518232878,
+      "sample_sd_seconds": 0.12249118785604893,
+      "paired_slowdown_mean": 629.9061676987874,
+      "paired_slowdown_sample_sd": 118.62442885317924,
+      "paired_slowdowns": [
+        500.7979317863049,
+        654.8363953182879,
+        734.0841759917694
+      ]
+    },
+    {
+      "method": "PCT",
+      "mean_seconds": 12.115376876698914,
+      "sample_sd_seconds": 0.05593543948298716,
+      "paired_slowdown_mean": 628.091914692402,
+      "paired_slowdown_sample_sd": 112.43521145382695,
+      "paired_slowdowns": [
+        504.86904616819805,
+        654.2947302414445,
+        725.1119676675636
+      ]
+    }
+  ],
+  "period_completion": [
+    {
+      "repetition": 1,
+      "completion_reason": "driver_returned",
+      "unique_rounds": 10,
+      "retests": 0
+    },
+    {
+      "repetition": 2,
+      "completion_reason": "actual_launch_budget_reached",
+      "unique_rounds": 9,
+      "retests": 1
+    },
+    {
+      "repetition": 3,
+      "completion_reason": "driver_returned",
+      "unique_rounds": 10,
+      "retests": 0
+    }
+  ],
+  "pct_observed_step_range": [
+    1711,
+    2412
+  ],
+  "exit_code_counts_including_profiles": {
+    "0": 63,
+    "1": 87,
+    "77": 3
+  },
+  "target_assertions": 0,
+  "tool_failures": 0,
+  "timeouts": 0,
+  "timing_flags": [],
+  "quality": [
+    {
+      "group": 1,
+      "host_seconds": 0.3771059999999977,
+      "child_seconds": 0.24094011000124738,
+      "flagged": false
+    },
+    {
+      "group": 2,
+      "host_seconds": 2.1537060999999937,
+      "child_seconds": 1.3680113480004366,
+      "flagged": false
+    },
+    {
+      "group": 3,
+      "host_seconds": 122.57174049999999,
+      "child_seconds": 122.35949050797353,
+      "flagged": false
+    },
+    {
+      "group": 4,
+      "host_seconds": 120.87707149999997,
+      "child_seconds": 120.66230877298949,
+      "flagged": false
+    },
+    {
+      "group": 5,
+      "host_seconds": 121.831705,
+      "child_seconds": 121.6432035199905,
+      "flagged": false
+    },
+    {
+      "group": 6,
+      "host_seconds": 2.4760356999999544,
+      "child_seconds": 1.6233949070010567,
+      "flagged": false
+    },
+    {
+      "group": 7,
+      "host_seconds": 120.52130890000007,
+      "child_seconds": 120.33356376700976,
+      "flagged": false
+    },
+    {
+      "group": 8,
+      "host_seconds": 120.94094630000006,
+      "child_seconds": 120.64385531299195,
+      "flagged": false
+    },
+    {
+      "group": 9,
+      "host_seconds": 120.70696659999999,
+      "child_seconds": 120.5440615879852,
+      "flagged": false
+    },
+    {
+      "group": 10,
+      "host_seconds": 0.363944399999923,
+      "child_seconds": 0.1842351099840016,
+      "flagged": false
+    },
+    {
+      "group": 11,
+      "host_seconds": 119.66136979999999,
+      "child_seconds": 119.49732473800395,
+      "flagged": false
+    },
+    {
+      "group": 12,
+      "host_seconds": 123.13212959999998,
+      "child_seconds": 122.7746314610049,
+      "flagged": false
+    },
+    {
+      "group": 13,
+      "host_seconds": 121.43710229999988,
+      "child_seconds": 121.27404119299172,
+      "flagged": false
+    },
+    {
+      "group": 14,
+      "host_seconds": 0.3079333000000588,
+      "child_seconds": 0.1672487099931459,
+      "flagged": false
+    },
+    {
+      "group": 15,
+      "host_seconds": 2.1285351999999875,
+      "child_seconds": 1.3769732959917746,
+      "flagged": false
+    }
+  ],
+  "timing": {
+    "measurements_complete": true,
+    "planned_groups": 15,
+    "host_elapsed_seconds": 1206.8368071999998,
+    "ended_utc": "2026-11-21T02:21:17.9340939Z",
+    "selection": "swsq",
+    "started_utc": "2026-11-21T02:01:11.0902822Z",
+    "required_clocksource": "kvm-clock",
+    "planned_launches": 150,
+    "command_exit_code": 0
+  },
+  "preservation": {
+    "changed_files": [],
+    "checked_files": 594
+  },
+  "existing_deliverable_hash_checks": {
+    "rq3-final-20261120": 27,
+    "rq3-expanded-20261121": 43
+  },
+  "environment": {
+    "arguments": [
+      "2",
+      "4",
+      "2"
+    ],
+    "assertion_rules": [
+      {
+        "file": "StateWorkStealQueue.cpp",
+        "line": 60
+      },
+      {
+        "file": "WorkStealQueueWithState.h",
+        "line": 72
+      },
+      {
+        "file": "WorkStealQueueWithState.h",
+        "line": 79
+      },
+      {
+        "file": "WorkStealQueueWithState.h",
+        "line": 567
+      },
+      {
+        "file": "WorkStealQueueWithState.h",
+        "line": 592
+      }
+    ],
+    "bitcode_sha256": "515292896a4cb80c663b38db31019312b4f6fd0f64acaca9e7802186b86faab8",
+    "case": "Chess.SWSQ",
+    "compile_command": [
+      "clang++",
+      "-g",
+      "-O0",
+      "-pthread",
+      "-std=c++0x",
+      "-emit-llvm",
+      "-c",
+      "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue.cpp",
+      "-o",
+      "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue.bc"
+    ],
+    "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue-native",
+    "native_binary_sha256": "1d2d50a29d1df6163f8b2130a18470394b04274016610988abc6728131a5575b",
+    "native_link_command": [
+      "clang++",
+      "-g",
+      "-O0",
+      "-no-pie",
+      "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue.bc",
+      "-o",
+      "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue-native",
+      "-lpthread",
+      "-ldl"
+    ],
+    "pct_depth": 3,
+    "pct_k": 8192,
+    "pct_n": 4,
+    "pct_smoke_observed_steps": 551,
+    "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue",
+    "period_binary_sha256": "3d31d4613ed4ddf0fa6f629be9213a8ccaa95290384ea1e53d10f3d2cac796e9",
+    "period_link_command": [
+      "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+      "-g",
+      "-O0",
+      "-no-pie",
+      "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue.bc",
+      "-o",
+      "/workdir/rq3-cross-family-screen-o5n8qz/Chess.SWSQ/build/StateWorkStealQueue",
+      "-lpthread",
+      "-ldl"
+    ],
+    "source_sha256": {
+      "StateWorkStealQueue.cpp": "e056c4154de178c27c96a613accab7e83904b6f66593045f68c0bf1c9f803597",
+      "WorkStealQueueWithState.h": "d27ca3c52fc5fbadc6d19ec0b0d4ee082496474b76225839a3113d06fb573bda"
+    },
+    "worker_threads": 3
+  },
+  "combined_progress": {
+    "cases": 10,
+    "sctbench_total": 36,
+    "families": 4,
+    "paper_families_total": 7,
+    "groups": 150,
+    "actual_measurements": 1500,
+    "paired_blocks": 30,
+    "formal_command_seconds": 7280.016247599999
+  },
+  "limits": [
+    "same-VM repeated sessions, not 30 independent repetitions",
+    "startup-inclusive metric, not steady-state overhead",
+    "observed Native group means vary; paired ratios retain this variation",
+    "selected workload subset; boundedBuffer excluded with recorded failures",
+    "three sessions cannot establish statistical significance or error-finding superiority"
+  ]
+}

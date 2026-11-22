@@ -1,0 +1,8 @@
+{
+  "summary_values_checked": 315,
+  "formula_error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "input_propagation_and_restoration": "passed",
+  "raw_observations": 1350,
+  "groups": 135,
+  "native_excel_application_tested": false
+}

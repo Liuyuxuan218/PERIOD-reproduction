@@ -1,0 +1,1421 @@
+{
+  "source_batch": "five-extra-formal-20261120T151904Z-b3d307",
+  "archive_sha256": "139fcd474eec08a8b905cbf732b69b9c5d36383602aec7145499f12df600c188",
+  "raw_logs_of_completed_groups_read": 710,
+  "additional_raw_logs_read": 49,
+  "additional_log_categories": {
+    "profiling": 15,
+    "partial_group": 10,
+    "observer_selfcheck": 24
+  },
+  "completed_groups": 71,
+  "complete_paired_blocks": 14,
+  "complete_paired_children": 700,
+  "target_assertions": [
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 3,
+      "elapsed_seconds": 8.995555925999724,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IPB/bound1/samples.json.child-03.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 4,
+      "elapsed_seconds": 8.91781962999994,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IPB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 5,
+      "elapsed_seconds": 8.85444773600102,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IPB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 6,
+      "elapsed_seconds": 8.946524338998643,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IPB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 3,
+      "elapsed_seconds": 9.196863612000016,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IDB/bound1/samples.json.child-03.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 4,
+      "elapsed_seconds": 8.729562799000632,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IDB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 5,
+      "elapsed_seconds": 7.615032493000399,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IDB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 6,
+      "elapsed_seconds": 7.749379257000328,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.WSQ/IDB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 4,
+      "elapsed_seconds": 9.14119302799918,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IPB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 5,
+      "elapsed_seconds": 9.092078061001303,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IPB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 6,
+      "elapsed_seconds": 9.233929563000856,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IPB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "index": 7,
+      "elapsed_seconds": 9.255390211999838,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IPB/bound1/samples.json.child-07.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 4,
+      "elapsed_seconds": 8.085696627000289,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IDB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 5,
+      "elapsed_seconds": 7.894213895000576,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IDB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 6,
+      "elapsed_seconds": 7.92025106499932,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IDB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "index": 7,
+      "elapsed_seconds": 7.804708042000129,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/IDB/bound1/samples.json.child-07.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "PCT",
+      "index": 9,
+      "elapsed_seconds": 9.185288433000096,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep01/Chess.IWSQ/PCT/bound0/samples.json.child-09.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 3,
+      "elapsed_seconds": 9.388592608000181,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IPB/bound1/samples.json.child-03.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 4,
+      "elapsed_seconds": 9.070181632998356,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IPB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 5,
+      "elapsed_seconds": 8.871994811999684,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IPB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 6,
+      "elapsed_seconds": 7.639778782000576,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IPB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 3,
+      "elapsed_seconds": 7.841719156000181,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IDB/bound1/samples.json.child-03.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 4,
+      "elapsed_seconds": 7.801029678001214,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IDB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 5,
+      "elapsed_seconds": 8.313591603000532,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IDB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 6,
+      "elapsed_seconds": 8.108305455998561,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.WSQ/IDB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 4,
+      "elapsed_seconds": 9.13965069400001,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IDB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 5,
+      "elapsed_seconds": 8.342013847999624,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IDB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 6,
+      "elapsed_seconds": 8.101964973999202,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IDB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "index": 7,
+      "elapsed_seconds": 8.518873454999266,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IDB/bound1/samples.json.child-07.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 4,
+      "elapsed_seconds": 9.112129301000095,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IPB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 5,
+      "elapsed_seconds": 9.180321322999589,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IPB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 6,
+      "elapsed_seconds": 9.3648262480001,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IPB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "index": 7,
+      "elapsed_seconds": 8.977285566999853,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep02/Chess.IWSQ/IPB/bound1/samples.json.child-07.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 3,
+      "elapsed_seconds": 8.572703751999143,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IDB/bound1/samples.json.child-03.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 4,
+      "elapsed_seconds": 7.893829335000191,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IDB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 5,
+      "elapsed_seconds": 8.486425969000265,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IDB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 6,
+      "elapsed_seconds": 8.550674647998676,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IDB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 3,
+      "elapsed_seconds": 8.238467550001587,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IPB/bound1/samples.json.child-03.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 4,
+      "elapsed_seconds": 8.17017421499986,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IPB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 5,
+      "elapsed_seconds": 7.9966431809989444,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IPB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 6,
+      "elapsed_seconds": 8.899930196999776,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.WSQ/IPB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 4,
+      "elapsed_seconds": 8.25459918800152,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IPB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 5,
+      "elapsed_seconds": 7.962849487001222,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IPB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 6,
+      "elapsed_seconds": 8.122351674001038,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IPB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "index": 7,
+      "elapsed_seconds": 7.958664031000808,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IPB/bound1/samples.json.child-07.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 4,
+      "elapsed_seconds": 8.363208348999251,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IDB/bound1/samples.json.child-04.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 5,
+      "elapsed_seconds": 8.57780182299939,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IDB/bound1/samples.json.child-05.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 6,
+      "elapsed_seconds": 8.73728255199967,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IDB/bound1/samples.json.child-06.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    },
+    {
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "index": 7,
+      "elapsed_seconds": 8.618988811998861,
+      "target_assertion": true,
+      "exit_code": 1,
+      "log": "rep03/Chess.IWSQ/IDB/bound1/samples.json.child-07.log",
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307"
+    }
+  ],
+  "timing_flags": [],
+  "quality": [
+    {
+      "group": 1,
+      "case": "Inspect.qsort_mt",
+      "repetition": 1,
+      "method": "Native",
+      "host_seconds": 0.333987300000004,
+      "child_seconds": 0.17328509499930078,
+      "flagged": false
+    },
+    {
+      "group": 2,
+      "case": "Inspect.qsort_mt",
+      "repetition": 1,
+      "method": "PERIOD",
+      "host_seconds": 1.9827561000000031,
+      "child_seconds": 1.0361625790028484,
+      "flagged": false
+    },
+    {
+      "group": 3,
+      "case": "Inspect.qsort_mt",
+      "repetition": 1,
+      "method": "IPB",
+      "host_seconds": 72.75297170000002,
+      "child_seconds": 72.53336232499714,
+      "flagged": false
+    },
+    {
+      "group": 4,
+      "case": "Inspect.qsort_mt",
+      "repetition": 1,
+      "method": "IDB",
+      "host_seconds": 67.26903139999999,
+      "child_seconds": 66.68058146100338,
+      "flagged": false
+    },
+    {
+      "group": 5,
+      "case": "Inspect.qsort_mt",
+      "repetition": 1,
+      "method": "PCT",
+      "host_seconds": 65.95179079999997,
+      "child_seconds": 65.75391559400123,
+      "flagged": false
+    },
+    {
+      "group": 6,
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "PERIOD",
+      "host_seconds": 1.3806919999999536,
+      "child_seconds": 0.8104922300026374,
+      "flagged": false
+    },
+    {
+      "group": 7,
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "host_seconds": 91.00672760000003,
+      "child_seconds": 90.27007964899894,
+      "flagged": false
+    },
+    {
+      "group": 8,
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "host_seconds": 85.97223209999999,
+      "child_seconds": 85.66973493100159,
+      "flagged": false
+    },
+    {
+      "group": 9,
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "PCT",
+      "host_seconds": 83.64132760000001,
+      "child_seconds": 83.48527653099882,
+      "flagged": false
+    },
+    {
+      "group": 10,
+      "case": "Chess.WSQ",
+      "repetition": 1,
+      "method": "Native",
+      "host_seconds": 0.3973267000000078,
+      "child_seconds": 0.22609061400180508,
+      "flagged": false
+    },
+    {
+      "group": 11,
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IPB",
+      "host_seconds": 90.99722840000004,
+      "child_seconds": 90.6815070399989,
+      "flagged": false
+    },
+    {
+      "group": 12,
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "IDB",
+      "host_seconds": 83.17256550000002,
+      "child_seconds": 82.8380524230015,
+      "flagged": false
+    },
+    {
+      "group": 13,
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "PCT",
+      "host_seconds": 87.30405840000003,
+      "child_seconds": 87.13550611500068,
+      "flagged": false
+    },
+    {
+      "group": 14,
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "Native",
+      "host_seconds": 0.4281220000000303,
+      "child_seconds": 0.2440278190006211,
+      "flagged": false
+    },
+    {
+      "group": 15,
+      "case": "Chess.IWSQ",
+      "repetition": 1,
+      "method": "PERIOD",
+      "host_seconds": 1.3660589999999502,
+      "child_seconds": 0.7506197610018717,
+      "flagged": false
+    },
+    {
+      "group": 16,
+      "case": "Chess.IWSQWS",
+      "repetition": 1,
+      "method": "IDB",
+      "host_seconds": 111.73012009999991,
+      "child_seconds": 111.39461974699952,
+      "flagged": false
+    },
+    {
+      "group": 17,
+      "case": "Chess.IWSQWS",
+      "repetition": 1,
+      "method": "PCT",
+      "host_seconds": 107.04744729999993,
+      "child_seconds": 106.88314541499676,
+      "flagged": false
+    },
+    {
+      "group": 18,
+      "case": "Chess.IWSQWS",
+      "repetition": 1,
+      "method": "Native",
+      "host_seconds": 0.33002380000016274,
+      "child_seconds": 0.16879884399895673,
+      "flagged": false
+    },
+    {
+      "group": 19,
+      "case": "Chess.IWSQWS",
+      "repetition": 1,
+      "method": "PERIOD",
+      "host_seconds": 2.634950500000059,
+      "child_seconds": 1.5642981409982895,
+      "flagged": false
+    },
+    {
+      "group": 20,
+      "case": "Chess.IWSQWS",
+      "repetition": 1,
+      "method": "IPB",
+      "host_seconds": 116.0889388999999,
+      "child_seconds": 115.82120757699886,
+      "flagged": false
+    },
+    {
+      "group": 21,
+      "case": "Misc.safestack",
+      "repetition": 1,
+      "method": "PCT",
+      "host_seconds": 56.24158590000002,
+      "child_seconds": 55.58196919499824,
+      "flagged": false
+    },
+    {
+      "group": 22,
+      "case": "Misc.safestack",
+      "repetition": 1,
+      "method": "Native",
+      "host_seconds": 0.4061911000001146,
+      "child_seconds": 0.2253191039999365,
+      "flagged": false
+    },
+    {
+      "group": 23,
+      "case": "Misc.safestack",
+      "repetition": 1,
+      "method": "PERIOD",
+      "host_seconds": 1.1134078000000045,
+      "child_seconds": 0.4283812030007539,
+      "flagged": false
+    },
+    {
+      "group": 24,
+      "case": "Misc.safestack",
+      "repetition": 1,
+      "method": "IPB",
+      "host_seconds": 59.4147117,
+      "child_seconds": 59.17451775799964,
+      "flagged": false
+    },
+    {
+      "group": 25,
+      "case": "Misc.safestack",
+      "repetition": 1,
+      "method": "IDB",
+      "host_seconds": 64.28609010000014,
+      "child_seconds": 63.94110163100049,
+      "flagged": false
+    },
+    {
+      "group": 26,
+      "case": "Inspect.qsort_mt",
+      "repetition": 2,
+      "method": "PERIOD",
+      "host_seconds": 2.487772599999971,
+      "child_seconds": 1.4737483110002358,
+      "flagged": false
+    },
+    {
+      "group": 27,
+      "case": "Inspect.qsort_mt",
+      "repetition": 2,
+      "method": "IPB",
+      "host_seconds": 68.04701690000002,
+      "child_seconds": 67.83500719999756,
+      "flagged": false
+    },
+    {
+      "group": 28,
+      "case": "Inspect.qsort_mt",
+      "repetition": 2,
+      "method": "IDB",
+      "host_seconds": 65.65077359999987,
+      "child_seconds": 65.24831791399993,
+      "flagged": false
+    },
+    {
+      "group": 29,
+      "case": "Inspect.qsort_mt",
+      "repetition": 2,
+      "method": "PCT",
+      "host_seconds": 71.27021999999988,
+      "child_seconds": 71.04691804899812,
+      "flagged": false
+    },
+    {
+      "group": 30,
+      "case": "Inspect.qsort_mt",
+      "repetition": 2,
+      "method": "Native",
+      "host_seconds": 0.3815657000000101,
+      "child_seconds": 0.20350118699934683,
+      "flagged": false
+    },
+    {
+      "group": 31,
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "host_seconds": 90.02401239999995,
+      "child_seconds": 89.62794466699779,
+      "flagged": false
+    },
+    {
+      "group": 32,
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "host_seconds": 81.21058930000004,
+      "child_seconds": 80.92546660199878,
+      "flagged": false
+    },
+    {
+      "group": 33,
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "PCT",
+      "host_seconds": 89.67744059999995,
+      "child_seconds": 89.46304577500086,
+      "flagged": false
+    },
+    {
+      "group": 34,
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "Native",
+      "host_seconds": 0.4997631999999612,
+      "child_seconds": 0.2356379700031539,
+      "flagged": false
+    },
+    {
+      "group": 35,
+      "case": "Chess.WSQ",
+      "repetition": 2,
+      "method": "PERIOD",
+      "host_seconds": 1.2463990000001104,
+      "child_seconds": 0.652519391003807,
+      "flagged": false
+    },
+    {
+      "group": 36,
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IDB",
+      "host_seconds": 88.58780780000006,
+      "child_seconds": 88.21806667700002,
+      "flagged": false
+    },
+    {
+      "group": 37,
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "PCT",
+      "host_seconds": 85.47504270000013,
+      "child_seconds": 85.19086219400197,
+      "flagged": false
+    },
+    {
+      "group": 38,
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "Native",
+      "host_seconds": 0.5394680000001699,
+      "child_seconds": 0.2628636800000095,
+      "flagged": false
+    },
+    {
+      "group": 39,
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "PERIOD",
+      "host_seconds": 0.8546692999998413,
+      "child_seconds": 0.33854657200572547,
+      "flagged": false
+    },
+    {
+      "group": 40,
+      "case": "Chess.IWSQ",
+      "repetition": 2,
+      "method": "IPB",
+      "host_seconds": 92.72717070000022,
+      "child_seconds": 92.389020179,
+      "flagged": false
+    },
+    {
+      "group": 41,
+      "case": "Chess.IWSQWS",
+      "repetition": 2,
+      "method": "PCT",
+      "host_seconds": 103.56288859999995,
+      "child_seconds": 103.36186356800135,
+      "flagged": false
+    },
+    {
+      "group": 42,
+      "case": "Chess.IWSQWS",
+      "repetition": 2,
+      "method": "Native",
+      "host_seconds": 0.4064986000003046,
+      "child_seconds": 0.20575881799777562,
+      "flagged": false
+    },
+    {
+      "group": 43,
+      "case": "Chess.IWSQWS",
+      "repetition": 2,
+      "method": "PERIOD",
+      "host_seconds": 2.676930099999936,
+      "child_seconds": 1.810000459996445,
+      "flagged": false
+    },
+    {
+      "group": 44,
+      "case": "Chess.IWSQWS",
+      "repetition": 2,
+      "method": "IPB",
+      "host_seconds": 116.5862404999998,
+      "child_seconds": 116.2907030849965,
+      "flagged": false
+    },
+    {
+      "group": 45,
+      "case": "Chess.IWSQWS",
+      "repetition": 2,
+      "method": "IDB",
+      "host_seconds": 111.3156656000001,
+      "child_seconds": 110.95721272500305,
+      "flagged": false
+    },
+    {
+      "group": 46,
+      "case": "Misc.safestack",
+      "repetition": 2,
+      "method": "Native",
+      "host_seconds": 0.4733590999999251,
+      "child_seconds": 0.21924196499821846,
+      "flagged": false
+    },
+    {
+      "group": 47,
+      "case": "Misc.safestack",
+      "repetition": 2,
+      "method": "PERIOD",
+      "host_seconds": 0.816696100000172,
+      "child_seconds": 0.3092265859959298,
+      "flagged": false
+    },
+    {
+      "group": 48,
+      "case": "Misc.safestack",
+      "repetition": 2,
+      "method": "IPB",
+      "host_seconds": 63.495893799999976,
+      "child_seconds": 63.2975677880022,
+      "flagged": false
+    },
+    {
+      "group": 49,
+      "case": "Misc.safestack",
+      "repetition": 2,
+      "method": "IDB",
+      "host_seconds": 64.38688569999977,
+      "child_seconds": 64.05894396500116,
+      "flagged": false
+    },
+    {
+      "group": 50,
+      "case": "Misc.safestack",
+      "repetition": 2,
+      "method": "PCT",
+      "host_seconds": 61.74557050000021,
+      "child_seconds": 61.5306816100001,
+      "flagged": false
+    },
+    {
+      "group": 51,
+      "case": "Inspect.qsort_mt",
+      "repetition": 3,
+      "method": "IPB",
+      "host_seconds": 70.39466549999997,
+      "child_seconds": 70.0280686560036,
+      "flagged": false
+    },
+    {
+      "group": 52,
+      "case": "Inspect.qsort_mt",
+      "repetition": 3,
+      "method": "IDB",
+      "host_seconds": 66.59845660000019,
+      "child_seconds": 65.8453247949983,
+      "flagged": false
+    },
+    {
+      "group": 53,
+      "case": "Inspect.qsort_mt",
+      "repetition": 3,
+      "method": "PCT",
+      "host_seconds": 65.95565940000006,
+      "child_seconds": 65.73603701000138,
+      "flagged": false
+    },
+    {
+      "group": 54,
+      "case": "Inspect.qsort_mt",
+      "repetition": 3,
+      "method": "Native",
+      "host_seconds": 0.32301870000037525,
+      "child_seconds": 0.1626352239982225,
+      "flagged": false
+    },
+    {
+      "group": 55,
+      "case": "Inspect.qsort_mt",
+      "repetition": 3,
+      "method": "PERIOD",
+      "host_seconds": 1.436490799999774,
+      "child_seconds": 0.909974387004695,
+      "flagged": false
+    },
+    {
+      "group": 56,
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "host_seconds": 85.05697180000016,
+      "child_seconds": 84.7406321849976,
+      "flagged": false
+    },
+    {
+      "group": 57,
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "PCT",
+      "host_seconds": 83.34668079999983,
+      "child_seconds": 83.13041301199883,
+      "flagged": false
+    },
+    {
+      "group": 58,
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "Native",
+      "host_seconds": 0.3523623000000953,
+      "child_seconds": 0.15717298399613355,
+      "flagged": false
+    },
+    {
+      "group": 59,
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "PERIOD",
+      "host_seconds": 0.7735607999998138,
+      "child_seconds": 0.2614514109973243,
+      "flagged": false
+    },
+    {
+      "group": 60,
+      "case": "Chess.WSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "host_seconds": 84.40075389999993,
+      "child_seconds": 84.05927051199978,
+      "flagged": false
+    },
+    {
+      "group": 61,
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "PCT",
+      "host_seconds": 85.1449705,
+      "child_seconds": 84.90320154700021,
+      "flagged": false
+    },
+    {
+      "group": 62,
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "Native",
+      "host_seconds": 0.38106870000001436,
+      "child_seconds": 0.14726429300026211,
+      "flagged": false
+    },
+    {
+      "group": 63,
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "PERIOD",
+      "host_seconds": 0.8262752000000546,
+      "child_seconds": 0.2527613640013442,
+      "flagged": false
+    },
+    {
+      "group": 64,
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IPB",
+      "host_seconds": 80.29389690000016,
+      "child_seconds": 79.94241755900475,
+      "flagged": false
+    },
+    {
+      "group": 65,
+      "case": "Chess.IWSQ",
+      "repetition": 3,
+      "method": "IDB",
+      "host_seconds": 85.43244129999994,
+      "child_seconds": 84.80704295599571,
+      "flagged": false
+    },
+    {
+      "group": 66,
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "Native",
+      "host_seconds": 0.3726339000004373,
+      "child_seconds": 0.16462183199655556,
+      "flagged": false
+    },
+    {
+      "group": 71,
+      "case": "Misc.safestack",
+      "repetition": 3,
+      "method": "PERIOD",
+      "host_seconds": 1.1789528000003884,
+      "child_seconds": 0.583021397000266,
+      "flagged": false
+    },
+    {
+      "group": 72,
+      "case": "Misc.safestack",
+      "repetition": 3,
+      "method": "IPB",
+      "host_seconds": 55.01329029999988,
+      "child_seconds": 54.75304454099751,
+      "flagged": false
+    },
+    {
+      "group": 73,
+      "case": "Misc.safestack",
+      "repetition": 3,
+      "method": "IDB",
+      "host_seconds": 54.94249979999995,
+      "child_seconds": 54.39686633399833,
+      "flagged": false
+    },
+    {
+      "group": 74,
+      "case": "Misc.safestack",
+      "repetition": 3,
+      "method": "PCT",
+      "host_seconds": 54.27813859999969,
+      "child_seconds": 54.06525940899883,
+      "flagged": false
+    },
+    {
+      "group": 75,
+      "case": "Misc.safestack",
+      "repetition": 3,
+      "method": "Native",
+      "host_seconds": 0.3472954999997455,
+      "child_seconds": 0.14786314500270237,
+      "flagged": false
+    }
+  ],
+  "partial_PERIOD_group": {
+    "actual_children": 10,
+    "driver_complete": false,
+    "driver_exit_code": 1,
+    "all_children_valid": true,
+    "rounds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      9
+    ],
+    "not_adopted_as_complete_group": true
+  },
+  "preservation": {
+    "changed_files": [],
+    "checked_files": 594
+  },
+  "original_deliverable_files_checked": 27,
+  "problems": [],
+  "stats": [
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "Native",
+      "paired_repetitions": 3,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "PERIOD",
+      "paired_repetitions": 3,
+      "slowdown_mean": 6.2722252279152215,
+      "slowdown_sample_sd": 0.8615244206133469
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "IPB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 394.1671537936666,
+      "slowdown_sample_sd": 53.01909948451007
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "IDB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 370.0988426641066,
+      "slowdown_sample_sd": 44.00109955297375
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "method": "PCT",
+      "paired_repetitions": 3,
+      "slowdown_mean": 377.59036428262635,
+      "slowdown_sample_sd": 27.58243758591033
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "Native",
+      "paired_repetitions": 3,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "PERIOD",
+      "paired_repetitions": 3,
+      "slowdown_mean": 2.6724783053690926,
+      "slowdown_sample_sd": 0.9643162369147662
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "IPB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 438.14935227055946,
+      "slowdown_sample_sd": 84.2510967411196
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "IDB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 420.5014177389863,
+      "slowdown_sample_sd": 104.2778061554838
+    },
+    {
+      "case": "Chess.WSQ",
+      "method": "PCT",
+      "paired_repetitions": 3,
+      "slowdown_mean": 425.94308673097515,
+      "slowdown_sample_sd": 89.32393865063432
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "Native",
+      "paired_repetitions": 3,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "PERIOD",
+      "paired_repetitions": 3,
+      "slowdown_mean": 2.02675194908501,
+      "slowdown_sample_sd": 0.9335538627353064
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "IPB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 421.974784668324,
+      "slowdown_sample_sd": 105.16383445431258
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "IDB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 416.9828827639241,
+      "slowdown_sample_sd": 137.62529100686896
+    },
+    {
+      "case": "Chess.IWSQ",
+      "method": "PCT",
+      "paired_repetitions": 3,
+      "slowdown_mean": 419.23195643941625,
+      "slowdown_sample_sd": 137.22416204732295
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "Native",
+      "paired_repetitions": 2,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "PERIOD",
+      "paired_repetitions": 2,
+      "slowdown_mean": 9.03197080722924,
+      "slowdown_sample_sd": 0.33271034305093167
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "IPB",
+      "paired_repetitions": 2,
+      "slowdown_mean": 625.6644872371687,
+      "slowdown_sample_sd": 85.5384335312736
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "IDB",
+      "paired_repetitions": 2,
+      "slowdown_mean": 599.5919276909831,
+      "slowdown_sample_sd": 85.3242062019395
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "method": "PCT",
+      "paired_repetitions": 2,
+      "slowdown_mean": 567.7715417346631,
+      "slowdown_sample_sd": 92.52744534991038
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "Native",
+      "paired_repetitions": 3,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "PERIOD",
+      "paired_repetitions": 3,
+      "slowdown_mean": 2.418211699335373,
+      "slowdown_sample_sd": 1.343095608850476
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "IPB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 307.2106029923877,
+      "slowdown_sample_sd": 56.16836178231507
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "IDB",
+      "paired_repetitions": 3,
+      "slowdown_mean": 314.61685108478196,
+      "slowdown_sample_sd": 46.3238899451842
+    },
+    {
+      "case": "Misc.safestack",
+      "method": "PCT",
+      "paired_repetitions": 3,
+      "slowdown_mean": 297.658990656262,
+      "slowdown_sample_sd": 61.27778245151422
+    }
+  ],
+  "timing": {
+    "planned_launches": 750,
+    "host_elapsed_seconds": 3528.0604906,
+    "measurements_complete": false,
+    "planned_groups": 75,
+    "required_clocksource": "kvm-clock",
+    "command_exit_code": 1,
+    "started_utc": "2026-11-20T15:19:04.4438204Z",
+    "ended_utc": "2026-11-20T16:17:52.5106639Z"
+  },
+  "original_failures": [
+    {
+      "case": "Chess.IWSQWS",
+      "group_number": 67,
+      "logs": "/workdir/rq3-five-extra-formal-b8xFqd/rep03/Chess.IWSQWS",
+      "method": "PERIOD",
+      "paired_block_excluded": true,
+      "reason": "Method failed (1): /workdir/rq3-five-extra-formal-b8xFqd/rep03/Chess.IWSQWS/PERIOD/driver.log",
+      "repetition": 3
+    }
+  ],
+  "archive_extracted_to": "C:\\Users\\Lyufan\\Documents\\Codex\\2026-11-15\\new-chat\\work\\rq3-legacy-vm\\extracted-five-extra-formal-20261120T151904Z-b3d307"
+}

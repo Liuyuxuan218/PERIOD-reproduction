@@ -1,0 +1,137 @@
+﻿[
+    {
+        "group":  1,
+        "case":  "Chess.SWSQ",
+        "repetition":  1,
+        "method":  "Native",
+        "host_seconds":  0.3771060,
+        "guest_child_seconds":  0.24094011000124738,
+        "flagged":  false
+    },
+    {
+        "group":  2,
+        "case":  "Chess.SWSQ",
+        "repetition":  1,
+        "method":  "PERIOD",
+        "host_seconds":  2.153706099999989,
+        "guest_child_seconds":  1.3680113480004366,
+        "flagged":  false
+    },
+    {
+        "group":  3,
+        "case":  "Chess.SWSQ",
+        "repetition":  1,
+        "method":  "IPB",
+        "host_seconds":  122.57174049999999,
+        "guest_child_seconds":  122.35949050797353,
+        "flagged":  false
+    },
+    {
+        "group":  4,
+        "case":  "Chess.SWSQ",
+        "repetition":  1,
+        "method":  "IDB",
+        "host_seconds":  120.87707149999997,
+        "guest_child_seconds":  120.66230877298949,
+        "flagged":  false
+    },
+    {
+        "group":  5,
+        "case":  "Chess.SWSQ",
+        "repetition":  1,
+        "method":  "PCT",
+        "host_seconds":  121.8317050,
+        "guest_child_seconds":  121.64320351999049,
+        "flagged":  false
+    },
+    {
+        "group":  6,
+        "case":  "Chess.SWSQ",
+        "repetition":  2,
+        "method":  "PERIOD",
+        "host_seconds":  2.47603569999996,
+        "guest_child_seconds":  1.6233949070010567,
+        "flagged":  false
+    },
+    {
+        "group":  7,
+        "case":  "Chess.SWSQ",
+        "repetition":  2,
+        "method":  "IPB",
+        "host_seconds":  120.52130890000004,
+        "guest_child_seconds":  120.33356376700976,
+        "flagged":  false
+    },
+    {
+        "group":  8,
+        "case":  "Chess.SWSQ",
+        "repetition":  2,
+        "method":  "IDB",
+        "host_seconds":  120.94094630000006,
+        "guest_child_seconds":  120.64385531299195,
+        "flagged":  false
+    },
+    {
+        "group":  9,
+        "case":  "Chess.SWSQ",
+        "repetition":  2,
+        "method":  "PCT",
+        "host_seconds":  120.70696659999994,
+        "guest_child_seconds":  120.5440615879852,
+        "flagged":  false
+    },
+    {
+        "group":  10,
+        "case":  "Chess.SWSQ",
+        "repetition":  2,
+        "method":  "Native",
+        "host_seconds":  0.36394439999992,
+        "guest_child_seconds":  0.18423510998400161,
+        "flagged":  false
+    },
+    {
+        "group":  11,
+        "case":  "Chess.SWSQ",
+        "repetition":  3,
+        "method":  "IPB",
+        "host_seconds":  119.66136979999994,
+        "guest_child_seconds":  119.49732473800395,
+        "flagged":  false
+    },
+    {
+        "group":  12,
+        "case":  "Chess.SWSQ",
+        "repetition":  3,
+        "method":  "IDB",
+        "host_seconds":  123.1321296,
+        "guest_child_seconds":  122.7746314610049,
+        "flagged":  false
+    },
+    {
+        "group":  13,
+        "case":  "Chess.SWSQ",
+        "repetition":  3,
+        "method":  "PCT",
+        "host_seconds":  121.4371023,
+        "guest_child_seconds":  121.27404119299172,
+        "flagged":  false
+    },
+    {
+        "group":  14,
+        "case":  "Chess.SWSQ",
+        "repetition":  3,
+        "method":  "Native",
+        "host_seconds":  0.3079333,
+        "guest_child_seconds":  0.16724870999314589,
+        "flagged":  false
+    },
+    {
+        "group":  15,
+        "case":  "Chess.SWSQ",
+        "repetition":  3,
+        "method":  "PERIOD",
+        "host_seconds":  2.1285352,
+        "guest_child_seconds":  1.3769732959917746,
+        "flagged":  false
+    }
+]

@@ -1,0 +1,887 @@
+{
+  "cases": [
+    "CS.reorder_3_bad",
+    "CS.reorder_4_bad",
+    "CS.reorder_5_bad",
+    "CS.reorder_10_bad",
+    "Inspect.qsort_mt",
+    "Chess.WSQ",
+    "Chess.IWSQ",
+    "Chess.IWSQWS",
+    "Misc.safestack"
+  ],
+  "methods": [
+    "Native",
+    "PERIOD",
+    "IPB",
+    "IDB",
+    "PCT"
+  ],
+  "families": [
+    "CS",
+    "Inspect",
+    "Chess",
+    "Misc"
+  ],
+  "case_count": 9,
+  "sctbench_total": 36,
+  "sctbench_families_total": 7,
+  "adopted_measurements": 1350,
+  "adopted_groups": 135,
+  "paired_blocks": 27,
+  "source_batches": [
+    {
+      "batch": "four-cs-formal-20261120T122804Z",
+      "archive_sha256": "7e81cecdfed972a3d79a11622c92e09d99a91c1098b3526b30631c377c0485b7",
+      "timing": {
+        "started_utc": "2026-11-20T12:28:04.5477273Z",
+        "ended_utc": "2026-11-20T13:02:03.6896971Z",
+        "host_elapsed_seconds": 2039.1380735999999,
+        "host_elapsed_minutes": 33.98563456,
+        "wall_clock_seconds": 2039.1419698,
+        "planned_groups": 60,
+        "planned_launches": 600,
+        "repair": false,
+        "pilot": false,
+        "required_clocksource": "kvm-clock",
+        "selection": "all",
+        "measurements_complete": true,
+        "command_exit_code": 0,
+        "sleep_inhibition_requested": true,
+        "source_batch": "none"
+      },
+      "original_batch_complete": true,
+      "adopted_groups": 60,
+      "evidence_archive": "work/rq3-legacy-vm/four-cs-formal-20261120T122804Z/evidence.tar.gz"
+    },
+    {
+      "batch": "five-extra-formal-20261120T151904Z-b3d307",
+      "archive_sha256": "139fcd474eec08a8b905cbf732b69b9c5d36383602aec7145499f12df600c188",
+      "timing": {
+        "planned_launches": 750,
+        "host_elapsed_seconds": 3528.0604906,
+        "measurements_complete": false,
+        "planned_groups": 75,
+        "required_clocksource": "kvm-clock",
+        "command_exit_code": 1,
+        "started_utc": "2026-11-20T15:19:04.4438204Z",
+        "ended_utc": "2026-11-20T16:17:52.5106639Z"
+      },
+      "original_batch_complete": false,
+      "adopted_groups": 70,
+      "evidence_archive": "work/rq3-legacy-vm/five-extra-formal-20261120T151904Z-b3d307/evidence.tar.gz"
+    },
+    {
+      "batch": "five-extra-repair-20261120T231039Z-b86dea",
+      "archive_sha256": "0e4c7b2c202f052dfe182c533bb58975686e9b68e73f5b69063073f16297377b",
+      "timing": {
+        "measurements_complete": true,
+        "planned_groups": 5,
+        "host_elapsed_seconds": 505.98087619999995,
+        "ended_utc": "2026-11-20T23:19:05.4990162Z",
+        "selection": "repair-iwsqws-rep3",
+        "started_utc": "2026-11-20T23:10:39.5113601Z",
+        "required_clocksource": "kvm-clock",
+        "planned_launches": 50,
+        "command_exit_code": 0
+      },
+      "original_batch_complete": true,
+      "adopted_groups": 5,
+      "evidence_archive": "work/rq3-legacy-vm/five-extra-repair-20261120T231039Z-b86dea/evidence.tar.gz"
+    }
+  ],
+  "excluded": [
+    {
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307",
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "Native",
+      "actual_children": 10,
+      "reason": "entire original rep3 block replaced with fresh paired repair"
+    },
+    {
+      "source_batch": "five-extra-formal-20261120T151904Z-b3d307",
+      "case": "Chess.IWSQWS",
+      "repetition": 3,
+      "method": "PERIOD",
+      "actual_children": 10,
+      "reason": "old incomplete PERIOD group retained for diagnosis only"
+    }
+  ],
+  "statistics": [
+    {
+      "case": "CS.reorder_3_bad",
+      "family": "CS",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.0165408507333647,
+      "time_sample_sd_seconds": 0.003296788162041545,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "CS.reorder_3_bad",
+      "family": "CS",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.06188602653329175,
+      "time_sample_sd_seconds": 0.010667026633649233,
+      "slowdown_mean": 3.8067728415410325,
+      "slowdown_sample_sd": 0.8499552947594516,
+      "assertions": 5,
+      "repetition_slowdowns": [
+        3.3108320513853022,
+        4.788198110884799,
+        3.3212883623529965
+      ]
+    },
+    {
+      "case": "CS.reorder_3_bad",
+      "family": "CS",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.3793366643667015,
+      "time_sample_sd_seconds": 0.05871587434365517,
+      "slowdown_mean": 333.00834216032234,
+      "slowdown_sample_sd": 58.92187827676257,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        266.11454407860003,
+        377.21175426597125,
+        355.6987281363957
+      ]
+    },
+    {
+      "case": "CS.reorder_3_bad",
+      "family": "CS",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.303084346533327,
+      "time_sample_sd_seconds": 0.089992875190027,
+      "slowdown_mean": 327.8491905552394,
+      "slowdown_sample_sd": 54.529678500849734,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        265.0197786021231,
+        362.8464351045474,
+        355.6813579590476
+      ]
+    },
+    {
+      "case": "CS.reorder_3_bad",
+      "family": "CS",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.127377947400002,
+      "time_sample_sd_seconds": 0.25848247144298697,
+      "slowdown_mean": 316.1652298144383,
+      "slowdown_sample_sd": 48.36626474409439,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        263.97625523294414,
+        359.47972768575545,
+        325.0397065246153
+      ]
+    },
+    {
+      "case": "CS.reorder_4_bad",
+      "family": "CS",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.019162630033247297,
+      "time_sample_sd_seconds": 0.0031359647278045456,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "CS.reorder_4_bad",
+      "family": "CS",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.05725981990000643,
+      "time_sample_sd_seconds": 0.020255725356695505,
+      "slowdown_mean": 3.161181876202626,
+      "slowdown_sample_sd": 1.5902371698775688,
+      "assertions": 3,
+      "repetition_slowdowns": [
+        1.6194788483651066,
+        4.795872545825553,
+        3.068194234417218
+      ]
+    },
+    {
+      "case": "CS.reorder_4_bad",
+      "family": "CS",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.269635638099991,
+      "time_sample_sd_seconds": 0.10981519844572174,
+      "slowdown_mean": 280.1354069665535,
+      "slowdown_sample_sd": 48.05528897134995,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        243.16143366387834,
+        334.4554059358605,
+        262.7893812999217
+      ]
+    },
+    {
+      "case": "CS.reorder_4_bad",
+      "family": "CS",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.446383811999992,
+      "time_sample_sd_seconds": 0.08527114455244392,
+      "slowdown_mean": 289.102830293108,
+      "slowdown_sample_sd": 44.976112260424244,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        250.75640151203845,
+        338.607780932431,
+        277.9443084348545
+      ]
+    },
+    {
+      "case": "CS.reorder_4_bad",
+      "family": "CS",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.246048783066689,
+      "time_sample_sd_seconds": 0.12564888846695835,
+      "slowdown_mean": 278.7724884642694,
+      "slowdown_sample_sd": 46.96544240413077,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        243.23848773123157,
+        332.01841037787136,
+        261.0605672837052
+      ]
+    },
+    {
+      "case": "CS.reorder_5_bad",
+      "family": "CS",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.015214789600054245,
+      "time_sample_sd_seconds": 0.00042256403876877595,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "CS.reorder_5_bad",
+      "family": "CS",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.0803611278666646,
+      "time_sample_sd_seconds": 0.0385914520963416,
+      "slowdown_mean": 5.320228710412476,
+      "slowdown_sample_sd": 2.686500465627517,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        4.895941216981916,
+        8.193625891884707,
+        2.871119022370803
+      ]
+    },
+    {
+      "case": "CS.reorder_5_bad",
+      "family": "CS",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.4358496905666245,
+      "time_sample_sd_seconds": 0.07630170125842574,
+      "slowdown_mean": 357.54713475680694,
+      "slowdown_sample_sd": 14.831774731360413,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        343.81277279345045,
+        373.27473433900576,
+        355.55389713796455
+      ]
+    },
+    {
+      "case": "CS.reorder_5_bad",
+      "family": "CS",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.428419696099976,
+      "time_sample_sd_seconds": 0.11949465237255948,
+      "slowdown_mean": 356.8311096318841,
+      "slowdown_sample_sd": 3.3605964981822005,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        356.55543480556776,
+        360.3210525574323,
+        353.61684153265213
+      ]
+    },
+    {
+      "case": "CS.reorder_5_bad",
+      "family": "CS",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.46813416400001,
+      "time_sample_sd_seconds": 0.13968858760039507,
+      "slowdown_mean": 359.4819156042453,
+      "slowdown_sample_sd": 8.693551094485274,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        361.31051480600854,
+        367.11571516937175,
+        350.01951683735547
+      ]
+    },
+    {
+      "case": "CS.reorder_10_bad",
+      "family": "CS",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.01795596883333322,
+      "time_sample_sd_seconds": 0.0027433972680781624,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "CS.reorder_10_bad",
+      "family": "CS",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.08148346330006764,
+      "time_sample_sd_seconds": 0.0508560916356329,
+      "slowdown_mean": 4.332861752686932,
+      "slowdown_sample_sd": 2.0137193091432306,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        3.5157082643937536,
+        2.8561638249503996,
+        6.626713168716641
+      ]
+    },
+    {
+      "case": "CS.reorder_10_bad",
+      "family": "CS",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.423685799333324,
+      "time_sample_sd_seconds": 0.07228740505398314,
+      "slowdown_mean": 306.8725837050186,
+      "slowdown_sample_sd": 47.42785006002511,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        321.72900753194716,
+        345.0937525608728,
+        253.79499102223582
+      ]
+    },
+    {
+      "case": "CS.reorder_10_bad",
+      "family": "CS",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.423356123966672,
+      "time_sample_sd_seconds": 0.18316542866647872,
+      "slowdown_mean": 305.92242418293336,
+      "slowdown_sample_sd": 39.6081061407683,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        309.4005130979013,
+        343.676787342203,
+        264.6899721086958
+      ]
+    },
+    {
+      "case": "CS.reorder_10_bad",
+      "family": "CS",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.439282592200061,
+      "time_sample_sd_seconds": 0.05708965868826648,
+      "slowdown_mean": 307.20459555926107,
+      "slowdown_sample_sd": 42.30156943284508,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        318.5850794802796,
+        342.65176012583356,
+        260.37694707167
+      ]
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "family": "Inspect",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.017980716866562337,
+      "time_sample_sd_seconds": 0.00211992881173878,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "family": "Inspect",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.1139961759002593,
+      "time_sample_sd_seconds": 0.029587321891444824,
+      "slowdown_mean": 6.2722252279152215,
+      "slowdown_sample_sd": 0.8615244206133469,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        5.979525123075526,
+        7.241964200459264,
+        5.595186360210875
+      ]
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "family": "Inspect",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 7.0132146060332765,
+      "time_sample_sd_seconds": 0.23509060593144496,
+      "slowdown_mean": 394.1671537936666,
+      "slowdown_sample_sd": 53.01909948451007,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        418.5781952296002,
+        333.33961437883545,
+        430.5836517725641
+      ]
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "family": "Inspect",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 6.592474139000053,
+      "time_sample_sd_seconds": 0.07194268299765054,
+      "slowdown_mean": 370.0988426641066,
+      "slowdown_sample_sd": 44.00109955297375,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        384.80275214248775,
+        320.62868465828336,
+        404.8650911915487
+      ]
+    },
+    {
+      "case": "Inspect.qsort_mt",
+      "family": "Inspect",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 6.751229021766691,
+      "time_sample_sd_seconds": 0.306109054757571,
+      "slowdown_mean": 377.59036428262635,
+      "slowdown_sample_sd": 27.58243758591033,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        379.45511467253743,
+        349.1228680117043,
+        404.1931101636373
+      ]
+    },
+    {
+      "case": "Chess.WSQ",
+      "family": "Chess",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.020630052266703083,
+      "time_sample_sd_seconds": 0.004281266510682914,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "Chess.WSQ",
+      "family": "Chess",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.05748210106679229,
+      "time_sample_sd_seconds": 0.02826468361111106,
+      "slowdown_mean": 2.6724783053690926,
+      "slowdown_sample_sd": 0.9643162369147662,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        3.5848114862307665,
+        2.7691606365267587,
+        1.6634627933497528
+      ]
+    },
+    {
+      "case": "Chess.WSQ",
+      "family": "Chess",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 8.79857649426655,
+      "time_sample_sd_seconds": 0.3415567774077122,
+      "slowdown_mean": 438.14935227055946,
+      "slowdown_sample_sd": 84.2510967411196,
+      "assertions": 12,
+      "repetition_slowdowns": [
+        399.2650471030975,
+        380.3629129286684,
+        534.8200967799125
+      ]
+    },
+    {
+      "case": "Chess.WSQ",
+      "family": "Chess",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 8.377861123933265,
+      "time_sample_sd_seconds": 0.2514186492549497,
+      "slowdown_mean": 420.5014177389863,
+      "slowdown_sample_sd": 104.2778061554838,
+      "assertions": 12,
+      "repetition_slowdowns": [
+        378.91769770821895,
+        343.4313519205569,
+        539.155203588183
+      ]
+    },
+    {
+      "case": "Chess.WSQ",
+      "family": "Chess",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 8.535957843933284,
+      "time_sample_sd_seconds": 0.3558133662532943,
+      "slowdown_mean": 425.94308673097515,
+      "slowdown_sample_sd": 89.32393865063432,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        369.2558264728862,
+        379.66311530269695,
+        528.9103184173423
+      ]
+    },
+    {
+      "case": "Chess.IWSQ",
+      "family": "Chess",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.021805193066696423,
+      "time_sample_sd_seconds": 0.006202309771142762,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "Chess.IWSQ",
+      "family": "Chess",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.04473092323363138,
+      "time_sample_sd_seconds": 0.026615358926308678,
+      "slowdown_mean": 2.02675194908501,
+      "slowdown_sample_sd": 0.9335538627353064,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        3.0759597986652545,
+        1.287916885306153,
+        1.7163791632836232
+      ]
+    },
+    {
+      "case": "Chess.IWSQ",
+      "family": "Chess",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 8.767098159266789,
+      "time_sample_sd_seconds": 0.6747364433376104,
+      "slowdown_mean": 421.974784668324,
+      "slowdown_sample_sd": 105.16383445431258,
+      "assertions": 12,
+      "repetition_slowdowns": [
+        371.6031533264169,
+        351.4712271356646,
+        542.8499735428904
+      ]
+    },
+    {
+      "case": "Chess.IWSQ",
+      "family": "Chess",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 8.528772068533241,
+      "time_sample_sd_seconds": 0.27220262035691395,
+      "slowdown_mean": 416.9828827639241,
+      "slowdown_sample_sd": 137.62529100686896,
+      "assertions": 12,
+      "repetition_slowdowns": [
+        339.4615120614206,
+        335.6038638620476,
+        575.8832723683042
+      ]
+    },
+    {
+      "case": "Chess.IWSQ",
+      "family": "Chess",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 8.574318995200095,
+      "time_sample_sd_seconds": 0.12143291914761345,
+      "slowdown_mean": 419.23195643941625,
+      "slowdown_sample_sd": 137.22416204732295,
+      "assertions": 1,
+      "repetition_slowdowns": [
+        357.0720193781632,
+        324.08761147222356,
+        576.536238467862
+      ]
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "family": "Chess",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.01891714489993319,
+      "time_sample_sd_seconds": 0.0018768482309208714,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "family": "Chess",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.15734309599932506,
+      "time_sample_sd_seconds": 0.023213786914525275,
+      "slowdown_mean": 8.346523592303736,
+      "slowdown_sample_sd": 1.2103147274713,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        9.267232546971456,
+        8.796709067487024,
+        6.9756291624527265
+      ]
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "family": "Chess",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 11.72790772583321,
+      "time_sample_sd_seconds": 0.21314756051586345,
+      "slowdown_mean": 623.9355598921676,
+      "slowdown_sample_sd": 60.55889178960372,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        686.149293639207,
+        565.1796808351304,
+        620.4777052021653
+      ]
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "family": "Chess",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 11.574088653300107,
+      "time_sample_sd_seconds": 0.7909784615474317,
+      "slowdown_mean": 615.44273276704,
+      "slowdown_sample_sd": 66.28615350639218,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        659.9252524957338,
+        539.2586028862324,
+        647.1443429191535
+      ]
+    },
+    {
+      "case": "Chess.IWSQWS",
+      "family": "Chess",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 11.124342361333039,
+      "time_sample_sd_seconds": 1.0746944177276434,
+      "slowdown_mean": 591.8355733863345,
+      "slowdown_sample_sd": 77.57510508847703,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        633.1983257874524,
+        502.3447576818738,
+        639.9636366896773
+      ]
+    },
+    {
+      "case": "Misc.safestack",
+      "family": "Misc",
+      "method": "Native",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.019747473800028576,
+      "time_sample_sd_seconds": 0.004307221290379623,
+      "slowdown_mean": 1.0,
+      "slowdown_sample_sd": 0.0,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "case": "Misc.safestack",
+      "family": "Misc",
+      "method": "PERIOD",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 0.04402097286656499,
+      "time_sample_sd_seconds": 0.013728013384236949,
+      "slowdown_mean": 2.418211699335373,
+      "slowdown_sample_sd": 1.343095608850476,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        1.9012200714275638,
+        1.4104352056799094,
+        3.9429798208986466
+      ]
+    },
+    {
+      "case": "Misc.safestack",
+      "family": "Misc",
+      "method": "IPB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.907504336233312,
+      "time_sample_sd_seconds": 0.4273130087675285,
+      "slowdown_mean": 307.2106029923877,
+      "slowdown_sample_sd": 56.16836178231507,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        262.62539086795016,
+        288.71100379216426,
+        370.2954143170486
+      ]
+    },
+    {
+      "case": "Misc.safestack",
+      "family": "Misc",
+      "method": "IDB",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 6.079897064333333,
+      "time_sample_sd_seconds": 0.5544698043593087,
+      "slowdown_mean": 314.61685108478196,
+      "slowdown_sample_sd": 46.3238899451842,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        283.78020547702215,
+        292.1837704087431,
+        367.8865773685807
+      ]
+    },
+    {
+      "case": "Misc.safestack",
+      "family": "Misc",
+      "method": "PCT",
+      "repetitions": 3,
+      "launches_per_repetition": 10,
+      "time_mean_seconds": 5.705930340466572,
+      "time_sample_sd_seconds": 0.39458863940933553,
+      "slowdown_mean": 297.658990656262,
+      "slowdown_sample_sd": 61.27778245151422,
+      "assertions": 0,
+      "repetition_slowdowns": [
+        246.6811211667782,
+        280.65193454410104,
+        365.64391625790677
+      ]
+    }
+  ],
+  "assertions": 57,
+  "formal_batch_elapsed_seconds": 6073.179440399999,
+  "timing": "startup-inclusive CLOCK_MONOTONIC child lifetime; not steady-state overhead",
+  "limits": [
+    "selected9 of36 SCTBench programs,4 of7 families; no CVE overhead",
+    "3 repeated sessions on one VM; fixed PCT seeds; no statistical significance claim",
+    "separate batches; entire IWSQWS rep3 replaced; cross-batch limitation retained",
+    "controlled one-factor extension and exact paper per-case references still pending"
+  ]
+}

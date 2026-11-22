@@ -1,0 +1,28 @@
+{
+  "adopted_measurements": 1350,
+  "adopted_groups": 135,
+  "paired_blocks": 27,
+  "cases": 9,
+  "families": 4,
+  "repetitions_per_case_method": 3,
+  "launches_per_repetition": 10,
+  "source_assertions": 57,
+  "adopted_tool_failures": 0,
+  "adopted_timeouts": 0,
+  "timing_screen_flags": 0,
+  "csv_group_means_rechecked": 135,
+  "exported_xlsx_formula_values_checked": 315,
+  "xlsx_formula_error_cells": 0,
+  "workbook_input_propagation_and_restore": "passed",
+  "report_pages": 5,
+  "old_result_files_hash_verified": 27,
+  "pdf_visual_review": "five final pages reviewed",
+  "workbook_visual_review": "all four sheets reviewed",
+  "native_excel_application_tested": false,
+  "deferred_programs": [
+    "Chess.SWSQ",
+    "Inspect.boundedBuffer"
+  ],
+  "assignment_extension_completed": false,
+  "repository_modified": false
+}

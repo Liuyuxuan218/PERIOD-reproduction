@@ -1,0 +1,1255 @@
+{
+  "four-cs-formal-20261120T122804Z": {
+    "affinity": "same available VM CPUs for all methods; cpu=0 passed to Maple, but this fork comments out SetAffinity/SetSchedPolicy calls, so no actual CPU0 affinity or FIFO claim",
+    "budget": 10,
+    "build_directory": "/workdir/rq3-four-cs-QRUZy7",
+    "builds": {
+      "reorder_10_bad": {
+        "bitcode_sha256": "8100f6210377b99a40de7c6b8f5e665cb0f2fbfb9e8f9325e731f734facccd19",
+        "canonical_source": "/workdir/PERIOD/evaluation/CS/reorder_10/reorder_10_bad.c",
+        "case": "reorder_10_bad",
+        "compile_command": [
+          "clang",
+          "-g",
+          "-O0",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad.c",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad.bc"
+        ],
+        "formal_pct_k": null,
+        "formal_timing_started": false,
+        "native_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad-native",
+        "native_binary_sha256": "0ecac70f0e19b5e81dda9c262cbe6b38bb1baf15585221ba7b1238195480488a",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_n": 11,
+        "period_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad",
+        "period_binary_sha256": "3c59759d0c44639906f3da0b0d3843fc2fe0317f63f6b1b7f916bc94cb36431c",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_10_bad/build/reorder_10_bad",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": "fbea2e5853d76353a9330acef46f0ca57a528724a8ef1a0fc2665f2c540fd038",
+        "total_threads_including_main": 11,
+        "validation_pct_k": 100000,
+        "worker_threads": 10
+      },
+      "reorder_3_bad": {
+        "bitcode_sha256": "f593a7b4922d88e21cfc5738dac4c3581296a342e67a10f7ba888dc710cd14ae",
+        "canonical_source": "/workdir/PERIOD/evaluation/CS/reorder_3/reorder_3_bad.c",
+        "case": "reorder_3_bad",
+        "compile_command": [
+          "clang",
+          "-g",
+          "-O0",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad.c",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad.bc"
+        ],
+        "formal_pct_k": null,
+        "formal_timing_started": false,
+        "native_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad-native",
+        "native_binary_sha256": "edc17c2587e9b139112d3564f79624404d1fd588012b389f70eeb891e93519aa",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_n": 4,
+        "period_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad",
+        "period_binary_sha256": "4c158386eb262fd618f3bcb68dffc1cc52dfd5db54881215a591708ac5a470ee",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_3_bad/build/reorder_3_bad",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": "f45cfe3dfda3f6ffb4c6d238b8696c84fdfc41d2f65dfe462e107991f5b1d3ae",
+        "total_threads_including_main": 4,
+        "validation_pct_k": 100000,
+        "worker_threads": 3
+      },
+      "reorder_4_bad": {
+        "bitcode_sha256": "bc546a99d943663fccb200abd14c4f7956803465352380003ea6efc72b0891ac",
+        "canonical_source": "/workdir/PERIOD/evaluation/CS/reorder_4/reorder_4_bad.c",
+        "case": "reorder_4_bad",
+        "compile_command": [
+          "clang",
+          "-g",
+          "-O0",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad.c",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad.bc"
+        ],
+        "formal_pct_k": null,
+        "formal_timing_started": false,
+        "native_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad-native",
+        "native_binary_sha256": "2e426c50ebc93188be18d90d3dcd176a5da61d4e9226bd984834dd59429a1e57",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_n": 5,
+        "period_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad",
+        "period_binary_sha256": "8fa67bf5ec45ef054eaee82be05a53d5ecd19496cef10a6e9e9df1e8007557d9",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_4_bad/build/reorder_4_bad",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": "db96fa9fbcf88dd002d9d86ef499a70694719dba8769e76535fdfe9c643687d5",
+        "total_threads_including_main": 5,
+        "validation_pct_k": 100000,
+        "worker_threads": 4
+      },
+      "reorder_5_bad": {
+        "bitcode_sha256": "fb2c574060f00e4b173a162e5bd33751744265b98946920d09288bd79294e895",
+        "canonical_source": "/workdir/PERIOD/evaluation/CS/reorder_5/reorder_5_bad.c",
+        "case": "reorder_5_bad",
+        "compile_command": [
+          "clang",
+          "-g",
+          "-O0",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad.c",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad.bc"
+        ],
+        "formal_pct_k": null,
+        "formal_timing_started": false,
+        "native_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad-native",
+        "native_binary_sha256": "00c5c5489cf9a6a9a5698ba359d468b8187ae5092b90be132e1e921cbad3409b",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_n": 6,
+        "period_binary": "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad",
+        "period_binary_sha256": "4aa63c2684ebc613c1562ef7ce4de53b3237e716918a8bb4f74ce840956c5b3b",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad.bc",
+          "-o",
+          "/workdir/rq3-four-cs-QRUZy7/reorder_5_bad/build/reorder_5_bad",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": "ac72c1ca4f16ab1df2b7f655106c722eed9e5520927b8e7d7055f6e3c625118e",
+        "total_threads_including_main": 6,
+        "validation_pct_k": 100000,
+        "worker_threads": 5
+      }
+    },
+    "clang": "clang version 10.0.0 \nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /workdir/PERIOD/clang+llvm/bin\n",
+    "classification_version": "maple-status1-v2",
+    "cpu_affinity_available_to_experiment": [
+      0,
+      1
+    ],
+    "cpu_model": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 26\nmodel\t\t: 96\nmodel name\t: AMD Ryzen AI 7 H 350 w/ Radeon 860M\nstepping\t: 0\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 1996.213\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 2\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch arat vmmcall fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt\nbogomips\t: 3992.42\nTLB size\t: 192 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 26\nmodel\t\t: 96\nmodel name\t: AMD Ryzen AI 7 H 350 w/ Radeon 860M \nstepping\t: 0\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 1996.213\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 1\ncpu cores\t: 2\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch arat vmmcall fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt\nbogomips\t: 3992.42\nTLB size\t: 192 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\n",
+    "deviations": [
+      "four related CS workloads only; no CVE workloads",
+      "10 actual child executions per method per repetition",
+      "2-vCPU VirtualBox VM; same Ubuntu 18.04 userland on Linux 3.16",
+      "clang 10 O0 non-PIE builds from shared bitcode",
+      "startup-inclusive runtime metric; paper does not fully specify timing boundary"
+    ],
+    "excluded_from_600": "observer selfchecks and 12 race profiling runs; PERIOD dry/default executions",
+    "guest_clocksource": "kvm-clock",
+    "kernel": "Linux rq3-baseline-guest 3.16.0-77-generic #99~14.04.1-Ubuntu SMP Tue Jun 28 19:17:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux",
+    "maple_upstream_commit": "d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2",
+    "methods": [
+      "Native",
+      "PERIOD",
+      "IPB",
+      "IDB",
+      "PCT"
+    ],
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"18.04.5 LTS (Bionic Beaver)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 18.04.5 LTS\"\nVERSION_ID=\"18.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=bionic\nUBUNTU_CODENAME=bionic\n",
+    "pct_depth": 3,
+    "pct_k_rule": "8 * (worker_threads + 1) + 16; conservative configured bound, audited on every observed execution, not a proof over all schedules",
+    "pct_n": "worker threads + main",
+    "period_upstream_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+    "repetitions": 3,
+    "replacement_of_host_batch": "none",
+    "selected_blocks": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        10
+      ]
+    ],
+    "started_utc": "2026-11-20T12:28:52.535048Z",
+    "systematic_bounds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "timing": "CLOCK_MONOTONIC child lifetime including sudo/tool/target startup and pipe collection; excludes compilation, profiling, discovery, driver/search generation and database parsing"
+  },
+  "five-extra-formal-20261120T151904Z-b3d307": {
+    "affinity": "two VM CPUs available; no CPU0 pinning or FIFO claim",
+    "assertion_policy": "keep source-file/line-matched target assertions; retain tool failures/timeouts separately; reject unknown abnormal exits",
+    "audited_source_archive_sha256": "b53c88e09439e7b19a6f5d4f484ad373a312a7cbef10b4c9b910a56a9537da77",
+    "budget": 10,
+    "build_directory": "/workdir/rq3-cross-family-screen-o5n8qz",
+    "cases": [
+      {
+        "arguments": [
+          "-n",
+          "32",
+          "-f",
+          "4",
+          "-h",
+          "3",
+          "-v"
+        ],
+        "assertion_rules": [
+          {
+            "file": "qsort_mt.c",
+            "line": 477
+          },
+          {
+            "file": "qsort_mt.c",
+            "line": 649
+          }
+        ],
+        "bitcode_sha256": "4750db54f8f804aab12b8f0fc8a4a7f747945a438810b9793498ff08a464f78d",
+        "case": "Inspect.qsort_mt",
+        "compile_command": [
+          "clang",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.c",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt-native",
+        "native_binary_sha256": "5373b85edb1444ca950e0a789648996793b0229cf7a1b77f5671e0d311694210",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 512,
+        "pct_n": 4,
+        "pct_smoke_observed_steps": 55,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt",
+        "period_binary_sha256": "f9eb829b8bb309d65f29e36a03f940e234ba9deabc6939e1139fcdac11872b95",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "qsort_mt.c": "e23cf7a23a8986c9cd8d64da4447ca122f37d986b9f05be439a22d32e487121c"
+        },
+        "worker_threads": 3
+      },
+      {
+        "arguments": [
+          "1",
+          "4",
+          "2"
+        ],
+        "assertion_rules": [
+          {
+            "file": "WorkStealQueue.cpp",
+            "line": 53
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 359
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 373
+          }
+        ],
+        "bitcode_sha256": "2c1cc368e37d8ef7ecd18f43c409e5bb02f7bd34f9d8b8ae839a3347d0db3e6c",
+        "case": "Chess.WSQ",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue-native",
+        "native_binary_sha256": "60aeea08b5bf5c2f4a6294f88de69fdfc925e22ca4b91101d554c47ede096ae6",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 1024,
+        "pct_n": 3,
+        "pct_smoke_observed_steps": 90,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue",
+        "period_binary_sha256": "9aa9fb12b8595aefb69f6a5b855bdb5bc0063847ebe367f10b39661d1d7511e0",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "WorkStealQueue.cpp": "e0e486a5d1ee366fb9730a00b03826775647b20a2ba4b0c936f5265a6417abd0",
+          "WorkStealQueue.h": "66d4789c3fe93c5452421f69781e72fd825532f59eab46065b48d5cdb9245891"
+        },
+        "worker_threads": 2
+      },
+      {
+        "arguments": [
+          "1",
+          "4",
+          "2"
+        ],
+        "assertion_rules": [
+          {
+            "file": "InterlockedWorkStealQueue.cpp",
+            "line": 57
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 359
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 373
+          }
+        ],
+        "bitcode_sha256": "0acf50c5bd56f84a4be9525c17bdcfe20dede318353f430ce8c9f129f8b15e56",
+        "case": "Chess.IWSQ",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue-native",
+        "native_binary_sha256": "3b8c8f1a291f86f5fa0901362e9fec05927c4af90672e4cfcbcc76d7ab12351d",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 1024,
+        "pct_n": 3,
+        "pct_smoke_observed_steps": 93,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue",
+        "period_binary_sha256": "88303172b71a43fd402a5d3f16ac574c83c09e5e7914f70e97439733e85d21f3",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "InterlockedWorkStealQueue.cpp": "d06d886f4e37b6c098a04944e5f2dde64682ef6a7eca7c35e92eaed938dab97f",
+          "WorkStealQueue.h": "66d4789c3fe93c5452421f69781e72fd825532f59eab46065b48d5cdb9245891"
+        },
+        "worker_threads": 2
+      },
+      {
+        "arguments": [
+          "2",
+          "4",
+          "2"
+        ],
+        "assertion_rules": [
+          {
+            "file": "InterlockedWorkStealQueueWithState.cpp",
+            "line": 59
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 72
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 79
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 567
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 592
+          }
+        ],
+        "bitcode_sha256": "e57f4c30a5c62e8793ccd2df664454ee8322c0f3fc7096433c122df1770d746b",
+        "case": "Chess.IWSQWS",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState-native",
+        "native_binary_sha256": "1cd71e015a6b7fbdc802e5f8f2aff51707609d0c460a39743fa28c8be13db485",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 16384,
+        "pct_n": 4,
+        "pct_smoke_observed_steps": 1512,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState",
+        "period_binary_sha256": "5ba6545d562a53587809b345782acc5fd517fca7d8e7f3614cbc59168589369f",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "InterlockedWorkStealQueueWithState.cpp": "36bd8afe44101be31a33bef3efc5e85b37ec9ac1333c88f090aa5ac8bca3b0cf",
+          "WorkStealQueueWithState.h": "d27ca3c52fc5fbadc6d19ec0b0d4ee082496474b76225839a3113d06fb573bda"
+        },
+        "worker_threads": 3
+      },
+      {
+        "arguments": [],
+        "assertion_rules": [
+          {
+            "file": "SafeStack.cpp",
+            "line": 100
+          },
+          {
+            "file": "SafeStackRelacy.cpp",
+            "line": 100
+          },
+          {
+            "file": "SafeStack_simplify.cpp",
+            "line": 95
+          },
+          {
+            "file": "SafeStack_sleep.cpp",
+            "line": 229
+          },
+          {
+            "file": "SafeStack_sleep.cpp",
+            "line": 254
+          },
+          {
+            "file": "SafeStack_sleep.cpp",
+            "line": 283
+          }
+        ],
+        "bitcode_sha256": "e9f25ecb3cf34d251ce623bbe030f83d9784d08b4624651cfa987a2c2a692781",
+        "case": "Misc.safestack",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack-native",
+        "native_binary_sha256": "4c6857f6f46c3f4abf8558adf803bd6a1db2de05a04cef17d0b73d8cadd2abea",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 1024,
+        "pct_n": 4,
+        "pct_smoke_observed_steps": 101,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack",
+        "period_binary_sha256": "8a2e7cd0ca9decf3b4ec2b816b61744a76cab2853e02bfa856e6a661a99776b6",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "SafeStack.cpp": "41bba45743a27a1b590d9d885c3e0e5a72c66c55c64312b4ea4f48700855f68e",
+          "SafeStackRelacy.cpp": "8cca4c4b8a9baac60f31d1a010011b496d42bef441d7be6feb4ddfff49ef0804",
+          "SafeStack_simplify.cpp": "01ded1a223b74cc3eac0511b68e99148e8ccaec3e8b66eacfc2ff231bb887a3a",
+          "SafeStack_sleep.cpp": "2fccddc94878eadae7cbd77056fd974c5d4e1d84b3caadea084c4b146e1b6e96",
+          "relacy/atomic.hpp": "2b404b4a70fb0b75f79202f0c03be3b591706b6b21e0704e400428132e9134dc",
+          "relacy/atomic_events.hpp": "0d7fc4b7eec58fc0431395d984b09434e1ce1c24627ecf55b10accc920a3c6f5",
+          "relacy/atomic_fence.hpp": "5a26525c837c50cb2c154b344bd531d7cf99f73f0fc956c4cac2cb203a9ceb73",
+          "relacy/backoff.hpp": "625d769ba760689fc24f4409eaa7f90ce3785d7a4a2aaee2e1deec2f1da2ab50",
+          "relacy/base.hpp": "3926980f449748d0bfb96daafd05929bfa1517cb6fa7dbd07018a539b02ab1af",
+          "relacy/cli.hpp": "6333645f9869d7fb84a7154a3f8ceef20fb83859e03f255a37c8121b6d126194",
+          "relacy/cli_interlocked.hpp": "e7a320b8249095c4e972f620f4a6cbc11b5b2d9226b57491f67806078e78e912",
+          "relacy/cli_var.hpp": "d307324c16b2f3b9ed02190171b239c3d0832921f2c966e32aa72c0f77855053",
+          "relacy/cli_volatile.hpp": "65a9871a58799dbf8f49008fcca747b9d5299782dd6e7fb43e3ff6f433a9a30a",
+          "relacy/context.hpp": "8e19827ca4bb8540c08fd0e7ae6a61c360d92cf4ebb2915a20eec86ce3deb4dd",
+          "relacy/context_addr_hash.hpp": "b1615662bf2e35e42e0eaf6debb18cec937b8af8e9b924e9730655de9fd9a34e",
+          "relacy/context_base.hpp": "0fc2c10c4075611c6b89bc885d86ed730271b067dbebfd05c293de7a24c899f2",
+          "relacy/context_base_impl.hpp": "2bbb96c6444fefc92c94b8f4f7aee6ac05e07e4bdbd27279874fb25b6ccbff2e",
+          "relacy/context_bound_scheduler.hpp": "243b43c7569c0591eb64b06c1c3f87faac33b60998467358dc1186f7029128a3",
+          "relacy/defs.hpp": "738759adca7f0c08ee6b78b0dffb4d78256b9d646544317d29078b2fe656c99f",
+          "relacy/dyn_thread.hpp": "6031de062726e1a08cf4683e9474d0de0fea3d10428b9d3b66e3d89027a0ce85",
+          "relacy/dyn_thread_ctx.hpp": "c9669e2f781f3ff1c07e612eba540fb3027dcbd044af6c2869702209b96b30f6",
+          "relacy/foreach.hpp": "e3441eb6150b3d4fdb1588acd54c07ef2267c6c0e3b1a8441c1dc4689fd4e881",
+          "relacy/full_search_scheduler.hpp": "419e8c61a12841194286dc1f755699e3911f7fa98e76eb0b52718d220ce5a682",
+          "relacy/history.hpp": "a79057b55928da3d11a06138339448b6316553569e494dd85bf272af57a937ab",
+          "relacy/java.hpp": "f730b0aca33583452c6df5773dd1a6748b5ec5b1e86a9eaa88367766484dd198",
+          "relacy/java_atomic.hpp": "6e3e386a16ed1ece3f99b45ed0a4486c9fde428ab394b2e7c15ab2aba6ea5fa6",
+          "relacy/java_var.hpp": "41c4bc11f8144aa0e7fecd0a5e1bf60c875a450dcfe214f73733738506fcdc1a",
+          "relacy/java_volatile.hpp": "7816fc19d37804dd0122a3b074c6dbb4eb7440619fb1d16ed05d755e83b327a3",
+          "relacy/memory.hpp": "4e2411285bea187b7ea00399db241b5c57a5cb6ce5ffb33be2b81b7a4ca826fd",
+          "relacy/memory_order.hpp": "5eb0f6138480aa26ed2258a75c8e6fb5953d192cfc0bdce5889e64ab95def035",
+          "relacy/pch.hpp": "bd91d8192721dab5f1c0d2aad6ebfcc7acf00a81826ed396b7e0a96bfab9e520",
+          "relacy/platform.hpp": "b3c37b6eff3e302b178807d75a196e24acce1b5d913c49702922899688801dbb",
+          "relacy/pthread.h": "43f712830dee8b224c4053e486e3da89fe924f196f7daf04e9525a311ee4a356",
+          "relacy/random.hpp": "7636e80b101230f5e3f96512192061b12268748675d37c2a4214f89bf0f76fc3",
+          "relacy/random_scheduler.hpp": "d6fe2a1f85c5a5500df069e13361a4c47c71b53edc53658f1e4dbb1e962f0b2e",
+          "relacy/relacy.hpp": "7bbb903982b6c9ce5bb740ec69d53612a85008f2990595aed9fd0954374d479b",
+          "relacy/relacy_cli.hpp": "3f9576faa50eed5cae5d3af47a476bfbd59d2e953633d104d47a5fd95f7d7b75",
+          "relacy/relacy_java.hpp": "63c98be54e8725ba16b79642f0c85e7fe9b2b8589510c54a0960a3283c0646d5",
+          "relacy/relacy_std.hpp": "cabf21a4fff2583d7b3390fff4071ad46efa33f24e0dbe5f66edb31444552ce2",
+          "relacy/rmw.hpp": "cab3877003f4de6b62f28668d5e0260252ed9078e0225403fd9bd3edceeb0f84",
+          "relacy/scheduler.hpp": "28b24fb5634b53d554184fd0f11fe4298ea99a2e385efc78f7274cbb326e099a",
+          "relacy/signature.hpp": "d83a74c146ded9aae582ab3cca091eb97d41cc173524afccaac5c4393e8df80e",
+          "relacy/slab_allocator.hpp": "ffce2af0e930b74d2d5e7051037e64f780f8af883b2671385ff88c3ef72c5dbc",
+          "relacy/stdlib/condition_variable.hpp": "353710dadca8859878eac840d383250ee6da4d52fa6e87a80b8f9baff72d25b4",
+          "relacy/stdlib/event.hpp": "36371028064e6ab8f4c39702aa5b0be807c4db1cf9ba9e990caecde2a0265257",
+          "relacy/stdlib/mutex.hpp": "9472bd9af9a8995c07432a74fc2b4aa4e13b972e32581de36b2640e5d9799702",
+          "relacy/stdlib/pthread.hpp": "9328764581394d1a6999383771d2959394e11c03aa848c20c8b79d4d84bc3178",
+          "relacy/stdlib/semaphore.hpp": "ded8de0f27884f9679d29b23c55cc362c6240df31d6c554fa95882a0c1ba841c",
+          "relacy/stdlib/windows.hpp": "89216d5706c7dfc355e12bde1922f4765418f7e424e12bee6d0e6f8b4e63880a",
+          "relacy/sync_var.hpp": "109a16fe15772c85d607841be8aed336c42b792a2c34cb6a6c5b2eb1014d17dc",
+          "relacy/test_params.hpp": "1e1879d79941caa0977dcec43d3094266760d718bafb5a9c4dcd6d174d170746",
+          "relacy/test_result.hpp": "f75b1380e2da8e65f7c75e8ecc7344842ed93d465e1d968faec1a8692b0411f3",
+          "relacy/test_suite.hpp": "fea403518adbab46602bc2490d9fad1455d31a536cbe5424c7c164eb22d3e7bd",
+          "relacy/thread.hpp": "48efa27c3f3875ade7236275793830b4ba456b49f76e3ec1f31e6b2c9cbb0f88",
+          "relacy/thread_base.hpp": "8767b777a22688e121b3d75dd1ec670285c3a0932d203601332402b0d75e60aa",
+          "relacy/thread_local.hpp": "41a21dce7f14cd98db2fa9da4ec24bb12151e41d7401fbffe182f61393e0b1b7",
+          "relacy/thread_local_ctx.hpp": "9b2c04980e1314647b8c609e280400199758229e56e01566371b9d9450836799",
+          "relacy/var.hpp": "2e6ee30585bb3b44b955bc2e640c2e81fe5fa931d646c00bdec1d8f34a7c5758",
+          "relacy/volatile.hpp": "9604d82f2d8132a6617fbf795b78376504d163e2b7871cf106947ec9f55a5207",
+          "relacy/waitset.hpp": "707222d448b2fad933f1a6d194d09580da5639b290f5a7027862d057d99fe8a7",
+          "relacy/windows.h": "dcc2c1efabc687094e21b684e7b94aaae10d67773718d038c983167ddd76864e"
+        },
+        "worker_threads": 3
+      }
+    ],
+    "classification_version": "cross-family-source-assertions-v1",
+    "cpu_affinity_available_to_experiment": [
+      0,
+      1
+    ],
+    "cpu_model": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 26\nmodel\t\t: 96\nmodel name\t: AMD Ryzen AI 7 H 350 w/ Radeon 860M\nstepping\t: 0\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 1996.213\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 2\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch arat vmmcall fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt\nbogomips\t: 3992.42\nTLB size\t: 192 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 26\nmodel\t\t: 96\nmodel name\t: AMD Ryzen AI 7 H 350 w/ Radeon 860M \nstepping\t: 0\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 1996.213\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 1\ncpu cores\t: 2\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch arat vmmcall fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt\nbogomips\t: 3992.42\nTLB size\t: 192 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\n",
+    "excluded_special_cases": [
+      "Chess.SWSQ",
+      "Inspect.boundedbuffer"
+    ],
+    "guest_clocksource": "kvm-clock",
+    "host_audit_sha256": "5db2c8fcdc5325c8b72a6a6fe07ce3b0dae4151c82674cad15d29aebb3e261ff",
+    "kernel": "Linux rq3-baseline-guest 3.16.0-77-generic #99~14.04.1-Ubuntu SMP Tue Jun 28 19:17:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux",
+    "methods": [
+      "Native",
+      "PERIOD",
+      "IPB",
+      "IDB",
+      "PCT"
+    ],
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"18.04.5 LTS (Bionic Beaver)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 18.04.5 LTS\"\nVERSION_ID=\"18.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=bionic\nUBUNTU_CODENAME=bionic\n",
+    "pct_k_rule": "next power of two >= max(256, 8 * observed smoke PCT steps); fixed before formal run; not proof of worst-case bound",
+    "period_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+    "repetitions": 3,
+    "selected_before_formal_measurement": true,
+    "source_build_directory": "/workdir/rq3-cross-family-screen-o5n8qz",
+    "started_utc": "2026-11-20T15:20:25.158778Z",
+    "systematic_bounds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "timing": "CLOCK_MONOTONIC child lifetime; sudo/tool/target startup and pipe collection included; preparation, profile, discovery and driver/search generation excluded"
+  },
+  "five-extra-repair-20261120T231039Z-b86dea": {
+    "affinity": "two VM CPUs available; no CPU0 pinning or FIFO claim",
+    "assertion_policy": "keep source-file/line-matched target assertions; retain tool failures/timeouts separately; reject unknown abnormal exits",
+    "audited_source_archive_sha256": "b53c88e09439e7b19a6f5d4f484ad373a312a7cbef10b4c9b910a56a9537da77",
+    "budget": 10,
+    "build_directory": "/workdir/rq3-cross-family-screen-o5n8qz",
+    "cases": [
+      {
+        "arguments": [
+          "-n",
+          "32",
+          "-f",
+          "4",
+          "-h",
+          "3",
+          "-v"
+        ],
+        "assertion_rules": [
+          {
+            "file": "qsort_mt.c",
+            "line": 477
+          },
+          {
+            "file": "qsort_mt.c",
+            "line": 649
+          }
+        ],
+        "bitcode_sha256": "4750db54f8f804aab12b8f0fc8a4a7f747945a438810b9793498ff08a464f78d",
+        "case": "Inspect.qsort_mt",
+        "compile_command": [
+          "clang",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.c",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt-native",
+        "native_binary_sha256": "5373b85edb1444ca950e0a789648996793b0229cf7a1b77f5671e0d311694210",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 512,
+        "pct_n": 4,
+        "pct_smoke_observed_steps": 55,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt",
+        "period_binary_sha256": "f9eb829b8bb309d65f29e36a03f940e234ba9deabc6939e1139fcdac11872b95",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Inspect.qsort_mt/build/qsort_mt",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "qsort_mt.c": "e23cf7a23a8986c9cd8d64da4447ca122f37d986b9f05be439a22d32e487121c"
+        },
+        "worker_threads": 3
+      },
+      {
+        "arguments": [
+          "1",
+          "4",
+          "2"
+        ],
+        "assertion_rules": [
+          {
+            "file": "WorkStealQueue.cpp",
+            "line": 53
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 359
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 373
+          }
+        ],
+        "bitcode_sha256": "2c1cc368e37d8ef7ecd18f43c409e5bb02f7bd34f9d8b8ae839a3347d0db3e6c",
+        "case": "Chess.WSQ",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue-native",
+        "native_binary_sha256": "60aeea08b5bf5c2f4a6294f88de69fdfc925e22ca4b91101d554c47ede096ae6",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 1024,
+        "pct_n": 3,
+        "pct_smoke_observed_steps": 90,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue",
+        "period_binary_sha256": "9aa9fb12b8595aefb69f6a5b855bdb5bc0063847ebe367f10b39661d1d7511e0",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.WSQ/build/WorkStealQueue",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "WorkStealQueue.cpp": "e0e486a5d1ee366fb9730a00b03826775647b20a2ba4b0c936f5265a6417abd0",
+          "WorkStealQueue.h": "66d4789c3fe93c5452421f69781e72fd825532f59eab46065b48d5cdb9245891"
+        },
+        "worker_threads": 2
+      },
+      {
+        "arguments": [
+          "1",
+          "4",
+          "2"
+        ],
+        "assertion_rules": [
+          {
+            "file": "InterlockedWorkStealQueue.cpp",
+            "line": 57
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 359
+          },
+          {
+            "file": "WorkStealQueue.h",
+            "line": 373
+          }
+        ],
+        "bitcode_sha256": "0acf50c5bd56f84a4be9525c17bdcfe20dede318353f430ce8c9f129f8b15e56",
+        "case": "Chess.IWSQ",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue-native",
+        "native_binary_sha256": "3b8c8f1a291f86f5fa0901362e9fec05927c4af90672e4cfcbcc76d7ab12351d",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 1024,
+        "pct_n": 3,
+        "pct_smoke_observed_steps": 93,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue",
+        "period_binary_sha256": "88303172b71a43fd402a5d3f16ac574c83c09e5e7914f70e97439733e85d21f3",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQ/build/InterlockedWorkStealQueue",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "InterlockedWorkStealQueue.cpp": "d06d886f4e37b6c098a04944e5f2dde64682ef6a7eca7c35e92eaed938dab97f",
+          "WorkStealQueue.h": "66d4789c3fe93c5452421f69781e72fd825532f59eab46065b48d5cdb9245891"
+        },
+        "worker_threads": 2
+      },
+      {
+        "arguments": [
+          "2",
+          "4",
+          "2"
+        ],
+        "assertion_rules": [
+          {
+            "file": "InterlockedWorkStealQueueWithState.cpp",
+            "line": 59
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 72
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 79
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 567
+          },
+          {
+            "file": "WorkStealQueueWithState.h",
+            "line": 592
+          }
+        ],
+        "bitcode_sha256": "e57f4c30a5c62e8793ccd2df664454ee8322c0f3fc7096433c122df1770d746b",
+        "case": "Chess.IWSQWS",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState-native",
+        "native_binary_sha256": "1cd71e015a6b7fbdc802e5f8f2aff51707609d0c460a39743fa28c8be13db485",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 16384,
+        "pct_n": 4,
+        "pct_smoke_observed_steps": 1512,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState",
+        "period_binary_sha256": "5ba6545d562a53587809b345782acc5fd517fca7d8e7f3614cbc59168589369f",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Chess.IWSQWS/build/InterlockedWorkStealQueueWithState",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "InterlockedWorkStealQueueWithState.cpp": "36bd8afe44101be31a33bef3efc5e85b37ec9ac1333c88f090aa5ac8bca3b0cf",
+          "WorkStealQueueWithState.h": "d27ca3c52fc5fbadc6d19ec0b0d4ee082496474b76225839a3113d06fb573bda"
+        },
+        "worker_threads": 3
+      },
+      {
+        "arguments": [],
+        "assertion_rules": [
+          {
+            "file": "SafeStack.cpp",
+            "line": 100
+          },
+          {
+            "file": "SafeStackRelacy.cpp",
+            "line": 100
+          },
+          {
+            "file": "SafeStack_simplify.cpp",
+            "line": 95
+          },
+          {
+            "file": "SafeStack_sleep.cpp",
+            "line": 229
+          },
+          {
+            "file": "SafeStack_sleep.cpp",
+            "line": 254
+          },
+          {
+            "file": "SafeStack_sleep.cpp",
+            "line": 283
+          }
+        ],
+        "bitcode_sha256": "e9f25ecb3cf34d251ce623bbe030f83d9784d08b4624651cfa987a2c2a692781",
+        "case": "Misc.safestack",
+        "compile_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-pthread",
+          "-std=c++0x",
+          "-emit-llvm",
+          "-c",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.cpp",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc"
+        ],
+        "native_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack-native",
+        "native_binary_sha256": "4c6857f6f46c3f4abf8558adf803bd6a1db2de05a04cef17d0b73d8cadd2abea",
+        "native_link_command": [
+          "clang++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack-native",
+          "-lpthread",
+          "-ldl"
+        ],
+        "pct_depth": 3,
+        "pct_k": 1024,
+        "pct_n": 4,
+        "pct_smoke_observed_steps": 101,
+        "period_binary": "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack",
+        "period_binary_sha256": "8a2e7cd0ca9decf3b4ec2b816b61744a76cab2853e02bfa856e6a661a99776b6",
+        "period_link_command": [
+          "/workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++",
+          "-g",
+          "-O0",
+          "-no-pie",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack.bc",
+          "-o",
+          "/workdir/rq3-cross-family-screen-o5n8qz/Misc.safestack/build/SafeStack",
+          "-lpthread",
+          "-ldl"
+        ],
+        "source_sha256": {
+          "SafeStack.cpp": "41bba45743a27a1b590d9d885c3e0e5a72c66c55c64312b4ea4f48700855f68e",
+          "SafeStackRelacy.cpp": "8cca4c4b8a9baac60f31d1a010011b496d42bef441d7be6feb4ddfff49ef0804",
+          "SafeStack_simplify.cpp": "01ded1a223b74cc3eac0511b68e99148e8ccaec3e8b66eacfc2ff231bb887a3a",
+          "SafeStack_sleep.cpp": "2fccddc94878eadae7cbd77056fd974c5d4e1d84b3caadea084c4b146e1b6e96",
+          "relacy/atomic.hpp": "2b404b4a70fb0b75f79202f0c03be3b591706b6b21e0704e400428132e9134dc",
+          "relacy/atomic_events.hpp": "0d7fc4b7eec58fc0431395d984b09434e1ce1c24627ecf55b10accc920a3c6f5",
+          "relacy/atomic_fence.hpp": "5a26525c837c50cb2c154b344bd531d7cf99f73f0fc956c4cac2cb203a9ceb73",
+          "relacy/backoff.hpp": "625d769ba760689fc24f4409eaa7f90ce3785d7a4a2aaee2e1deec2f1da2ab50",
+          "relacy/base.hpp": "3926980f449748d0bfb96daafd05929bfa1517cb6fa7dbd07018a539b02ab1af",
+          "relacy/cli.hpp": "6333645f9869d7fb84a7154a3f8ceef20fb83859e03f255a37c8121b6d126194",
+          "relacy/cli_interlocked.hpp": "e7a320b8249095c4e972f620f4a6cbc11b5b2d9226b57491f67806078e78e912",
+          "relacy/cli_var.hpp": "d307324c16b2f3b9ed02190171b239c3d0832921f2c966e32aa72c0f77855053",
+          "relacy/cli_volatile.hpp": "65a9871a58799dbf8f49008fcca747b9d5299782dd6e7fb43e3ff6f433a9a30a",
+          "relacy/context.hpp": "8e19827ca4bb8540c08fd0e7ae6a61c360d92cf4ebb2915a20eec86ce3deb4dd",
+          "relacy/context_addr_hash.hpp": "b1615662bf2e35e42e0eaf6debb18cec937b8af8e9b924e9730655de9fd9a34e",
+          "relacy/context_base.hpp": "0fc2c10c4075611c6b89bc885d86ed730271b067dbebfd05c293de7a24c899f2",
+          "relacy/context_base_impl.hpp": "2bbb96c6444fefc92c94b8f4f7aee6ac05e07e4bdbd27279874fb25b6ccbff2e",
+          "relacy/context_bound_scheduler.hpp": "243b43c7569c0591eb64b06c1c3f87faac33b60998467358dc1186f7029128a3",
+          "relacy/defs.hpp": "738759adca7f0c08ee6b78b0dffb4d78256b9d646544317d29078b2fe656c99f",
+          "relacy/dyn_thread.hpp": "6031de062726e1a08cf4683e9474d0de0fea3d10428b9d3b66e3d89027a0ce85",
+          "relacy/dyn_thread_ctx.hpp": "c9669e2f781f3ff1c07e612eba540fb3027dcbd044af6c2869702209b96b30f6",
+          "relacy/foreach.hpp": "e3441eb6150b3d4fdb1588acd54c07ef2267c6c0e3b1a8441c1dc4689fd4e881",
+          "relacy/full_search_scheduler.hpp": "419e8c61a12841194286dc1f755699e3911f7fa98e76eb0b52718d220ce5a682",
+          "relacy/history.hpp": "a79057b55928da3d11a06138339448b6316553569e494dd85bf272af57a937ab",
+          "relacy/java.hpp": "f730b0aca33583452c6df5773dd1a6748b5ec5b1e86a9eaa88367766484dd198",
+          "relacy/java_atomic.hpp": "6e3e386a16ed1ece3f99b45ed0a4486c9fde428ab394b2e7c15ab2aba6ea5fa6",
+          "relacy/java_var.hpp": "41c4bc11f8144aa0e7fecd0a5e1bf60c875a450dcfe214f73733738506fcdc1a",
+          "relacy/java_volatile.hpp": "7816fc19d37804dd0122a3b074c6dbb4eb7440619fb1d16ed05d755e83b327a3",
+          "relacy/memory.hpp": "4e2411285bea187b7ea00399db241b5c57a5cb6ce5ffb33be2b81b7a4ca826fd",
+          "relacy/memory_order.hpp": "5eb0f6138480aa26ed2258a75c8e6fb5953d192cfc0bdce5889e64ab95def035",
+          "relacy/pch.hpp": "bd91d8192721dab5f1c0d2aad6ebfcc7acf00a81826ed396b7e0a96bfab9e520",
+          "relacy/platform.hpp": "b3c37b6eff3e302b178807d75a196e24acce1b5d913c49702922899688801dbb",
+          "relacy/pthread.h": "43f712830dee8b224c4053e486e3da89fe924f196f7daf04e9525a311ee4a356",
+          "relacy/random.hpp": "7636e80b101230f5e3f96512192061b12268748675d37c2a4214f89bf0f76fc3",
+          "relacy/random_scheduler.hpp": "d6fe2a1f85c5a5500df069e13361a4c47c71b53edc53658f1e4dbb1e962f0b2e",
+          "relacy/relacy.hpp": "7bbb903982b6c9ce5bb740ec69d53612a85008f2990595aed9fd0954374d479b",
+          "relacy/relacy_cli.hpp": "3f9576faa50eed5cae5d3af47a476bfbd59d2e953633d104d47a5fd95f7d7b75",
+          "relacy/relacy_java.hpp": "63c98be54e8725ba16b79642f0c85e7fe9b2b8589510c54a0960a3283c0646d5",
+          "relacy/relacy_std.hpp": "cabf21a4fff2583d7b3390fff4071ad46efa33f24e0dbe5f66edb31444552ce2",
+          "relacy/rmw.hpp": "cab3877003f4de6b62f28668d5e0260252ed9078e0225403fd9bd3edceeb0f84",
+          "relacy/scheduler.hpp": "28b24fb5634b53d554184fd0f11fe4298ea99a2e385efc78f7274cbb326e099a",
+          "relacy/signature.hpp": "d83a74c146ded9aae582ab3cca091eb97d41cc173524afccaac5c4393e8df80e",
+          "relacy/slab_allocator.hpp": "ffce2af0e930b74d2d5e7051037e64f780f8af883b2671385ff88c3ef72c5dbc",
+          "relacy/stdlib/condition_variable.hpp": "353710dadca8859878eac840d383250ee6da4d52fa6e87a80b8f9baff72d25b4",
+          "relacy/stdlib/event.hpp": "36371028064e6ab8f4c39702aa5b0be807c4db1cf9ba9e990caecde2a0265257",
+          "relacy/stdlib/mutex.hpp": "9472bd9af9a8995c07432a74fc2b4aa4e13b972e32581de36b2640e5d9799702",
+          "relacy/stdlib/pthread.hpp": "9328764581394d1a6999383771d2959394e11c03aa848c20c8b79d4d84bc3178",
+          "relacy/stdlib/semaphore.hpp": "ded8de0f27884f9679d29b23c55cc362c6240df31d6c554fa95882a0c1ba841c",
+          "relacy/stdlib/windows.hpp": "89216d5706c7dfc355e12bde1922f4765418f7e424e12bee6d0e6f8b4e63880a",
+          "relacy/sync_var.hpp": "109a16fe15772c85d607841be8aed336c42b792a2c34cb6a6c5b2eb1014d17dc",
+          "relacy/test_params.hpp": "1e1879d79941caa0977dcec43d3094266760d718bafb5a9c4dcd6d174d170746",
+          "relacy/test_result.hpp": "f75b1380e2da8e65f7c75e8ecc7344842ed93d465e1d968faec1a8692b0411f3",
+          "relacy/test_suite.hpp": "fea403518adbab46602bc2490d9fad1455d31a536cbe5424c7c164eb22d3e7bd",
+          "relacy/thread.hpp": "48efa27c3f3875ade7236275793830b4ba456b49f76e3ec1f31e6b2c9cbb0f88",
+          "relacy/thread_base.hpp": "8767b777a22688e121b3d75dd1ec670285c3a0932d203601332402b0d75e60aa",
+          "relacy/thread_local.hpp": "41a21dce7f14cd98db2fa9da4ec24bb12151e41d7401fbffe182f61393e0b1b7",
+          "relacy/thread_local_ctx.hpp": "9b2c04980e1314647b8c609e280400199758229e56e01566371b9d9450836799",
+          "relacy/var.hpp": "2e6ee30585bb3b44b955bc2e640c2e81fe5fa931d646c00bdec1d8f34a7c5758",
+          "relacy/volatile.hpp": "9604d82f2d8132a6617fbf795b78376504d163e2b7871cf106947ec9f55a5207",
+          "relacy/waitset.hpp": "707222d448b2fad933f1a6d194d09580da5639b290f5a7027862d057d99fe8a7",
+          "relacy/windows.h": "dcc2c1efabc687094e21b684e7b94aaae10d67773718d038c983167ddd76864e"
+        },
+        "worker_threads": 3
+      }
+    ],
+    "classification_version": "cross-family-source-assertions-v1",
+    "cpu_affinity_available_to_experiment": [
+      0,
+      1
+    ],
+    "cpu_model": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 26\nmodel\t\t: 96\nmodel name\t: AMD Ryzen AI 7 H 350 w/ Radeon 860M\nstepping\t: 0\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 1996.213\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 0\ncpu cores\t: 2\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch arat vmmcall fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt\nbogomips\t: 3992.42\nTLB size\t: 192 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: AuthenticAMD\ncpu family\t: 26\nmodel\t\t: 96\nmodel name\t: AMD Ryzen AI 7 H 350 w/ Radeon 860M \nstepping\t: 0\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 1996.213\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 2\ncore id\t\t: 1\ncpu cores\t: 2\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 13\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch arat vmmcall fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt\nbogomips\t: 3992.42\nTLB size\t: 192 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management:\n\n",
+    "excluded_special_cases": [
+      "Chess.SWSQ",
+      "Inspect.boundedbuffer"
+    ],
+    "guest_clocksource": "kvm-clock",
+    "host_audit_sha256": "5db2c8fcdc5325c8b72a6a6fe07ce3b0dae4151c82674cad15d29aebb3e261ff",
+    "kernel": "Linux rq3-baseline-guest 3.16.0-77-generic #99~14.04.1-Ubuntu SMP Tue Jun 28 19:17:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux",
+    "methods": [
+      "Native",
+      "PERIOD",
+      "IPB",
+      "IDB",
+      "PCT"
+    ],
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"18.04.5 LTS (Bionic Beaver)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 18.04.5 LTS\"\nVERSION_ID=\"18.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=bionic\nUBUNTU_CODENAME=bionic\n",
+    "pct_k_rule": "next power of two >= max(256, 8 * observed smoke PCT steps); fixed before formal run; not proof of worst-case bound",
+    "period_commit": "b6f72a7b06d01ffa7114b640312873ec2578a5ea",
+    "protocol_amendment": "actual-launch-budget-v2; before launch11 stop PERIOD normally after exactly10 valid measured children, including retests; search exhaustion not claimed",
+    "repair_provenance": {
+      "created_before_run_utc": "2026-11-20T23:10:40.1223624Z",
+      "original_archive_sha256": "139fcd474eec08a8b905cbf732b69b9c5d36383602aec7145499f12df600c188",
+      "original_batch": "five-extra-formal-20261120T151904Z-b3d307",
+      "original_native_and_partial_period_excluded": true,
+      "preserve_other_14_paired_blocks": true,
+      "protocol_amendment_file": "five-extra-budget-amendment.md",
+      "protocol_amendment_sha256": "56b63c9a6c31c4c4c0ccb1b0dff146175d9c9707e96d7e0145ff6e557bb9f784",
+      "replace_complete_block": {
+        "case": "Chess.IWSQWS",
+        "original_group_numbers": [
+          66,
+          67,
+          68,
+          69,
+          70
+        ],
+        "repetition": 3
+      }
+    },
+    "repetitions": 3,
+    "selected_before_formal_measurement": true,
+    "selected_blocks": [
+      [
+        3,
+        "Chess.IWSQWS"
+      ]
+    ],
+    "selection": "repair-iwsqws-rep3",
+    "source_build_directory": "/workdir/rq3-cross-family-screen-o5n8qz",
+    "started_utc": "2026-11-20T23:12:49.275390Z",
+    "systematic_bounds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "timing": "CLOCK_MONOTONIC child lifetime; sudo/tool/target startup and pipe collection included; preparation, profile, discovery and driver/search generation excluded"
+  }
+}
