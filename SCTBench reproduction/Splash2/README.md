@@ -10,17 +10,17 @@ The programs are `Splash2.barnes`, `Splash2.fft`, `Splash2.lu`. Their upstream p
 
 ## 2. Experimental Results
 
-1 of the 3 programs have three valid repetitions. This group has 7 valid repetitions.
+All 3 programs have three valid repetitions. This group has 9 valid repetitions.
 
 A results cell with two or more repetitions is the mean ± the sample standard deviation, rounded to one decimal place when the value is not an integer. A single observation is the measured value, and the sample standard deviation is unavailable. `No completed run` means the program has no valid metrics file. `No error detected` means the valid runs finished without an error interleaving. A measured error count of 0 is a real zero. `Measurement unavailable` would mean a valid record omitted the field. In these records, every valid repetition of a program either recorded a bug or recorded none, so a printed first-bug number uses the same observation count as the valid-repetition count. [results/summary.csv](results/summary.csv) leaves a standard-deviation field empty, and [results/summary.json](results/summary.json) stores null, when fewer than two observations exist. A standard deviation of 0 is retained only when at least two observations are identical. The observation counts are `explored_n`, `errors_n`, `first_bug_n`, and `timeouts_n`. The submitted metrics files are historical records. They do not contain the provenance fingerprint now required before a run can be reused. Recovered scheduler logs, checksums, and remaining error or timeout files are linked from [results/evidence.md](results/evidence.md). A submitted measurement with no recovered log is not independently verifiable from raw scheduler output. Reparsing each recovered log reproduces the submitted metrics. The logs do not record source or executable checksums, so these runs are not relabeled as newly verified.
 
 | Program | Valid repetitions | Schedules explored | Error interleavings | First bug schedule | Timeout interleavings | Elapsed time (s) |
 |---|---:|---|---|---|---|---|
-| Splash2.barnes | 2 | 10001 ± 0 | 1365 ± 149.9 | 2 ± 0 | 1 ± 0 | 2424.5 ± 9.2 |
-| Splash2.fft | 2 | 10001 ± 0 | 3850.5 ± 16.3 | 2 ± 0 | 0.5 ± 0.7 | 1463.6 ± 13.6 |
+| Splash2.barnes | 3 | 10001 ± 0 | 1357.3 ± 106.8 | 2 ± 0 | 0.7 ± 0.6 | 2558.2 ± 231.6 |
+| Splash2.fft | 3 | 10001 ± 0 | 3911 ± 105.4 | 2 ± 0 | 0.3 ± 0.6 | 1293.9 ± 294.0 |
 | Splash2.lu | 3 | 10001 ± 0 | 4740.3 ± 384.7 | 2 ± 0 | 0.3 ± 0.6 | 1668 ± 100.7 |
 
-1 of the 3 programs have three valid repetitions. This group contributes 7 valid repetitions. `Splash2.barnes` has 2 valid repetitions (`rep02, rep03`); `Splash2.fft` has 2 valid repetitions (`rep02, rep03`). The cause of each missing repetition is not established by the submitted records. `Splash2.barnes`, `Splash2.fft`, and `Splash2.lu` recorded a schedule total above the configured budget. The table keeps the recorded totals.
+All 3 programs have three valid repetitions. This group contributes 9 valid repetitions. The missing repetitions of `Splash2.barnes` and `Splash2.fft` were recovered from the local experiment tree with their scheduler logs. `Splash2.barnes`, `Splash2.fft`, and `Splash2.lu` recorded a schedule total above the configured budget. The table keeps the recorded totals.
 
 The per-program records are in [results/cases/](results/cases/). The group tables are [results/summary.csv](results/summary.csv) and [results/per_run.csv](results/per_run.csv). The runner's last-attempt snapshot for these programs is [results/status.md](results/status.md); its explored column is the last attempt, not the mean. Scheduler stdout for every submitted metrics file in this group was recovered unchanged. [results/evidence.md](results/evidence.md) links each `run.log.gz`, its checksum, the matching command record, and any error or timeout files that were still present. Earlier runs kept at most two files in each Errors or Timeouts directory; files removed before this repair were not reconstructed. No schedule was replayed as part of this repair.
 
@@ -160,12 +160,12 @@ Published values are the PERIOD columns in [paper_table2.json](paper_table2.json
 
 | Program | Table 2 schedules | Measured schedules | Table 2 buggy schedules | Measured error interleavings | Table 2 first bug | Measured first bug |
 |---|---|---|---|---|---|---|
-| Splash2.barnes | L (budget 10000) | 10001 ± 0 | 1186 | 1365 ± 149.9 | 2 | 2 ± 0 |
-| Splash2.fft | L (budget 10000) | 10001 ± 0 | 3963 | 3850.5 ± 16.3 | 2 | 2 ± 0 |
+| Splash2.barnes | L (budget 10000) | 10001 ± 0 | 1186 | 1357.3 ± 106.8 | 2 | 2 ± 0 |
+| Splash2.fft | L (budget 10000) | 10001 ± 0 | 3963 | 3911 ± 105.4 | 2 | 2 ± 0 |
 | Splash2.lu | 6129 | 10001 ± 0 | 2848 | 4740.3 ± 384.7 | 2 | 2 ± 0 |
 
-Some compared columns match, and others differ, for `Splash2.barnes`, `Splash2.fft`, and `Splash2.lu`. The table above is the column-by-column record. The metrics do not establish the cause of a differing column. The configured limit and the recorded schedule total are different quantities for `Splash2.barnes`, `Splash2.fft`, and `Splash2.lu`. The recorded totals exceed the limit and are left unchanged. Their interpretation remains unresolved; the raw scheduler logs are not in this submission.
+Some compared columns match, and others differ, for `Splash2.barnes`, `Splash2.fft`, and `Splash2.lu`. The table above is the column-by-column record. The metrics do not establish the cause of a differing column. The configured limit and the recorded schedule total are different quantities for `Splash2.barnes`, `Splash2.fft`, and `Splash2.lu`. The recorded totals exceed the limit and are left unchanged. Their interpretation remains unresolved. The scheduler logs are linked from [results/evidence.md](results/evidence.md).
 
 ### Final Result
 
-The submitted evidence establishes 7 valid repetitions in this group and three completed repetitions for 1 of the 3 programs. Unfinished measurements remain for `Splash2.barnes` and `Splash2.fft`. No program in this group matches Table 2 on the schedule total, the error count, and the first-bug schedule together. Recorded schedule totals above the configured budget are kept as measured. Other numeric differences remain unresolved. Timeout interleavings are not confirmed bugs.
+The submitted evidence establishes 9 valid repetitions in this group and three completed repetitions for all 3 programs. No program in this group matches Table 2 on the schedule total, the error count, and the first-bug schedule together. Recorded schedule totals above the configured budget are kept as measured. Other numeric differences remain unresolved. Timeout interleavings are not confirmed bugs.

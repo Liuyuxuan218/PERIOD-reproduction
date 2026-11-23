@@ -1,0 +1,2 @@
+[[0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+queue_bad: ./queue_bad.c:122: void *t2(void *): Assertion `dequeue(&queue)==stored_elements[i]' failed.

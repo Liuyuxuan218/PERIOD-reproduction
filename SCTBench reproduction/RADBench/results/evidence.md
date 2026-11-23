@@ -64,3 +64,7 @@ These records do not contain the source, toolchain, and executable fingerprint n
 ## Missing raw logs
 
 None.
+
+## Additional repetitions
+
+`RADBench.bug3/rep03` is a completed run recovered from the local experiment tree. `RADBench.bug4` rep01, rep02, and rep03 are failed attempts: the scheduler log ends in a 5-second dry-run timeout and no schedule was explored. These files were copied unchanged and do not contain the provenance fingerprint required before a run can be reused.

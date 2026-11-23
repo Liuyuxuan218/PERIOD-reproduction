@@ -229,3 +229,13 @@ These records do not contain the source, toolchain, and executable fingerprint n
 ## Missing raw logs
 
 None.
+
+## Additional repetitions
+
+These repetitions were not in the first submission. They were copied unchanged from the local experiment tree after the same log checks used for the original 97 records. They do not contain the provenance fingerprint required before a run can be reused.
+
+- `CS.account_bad/rep01`
+- `CS.account_bad/rep02`
+- `CS.account_bad/rep03`
+- `CS.queue_bad/rep02`
+- `CS.queue_bad/rep03`

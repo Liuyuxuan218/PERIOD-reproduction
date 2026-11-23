@@ -1,4 +1,7 @@
 case,repetition,valid,stop_reason,schedules_explored,round_footer_total,error_interleavings,timeout_interleavings,first_bug_schedule,bug_found,elapsed_sec,exit_code,metrics_path
+CS.account_bad,1,True,completed,65,65,27,0,3,True,13.84,0,results/cases/CS.account_bad/rep01/metrics.json
+CS.account_bad,2,True,completed,65,65,26,0,10,True,10.603,0,results/cases/CS.account_bad/rep02/metrics.json
+CS.account_bad,3,True,completed,65,65,26,0,10,True,11.198,0,results/cases/CS.account_bad/rep03/metrics.json
 CS.bluetooth_driver_bad,1,True,completed,205,205,7,0,9,True,10.824,0,results/cases/CS.bluetooth_driver_bad/rep01/metrics.json
 CS.bluetooth_driver_bad,2,True,completed,205,205,7,0,9,True,9.375,0,results/cases/CS.bluetooth_driver_bad/rep02/metrics.json
 CS.bluetooth_driver_bad,3,True,completed,205,205,6,0,9,True,11.866,0,results/cases/CS.bluetooth_driver_bad/rep03/metrics.json
@@ -15,6 +18,8 @@ CS.lazy01_bad,1,True,completed,39,39,12,0,8,True,5.018,0,results/cases/CS.lazy01
 CS.lazy01_bad,2,True,completed,39,39,12,0,8,True,6.114,0,results/cases/CS.lazy01_bad/rep02/metrics.json
 CS.lazy01_bad,3,True,completed,39,39,12,0,8,True,4.44,0,results/cases/CS.lazy01_bad/rep03/metrics.json
 CS.queue_bad,1,True,completed,1048,1048,114,0,4,True,71.802,0,results/cases/CS.queue_bad/rep01/metrics.json
+CS.queue_bad,2,True,completed,833,833,91,0,6,True,74.832,0,results/cases/CS.queue_bad/rep02/metrics.json
+CS.queue_bad,3,True,completed,1044,1044,207,0,3,True,97.317,0,results/cases/CS.queue_bad/rep03/metrics.json
 CS.reorder_10_bad,1,True,completed,2350,2350,88,0,27,True,193.477,0,results/cases/CS.reorder_10_bad/rep01/metrics.json
 CS.reorder_10_bad,2,True,completed,2350,2350,92,0,27,True,204.782,0,results/cases/CS.reorder_10_bad/rep02/metrics.json
 CS.reorder_10_bad,3,True,completed,2350,2350,90,0,27,True,237.709,0,results/cases/CS.reorder_10_bad/rep03/metrics.json

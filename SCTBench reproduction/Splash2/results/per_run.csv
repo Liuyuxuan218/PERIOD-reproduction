@@ -1,6 +1,8 @@
 case,repetition,valid,stop_reason,schedules_explored,round_footer_total,error_interleavings,timeout_interleavings,first_bug_schedule,bug_found,elapsed_sec,exit_code,metrics_path
+Splash2.barnes,1,True,budget,10001,10006,1342,0,2,True,2825.584,0,results/cases/Splash2.barnes/rep01/metrics.json
 Splash2.barnes,2,True,budget,10001,10007,1471,1,2,True,2418.024,0,results/cases/Splash2.barnes/rep02/metrics.json
 Splash2.barnes,3,True,budget,10001,10007,1259,1,2,True,2431.015,0,results/cases/Splash2.barnes/rep03/metrics.json
+Splash2.fft,1,True,budget,10001,10029,4032,0,2,True,954.665,0,results/cases/Splash2.fft/rep01/metrics.json
 Splash2.fft,2,True,budget,10001,10020,3839,1,2,True,1453.946,0,results/cases/Splash2.fft/rep02/metrics.json
 Splash2.fft,3,True,budget,10001,10024,3862,0,2,True,1473.172,0,results/cases/Splash2.fft/rep03/metrics.json
 Splash2.lu,1,True,budget,10001,10047,4627,0,2,True,1644.906,0,results/cases/Splash2.lu/rep01/metrics.json

@@ -1,0 +1,47 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "assertion-failed": {
+      "count": 1342,
+      "first_schedule": 2
+    }
+  },
+  "by_type_log": {
+    "assertion": {
+      "count": 1342,
+      "first_schedule": 2
+    }
+  },
+  "case": "Splash2.barnes",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./BARNES"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 2825.584,
+  "end_testing": true,
+  "ended": "2026-11-15T08:52:38Z",
+  "error_interleavings": 1342,
+  "exit_code": 0,
+  "first_bug_schedule": 2,
+  "output_dirs": [
+    "out_BARNES_1"
+  ],
+  "repetition": 1,
+  "round_footer_last": 0,
+  "round_footer_total": 10006,
+  "schedule_limit": 10000,
+  "schedules_explored": 10001,
+  "started": "2026-11-15T08:05:33Z",
+  "stop_reason": "budget",
+  "timeout_interleavings": 0,
+  "valid": true
+}

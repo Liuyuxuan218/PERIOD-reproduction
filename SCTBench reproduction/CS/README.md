@@ -10,19 +10,19 @@ The programs are `CS.account_bad`, `CS.bluetooth_driver_bad`, `CS.carter01_bad`,
 
 ## 2. Experimental Results
 
-16 of the 18 programs have three valid repetitions. This group has 49 valid repetitions.
+All 18 programs have three valid repetitions. This group has 54 valid repetitions.
 
 A results cell with two or more repetitions is the mean ± the sample standard deviation, rounded to one decimal place when the value is not an integer. A single observation is the measured value, and the sample standard deviation is unavailable. `No completed run` means the program has no valid metrics file. `No error detected` means the valid runs finished without an error interleaving. A measured error count of 0 is a real zero. `Measurement unavailable` would mean a valid record omitted the field. In these records, every valid repetition of a program either recorded a bug or recorded none, so a printed first-bug number uses the same observation count as the valid-repetition count. [results/summary.csv](results/summary.csv) leaves a standard-deviation field empty, and [results/summary.json](results/summary.json) stores null, when fewer than two observations exist. A standard deviation of 0 is retained only when at least two observations are identical. The observation counts are `explored_n`, `errors_n`, `first_bug_n`, and `timeouts_n`. The submitted metrics files are historical records. They do not contain the provenance fingerprint now required before a run can be reused. Recovered scheduler logs, checksums, and remaining error or timeout files are linked from [results/evidence.md](results/evidence.md). A submitted measurement with no recovered log is not independently verifiable from raw scheduler output. Reparsing each recovered log reproduces the submitted metrics. The logs do not record source or executable checksums, so these runs are not relabeled as newly verified.
 
 | Program | Valid repetitions | Schedules explored | Error interleavings | First bug schedule | Timeout interleavings | Elapsed time (s) |
 |---|---:|---|---|---|---|---|
-| CS.account_bad | 0 | No completed run | No completed run | No completed run | No completed run | No completed run |
+| CS.account_bad | 3 | 65 ± 0 | 26.3 ± 0.6 | 7.7 ± 4.0 | 0 ± 0 | 11.9 ± 1.7 |
 | CS.bluetooth_driver_bad | 3 | 205 ± 0 | 6.7 ± 0.6 | 9 ± 0 | 0 ± 0 | 10.7 ± 1.3 |
 | CS.carter01_bad | 3 | 42 ± 0 | 0 ± 0 | No error detected | 10.3 ± 0.6 | 55.3 ± 2.9 |
 | CS.circular_buffer_bad | 3 | 544.7 ± 2.3 | 57.3 ± 2.1 | 16.7 ± 0.6 | 0 ± 0 | 37.3 ± 1.2 |
 | CS.deadlock01_bad | 3 | 14 ± 0 | 0 ± 0 | No error detected | 6 ± 0 | 31.5 ± 0.2 |
 | CS.lazy01_bad | 3 | 39 ± 0 | 12 ± 0 | 8 ± 0 | 0 ± 0 | 5.2 ± 0.9 |
-| CS.queue_bad | 1 | 1048; sample standard deviation unavailable | 114; sample standard deviation unavailable | 4; sample standard deviation unavailable | 0; sample standard deviation unavailable | 71.8; sample standard deviation unavailable |
+| CS.queue_bad | 3 | 975 ± 123 | 137.3 ± 61.4 | 4.3 ± 1.5 | 0 ± 0 | 81.3 ± 13.9 |
 | CS.reorder_10_bad | 3 | 2350 ± 0 | 90 ± 2 | 27 ± 0 | 0 ± 0 | 212 ± 23 |
 | CS.reorder_20_bad | 3 | 10000 ± 0 | 2848.7 ± 30.9 | 39 ± 0 | 12.3 ± 6.1 | 6523.5 ± 375.9 |
 | CS.reorder_3_bad | 3 | 27 ± 0 | 6 ± 0 | 6 ± 0 | 0 ± 0 | 2.8 ± 0.2 |
@@ -35,7 +35,7 @@ A results cell with two or more repetitions is the mean ± the sample standard d
 | CS.wronglock_3_bad | 3 | 172 ± 0 | 42.3 ± 0.6 | 6 ± 0 | 0 ± 0 | 21.5 ± 1.6 |
 | CS.wronglock_bad | 3 | 1464 ± 0 | 217.7 ± 2.1 | 10 ± 0 | 0 ± 0 | 197.7 ± 4.9 |
 
-16 of the 18 programs have three valid repetitions. This group contributes 49 valid repetitions. `CS.account_bad` has no completed run; `CS.queue_bad` has one valid repetition (`rep01`). The cause of each missing repetition is not established by the submitted records. `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad` match Table 2 on the schedule total, the error count, and the first-bug schedule. Table 2 labels `CS.carter01_bad` and `CS.deadlock01_bad` as DL. Those runs recorded 0 error interleavings. Their timeout counts stay in the timeout column and are not treated as confirmed deadlocks.
+All 18 programs have three valid repetitions. This group contributes 54 valid repetitions. The repetitions missing from the first submission were recovered from the local experiment tree: three for `CS.account_bad` and two for `CS.queue_bad`, each with its scheduler log. `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad` match Table 2 on the schedule total, the error count, and the first-bug schedule. Table 2 labels `CS.carter01_bad` and `CS.deadlock01_bad` as DL. Those runs recorded 0 error interleavings. Their timeout counts stay in the timeout column and are not treated as confirmed deadlocks.
 
 The per-program records are in [results/cases/](results/cases/). The group tables are [results/summary.csv](results/summary.csv) and [results/per_run.csv](results/per_run.csv). The runner's last-attempt snapshot for these programs is [results/status.md](results/status.md); its explored column is the last attempt, not the mean. Scheduler stdout for every submitted metrics file in this group was recovered unchanged. [results/evidence.md](results/evidence.md) links each `run.log.gz`, its checksum, the matching command record, and any error or timeout files that were still present. Earlier runs kept at most two files in each Errors or Timeouts directory; files removed before this repair were not reconstructed. No schedule was replayed as part of this repair.
 
@@ -199,13 +199,13 @@ Published values are the PERIOD columns in [paper_table2.json](paper_table2.json
 
 | Program | Table 2 schedules | Measured schedules | Table 2 buggy schedules | Measured error interleavings | Table 2 first bug | Measured first bug |
 |---|---|---|---|---|---|---|
-| CS.account_bad | 65 | No completed run | 26 | No completed run | 2 | No completed run |
+| CS.account_bad | 65 | 65 ± 0 | 26 | 26.3 ± 0.6 | 2 | 7.7 ± 4.0 |
 | CS.bluetooth_driver_bad | 205 | 205 ± 0 | 9 | 6.7 ± 0.6 | 9 | 9 ± 0 |
 | CS.carter01_bad | 42 | 42 ± 0 | 11 | 0 ± 0 | 5 | No error detected |
 | CS.circular_buffer_bad | 871 | 544.7 ± 2.3 | 207 | 57.3 ± 2.1 | 17 | 16.7 ± 0.6 |
 | CS.deadlock01_bad | 14 | 14 ± 0 | 6 | 0 ± 0 | 3 | No error detected |
 | CS.lazy01_bad | 39 | 39 ± 0 | 12 | 12 ± 0 | 3 | 8 ± 0 |
-| CS.queue_bad | 998 | 1048; sample standard deviation unavailable | 119 | 114; sample standard deviation unavailable | 25 | 4; sample standard deviation unavailable |
+| CS.queue_bad | 998 | 975 ± 123 | 119 | 137.3 ± 61.4 | 25 | 4.3 ± 1.5 |
 | CS.reorder_10_bad | 2350 | 2350 ± 0 | 89 | 90 ± 2 | 27 | 27 ± 0 |
 | CS.reorder_20_bad | L (budget 10000) | 10000 ± 0 | 2870 | 2848.7 ± 30.9 | 39 | 39 ± 0 |
 | CS.reorder_3_bad | 27 | 27 ± 0 | 6 | 6 ± 0 | 6 | 6 ± 0 |
@@ -218,8 +218,8 @@ Published values are the PERIOD columns in [paper_table2.json](paper_table2.json
 | CS.wronglock_3_bad | 172 | 172 ± 0 | 42 | 42.3 ± 0.6 | 6 | 6 ± 0 |
 | CS.wronglock_bad | 1464 | 1464 ± 0 | 210 | 217.7 ± 2.1 | 10 | 10 ± 0 |
 
-The measured schedule total, error count, and first-bug schedule match Table 2 for `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad`. Some compared columns match, and others differ, for `CS.bluetooth_driver_bad`, `CS.carter01_bad`, `CS.deadlock01_bad`, `CS.lazy01_bad`, `CS.reorder_10_bad`, `CS.reorder_20_bad`, `CS.stack_bad`, `CS.token_ring_bad`, `CS.twostage_100_bad`, `CS.twostage_bad`, `CS.wronglock_3_bad`, and `CS.wronglock_bad`. The table above is the column-by-column record. The metrics do not establish the cause of a differing column. The compared columns differ for `CS.circular_buffer_bad` and `CS.queue_bad`. There is no measured comparison for `CS.account_bad`, because no valid repetition was submitted.
+The measured schedule total, error count, and first-bug schedule match Table 2 for `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad`. Some compared columns match, and others differ, for `CS.bluetooth_driver_bad`, `CS.carter01_bad`, `CS.deadlock01_bad`, `CS.lazy01_bad`, `CS.reorder_10_bad`, `CS.reorder_20_bad`, `CS.stack_bad`, `CS.token_ring_bad`, `CS.twostage_100_bad`, `CS.twostage_bad`, `CS.wronglock_3_bad`, and `CS.wronglock_bad`. The table above is the column-by-column record. The metrics do not establish the cause of a differing column. The compared columns differ for `CS.circular_buffer_bad` and `CS.queue_bad`. `CS.account_bad` matches Table 2 on the schedule total. Its error count and first-bug schedule differ.
 
 ### Final Result
 
-The submitted evidence establishes 49 valid repetitions in this group and three completed repetitions for 16 of the 18 programs. Unfinished measurements remain for `CS.account_bad` and `CS.queue_bad`. Exact agreement on the schedule total, the error count, and the first-bug schedule holds for `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad`. Other numeric differences remain unresolved. Timeout interleavings are not confirmed bugs.
+The submitted evidence establishes 54 valid repetitions in this group and three completed repetitions for all 18 programs. Exact agreement on the schedule total, the error count, and the first-bug schedule holds for `CS.reorder_3_bad`, `CS.reorder_4_bad`, and `CS.reorder_5_bad`. `CS.account_bad` agrees on the schedule total only. Other numeric differences remain unresolved. Timeout interleavings are not confirmed bugs.

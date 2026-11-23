@@ -1,21 +1,21 @@
 [
   {
     "program": "CS.account_bad",
-    "valid_reps": 0,
-    "attempted_reps": 0,
-    "detection_count": 0,
-    "explored_mean": null,
-    "explored_sd": null,
-    "explored_n": 0,
-    "errors_mean": null,
-    "errors_sd": null,
-    "errors_n": 0,
-    "first_bug_mean": null,
-    "first_bug_sd": null,
-    "first_bug_n": 0,
-    "timeouts_mean": null,
-    "timeouts_sd": null,
-    "timeouts_n": 0,
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 65,
+    "explored_sd": 0.0,
+    "explored_n": 3,
+    "errors_mean": 26.333333333333332,
+    "errors_sd": 0.5773502691896257,
+    "errors_n": 3,
+    "first_bug_mean": 7.666666666666667,
+    "first_bug_sd": 4.041451884327381,
+    "first_bug_n": 3,
+    "timeouts_mean": 0,
+    "timeouts_sd": 0.0,
+    "timeouts_n": 3,
     "paper_schedules": 65,
     "paper_schedules_numeric": 65,
     "paper_bugs": [
@@ -26,7 +26,11 @@
         "buggy": 26
       }
     ],
-    "stop_reasons": []
+    "stop_reasons": [
+      "completed"
+    ],
+    "explored_abs_diff": 0,
+    "explored_rel_diff": 0.0
   },
   {
     "program": "CS.bluetooth_driver_bad",
@@ -195,21 +199,21 @@
   },
   {
     "program": "CS.queue_bad",
-    "valid_reps": 1,
-    "attempted_reps": 1,
-    "detection_count": 1,
-    "explored_mean": 1048,
-    "explored_sd": null,
-    "explored_n": 1,
-    "errors_mean": 114,
-    "errors_sd": null,
-    "errors_n": 1,
-    "first_bug_mean": 4,
-    "first_bug_sd": null,
-    "first_bug_n": 1,
+    "valid_reps": 3,
+    "attempted_reps": 3,
+    "detection_count": 3,
+    "explored_mean": 975,
+    "explored_sd": 122.99186964998947,
+    "explored_n": 3,
+    "errors_mean": 137.33333333333334,
+    "errors_sd": 61.419323777890405,
+    "errors_n": 3,
+    "first_bug_mean": 4.333333333333333,
+    "first_bug_sd": 1.5275252316519468,
+    "first_bug_n": 3,
     "timeouts_mean": 0,
-    "timeouts_sd": null,
-    "timeouts_n": 1,
+    "timeouts_sd": 0.0,
+    "timeouts_n": 3,
     "paper_schedules": 998,
     "paper_schedules_numeric": 998,
     "paper_bugs": [
@@ -223,8 +227,8 @@
     "stop_reasons": [
       "completed"
     ],
-    "explored_abs_diff": 50,
-    "explored_rel_diff": 0.050100200400801605
+    "explored_abs_diff": -23,
+    "explored_rel_diff": -0.023046092184368736
   },
   {
     "program": "CS.reorder_10_bad",

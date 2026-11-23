@@ -1,0 +1,47 @@
+{
+  "bare_test_lines": [],
+  "bug_depth": 3,
+  "bug_found": true,
+  "by_type_files": {
+    "assertion-failed": {
+      "count": 207,
+      "first_schedule": 3
+    }
+  },
+  "by_type_log": {
+    "assertion": {
+      "count": 207,
+      "first_schedule": 3
+    }
+  },
+  "case": "CS.queue_bad",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./queue_bad"
+  ],
+  "configuration": "table2-period",
+  "elapsed_sec": 97.317,
+  "end_testing": true,
+  "ended": "2026-11-15T07:24:38Z",
+  "error_interleavings": 207,
+  "exit_code": 0,
+  "first_bug_schedule": 3,
+  "output_dirs": [
+    "out_queue_bad_1"
+  ],
+  "repetition": 3,
+  "round_footer_last": 0,
+  "round_footer_total": 1044,
+  "schedule_limit": 10000,
+  "schedules_explored": 1044,
+  "started": "2026-11-15T07:23:01Z",
+  "stop_reason": "completed",
+  "timeout_interleavings": 0,
+  "valid": true
+}

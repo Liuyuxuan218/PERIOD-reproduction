@@ -47,3 +47,7 @@ These records do not contain the source, toolchain, and executable fingerprint n
 ## Missing raw logs
 
 None.
+
+## Additional repetitions
+
+`Splash2.barnes/rep01` and `Splash2.fft/rep01` were not in the first submission. They were copied unchanged from the local experiment tree. They do not contain the provenance fingerprint required before a run can be reused.
