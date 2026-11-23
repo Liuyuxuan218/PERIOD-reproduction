@@ -1,0 +1,26 @@
+{
+  "bug_depth": 3,
+  "case": "Inspect.qsort_mt",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./qsort_mt",
+    "-n",
+    "32",
+    "-f",
+    "4",
+    "-h",
+    "3",
+    "-v"
+  ],
+  "host_note": "executed inside period-sctbench",
+  "repetition": 3,
+  "schedule_limit": 10000,
+  "started": "2026-11-13T16:18:28Z",
+  "workdir": "/workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt"
+}

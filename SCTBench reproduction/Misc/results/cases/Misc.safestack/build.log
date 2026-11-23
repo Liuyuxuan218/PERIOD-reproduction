@@ -1,0 +1,44 @@
+cwd: /workdir/PERIOD/evaluation/SafeStack
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T16:03:51Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/SafeStack
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./SafeStack.cpp -o SafeStack.bc
+./SafeStack.cpp:110:47: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+    pthread_create(&threads[i], NULL, thread, (void*)i);
+                                              ^
+1 warning generated.
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh SafeStack
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/SafeStack
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.SafeStack
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root   35 Nov 13 16:03 ConConfig.SafeStack
+-rw-r--r-- 1 root root  31K Nov 13 16:03 SafeStack.bc
+-rw-rw-r-- 1 root root 2.5K Jan 16  2022 SafeStack.cpp
+-rw-rw-r-- 1 root root 2.4K Jan 16  2022 SafeStackRelacy.cpp
+-rw-rw-r-- 1 root root 2.4K Jan 16  2022 SafeStack_simplify.cpp
+-rw-rw-r-- 1 root root 8.0K Jan 16  2022 SafeStack_sleep.cpp
+-rw-r--r-- 1 root root  100 Nov 13 16:03 mempair.SafeStack
+-rw-r--r-- 1 root root 2.4K Nov 13 16:03 mempair.SafeStack.npz
+-rw-r--r-- 1 root root 6.7K Nov 13 16:03 mssa.SafeStack
+-rw-r--r-- 1 root root 4.0K Nov 13 16:03 so.SafeStack
+/workdir/PERIOD/evaluation/SafeStack
++ export Con_PATH=/workdir/PERIOD/evaluation/SafeStack/ConConfig.SafeStack
++ Con_PATH=/workdir/PERIOD/evaluation/SafeStack/ConConfig.SafeStack
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./SafeStack.bc -o SafeStack -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/SafeStack/ConConfig.SafeStack
+[DEBUG]
+[DEBUG] Instrumentation for SafeStack.cpp:99
+[DEBUG] Instrumentation for SafeStack.cpp:100
+
+exit: 0
+ended: 2026-11-13T16:03:52Z
+elapsed_sec: 0.692

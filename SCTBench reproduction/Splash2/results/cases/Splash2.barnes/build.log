@@ -1,0 +1,423 @@
+cwd: /workdir/PERIOD/evaluation/Splash2/barnes
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T17:04:18Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/Splash2/barnes
++ ./cleanDIR.sh
++ CC=wllvm
++ make
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null stdinc.H > stdinc.h
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null vectmath.H > vectmath.h
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null defs.H > defs.h
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null code.H > code.h
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null code.C > code.c
+wllvm -g -c -O0  code.c -Wno-return-type
+code.C:108:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(argc, argv)
+^
+code.C:115:16: warning: implicit declaration of function 'getopt' is invalid in C99 [-Wimplicit-function-declaration]
+   while ((c = getopt(argc, argv, "h")) != -1) {
+               ^
+code.C:128:4: warning: implicit declaration of function 'ANLinit' is invalid in C99 [-Wimplicit-function-declaration]
+   ANLinit();
+   ^
+code.C:129:4: warning: implicit declaration of function 'initparam' is invalid in C99 [-Wimplicit-function-declaration]
+   initparam(argv, defv);
+   ^
+code.C:130:4: warning: implicit declaration of function 'startrun' is invalid in C99 [-Wimplicit-function-declaration]
+   startrun();
+   ^
+code.C:131:4: warning: implicit declaration of function 'initoutput' is invalid in C99 [-Wimplicit-function-declaration]
+   initoutput();
+   ^
+code.C:132:4: warning: implicit declaration of function 'tab_init' is invalid in C99 [-Wimplicit-function-declaration]
+   tab_init();
+   ^
+code.C:145:34: warning: incompatible pointer types passing 'void ()' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+   pthread_create(&checkT, NULL, SlaveStartCheck, NULL);
+                                 ^~~~~~~~~~~~~~~
+/usr/include/pthread.h:236:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+code.C:148:49: warning: incompatible pointer types passing 'void ()' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+      pthread_create(&child[ProcessId-1], NULL, SlaveStart, NULL);
+                                                ^~~~~~~~~~
+/usr/include/pthread.h:236:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+code.C:178:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+ANLinit()
+^
+code.C:184:22: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+   if (Global==NULL) error("No initialization for Global\n");
+                     ^
+code.C:200:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+init_root (ProcessId)
+^
+code.C:239:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+tab_init()
+^
+code.C:337:4: warning: implicit declaration of function 'find_my_initial_bodies' is invalid in C99 [-Wimplicit-function-declaration]
+   find_my_initial_bodies(bodytab, nbody, ProcessId);
+   ^
+code.C:352:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+startrun()
+^
+code.C:361:16: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   if (*infile != NULL) {
+       ~~~~~~~ ^  ~~~~
+code.C:362:7: warning: implicit declaration of function 'inputdata' is invalid in C99 [-Wimplicit-function-declaration]
+      inputdata();
+      ^
+code.C:367:3: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+         error("startrun: absurd nbody\n");
+         ^
+code.C:385:4: warning: implicit declaration of function 'pranset' is invalid in C99 [-Wimplicit-function-declaration]
+   pranset(seed);
+   ^
+code.C:386:4: warning: implicit declaration of function 'testdata' is invalid in C99 [-Wimplicit-function-declaration]
+   testdata();
+   ^
+code.C:387:4: warning: implicit declaration of function 'setbound' is invalid in C99 [-Wimplicit-function-declaration]
+   setbound();
+   ^
+code.C:399:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+testdata()
+^
+code.C:415:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("testdata: not enuf memory\n");
+      ^
+code.C:436:7: warning: implicit declaration of function 'pickshell' is invalid in C99 [-Wimplicit-function-declaration]
+      pickshell(Pos(p), rsc * r);
+      ^
+code.C:478:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+pickshell(vec, rad)
+^
+code.C:555:5: warning: implicit declaration of function 'maketree' is invalid in C99 [-Wimplicit-function-declaration]
+    maketree(ProcessId);
+    ^
+code.C:562:5: warning: implicit declaration of function 'Housekeep' is invalid in C99 [-Wimplicit-function-declaration]
+    Housekeep(ProcessId);
+    ^
+code.C:574:5: warning: implicit declaration of function 'find_my_bodies' is invalid in C99 [-Wimplicit-function-declaration]
+    find_my_bodies(Global->G_root, 0, BRC_FUC, ProcessId );
+    ^
+code.C:663:7: warning: implicit declaration of function 'hackgrav' is invalid in C99 [-Wimplicit-function-declaration]
+      hackgrav(p,ProcessId);
+      ^
+code.C:683:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+find_my_initial_bodies(btab, nbody, ProcessId)
+^
+code.C:710:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+find_my_bodies(mycell, work, direction, ProcessId)
+^
+code.C:725:9: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+               error("find_my_bodies: Processor %d needs more than %d bodies; increase fleaves\n",ProcessId, maxmybody); 
+               ^
+code.C:755:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+Housekeep(ProcessId)
+^
+code.C:768:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+setbound()
+^
+34 warnings generated.
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null code_io.C > code_io.c
+wllvm -g -c -O0  code_io.c -Wno-return-type
+code_io.C:33:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+inputdata ()
+^
+code_io.C:46:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("inputdata: cannot find file %s\n", infile);
+      ^
+code_io.C:82:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+initoutput()
+^
+code_io.C:211:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("in_int: input conversion error\n");
+      ^
+code_io.C:221:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("in_real: input conversion error\n");
+      ^
+code_io.C:232:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("in_vector: input conversion error\n");
+      ^
+6 warnings generated.
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null load.C > load.c
+wllvm -g -c -O0  load.c -Wno-return-type
+load.C:38:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+maketree(ProcessId)
+^
+load.C:65:4: warning: implicit declaration of function 'hackcofm' is invalid in C99 [-Wimplicit-function-declaration]
+   hackcofm( 0, ProcessId );
+   ^
+load.C:109:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+printtree (n)
+^
+load.C:162:3: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+                p - bodytab, k, Level(p));
+                ^~~~~~~~~~~
+load.C:224:44: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+               printf("P%d body %d\n", ProcessId, p - bodytab);
+                                ~~                ^~~~~~~~~~~
+                                %ld
+load.C:240:3: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+         error("not enough levels in tree\n");
+         ^
+load.C:349:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+hackcofm(nc, ProcessId)
+^
+load.C:512:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("makecell: Proc %d needs more than %d cells; increase fcells\n", 
+      ^
+load.C:539:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("makeleaf: Proc %d needs more than %d leaves; increase fleaves\n",
+      ^
+9 warnings generated.
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null grav.C > grav.c
+wllvm -g -c -O0  grav.c -Wno-return-type
+grav.C:30:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+hackgrav(p,ProcessId)
+^
+grav.C:35:11: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+   extern gravsub();
+   ~~~~~~ ^
+grav.C:44:4: warning: implicit declaration of function 'hackwalk' is invalid in C99 [-Wimplicit-function-declaration]
+   hackwalk(gravsub, ProcessId);
+   ^
+grav.C:60:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+gravsub(p, ProcessId, level)
+^
+grav.C:108:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+hackwalk(sub, ProcessId)
+^
+grav.C:112:5: warning: implicit declaration of function 'walksub' is invalid in C99 [-Wimplicit-function-declaration]
+    walksub(Global->G_root, Global->rsize * Global->rsize, ProcessId);
+    ^
+grav.C:119:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+walksub(n, dsq, ProcessId)
+^
+grav.C:143:29: warning: too few arguments in call to 'gravsub'
+               gravsub(p, ProcessId);
+               ~~~~~~~             ^
+grav.C:143:17: warning: incompatible pointer types passing 'bodyptr' (aka 'struct _body *') to parameter of type 'nodeptr' (aka 'struct _node *') [-Wincompatible-pointer-types]
+               gravsub(p, ProcessId);
+                       ^
+grav.C:152:27: warning: too few arguments in call to 'gravsub'
+      gravsub(n, ProcessId);
+      ~~~~~~~             ^
+10 warnings generated.
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null getparam.C > getparam.c
+wllvm -g -c -O0  getparam.c -Wno-return-type
+getparam.C:30:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+initparam(argv, defv)
+^
+getparam.C:43:23: warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+   int scanbind(), i, strlen(), leng;
+                      ^
+getparam.C:43:23: note: 'strlen' is a builtin with type 'unsigned long (const char *)'
+getparam.C:49:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("getparam: called before initparam\n");
+      ^
+getparam.C:74:24: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   for (val = ""; *val == NULL;) {
+                  ~~~~ ^  ~~~~
+getparam.C:86:24: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   for (val = ""; *val == NULL; )
+                  ~~~~ ^  ~~~~
+getparam.C:96:24: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   for (val = ""; *val == NULL; )
+                  ~~~~ ^  ~~~~
+getparam.C:98:8: warning: implicitly declaring library function 'strchr' with type 'char *(const char *, int)' [-Wimplicit-function-declaration]
+   if (strchr("tTyY1", *val) != NULL) {
+       ^
+getparam.C:98:8: note: include the header <string.h> or explicitly provide a declaration for 'strchr'
+getparam.C:104:4: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+   error("getbparam: %s=%s not bool\n", name, val);
+   ^
+getparam.C:113:24: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   for (val = ""; *val == NULL; ) {
+                  ~~~~ ^  ~~~~
+getparam.C:153:30: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   return (*bp == '=' && *np == NULL);
+                         ~~~ ^  ~~~~
+getparam.C:166:15: warning: comparison between pointer and integer ('char' and 'void *') [-Wpointer-integer-compare]
+   while (*ap != NULL)
+          ~~~ ^  ~~~~
+11 warnings generated.
+m4 -s -Ulen -Uindex ./null_macros/c.m4.null util.C > util.c
+wllvm -g -c -O0  util.c -Wno-return-type
+util.C:82:7: warning: implicit declaration of function 'error' is invalid in C99 [-Wimplicit-function-declaration]
+      error("times() call failed\n");
+      ^
+util.C:90:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+error(msg, a1, a2, a3, a4)
+^
+2 warnings generated.
+wllvm -g code.o code_io.o load.o grav.o getparam.o util.o -O0  -o BARNES -lm -pthread -Wno-return-type
++ extract-bc ./BARNES
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh BARNES
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Splash2/barnes
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.BARNES
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rwxr-xr-x 1 root root  87K Nov 13 17:04 BARNES
+-rw-r--r-- 1 root root 160K Nov 13 17:04 BARNES.bc
+-rw-r--r-- 1 root root  325 Nov 13 17:04 BARNES.bc.r
+-rw-r--r-- 1 root root 1.3K Nov 13 17:04 ConConfig.BARNES
+-rw-r--r-- 1 root root  19K Nov 13 17:04 mempair.BARNES
+-rw-r--r-- 1 root root 164K Nov 13 17:04 mempair.BARNES.npz
+-rw-r--r-- 1 root root  79K Nov 13 17:04 mssa.BARNES
+-rw-r--r-- 1 root root  64K Nov 13 17:04 so.BARNES
+/workdir/PERIOD/evaluation/Splash2/barnes
++ export Con_PATH=/workdir/PERIOD/evaluation/Splash2/barnes/ConConfig.BARNES
++ Con_PATH=/workdir/PERIOD/evaluation/Splash2/barnes/ConConfig.BARNES
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./BARNES.bc -o BARNES -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Splash2/barnes/ConConfig.BARNES
+[DEBUG]
+[DEBUG] Instrumentation for code.C:273
+[DEBUG] Instrumentation for code.C:274
+[DEBUG] Instrumentation for code.C:277
+[DEBUG] Instrumentation for code.C:278
+[DEBUG] Instrumentation for code.C:290
+[DEBUG] Instrumentation for code.C:291
+[DEBUG] Instrumentation for code.C:298
+[DEBUG] Instrumentation for code.C:303
+[DEBUG] Instrumentation for code.C:304
+[DEBUG] Instrumentation for code.C:333
+[DEBUG] Instrumentation for code.C:334
+[DEBUG] Instrumentation for code.C:335
+[DEBUG] Instrumentation for code.C:340
+[DEBUG] Instrumentation for code.C:340
+[DEBUG] Instrumentation for code.C:343
+[DEBUG] Instrumentation for code.C:693
+[DEBUG] Instrumentation for code.C:696
+[DEBUG] Instrumentation for code.C:697
+[DEBUG] Instrumentation for code.C:700
+[DEBUG] Instrumentation for code.C:701
+[DEBUG] Instrumentation for code.C:700
+[DEBUG] Instrumentation for code.C:703
+[DEBUG] Instrumentation for code.C:704
+[DEBUG] Instrumentation for code.C:703
+[DEBUG] Instrumentation for code.C:706
+[DEBUG] Instrumentation for code.C:529
+[DEBUG] Instrumentation for code.C:534
+[DEBUG] Instrumentation for code.C:542
+[DEBUG] Instrumentation for code.C:543
+[DEBUG] Instrumentation for code.C:548
+[DEBUG] Instrumentation for code.C:550
+[DEBUG] Instrumentation for code.C:557
+[DEBUG] Instrumentation for code.C:559
+[DEBUG] Instrumentation for code.C:564
+[DEBUG] Instrumentation for code.C:565
+[DEBUG] Instrumentation for code.C:566
+[DEBUG] Instrumentation for code.C:566
+[DEBUG] Instrumentation for code.C:569
+[DEBUG] Instrumentation for code.C:573
+[DEBUG] Instrumentation for code.C:574
+[DEBUG] Instrumentation for code.C:577
+[DEBUG] Instrumentation for code.C:579
+[DEBUG] Instrumentation for code.C:582
+[DEBUG] Instrumentation for code.C:588
+[DEBUG] Instrumentation for code.C:590
+[DEBUG] Instrumentation for code.C:594
+[DEBUG] Instrumentation for code.C:595
+[DEBUG] Instrumentation for code.C:594
+[DEBUG] Instrumentation for code.C:604
+[DEBUG] Instrumentation for code.C:605
+[DEBUG] Instrumentation for code.C:607
+[DEBUG] Instrumentation for code.C:608
+[DEBUG] Instrumentation for code.C:595
+[DEBUG] Instrumentation for code.C:594
+[DEBUG] Instrumentation for code.C:612
+[DEBUG] Instrumentation for code.C:614
+[DEBUG] Instrumentation for code.C:615
+[DEBUG] Instrumentation for code.C:617
+[DEBUG] Instrumentation for code.C:618
+[DEBUG] Instrumentation for code.C:626
+[DEBUG] Instrumentation for code.C:628
+[DEBUG] Instrumentation for code.C:630
+[DEBUG] Instrumentation for code.C:633
+[DEBUG] Instrumentation for code.C:634
+[DEBUG] Instrumentation for code.C:636
+[DEBUG] Instrumentation for code.C:637
+[DEBUG] Instrumentation for code.C:640
+[DEBUG] Instrumentation for code.C:641
+[DEBUG] Instrumentation for code.C:642
+[DEBUG] Instrumentation for code.C:643
+[DEBUG] Instrumentation for code.C:645
+[DEBUG] Instrumentation for code.C:646
+[DEBUG] Instrumentation for code.C:205
+[DEBUG] Instrumentation for code.C:206
+[DEBUG] Instrumentation for code.C:207
+[DEBUG] Instrumentation for code.C:208
+[DEBUG] Instrumentation for code.C:210
+[DEBUG] Instrumentation for code.C:212
+[DEBUG] Instrumentation for code.C:759
+[DEBUG] Instrumentation for code.C:758
+[DEBUG] Instrumentation for code.C:759
+[DEBUG] Instrumentation for code.C:758
+[DEBUG] Instrumentation for code.C:760
+[DEBUG] Instrumentation for code.C:761
+[DEBUG] Instrumentation for code.C:720
+[DEBUG] Instrumentation for code.C:722
+[DEBUG] Instrumentation for code.C:723
+[DEBUG] Instrumentation for code.C:724
+[DEBUG] Instrumentation for code.C:728
+[DEBUG] Instrumentation for code.C:727
+[DEBUG] Instrumentation for code.C:730
+[DEBUG] Instrumentation for code.C:731
+[DEBUG] Instrumentation for code.C:722
+[DEBUG] Instrumentation for code.C:737
+[DEBUG] Instrumentation for code.C:737
+[DEBUG] Instrumentation for code.C:738
+[DEBUG] Instrumentation for code.C:740
+[DEBUG] Instrumentation for code.C:744
+[DEBUG] Instrumentation for code.C:737
+[DEBUG] Instrumentation for code.C:658
+[DEBUG] Instrumentation for code.C:659
+[DEBUG] Instrumentation for code.C:658
+[DEBUG] Instrumentation for code.C:661
+[DEBUG] Instrumentation for code.C:662
+[DEBUG] Instrumentation for code.C:664
+[DEBUG] Instrumentation for code.C:665
+[DEBUG] Instrumentation for code.C:666
+[DEBUG] Instrumentation for code.C:667
+[DEBUG] Instrumentation for code.C:669
+[DEBUG] Instrumentation for code.C:659
+[DEBUG] Instrumentation for code.C:658
+[DEBUG] Instrumentation for load.C:43
+[DEBUG] Instrumentation for load.C:44
+[DEBUG] Instrumentation for load.C:46
+[DEBUG] Instrumentation for load.C:48
+[DEBUG] Instrumentation for load.C:49
+[DEBUG] Instrumentation for load.C:50
+[DEBUG] Instrumentation for load.C:49
+[DEBUG] Instrumentation for load.C:52
+[DEBUG] Instrumentation for load.C:54
+[DEBUG] Instrumentation for load.C:54
+[DEBUG] Instrumentation for load.C:54
+[DEBUG] Instrumentation for load.C:58
+[DEBUG] Instrumentation for load.C:50
+[DEBUG] Instrumentation for load.C:49
+[DEBUG] Instrumentation for load.C:64
+[DEBUG] Instrumentation for load.C:66
+[DEBUG] Instrumentation for grav.C:37
+[DEBUG] Instrumentation for grav.C:38
+[DEBUG] Instrumentation for grav.C:39
+[DEBUG] Instrumentation for grav.C:40
+[DEBUG] Instrumentation for grav.C:41
+[DEBUG] Instrumentation for grav.C:42
+[DEBUG] Instrumentation for grav.C:43
+[DEBUG] Instrumentation for grav.C:45
+[DEBUG] Instrumentation for grav.C:46
+[DEBUG] Instrumentation for grav.C:50
+
+exit: 0
+ended: 2026-11-13T17:04:20Z
+elapsed_sec: 1.851

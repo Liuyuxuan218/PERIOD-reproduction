@@ -1,0 +1,226 @@
+cwd: /workdir/PERIOD/evaluation/CB/aget-bug2
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T14:01:00Z
+mesg: ttyname failed: Inappropriate ioctl for device
+/workdir/PERIOD
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CB/aget-bug2/
++ ./cleanDIR.sh
+rm -f *.o aget
++ cd /workdir/PERIOD/evaluation/CB/aget-bug2/aget-devel
++ CC=wllvm
++ make
+wllvm -g -Wall    -c -o main.o main.c
+main.c:157:6: warning: variable 'fullurl' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if (optind == argc) {
+            ^~~~~~~~~~~~~~
+main.c:162:12: note: uninitialized use occurs here
+        parse_url(fullurl, req);
+                  ^~~~~~~
+main.c:157:2: note: remove the 'if' if its condition is always true
+        if (optind == argc) {
+        ^~~~~~~~~~~~~~~~~~~~
+main.c:54:15: note: initialize the variable 'fullurl' to silence this warning
+        char *fullurl;
+                     ^
+                      = NULL
+1 warning generated.
+wllvm -g -Wall    -c -o Aget.o Aget.c
+Aget.c:83:9: warning: unused variable 'reply' [-Wunused-variable]
+                        char reply[MAXBUFSIZ];
+                             ^
+Aget.c:84:1: warning: unused label 'again' [-Wunused-label]
+again:
+^~~~~~
+Aget.c:114:1: warning: unused label 'retry' [-Wunused-label]
+retry:
+^~~~~~
+Aget.c:161:47: warning: bitwise or with non-zero value always evaluates to true [-Wtautological-bitwise-compare]
+        for(i = 0; i < nthreads && wthread[i].status | STAT_OK; i++) {
+                                   ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Aget.c:115:48: warning: bitwise or with non-zero value always evaluates to true [-Wtautological-bitwise-compare]
+        for (i = 0; i < nthreads && wthread[i].status | STAT_OK; i++) {
+                                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Aget.c:321:47: warning: bitwise or with non-zero value always evaluates to true [-Wtautological-bitwise-compare]
+        for(i = 0; i < nthreads && wthread[i].status | STAT_OK; i++) {
+                                   ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Aget.c:285:48: warning: bitwise or with non-zero value always evaluates to true [-Wtautological-bitwise-compare]
+        for (i = 0; i < nthreads && wthread[i].status | STAT_OK; i++) {
+                                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Aget.c:418:47: warning: bitwise or with non-zero value always evaluates to true [-Wtautological-bitwise-compare]
+        for(i = 0; i < nthreads && wthread[i].status | STAT_OK; i++) {
+                                   ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Aget.c:391:48: warning: bitwise or with non-zero value always evaluates to true [-Wtautological-bitwise-compare]
+        for (i = 0; i < nthreads && wthread[i].status | STAT_OK; i++) {
+                                    ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+9 warnings generated.
+wllvm -g -Wall    -c -o Misc.o Misc.c
+wllvm -g -Wall    -c -o Head.o Head.c
+Head.c:153:9: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+        printf(req->ip);
+               ^~~~~~~
+Head.c:153:9: note: treat the string as an argument to avoid this
+        printf(req->ip);
+               ^
+               "%s", 
+1 warning generated.
+wllvm -g -Wall    -c -o Signal.o Signal.c
+Signal.c:68:6: warning: unused variable 'i' [-Wunused-variable]
+        int i;
+            ^
+1 warning generated.
+wllvm -g -Wall    -c -o Download.o Download.c
+Download.c:167:10: warning: unused variable 'set' [-Wunused-variable]
+                fd_set set;
+                       ^
+1 warning generated.
+wllvm -g -Wall    -c -o Ftp.o Ftp.c
+Ftp.c:99:20: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                        fprintf(stderr, rbuf);
+                                        ^~~~
+Ftp.c:99:20: note: treat the string as an argument to avoid this
+                        fprintf(stderr, rbuf);
+                                        ^
+                                        "%s", 
+Ftp.c:178:27: warning: 'size' argument to memset is '0'; did you mean to transpose the last two arguments? [-Wmemset-transposed-args]
+                memset(rbuf, MAXBUFSIZ, 0);
+                                        ^
+Ftp.c:178:27: note: parenthesize the third argument to silence
+2 warnings generated.
+wllvm -g -Wall    -c -o Resume.o Resume.c
+Resume.c:101:56: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+        printf("total bytes: %d, log file total bytes: %d\n", total_bwritten, h.bwritten);
+                             ~~                               ^~~~~~~~~~~~~~
+                             %ld
+Resume.c:34:18: warning: unused variable 's' [-Wunused-variable]
+        char *logfile, *s;
+                        ^
+Resume.c:36:8: warning: unused variable 'fp' [-Wunused-variable]
+        FILE *fp;
+              ^
+Resume.c:38:17: warning: unused variable 'pw' [-Wunused-variable]
+        struct passwd *pw;
+                       ^
+4 warnings generated.
+wllvm -g -Wall    -c -o loadrc.o loadrc.c
+wllvm -o aget -g main.o Aget.o Misc.o Head.o Signal.o Download.o Ftp.o Resume.o loadrc.o -pthread
++ extract-bc ./aget
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh aget
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CB/aget-bug2/aget-devel
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.aget
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root 1.1K Nov 13 14:01 ConConfig.aget
+-rwxr-xr-x 1 root root  84K Nov 13 14:01 aget
+-rw-r--r-- 1 root root 128K Nov 13 14:01 aget.bc
+-rw-r--r-- 1 root root  567 Nov 13 14:01 aget.bc.r
+-rw-r--r-- 1 root root  17K Nov 13 14:01 mempair.aget
+-rw-r--r-- 1 root root 163K Nov 13 14:01 mempair.aget.npz
+-rw-r--r-- 1 root root  48K Nov 13 14:01 mssa.aget
+-rw-r--r-- 1 root root  34K Nov 13 14:01 so.aget
+/workdir/PERIOD/evaluation/CB/aget-bug2/aget-devel
++ export Con_PATH=/workdir/PERIOD/evaluation/CB/aget-bug2/aget-devel/ConConfig.aget
++ Con_PATH=/workdir/PERIOD/evaluation/CB/aget-bug2/aget-devel/ConConfig.aget
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./aget.bc -o aget -lpthread -ldl -fsanitize=address
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CB/aget-bug2/aget-devel/ConConfig.aget
+[DEBUG]
+[DEBUG] Instrumentation for Misc.c:211
+[DEBUG] Instrumentation for Misc.c:285
+[DEBUG] Instrumentation for Misc.c:286
+[DEBUG] Instrumentation for Misc.c:287
+[DEBUG] Instrumentation for Misc.c:304
+[DEBUG] Instrumentation for Misc.c:305
+[DEBUG] Instrumentation for Misc.c:307
+[DEBUG] Instrumentation for Misc.c:312
+[DEBUG] Instrumentation for Misc.c:313
+[DEBUG] Instrumentation for Misc.c:315
+[DEBUG] Instrumentation for Misc.c:317
+[DEBUG] Instrumentation for Misc.c:330
+[DEBUG] Instrumentation for Misc.c:339
+[DEBUG] Instrumentation for Misc.c:342
+[DEBUG] Instrumentation for Misc.c:350
+[DEBUG] Instrumentation for Head.c:329
+[DEBUG] Instrumentation for Head.c:339
+[DEBUG] Instrumentation for Head.c:340
+[DEBUG] Instrumentation for Head.c:341
+[DEBUG] Instrumentation for Head.c:344
+[DEBUG] Instrumentation for Head.c:347
+[DEBUG] Instrumentation for Head.c:348
+[DEBUG] Instrumentation for Head.c:350
+[DEBUG] Instrumentation for Head.c:351
+[DEBUG] Instrumentation for Head.c:352
+[DEBUG] Instrumentation for Head.c:353
+[DEBUG] Instrumentation for Download.c:108
+[DEBUG] Instrumentation for Download.c:110
+[DEBUG] Instrumentation for Download.c:111
+[DEBUG] Instrumentation for Download.c:117
+[DEBUG] Instrumentation for Download.c:136
+[DEBUG] Instrumentation for Download.c:146
+[DEBUG] Instrumentation for Download.c:156
+[DEBUG] Instrumentation for Download.c:158
+[DEBUG] Instrumentation for Download.c:159
+[DEBUG] Instrumentation for Download.c:160
+[DEBUG] Instrumentation for Download.c:161
+[DEBUG] Instrumentation for Download.c:166
+[DEBUG] Instrumentation for Download.c:181
+[DEBUG] Instrumentation for Download.c:187
+[DEBUG] Instrumentation for Download.c:188
+[DEBUG] Instrumentation for Download.c:190
+[DEBUG] Instrumentation for Download.c:191
+[DEBUG] Instrumentation for Download.c:193
+[DEBUG] Instrumentation for Download.c:194
+[DEBUG] Instrumentation for Download.c:166
+[DEBUG] Instrumentation for Download.c:199
+[DEBUG] Instrumentation for Download.c:200
+[DEBUG] Instrumentation for Ftp.c:64
+[DEBUG] Instrumentation for Ftp.c:66
+[DEBUG] Instrumentation for Ftp.c:67
+[DEBUG] Instrumentation for Ftp.c:75
+[DEBUG] Instrumentation for Ftp.c:92
+[DEBUG] Instrumentation for Ftp.c:98
+[DEBUG] Instrumentation for Ftp.c:106
+[DEBUG] Instrumentation for Ftp.c:116
+[DEBUG] Instrumentation for Ftp.c:125
+[DEBUG] Instrumentation for Ftp.c:129
+[DEBUG] Instrumentation for Ftp.c:130
+[DEBUG] Instrumentation for Ftp.c:140
+[DEBUG] Instrumentation for Ftp.c:149
+[DEBUG] Instrumentation for Ftp.c:166
+[DEBUG] Instrumentation for Ftp.c:169
+[DEBUG] Instrumentation for Ftp.c:171
+[DEBUG] Instrumentation for Ftp.c:178
+[DEBUG] Instrumentation for Ftp.c:184
+[DEBUG] Instrumentation for Ftp.c:185
+[DEBUG] Instrumentation for Ftp.c:187
+[DEBUG] Instrumentation for Ftp.c:188
+[DEBUG] Instrumentation for Ftp.c:189
+[DEBUG] Instrumentation for Ftp.c:190
+[DEBUG] Instrumentation for Ftp.c:171
+[DEBUG] Instrumentation for Ftp.c:195
+[DEBUG] Instrumentation for Ftp.c:196
+[DEBUG] Instrumentation for Resume.c:43
+[DEBUG] Instrumentation for Resume.c:46
+[DEBUG] Instrumentation for Resume.c:52
+[DEBUG] Instrumentation for Resume.c:66
+[DEBUG] Instrumentation for Resume.c:83
+[DEBUG] Instrumentation for Resume.c:85
+[DEBUG] Instrumentation for Resume.c:86
+[DEBUG] Instrumentation for Resume.c:87
+[DEBUG] Instrumentation for Resume.c:88
+[DEBUG] Instrumentation for Resume.c:90
+[DEBUG] Instrumentation for Resume.c:95
+[DEBUG] Instrumentation for Resume.c:98
+[DEBUG] Instrumentation for Resume.c:99
+[DEBUG] Instrumentation for Resume.c:98
+[DEBUG] Instrumentation for Resume.c:101
+[DEBUG] Instrumentation for Resume.c:102
++ cd ..
+
+exit: 0
+ended: 2026-11-13T14:01:02Z
+elapsed_sec: 2.445

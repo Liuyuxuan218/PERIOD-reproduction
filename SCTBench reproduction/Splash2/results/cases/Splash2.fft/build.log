@@ -1,0 +1,240 @@
+cwd: /workdir/PERIOD/evaluation/Splash2/fft
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T18:25:10Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/Splash2/fft
++ ./cleanDIR.sh
++ CC=wllvm
++ make
+m4 ./null_macros/c.m4.null fft.C > fft.c
+wllvm -g -c -O0 -w  fft.c -Wno-return-type
+fft.c:133:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(argc, argv)
+^
+fft.c:150:15: warning: implicit declaration of function 'getopt' is invalid in C99 [-Wimplicit-function-declaration]
+  while ((c = getopt(argc, argv, "p:m:n:l:stoh")) != -1) {
+              ^
+fft.c:152:21: warning: implicit declaration of function 'atoi' is invalid in C99 [-Wimplicit-function-declaration]
+      case 'p': P = atoi(optarg); 
+                    ^
+fft.c:155:19: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+                  exit(-1);
+                  ^
+fft.c:155:19: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+fft.c:219:69: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+    printf("WARNING: Each element is a complex double (%d bytes)\n",2*sizeof(double));
+                                                       ~~           ^~~~~~~~~~~~~~~~
+                                                       %lu
+fft.c:248:36: warning: implicitly declaring library function 'malloc' with type 'void *(unsigned long)' [-Wimplicit-function-declaration]
+  Global = (struct GlobalMemory *) malloc(sizeof(struct GlobalMemory));;
+                                   ^
+fft.c:248:36: note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+fft.c:273:7: warning: cast to 'double *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+  x = (double *) (((unsigned) x) + PAGE_SIZE - ((unsigned) x) % PAGE_SIZE);
+      ^
+fft.c:274:11: warning: cast to 'double *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+  trans = (double *) (((unsigned) trans) + PAGE_SIZE - ((unsigned) trans) % PAGE_SIZE);
+          ^
+fft.c:275:12: warning: cast to 'double *' from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+  umain2 = (double *) (((unsigned) umain2) + PAGE_SIZE - ((unsigned) umain2) % PAGE_SIZE);
+           ^
+fft.c:324:3: warning: implicit declaration of function 'InitX' is invalid in C99 [-Wimplicit-function-declaration]
+  InitX(N, x);                  /* place random values in x */
+  ^
+fft.c:331:5: warning: implicit declaration of function 'PrintArray' is invalid in C99 [-Wimplicit-function-declaration]
+    PrintArray(N, x);
+    ^
+fft.c:334:3: warning: implicit declaration of function 'InitU' is invalid in C99 [-Wimplicit-function-declaration]
+  InitU(N,umain);               /* initialize u arrays*/
+  ^
+fft.c:335:3: warning: implicit declaration of function 'InitU2' is invalid in C99 [-Wimplicit-function-declaration]
+  InitU2(N,umain2,rootN);
+  ^
+fft.c:340:33: warning: incompatible pointer types passing 'void ()' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+  pthread_create(&checkT, NULL, SlaveStartCheck, NULL);
+                                ^~~~~~~~~~~~~~~
+/usr/include/pthread.h:236:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+fft.c:344:39: warning: incompatible pointer types passing 'void ()' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+    pthread_create(&child[i-1], NULL, SlaveStart, NULL);
+                                      ^~~~~~~~~~
+/usr/include/pthread.h:236:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+fft.c:359:5: warning: implicit declaration of function 'PrintArray' is invalid in C99 [-Wimplicit-function-declaration]
+    PrintArray(N, x);
+    ^
+fft.c:626:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+InitX(N, x)
+^
+fft.c:634:3: warning: implicit declaration of function 'srand48' is invalid in C99 [-Wimplicit-function-declaration]
+  srand48(0);
+  ^
+fft.c:645:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+InitU(N, u)
+^
+fft.c:670:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+InitU2(N, u, n1)
+^
+fft.c:690:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+BitReverse(M, k)
+^
+fft.c:775:3: warning: implicit declaration of function 'Transpose' is invalid in C99 [-Wimplicit-function-declaration]
+  Transpose(n1, x, scratch, MyNum, MyFirst, MyLast, pad_length);
+  ^
+fft.c:784:5: warning: implicit declaration of function 'FFT1DOnce' is invalid in C99 [-Wimplicit-function-declaration]
+    FFT1DOnce(direction, m1, n1, upriv, &scratch[2*j*(n1+pad_length)]);
+    ^
+fft.c:785:5: warning: implicit declaration of function 'TwiddleOneCol' is invalid in C99 [-Wimplicit-function-declaration]
+    TwiddleOneCol(direction, n1, N, j, umain2, &scratch[2*j*(n1+pad_length)],
+    ^
+fft.c:829:5: warning: implicit declaration of function 'FFT1DOnce' is invalid in C99 [-Wimplicit-function-declaration]
+    FFT1DOnce(direction, m1, n1, upriv, &x[2*j*(n1+pad_length)]);
+    ^
+fft.c:831:7: warning: implicit declaration of function 'Scale' is invalid in C99 [-Wimplicit-function-declaration]
+      Scale(n1, N, &x[2*j*(n1+pad_length)]);
+      ^
+fft.c:903:7: warning: implicit declaration of function 'CopyColumn' is invalid in C99 [-Wimplicit-function-declaration]
+      CopyColumn(n1, &scratch[2*j*(n1+pad_length)], &x[2*j*(n1+pad_length)]); 
+      ^
+fft.c:936:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+TwiddleOneCol(direction, n1, N, j, u, x, pad_length)
+^
+fft.c:968:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+Scale(n1, N, x)
+^
+fft.c:984:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+Transpose(n1, src, dest, MyNum, MyFirst, MyLast, pad_length)
+^
+fft.c:1076:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+CopyColumn(n1, src, dest)
+^
+fft.c:1092:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+Reverse(N, M, x)
+^
+fft.c:1111:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+FFT1DOnce(direction, M, N, u, x)
+^
+fft.c:1163:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+PrintArray(N, x)
+^
+34 warnings generated.
+wllvm -g fft.o -O0 -w  -o FFT -lm -pthread -Wno-return-type
++ extract-bc ./FFT
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh FFT
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Splash2/fft
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.FFT
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  750 Nov 13 18:25 ConConfig.FFT
+-rwxr-xr-x 1 root root  41K Nov 13 18:25 FFT
+-rw-r--r-- 1 root root  72K Nov 13 18:25 FFT.bc
+-rw-r--r-- 1 root root   49 Nov 13 18:25 FFT.bc.r
+-rw-r--r-- 1 root root  17K Nov 13 18:25 mempair.FFT
+-rw-r--r-- 1 root root 129K Nov 13 18:25 mempair.FFT.npz
+-rw-r--r-- 1 root root  33K Nov 13 18:25 mssa.FFT
+-rw-r--r-- 1 root root  33K Nov 13 18:25 so.FFT
+/workdir/PERIOD/evaluation/Splash2/fft
++ export Con_PATH=/workdir/PERIOD/evaluation/Splash2/fft/ConConfig.FFT
++ Con_PATH=/workdir/PERIOD/evaluation/Splash2/fft/ConConfig.FFT
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./FFT.bc -o FFT -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Splash2/fft/ConConfig.FFT
+[DEBUG]
+[DEBUG] Instrumentation for fft.c:450
+[DEBUG] Instrumentation for fft.c:467
+[DEBUG] Instrumentation for fft.c:468
+[DEBUG] Instrumentation for fft.c:469
+[DEBUG] Instrumentation for fft.c:479
+[DEBUG] Instrumentation for fft.c:481
+[DEBUG] Instrumentation for fft.c:486
+[DEBUG] Instrumentation for fft.c:489
+[DEBUG] Instrumentation for fft.c:494
+[DEBUG] Instrumentation for fft.c:494
+[DEBUG] Instrumentation for fft.c:502
+[DEBUG] Instrumentation for fft.c:507
+[DEBUG] Instrumentation for fft.c:508
+[DEBUG] Instrumentation for fft.c:507
+[DEBUG] Instrumentation for fft.c:511
+[DEBUG] Instrumentation for fft.c:512
+[DEBUG] Instrumentation for fft.c:520
+[DEBUG] Instrumentation for fft.c:522
+[DEBUG] Instrumentation for fft.c:527
+[DEBUG] Instrumentation for fft.c:530
+[DEBUG] Instrumentation for fft.c:535
+[DEBUG] Instrumentation for fft.c:535
+[DEBUG] Instrumentation for fft.c:552
+[DEBUG] Instrumentation for fft.c:557
+[DEBUG] Instrumentation for fft.c:562
+[DEBUG] Instrumentation for fft.c:563
+[DEBUG] Instrumentation for fft.c:566
+[DEBUG] Instrumentation for fft.c:567
+[DEBUG] Instrumentation for fft.c:569
+[DEBUG] Instrumentation for fft.c:590
+[DEBUG] Instrumentation for fft.c:591
+[DEBUG] Instrumentation for fft.c:590
+[DEBUG] Instrumentation for fft.c:594
+[DEBUG] Instrumentation for fft.c:595
+[DEBUG] Instrumentation for fft.c:596
+[DEBUG] Instrumentation for fft.c:597
+[DEBUG] Instrumentation for fft.c:596
+[DEBUG] Instrumentation for fft.c:597
+[DEBUG] Instrumentation for fft.c:597
+[DEBUG] Instrumentation for fft.c:596
+[DEBUG] Instrumentation for fft.c:595
+[DEBUG] Instrumentation for fft.c:747
+[DEBUG] Instrumentation for fft.c:757
+[DEBUG] Instrumentation for fft.c:762
+[DEBUG] Instrumentation for fft.c:762
+[DEBUG] Instrumentation for fft.c:793
+[DEBUG] Instrumentation for fft.c:803
+[DEBUG] Instrumentation for fft.c:808
+[DEBUG] Instrumentation for fft.c:808
+[DEBUG] Instrumentation for fft.c:838
+[DEBUG] Instrumentation for fft.c:848
+[DEBUG] Instrumentation for fft.c:853
+[DEBUG] Instrumentation for fft.c:853
+[DEBUG] Instrumentation for fft.c:877
+[DEBUG] Instrumentation for fft.c:887
+[DEBUG] Instrumentation for fft.c:892
+[DEBUG] Instrumentation for fft.c:892
+[DEBUG] Instrumentation for fft.c:911
+[DEBUG] Instrumentation for fft.c:921
+[DEBUG] Instrumentation for fft.c:926
+[DEBUG] Instrumentation for fft.c:926
+[DEBUG] Instrumentation for fft.c:1028
+[DEBUG] Instrumentation for fft.c:1029
+[DEBUG] Instrumentation for fft.c:1047
+[DEBUG] Instrumentation for fft.c:1048
+[DEBUG] Instrumentation for fft.c:1065
+[DEBUG] Instrumentation for fft.c:1066
+[DEBUG] Instrumentation for fft.c:1145
+[DEBUG] Instrumentation for fft.c:1146
+[DEBUG] Instrumentation for fft.c:1147
+[DEBUG] Instrumentation for fft.c:1148
+[DEBUG] Instrumentation for fft.c:1151
+[DEBUG] Instrumentation for fft.c:1152
+[DEBUG] Instrumentation for fft.c:1153
+[DEBUG] Instrumentation for fft.c:1154
+[DEBUG] Instrumentation for fft.c:1155
+[DEBUG] Instrumentation for fft.c:1156
+[DEBUG] Instrumentation for fft.c:960
+[DEBUG] Instrumentation for fft.c:961
+[DEBUG] Instrumentation for fft.c:962
+[DEBUG] Instrumentation for fft.c:963
+[DEBUG] Instrumentation for fft.c:978
+[DEBUG] Instrumentation for fft.c:979
+[DEBUG] Instrumentation for fft.c:1086
+[DEBUG] Instrumentation for fft.c:1087
+[DEBUG] Instrumentation for fft.c:1104
+[DEBUG] Instrumentation for fft.c:1105
+
+exit: 0
+ended: 2026-11-13T18:25:11Z
+elapsed_sec: 1.041

@@ -1,0 +1,95 @@
+cwd: /workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T16:04:16Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./qsort_mt.c -o qsort_mt.bc
+./qsort_mt.c:567:5: warning: implicit declaration of function 'warnx' is invalid in C99 [-Wimplicit-function-declaration]
+                                warnx("illegal number, -f argument -- %s",
+                                ^
+./qsort_mt.c:575:5: warning: implicit declaration of function 'warnx' is invalid in C99 [-Wimplicit-function-declaration]
+                                warnx("illegal number, -h argument -- %s",
+                                ^
+./qsort_mt.c:586:5: warning: implicit declaration of function 'warnx' is invalid in C99 [-Wimplicit-function-declaration]
+                                warnx("illegal number, -n argument -- %s",
+                                ^
+./qsort_mt.c:615:8: warning: implicit declaration of function 'asprintf' is invalid in C99 [-Wimplicit-function-declaration]
+                        if (asprintf(&str_elem[i], "%d%d", rand(), rand()) == -1) {
+                            ^
+4 warnings generated.
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh qsort_mt
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.qsort_mt
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  570 Nov 13 16:04 ConConfig.qsort_mt
+-rw-r--r-- 1 root root 9.0K Nov 13 16:04 mempair.qsort_mt
+-rw-r--r-- 1 root root  77K Nov 13 16:04 mempair.qsort_mt.npz
+-rw-r--r-- 1 root root  12K Nov 13 16:04 mssa.qsort_mt
+-rw-r--r-- 1 root root  46K Nov 13 16:04 qsort_mt.bc
+-rw-rw-r-- 1 root root  17K Jan 16  2022 qsort_mt.c
+-rw-r--r-- 1 root root  21K Nov 13 16:04 so.qsort_mt
+/workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt
++ export Con_PATH=/workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt/ConConfig.qsort_mt
++ Con_PATH=/workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt/ConConfig.qsort_mt
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./qsort_mt.bc -o qsort_mt -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Inspect_benchmarks/qsort_mt/ConConfig.qsort_mt
+[DEBUG]
+[DEBUG] Instrumentation for qsort_mt.c:464
+[DEBUG] Instrumentation for qsort_mt.c:465
+[DEBUG] Instrumentation for qsort_mt.c:469
+[DEBUG] Instrumentation for qsort_mt.c:470
+[DEBUG] Instrumentation for qsort_mt.c:471
+[DEBUG] Instrumentation for qsort_mt.c:470
+[DEBUG] Instrumentation for qsort_mt.c:473
+[DEBUG] Instrumentation for qsort_mt.c:477
+[DEBUG] Instrumentation for qsort_mt.c:481
+[DEBUG] Instrumentation for qsort_mt.c:482
+[DEBUG] Instrumentation for qsort_mt.c:483
+[DEBUG] Instrumentation for qsort_mt.c:485
+[DEBUG] Instrumentation for qsort_mt.c:487
+[DEBUG] Instrumentation for qsort_mt.c:488
+[DEBUG] Instrumentation for qsort_mt.c:491
+[DEBUG] Instrumentation for qsort_mt.c:492
+[DEBUG] Instrumentation for qsort_mt.c:493
+[DEBUG] Instrumentation for qsort_mt.c:487
+[DEBUG] Instrumentation for qsort_mt.c:348
+[DEBUG] Instrumentation for qsort_mt.c:349
+[DEBUG] Instrumentation for qsort_mt.c:350
+[DEBUG] Instrumentation for qsort_mt.c:351
+[DEBUG] Instrumentation for qsort_mt.c:352
+[DEBUG] Instrumentation for qsort_mt.c:353
+[DEBUG] Instrumentation for qsort_mt.c:354
+[DEBUG] Instrumentation for qsort_mt.c:370
+[DEBUG] Instrumentation for qsort_mt.c:370
+[DEBUG] Instrumentation for qsort_mt.c:370
+[DEBUG] Instrumentation for qsort_mt.c:418
+[DEBUG] Instrumentation for qsort_mt.c:418
+[DEBUG] Instrumentation for qsort_mt.c:418
+[DEBUG] Instrumentation for qsort_mt.c:433
+[DEBUG] Instrumentation for qsort_mt.c:433
+[DEBUG] Instrumentation for qsort_mt.c:436
+[DEBUG] Instrumentation for qsort_mt.c:437
+[DEBUG] Instrumentation for qsort_mt.c:438
+[DEBUG] Instrumentation for qsort_mt.c:442
+[DEBUG] Instrumentation for qsort_mt.c:443
+[DEBUG] Instrumentation for qsort_mt.c:320
+[DEBUG] Instrumentation for qsort_mt.c:321
+[DEBUG] Instrumentation for qsort_mt.c:322
+[DEBUG] Instrumentation for qsort_mt.c:323
+[DEBUG] Instrumentation for qsort_mt.c:324
+[DEBUG] Instrumentation for qsort_mt.c:325
+[DEBUG] Instrumentation for qsort_mt.c:327
+[DEBUG] Instrumentation for qsort_mt.c:322
+[DEBUG] Instrumentation for qsort_mt.c:321
+
+exit: 0
+ended: 2026-11-13T16:04:16Z
+elapsed_sec: 0.752

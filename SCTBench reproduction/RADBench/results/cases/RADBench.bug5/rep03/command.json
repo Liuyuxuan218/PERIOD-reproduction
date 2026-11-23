@@ -1,0 +1,20 @@
+{
+  "bug_depth": 3,
+  "case": "RADBench.bug5",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "LD_LIBRARY_PATH=/workdir/PERIOD/evaluation/RADBench/bug5/src/nspr-4.8.6/target/dist/lib/",
+    "bin/main"
+  ],
+  "host_note": "executed inside period-sctbench",
+  "repetition": 3,
+  "schedule_limit": 10000,
+  "started": "2026-11-14T14:58:05Z",
+  "workdir": "/workdir/PERIOD/evaluation/RADBench/bug5"
+}

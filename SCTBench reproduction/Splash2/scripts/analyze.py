@@ -28,11 +28,12 @@ CASES = OUT / "cases"
 
 def mean_sd(values):
     nums = [v for v in values if isinstance(v, (int, float))]
-    if not nums:
+    count = len(nums)
+    if count == 0:
         return None, None, 0
-    if len(nums) == 1:
-        return nums[0], 0.0, 1
-    return statistics.mean(nums), statistics.stdev(nums), len(nums)
+    if count == 1:
+        return nums[0], None, 1
+    return statistics.mean(nums), statistics.stdev(nums), count
 
 
 def paper_limit(program, schedules):
@@ -206,9 +207,9 @@ def main():
         found = [r for r in valid if r.get("bug_found")]
         firsts = [r["first_bug_schedule"] for r in found if r.get("first_bug_schedule") is not None]
         em, es, en = mean_sd(explored)
-        erm, ers, _ = mean_sd(errors)
+        erm, ers, ern = mean_sd(errors)
         fm, fs, fn = mean_sd(firsts)
-        tm, ts, _ = mean_sd(timeouts)
+        tm, ts, tn = mean_sd(timeouts)
         paper_sched = prog["schedules"]
         row = {
             "program": name,
@@ -217,13 +218,16 @@ def main():
             "detection_count": len(found),
             "explored_mean": em,
             "explored_sd": es,
+            "explored_n": en,
             "errors_mean": erm,
             "errors_sd": ers,
+            "errors_n": ern,
             "first_bug_mean": fm,
             "first_bug_sd": fs,
             "first_bug_n": fn,
             "timeouts_mean": tm,
             "timeouts_sd": ts,
+            "timeouts_n": tn,
             "paper_schedules": paper_sched,
             "paper_schedules_numeric": paper_limit(name, paper_sched),
             "paper_bugs": prog["bugs"],
@@ -246,8 +250,9 @@ def main():
             writer.writerow(item)
     with (OUT / "summary.csv").open("w", newline="", encoding="utf-8") as fh:
         fields = ["program", "valid_reps", "detection_count", "explored_mean", "explored_sd",
-                  "errors_mean", "errors_sd", "first_bug_mean", "first_bug_sd", "first_bug_n",
-                  "timeouts_mean", "paper_schedules", "explored_abs_diff", "explored_rel_diff"]
+                  "explored_n", "errors_mean", "errors_sd", "errors_n", "first_bug_mean",
+                  "first_bug_sd", "first_bug_n", "timeouts_mean", "timeouts_sd", "timeouts_n",
+                  "paper_schedules", "explored_abs_diff", "explored_rel_diff"]
         writer = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         for row in summary:

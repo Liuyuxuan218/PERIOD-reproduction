@@ -2,6 +2,7 @@
 """Resumable runner for one SCTBench group inside the PERIOD image (Python 3.6)."""
 from __future__ import print_function
 
+import hashlib
 import json
 import os
 import re
@@ -171,13 +172,218 @@ def case_dir(case_id):
     return os.path.join(DATA, "cases", case_id)
 
 
+
+def sha256_file(path):
+    if not path or not os.path.isfile(path):
+        return None
+    digest = hashlib.sha256()
+    with open(path, "rb") as handle:
+        while True:
+            chunk = handle.read(1024 * 1024)
+            if not chunk:
+                break
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def resolve_executable(case):
+    workdir = os.path.join(ROOT, case["workdir"])
+    chosen = None
+    for token in case.get("argv") or []:
+        if token.startswith("-"):
+            continue
+        if "=" in token and not token.startswith("./") and not token.startswith("/"):
+            continue
+        chosen = token
+    if not chosen:
+        return None
+    if chosen.startswith("/"):
+        return chosen
+    if chosen.startswith("./"):
+        return os.path.join(workdir, chosen[2:])
+    return os.path.join(workdir, chosen)
+
+
+def tool_commit():
+    try:
+        return subprocess.check_output(
+            ["git", "-C", ROOT, "rev-parse", "HEAD"],
+            universal_newlines=True,
+        ).strip()
+    except Exception:
+        return None
+
+
+SOURCE_SUFFIXES = (
+    ".c", ".h", ".cc", ".cpp", ".cxx", ".hpp", ".hh",
+    ".s", ".S", ".sh", ".py", ".f", ".f90",
+)
+SOURCE_NAMES = {"Makefile", "makefile", "GNUmakefile", "build.sh"}
+SKIP_SOURCE_DIRS = {".git", "output", "out", ".svn"}
+
+
+def command_first_line(argv, env):
+    try:
+        out = subprocess.check_output(
+            argv,
+            stderr=subprocess.STDOUT,
+            env=env,
+            universal_newlines=True,
+            timeout=30,
+        )
+    except Exception:
+        return None
+    lines = [line.strip() for line in out.splitlines() if line.strip()]
+    return lines[0] if lines else None
+
+
+def source_identity(case):
+    workdir = os.path.join(ROOT, case["workdir"])
+    if not os.path.isdir(workdir):
+        return None
+    rows = []
+    for dirpath, dirnames, filenames in os.walk(workdir):
+        dirnames[:] = [
+            name for name in dirnames
+            if name not in SKIP_SOURCE_DIRS and not name.startswith("out_")
+        ]
+        for name in filenames:
+            if name not in SOURCE_NAMES and not name.endswith(SOURCE_SUFFIXES):
+                continue
+            path = os.path.join(dirpath, name)
+            rel = os.path.relpath(path, workdir).replace("\\", "/")
+            digest = sha256_file(path)
+            if not digest:
+                return None
+            rows.append(rel + "\0" + digest)
+    if not rows:
+        return None
+    digest = hashlib.sha256()
+    for row in sorted(rows):
+        digest.update(row.encode("utf-8"))
+        digest.update(b"\n")
+    return digest.hexdigest()
+
+
+def toolchain_identity(env=None):
+    env = env or os.environ
+    parts = []
+    for name in ("gcc", "clang"):
+        version = command_first_line([name, "--version"], env)
+        if version:
+            parts.append(name + ": " + version)
+    if not parts:
+        return None
+    return " | ".join(parts)
+
+
+def instrumentation_id(case):
+    return {
+        "scheduler": "PERIOD/tool/DBDS/run_PDS.py",
+        "bug_depth": 3,
+        "skip_prompt": True,
+        "exec_timeout": case.get("exec_timeout"),
+        "build": case.get("build"),
+    }
+
+
+def request_fingerprint(case, limit, env=None, repetition=None):
+    executable = resolve_executable(case)
+    return {
+        "program": case["id"],
+        "tool_commit": tool_commit(),
+        "build": case.get("build"),
+        "argv": list(case.get("argv") or []),
+        "schedule_limit": limit,
+        "bug_depth": 3,
+        "exec_timeout": case.get("exec_timeout"),
+        "executable": executable,
+        "executable_sha256": sha256_file(executable),
+        "source_sha256": source_identity(case),
+        "toolchain": toolchain_identity(env),
+        "instrumentation": instrumentation_id(case),
+        "repetition": repetition,
+        "random_seed": case.get("random_seed"),
+    }
+
+
+def provenance_supports(saved, requested):
+    provenance = saved.get("provenance") if isinstance(saved, dict) else None
+    if not isinstance(provenance, dict):
+        return False
+    if not provenance.get("executable_sha256"):
+        return False
+    if not provenance.get("source_sha256"):
+        return False
+    if not provenance.get("toolchain"):
+        return False
+    if not provenance.get("tool_commit"):
+        return False
+    keys = (
+        "program", "tool_commit", "build", "argv", "schedule_limit",
+        "bug_depth", "exec_timeout", "executable_sha256", "source_sha256",
+        "toolchain", "instrumentation", "repetition", "random_seed",
+    )
+    return all(provenance.get(key) == requested.get(key) for key in keys)
+
+
+def reusable_record(saved, requested):
+    return bool(saved and saved.get("valid") and provenance_supports(saved, requested))
+
+
+def assert_group_manifest(manifest):
+    for case in manifest["cases"]:
+        prefix = case["id"].split(".", 1)[0]
+        if prefix != GROUP:
+            raise SystemExit("manifest program %s is outside %s" % (case["id"], GROUP))
+
+
+def load_saved_json(path):
+    if not os.path.exists(path):
+        return None
+    with open(path) as handle:
+        return json.load(handle)
+
+
+def next_attempt_dir(repetition_dir):
+    base = os.path.join(repetition_dir, "attempts")
+    ensure_dir(base)
+    number = 1
+    while os.path.exists(os.path.join(base, "attempt-%02d" % number)):
+        number += 1
+    path = os.path.join(base, "attempt-%02d" % number)
+    ensure_dir(path)
+    return path
+
+
+def build_record_is_current(case, record, env=None):
+    executable = resolve_executable(case)
+    if not executable or not os.path.isfile(executable) or not isinstance(record, dict):
+        return False
+    digest = sha256_file(executable)
+    source = source_identity(case)
+    toolchain = toolchain_identity(env)
+    return (
+        bool(digest and source and toolchain)
+        and record.get("build") == case.get("build")
+        and record.get("argv") == list(case.get("argv") or [])
+        and record.get("executable_sha256") == digest
+        and record.get("source_sha256") == source
+        and record.get("toolchain") == toolchain
+        and record.get("instrumentation") == instrumentation_id(case)
+    )
+
 def build_case(case, env):
     workdir = os.path.join(ROOT, case["workdir"])
     cdir = case_dir(case["id"])
     ensure_dir(cdir)
     marker = os.path.join(cdir, "build.ok")
-    if os.path.exists(marker):
+    record_path = os.path.join(cdir, "build.json")
+    saved_build = load_saved_json(record_path)
+    if os.path.exists(marker) and build_record_is_current(case, saved_build, env):
         return True, "cached"
+    if os.path.exists(marker):
+        os.remove(marker)
     for item in case.get("fetch") or []:
         dest = os.path.join(workdir, item["dest"])
         if os.path.exists(dest) and os.path.getsize(dest) > 0:
@@ -212,8 +418,28 @@ def build_case(case, env):
         "build": case["build"],
     })
     if code == 0:
+        executable = resolve_executable(case)
+        record = {
+            "ok": True,
+            "exit": code,
+            "elapsed_sec": elapsed,
+            "time": utc_now(),
+            "build": case["build"],
+            "argv": list(case.get("argv") or []),
+            "executable": executable,
+            "executable_sha256": sha256_file(executable),
+            "source_sha256": source_identity(case),
+            "toolchain": toolchain_identity(env),
+            "instrumentation": instrumentation_id(case),
+            "tool_commit": tool_commit(),
+        }
+        write_json(record_path, record)
+        if not record["executable_sha256"]:
+            return False, "missing_executable"
+        if not record["source_sha256"] or not record["toolchain"]:
+            return False, "unverified_build"
         with open(marker, "w") as fh:
-            fh.write(utc_now() + "\n")
+            fh.write(record["executable_sha256"] + "\n")
         return True, "built"
     return False, "build"
 
@@ -230,15 +456,17 @@ def run_one(case, rep, env, limit_override=None):
     workdir = os.path.join(ROOT, case["workdir"])
     cdir = case_dir(case["id"])
     rdir = os.path.join(cdir, "rep%02d" % rep)
-    metrics_path = os.path.join(rdir, "metrics.json")
-    if os.path.exists(metrics_path):
-        with open(metrics_path) as fh:
-            old = json.load(fh)
-        if old.get("valid"):
-            return old
-    ensure_dir(rdir)
-    reset_shm()
+    historical_metrics = os.path.join(rdir, "metrics.json")
     limit = case["schedule_limit"] if limit_override is None else limit_override
+    requested = request_fingerprint(case, limit, env, rep)
+    saved = load_saved_json(historical_metrics)
+    if reusable_record(saved, requested):
+        return saved
+    if saved is not None:
+        rdir = next_attempt_dir(rdir)
+    ensure_dir(rdir)
+    metrics_path = os.path.join(rdir, "metrics.json")
+    reset_shm()
     spec = dict(case)
     spec["schedule_limit"] = limit
     cmd = pds_command(spec)
@@ -285,30 +513,18 @@ def run_one(case, rep, env, limit_override=None):
         "configuration": "table2-period",
         "schedule_limit": limit,
         "bug_depth": 3,
+        "provenance": requested,
+        "historical_record": saved is not None,
     })
     moved = move_out_dirs(workdir, os.path.join(rdir, "output"))
     parsed["output_dirs"] = moved
-    # Keep one error file for replay evidence. Drop the rest of the bulky ASAN dumps
-    # from the copied tree only after the first file is saved; full output stays until
-    # compact_output runs.
-    compact_output(os.path.join(rdir, "output"))
     write_json(metrics_path, parsed)
     write_excerpt(log_path, os.path.join(rdir, "run.excerpt.log"))
     return parsed
 
 
 def compact_output(output_root):
-    if not os.path.isdir(output_root):
-        return
-    for dirpath, _dirnames, filenames in os.walk(output_root):
-        base = os.path.basename(dirpath)
-        if base not in ("Errors", "Timeouts"):
-            continue
-        filenames = sorted(filenames)
-        keep = filenames[:2]
-        for name in filenames:
-            if name not in keep:
-                os.remove(os.path.join(dirpath, name))
+    return
 
 
 def write_excerpt(src, dest):
@@ -430,10 +646,7 @@ def main():
         manifest_path = sys.argv[1]
         mode = sys.argv[2] if len(sys.argv) > 2 else "--suite"
     manifest = load_manifest(manifest_path)
-    for case in manifest["cases"]:
-        prefix = case["id"].split(".", 1)[0]
-        if prefix != GROUP:
-            raise SystemExit("manifest program %s is outside %s" % (case["id"], GROUP))
+    assert_group_manifest(manifest)
     if manifest.get("upstream_commit"):
         head = subprocess.check_output(["git", "-C", ROOT, "rev-parse", "HEAD"], universal_newlines=True).strip()
         if head != manifest["upstream_commit"]:

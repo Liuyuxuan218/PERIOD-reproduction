@@ -1,0 +1,2 @@
+[[1, 0, 0, 0, 2, 0, 0, 0, 0, 0], [0, 0, 0, 0, 2, 0, 0, 0, 0, 0]]
+main: stringbuffer.cpp:54: void StringBuffer::getChars(int, int, char *, int): Assertion `0' failed.

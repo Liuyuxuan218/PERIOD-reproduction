@@ -1,0 +1,18 @@
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==2198897==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000018 (pc 0x7bca14b8eecc bp 0x7bca10dfdc40 sp 0x7bca10dfd3f8 T2)
+==2198897==The signal is caused by a WRITE memory access.
+==2198897==Hint: address points to the zero page.
+    #0 0x7bca14b8eecc  (/lib/x86_64-linux-gnu/libc.so.6+0x18eecc)
+    #1 0x43fd20  (/workdir/PERIOD/evaluation/RADBench/bug2/bin/main+0x43fd20)
+    #2 0x7bca16282c24  (/workdir/PERIOD/evaluation/RADBench/bug2/src/js/src/Linux_All_DBG.OBJ/libjs.so+0x82c24)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/lib/x86_64-linux-gnu/libc.so.6+0x18eecc) 
+Thread T2 created by T0 here:
+    #0 0x48ca7a  (/workdir/PERIOD/evaluation/RADBench/bug2/bin/main+0x48ca7a)
+    #1 0x4debc0  (/workdir/PERIOD/evaluation/RADBench/bug2/bin/main+0x4debc0)
+    #2 0x7bca14a21bf6  (/lib/x86_64-linux-gnu/libc.so.6+0x21bf6)
+
+==2198897==ABORTING

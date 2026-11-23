@@ -1,0 +1,119 @@
+cwd: /workdir/PERIOD/evaluation/Splash2/lu
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T14:40:24Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/Splash2/lu
++ ./cleanDIR.sh
++ CC=wllvm
++ make
+m4 ./null_macros/c.m4.null lu.C > lu.c
+wllvm -g -c -O0 -w lu.c -Wno-return-type
+lu.c:122:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(argc, argv)
+^
+lu.c:141:16: warning: implicit declaration of function 'getopt' is invalid in C99 [-Wimplicit-function-declaration]
+  while ((ch = getopt(argc, argv, "n:p:b:cstoh")) != -1) {
+               ^
+lu.c:233:33: warning: incompatible pointer types passing 'void ()' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+  pthread_create(&checkT, NULL, SlaveStartCheck, NULL);
+                                ^~~~~~~~~~~~~~~
+/usr/include/pthread.h:236:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+lu.c:237:39: warning: incompatible pointer types passing 'void ()' to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+    pthread_create(&child[i-1], NULL, SlaveStart, NULL);
+                                      ^~~~~~~~~~
+/usr/include/pthread.h:236:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+4 warnings generated.
+wllvm -g lu.o -O0 -w -o LU -lm -lpthread -Wno-return-type
++ extract-bc ./LU
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh LU
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Splash2/lu
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.LU
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  486 Nov 13 14:40 ConConfig.LU
+-rwxr-xr-x 1 root root  34K Nov 13 14:40 LU
+-rw-r--r-- 1 root root  57K Nov 13 14:40 LU.bc
+-rw-r--r-- 1 root root   47 Nov 13 14:40 LU.bc.r
+-rw-r--r-- 1 root root 5.2K Nov 13 14:40 mempair.LU
+-rw-r--r-- 1 root root  45K Nov 13 14:40 mempair.LU.npz
+-rw-r--r-- 1 root root  27K Nov 13 14:40 mssa.LU
+-rw-r--r-- 1 root root  21K Nov 13 14:40 so.LU
+/workdir/PERIOD/evaluation/Splash2/lu
++ export Con_PATH=/workdir/PERIOD/evaluation/Splash2/lu/ConConfig.LU
++ Con_PATH=/workdir/PERIOD/evaluation/Splash2/lu/ConConfig.LU
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./LU.bc -o LU -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Splash2/lu/ConConfig.LU
+[DEBUG]
+[DEBUG] Instrumentation for lu.c:358
+[DEBUG] Instrumentation for lu.c:371
+[DEBUG] Instrumentation for lu.c:372
+[DEBUG] Instrumentation for lu.c:373
+[DEBUG] Instrumentation for lu.c:380
+[DEBUG] Instrumentation for lu.c:405
+[DEBUG] Instrumentation for lu.c:406
+[DEBUG] Instrumentation for lu.c:407
+[DEBUG] Instrumentation for lu.c:408
+[DEBUG] Instrumentation for lu.c:415
+[DEBUG] Instrumentation for lu.c:417
+[DEBUG] Instrumentation for lu.c:422
+[DEBUG] Instrumentation for lu.c:425
+[DEBUG] Instrumentation for lu.c:430
+[DEBUG] Instrumentation for lu.c:430
+[DEBUG] Instrumentation for lu.c:445
+[DEBUG] Instrumentation for lu.c:447
+[DEBUG] Instrumentation for lu.c:452
+[DEBUG] Instrumentation for lu.c:455
+[DEBUG] Instrumentation for lu.c:460
+[DEBUG] Instrumentation for lu.c:460
+[DEBUG] Instrumentation for lu.c:485
+[DEBUG] Instrumentation for lu.c:487
+[DEBUG] Instrumentation for lu.c:492
+[DEBUG] Instrumentation for lu.c:495
+[DEBUG] Instrumentation for lu.c:500
+[DEBUG] Instrumentation for lu.c:500
+[DEBUG] Instrumentation for lu.c:510
+[DEBUG] Instrumentation for lu.c:511
+[DEBUG] Instrumentation for lu.c:512
+[DEBUG] Instrumentation for lu.c:513
+[DEBUG] Instrumentation for lu.c:514
+[DEBUG] Instrumentation for lu.c:517
+[DEBUG] Instrumentation for lu.c:518
+[DEBUG] Instrumentation for lu.c:519
+[DEBUG] Instrumentation for lu.c:851
+[DEBUG] Instrumentation for lu.c:692
+[DEBUG] Instrumentation for lu.c:694
+[DEBUG] Instrumentation for lu.c:699
+[DEBUG] Instrumentation for lu.c:702
+[DEBUG] Instrumentation for lu.c:707
+[DEBUG] Instrumentation for lu.c:707
+[DEBUG] Instrumentation for lu.c:751
+[DEBUG] Instrumentation for lu.c:753
+[DEBUG] Instrumentation for lu.c:758
+[DEBUG] Instrumentation for lu.c:761
+[DEBUG] Instrumentation for lu.c:766
+[DEBUG] Instrumentation for lu.c:766
+[DEBUG] Instrumentation for lu.c:800
+[DEBUG] Instrumentation for lu.c:801
+[DEBUG] Instrumentation for lu.c:802
+[DEBUG] Instrumentation for lu.c:803
+[DEBUG] Instrumentation for lu.c:539
+[DEBUG] Instrumentation for lu.c:540
+[DEBUG] Instrumentation for lu.c:564
+[DEBUG] Instrumentation for lu.c:589
+[DEBUG] Instrumentation for lu.c:590
+[DEBUG] Instrumentation for lu.c:615
+[DEBUG] Instrumentation for lu.c:633
+
+exit: 0
+ended: 2026-11-13T14:40:26Z
+elapsed_sec: 1.075

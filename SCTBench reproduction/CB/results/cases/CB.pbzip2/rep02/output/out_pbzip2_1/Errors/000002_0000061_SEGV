@@ -1,0 +1,36 @@
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+Parallel BZIP2 v0.9.4 - by: Jeff Gilchrist [http://compression.ca]
+[Aug. 30, 2005]             (uses libbzip2  by Julian Seward)
+
+** This is a BETA version - Use at your own risk! **
+
+         # CPUs: 1
+ BWT Block Size: 900k
+File Block Size: 900k
+-------------------------------------------
+         File #: 1 of 1
+     Input Name: test.tar
+    Output Name: test.tar.bz2
+
+     Input Size: 81920 bytes
+Compressing data...
+Completed: 100%                 Output Size: 17086 bytes
+-------------------------------------------
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==113662==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x730cb8409fd0 bp 0x730cb3bfee70 sp 0x730cb3bfecb8 T1)
+==113662==The signal is caused by a READ memory access.
+==113662==Hint: address points to the zero page.
+    #0 0x730cb8409fd0  (/lib/x86_64-linux-gnu/libpthread.so.0+0x9fd0)
+    #1 0x4e589f  (/workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src/pbzip2+0x4e589f)
+    #2 0x730cb84076da  (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #3 0x730cb692171e  (/lib/x86_64-linux-gnu/libc.so.6+0x12171e)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/lib/x86_64-linux-gnu/libpthread.so.0+0x9fd0) 
+Thread T1 created by T0 here:
+    #0 0x48fada  (/workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src/pbzip2+0x48fada)
+    #1 0x4e8e47  (/workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src/pbzip2+0x4e8e47)
+    #2 0x730cb6821bf6  (/lib/x86_64-linux-gnu/libc.so.6+0x21bf6)
+
+==113662==ABORTING

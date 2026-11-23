@@ -1,0 +1,51 @@
+cwd: /workdir/PERIOD/evaluation/Chess/InterlockedWorkStealQueue
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T10:51:45Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Installation completed. Everything's fine!
++ ./cleanDIR.sh
++ clang++ InterlockedWorkStealQueue.cpp -std=c++0x -pthread -g -O0 -emit-llvm -c -o InterlockedWorkStealQueue.bc
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh InterlockedWorkStealQueue
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Chess/InterlockedWorkStealQueue
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.InterlockedWorkStealQueue
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  347 Nov 13 10:51 ConConfig.InterlockedWorkStealQueue
+-rw-r--r-- 1 root root  68K Nov 13 10:51 InterlockedWorkStealQueue.bc
+-rw-rw-r-- 1 root root 2.3K Jan 16  2022 InterlockedWorkStealQueue.cpp
+-rw-r--r-- 1 root root   82 Nov 13 10:51 mempair.InterlockedWorkStealQueue
+-rw-r--r-- 1 root root  15K Nov 13 10:51 mempair.InterlockedWorkStealQueue.npz
+-rw-r--r-- 1 root root 9.7K Nov 13 10:51 mssa.InterlockedWorkStealQueue
+-rw-r--r-- 1 root root  20K Nov 13 10:51 so.InterlockedWorkStealQueue
+/workdir/PERIOD/evaluation/Chess/InterlockedWorkStealQueue
++ export Con_PATH=/workdir/PERIOD/evaluation/Chess/InterlockedWorkStealQueue/ConConfig.InterlockedWorkStealQueue
++ Con_PATH=/workdir/PERIOD/evaluation/Chess/InterlockedWorkStealQueue/ConConfig.InterlockedWorkStealQueue
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ InterlockedWorkStealQueue.cpp -std=c++0x -pthread -g -O0 -ldl -o InterlockedWorkStealQueue
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Chess/InterlockedWorkStealQueue/ConConfig.InterlockedWorkStealQueue
+[DEBUG]
+[DEBUG] Instrumentation for WorkStealQueue.h:226
+[DEBUG] Instrumentation for InterlockedWorkStealQueue.cpp:55
+[DEBUG] Instrumentation for WorkStealQueue.h:318
+[DEBUG] Instrumentation for WorkStealQueue.h:324
+[DEBUG] Instrumentation for WorkStealQueue.h:254
+[DEBUG] Instrumentation for WorkStealQueue.h:72
+[DEBUG] Instrumentation for WorkStealQueue.h:347
+[DEBUG] Instrumentation for WorkStealQueue.h:353
+[DEBUG] Instrumentation for WorkStealQueue.h:357
+[DEBUG] Instrumentation for WorkStealQueue.h:366
+[DEBUG] Instrumentation for WorkStealQueue.h:364
+[DEBUG] Instrumentation for WorkStealQueue.h:366
+[DEBUG] Instrumentation for WorkStealQueue.h:367
+[DEBUG] Instrumentation for WorkStealQueue.h:368
+[DEBUG] Instrumentation for WorkStealQueue.h:373
+[DEBUG] Instrumentation for WorkStealQueue.h:378
+[DEBUG] Instrumentation for WorkStealQueue.h:282
+
+exit: 0
+ended: 2026-11-13T10:51:46Z
+elapsed_sec: 1.017

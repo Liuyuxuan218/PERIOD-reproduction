@@ -1,0 +1,6 @@
+[[0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+Aget > Attempting to read log file for resuming download job...
+Aget > Couldn't find log file for this download, starting a clean job...
+Aget > Downloading gnu.txt (35147 bytes) from site local(:80).
+Number of Threads: 2
+File already exists! Overwrite?(y/n) aget: Resume.c:102: void save_log(): Assertion `total_bwritten == h.bwritten' failed.

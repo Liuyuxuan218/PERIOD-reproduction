@@ -1,0 +1,95 @@
+cwd: /workdir/PERIOD/evaluation/CB/pbzip2-0.9.4
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T11:09:32Z
+mesg: ttyname failed: Inappropriate ioctl for device
+/workdir/PERIOD
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/
++ ./cleanDIR.sh
++ cd /workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src
++ ./cleanDIR.sh
++ CXX=wllvm++
++ make
+wllvm++ -g -O3 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -o pbzip2 pbzip2.cpp -pthread -lpthread -lbz2
++ extract-bc ./pbzip2
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh pbzip2
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.pbzip2
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  699 Nov 13 11:09 ConConfig.pbzip2
+-rw-r--r-- 1 root root 6.6K Nov 13 11:09 mempair.pbzip2
+-rw-r--r-- 1 root root  68K Nov 13 11:09 mempair.pbzip2.npz
+-rw-r--r-- 1 root root  57K Nov 13 11:09 mssa.pbzip2
+-rwxr-xr-x 1 root root 135K Nov 13 11:09 pbzip2
+-rw-rw-r-- 1 root root 4.3K Jan 16  2022 pbzip2.1
+-rw-r--r-- 1 root root 189K Nov 13 11:09 pbzip2.bc
+-rw-r--r-- 1 root root   73 Nov 13 11:09 pbzip2.bc.r
+-rw-rw-r-- 1 root root  52K Jan 16  2022 pbzip2.cpp
+-rw-rw-r-- 1 root root 2.0K Jan 16  2022 pbzip2.spec
+-rw-r--r-- 1 root root  20K Nov 13 11:09 so.pbzip2
+/workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src
++ export Con_PATH=/workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src/ConConfig.pbzip2
++ Con_PATH=/workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src/ConConfig.pbzip2
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g -fsanitize=address ./pbzip2.cpp -o pbzip2 -lpthread -ldl -lbz2
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CB/pbzip2-0.9.4/pbzip2-0.9.4-src/ConConfig.pbzip2
+[DEBUG]
+[DEBUG] Instrumentation for pbzip2.cpp:1107
+[DEBUG] Instrumentation for pbzip2.cpp:558
+[DEBUG] Instrumentation for pbzip2.cpp:559
+[DEBUG] Instrumentation for pbzip2.cpp:564
+[DEBUG] Instrumentation for pbzip2.cpp:576
+[DEBUG] Instrumentation for pbzip2.cpp:577
+[DEBUG] Instrumentation for pbzip2.cpp:588
+[DEBUG] Instrumentation for pbzip2.cpp:603
+[DEBUG] Instrumentation for pbzip2.cpp:609
+[DEBUG] Instrumentation for pbzip2.cpp:628
+[DEBUG] Instrumentation for pbzip2.cpp:657
+[DEBUG] Instrumentation for pbzip2.cpp:658
+[DEBUG] Instrumentation for pbzip2.cpp:659
+[DEBUG] Instrumentation for pbzip2.cpp:669
+[DEBUG] Instrumentation for pbzip2.cpp:707
+[DEBUG] Instrumentation for pbzip2.cpp:707
+[DEBUG] Instrumentation for pbzip2.cpp:732
+[DEBUG] Instrumentation for pbzip2.cpp:733
+[DEBUG] Instrumentation for pbzip2.cpp:739
+[DEBUG] Instrumentation for pbzip2.cpp:740
+[DEBUG] Instrumentation for pbzip2.cpp:707
+[DEBUG] Instrumentation for pbzip2.cpp:794
+[DEBUG] Instrumentation for pbzip2.cpp:815
+[DEBUG] Instrumentation for pbzip2.cpp:825
+[DEBUG] Instrumentation for pbzip2.cpp:844
+[DEBUG] Instrumentation for pbzip2.cpp:845
+[DEBUG] Instrumentation for pbzip2.cpp:850
+[DEBUG] Instrumentation for pbzip2.cpp:845
+[DEBUG] Instrumentation for pbzip2.cpp:860
+[DEBUG] Instrumentation for pbzip2.cpp:897
+[DEBUG] Instrumentation for pbzip2.cpp:898
+[DEBUG] Instrumentation for pbzip2.cpp:903
+[DEBUG] Instrumentation for pbzip2.cpp:915
+[DEBUG] Instrumentation for pbzip2.cpp:916
+[DEBUG] Instrumentation for pbzip2.cpp:927
+[DEBUG] Instrumentation for pbzip2.cpp:942
+[DEBUG] Instrumentation for pbzip2.cpp:950
+[DEBUG] Instrumentation for pbzip2.cpp:972
+[DEBUG] Instrumentation for pbzip2.cpp:973
+[DEBUG] Instrumentation for pbzip2.cpp:974
+[DEBUG] Instrumentation for pbzip2.cpp:979
+[DEBUG] Instrumentation for pbzip2.cpp:1071
+[DEBUG] Instrumentation for pbzip2.cpp:1074
+[DEBUG] Instrumentation for pbzip2.cpp:1075
+[DEBUG] Instrumentation for pbzip2.cpp:1078
+[DEBUG] Instrumentation for pbzip2.cpp:1081
+[DEBUG] Instrumentation for pbzip2.cpp:1082
+[DEBUG] Instrumentation for pbzip2.cpp:1085
+[DEBUG] Instrumentation for pbzip2.cpp:1088
++ cd ..
+
+exit: 0
+ended: 2026-11-13T11:09:34Z
+elapsed_sec: 2.140

@@ -1,0 +1,2 @@
+[[1, 0, 2, 0, 0, 0, 0, 0], [0, 2, 0, 0, 0, 0, 0, 0]]
+bluetooth_driver_bad: ./bluetooth_driver_bad.c:52: void *BCSP_PnpAdd(DEVICE_EXTENSION *): Assertion `!stopped' failed.

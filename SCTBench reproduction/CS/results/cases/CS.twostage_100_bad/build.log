@@ -1,0 +1,49 @@
+cwd: /workdir/PERIOD/evaluation/CS/twostage_100
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-14T21:54:25Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CS/twostage_100
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./twostage_100_bad.c -o twostage_100_bad.bc
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh twostage_100_bad
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CS/twostage_100
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.twostage_100_bad
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  253 Nov 14 21:54 ConConfig.twostage_100_bad
+-rw-r--r-- 1 root root 1.4K Nov 14 21:54 mempair.twostage_100_bad
+-rw-r--r-- 1 root root  16K Nov 14 21:54 mempair.twostage_100_bad.npz
+-rw-r--r-- 1 root root 3.5K Nov 14 21:54 mssa.twostage_100_bad
+-rw-r--r-- 1 root root 6.1K Nov 14 21:54 so.twostage_100_bad
+-rw-r--r-- 1 root root  14K Nov 14 21:54 twostage_100_bad.bc
+-rw-rw-r-- 1 root root  64K Jan 16  2022 twostage_100_bad.c
+/workdir/PERIOD/evaluation/CS/twostage_100
++ export Con_PATH=/workdir/PERIOD/evaluation/CS/twostage_100/ConConfig.twostage_100_bad
++ Con_PATH=/workdir/PERIOD/evaluation/CS/twostage_100/ConConfig.twostage_100_bad
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./twostage_100_bad.bc -o twostage_100_bad -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CS/twostage_100/ConConfig.twostage_100_bad
+[DEBUG]
+[DEBUG] Instrumentation for twostage_bad.c:19
+[DEBUG] Instrumentation for twostage_bad.c:20
+[DEBUG] Instrumentation for twostage_bad.c:23
+[DEBUG] Instrumentation for twostage_bad.c:24
+[DEBUG] Instrumentation for twostage_bad.c:34
+[DEBUG] Instrumentation for twostage_bad.c:35
+[DEBUG] Instrumentation for twostage_bad.c:39
+[DEBUG] Instrumentation for twostage_bad.c:42
+[DEBUG] Instrumentation for twostage_bad.c:43
+[DEBUG] Instrumentation for twostage_bad.c:68
+[DEBUG] Instrumentation for twostage_bad.c:69
+[DEBUG] Instrumentation for twostage_bad.c:70
+[DEBUG] Instrumentation for twostage_bad.c:74
+[DEBUG] Instrumentation for twostage_bad.c:115
+
+exit: 0
+ended: 2026-11-14T21:54:26Z
+elapsed_sec: 0.619

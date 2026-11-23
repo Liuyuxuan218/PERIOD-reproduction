@@ -1,4 +1,4 @@
-program,valid_reps,detection_count,explored_mean,explored_sd,errors_mean,errors_sd,first_bug_mean,first_bug_sd,first_bug_n,timeouts_mean,paper_schedules,explored_abs_diff,explored_rel_diff
-CB.aget-bug,3,3,3945,0.0,702.6666666666666,11.590225767142472,9,0.0,3,0.3333333333333333,3279,666,0.2031107044830741
-CB.stringbuffer,3,3,163,0.0,4,0.0,121,0.0,3,0,163,0,0.0
-CB.pbzip2,3,3,1609.3333333333333,200.44284305839741,104,8.888194417315589,47.666666666666664,5.8594652770823155,3,0,1626,-16.666666666666742,-0.010250102501025057
+program,valid_reps,detection_count,explored_mean,explored_sd,explored_n,errors_mean,errors_sd,errors_n,first_bug_mean,first_bug_sd,first_bug_n,timeouts_mean,timeouts_sd,timeouts_n,paper_schedules,explored_abs_diff,explored_rel_diff
+CB.aget-bug,3,3,3945,0.0,3,702.6666666666666,11.590225767142472,3,9,0.0,3,0.3333333333333333,0.5773502691896257,3,3279,666,0.2031107044830741
+CB.stringbuffer,3,3,163,0.0,3,4,0.0,3,121,0.0,3,0,0.0,3,163,0,0.0
+CB.pbzip2,3,3,1609.3333333333333,200.44284305839741,3,104,8.888194417315589,3,47.666666666666664,5.8594652770823155,3,0,0.0,3,1626,-16.666666666666742,-0.010250102501025057

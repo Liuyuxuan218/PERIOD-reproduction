@@ -1,0 +1,38 @@
+cwd: /workdir/PERIOD/evaluation/CS/reorder_20
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T19:13:59Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CS/reorder_20
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./reorder_20_bad.c -o reorder_20_bad.bc
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh reorder_20_bad
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CS/reorder_20
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.reorder_20_bad
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root   51 Nov 13 19:13 ConConfig.reorder_20_bad
+-rw-r--r-- 1 root root  197 Nov 13 19:13 mempair.reorder_20_bad
+-rw-r--r-- 1 root root 3.4K Nov 13 19:13 mempair.reorder_20_bad.npz
+-rw-r--r-- 1 root root 1.9K Nov 13 19:13 mssa.reorder_20_bad
+-rw-r--r-- 1 root root  11K Nov 13 19:13 reorder_20_bad.bc
+-rw-rw-r-- 1 root root  63K Jan 16  2022 reorder_20_bad.c
+-rw-r--r-- 1 root root 3.8K Nov 13 19:13 so.reorder_20_bad
+/workdir/PERIOD/evaluation/CS/reorder_20
++ export Con_PATH=/workdir/PERIOD/evaluation/CS/reorder_20/ConConfig.reorder_20_bad
++ Con_PATH=/workdir/PERIOD/evaluation/CS/reorder_20/ConConfig.reorder_20_bad
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./reorder_20_bad.bc -o reorder_20_bad -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CS/reorder_20/ConConfig.reorder_20_bad
+[DEBUG]
+[DEBUG] Instrumentation for reorder_bad.c:71
+[DEBUG] Instrumentation for reorder_bad.c:72
+[DEBUG] Instrumentation for reorder_bad.c:78
+
+exit: 0
+ended: 2026-11-13T19:14:00Z
+elapsed_sec: 0.590

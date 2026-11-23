@@ -1,0 +1,47 @@
+cwd: /workdir/PERIOD/evaluation/CS/token_ring
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T10:49:44Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CS/token_ring
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./token_ring_bad.c -o token_ring_bad.bc
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh token_ring_bad
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CS/token_ring
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.token_ring_bad
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  240 Nov 13 10:49 ConConfig.token_ring_bad
+-rw-r--r-- 1 root root 1.4K Nov 13 10:49 mempair.token_ring_bad
+-rw-r--r-- 1 root root  17K Nov 13 10:49 mempair.token_ring_bad.npz
+-rw-r--r-- 1 root root 1.6K Nov 13 10:49 mssa.token_ring_bad
+-rw-r--r-- 1 root root 1.8K Nov 13 10:49 so.token_ring_bad
+-rw-r--r-- 1 root root 8.0K Nov 13 10:49 token_ring_bad.bc
+-rw-rw-r-- 1 root root 1.1K Jan 16  2022 token_ring_bad.c
+/workdir/PERIOD/evaluation/CS/token_ring
++ export Con_PATH=/workdir/PERIOD/evaluation/CS/token_ring/ConConfig.token_ring_bad
++ Con_PATH=/workdir/PERIOD/evaluation/CS/token_ring/ConConfig.token_ring_bad
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./token_ring_bad.bc -o token_ring_bad -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CS/token_ring/ConConfig.token_ring_bad
+[DEBUG]
+[DEBUG] Instrumentation for token_ring_bad.c:16
+[DEBUG] Instrumentation for token_ring_bad.c:17
+[DEBUG] Instrumentation for token_ring_bad.c:18
+[DEBUG] Instrumentation for token_ring_bad.c:25
+[DEBUG] Instrumentation for token_ring_bad.c:26
+[DEBUG] Instrumentation for token_ring_bad.c:27
+[DEBUG] Instrumentation for token_ring_bad.c:34
+[DEBUG] Instrumentation for token_ring_bad.c:35
+[DEBUG] Instrumentation for token_ring_bad.c:36
+[DEBUG] Instrumentation for token_ring_bad.c:43
+[DEBUG] Instrumentation for token_ring_bad.c:44
+[DEBUG] Instrumentation for token_ring_bad.c:45
+
+exit: 0
+ended: 2026-11-13T10:49:45Z
+elapsed_sec: 0.652

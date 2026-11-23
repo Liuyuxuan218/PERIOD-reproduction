@@ -1,0 +1,24 @@
+{
+  "bug_depth": 3,
+  "case": "Splash2.fft",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "LOOP_UNWINDED_NUM=3",
+    "./FFT",
+    "-p2",
+    "-m2",
+    "-n4",
+    "-l4"
+  ],
+  "host_note": "executed inside period-sctbench",
+  "repetition": 2,
+  "schedule_limit": 10000,
+  "started": "2026-11-13T18:25:11Z",
+  "workdir": "/workdir/PERIOD/evaluation/Splash2/fft"
+}

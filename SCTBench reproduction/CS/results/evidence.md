@@ -1,0 +1,231 @@
+# Evidence status
+
+Historical `metrics.json` files were not modified.
+Each `run.log.gz` is a lossless gzip copy of the local scheduler log whose start time, command, exit status, and parsed counts match that repetition.
+`run.log.sha256` is the SHA-256 of the uncompressed log.
+The execution workflow that produced these runs retained at most two files in each Errors or Timeouts directory. Those remaining files were copied unchanged. Deleted files were not reconstructed from the metrics.
+A build log is included only when its recorded time is not later than the earliest submitted run of that program.
+These records do not contain the source, toolchain, and executable fingerprint now required before a run can be reused. They remain historical records.
+
+## Recovered
+
+- `CS.bluetooth_driver_bad/rep01`
+  - [run.log.gz](cases/CS.bluetooth_driver_bad/rep01/run.log.gz) ([checksum](cases/CS.bluetooth_driver_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.bluetooth_driver_bad/rep01/command.json)
+  - [output.sha256](cases/CS.bluetooth_driver_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.bluetooth_driver_bad/rep02`
+  - [run.log.gz](cases/CS.bluetooth_driver_bad/rep02/run.log.gz) ([checksum](cases/CS.bluetooth_driver_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.bluetooth_driver_bad/rep02/command.json)
+  - [output.sha256](cases/CS.bluetooth_driver_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.bluetooth_driver_bad/rep03`
+  - [run.log.gz](cases/CS.bluetooth_driver_bad/rep03/run.log.gz) ([checksum](cases/CS.bluetooth_driver_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.bluetooth_driver_bad/rep03/command.json)
+  - [output.sha256](cases/CS.bluetooth_driver_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.carter01_bad/rep01`
+  - [run.log.gz](cases/CS.carter01_bad/rep01/run.log.gz) ([checksum](cases/CS.carter01_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.carter01_bad/rep01/command.json)
+  - [output.sha256](cases/CS.carter01_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.carter01_bad/rep02`
+  - [run.log.gz](cases/CS.carter01_bad/rep02/run.log.gz) ([checksum](cases/CS.carter01_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.carter01_bad/rep02/command.json)
+  - [output.sha256](cases/CS.carter01_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.carter01_bad/rep03`
+  - [run.log.gz](cases/CS.carter01_bad/rep03/run.log.gz) ([checksum](cases/CS.carter01_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.carter01_bad/rep03/command.json)
+  - [output.sha256](cases/CS.carter01_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.circular_buffer_bad/rep01`
+  - [run.log.gz](cases/CS.circular_buffer_bad/rep01/run.log.gz) ([checksum](cases/CS.circular_buffer_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.circular_buffer_bad/rep01/command.json)
+  - [output.sha256](cases/CS.circular_buffer_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.circular_buffer_bad/rep02`
+  - [run.log.gz](cases/CS.circular_buffer_bad/rep02/run.log.gz) ([checksum](cases/CS.circular_buffer_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.circular_buffer_bad/rep02/command.json)
+  - [output.sha256](cases/CS.circular_buffer_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.circular_buffer_bad/rep03`
+  - [run.log.gz](cases/CS.circular_buffer_bad/rep03/run.log.gz) ([checksum](cases/CS.circular_buffer_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.circular_buffer_bad/rep03/command.json)
+  - [output.sha256](cases/CS.circular_buffer_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.deadlock01_bad/rep01`
+  - [run.log.gz](cases/CS.deadlock01_bad/rep01/run.log.gz) ([checksum](cases/CS.deadlock01_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.deadlock01_bad/rep01/command.json)
+  - [output.sha256](cases/CS.deadlock01_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.deadlock01_bad/rep02`
+  - [run.log.gz](cases/CS.deadlock01_bad/rep02/run.log.gz) ([checksum](cases/CS.deadlock01_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.deadlock01_bad/rep02/command.json)
+  - [output.sha256](cases/CS.deadlock01_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.deadlock01_bad/rep03`
+  - [run.log.gz](cases/CS.deadlock01_bad/rep03/run.log.gz) ([checksum](cases/CS.deadlock01_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.deadlock01_bad/rep03/command.json)
+  - [output.sha256](cases/CS.deadlock01_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.lazy01_bad/rep01`
+  - [run.log.gz](cases/CS.lazy01_bad/rep01/run.log.gz) ([checksum](cases/CS.lazy01_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.lazy01_bad/rep01/command.json)
+  - [output.sha256](cases/CS.lazy01_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.lazy01_bad/rep02`
+  - [run.log.gz](cases/CS.lazy01_bad/rep02/run.log.gz) ([checksum](cases/CS.lazy01_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.lazy01_bad/rep02/command.json)
+  - [output.sha256](cases/CS.lazy01_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.lazy01_bad/rep03`
+  - [run.log.gz](cases/CS.lazy01_bad/rep03/run.log.gz) ([checksum](cases/CS.lazy01_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.lazy01_bad/rep03/command.json)
+  - [output.sha256](cases/CS.lazy01_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.queue_bad/rep01`
+  - [run.log.gz](cases/CS.queue_bad/rep01/run.log.gz) ([checksum](cases/CS.queue_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.queue_bad/rep01/command.json)
+  - [output.sha256](cases/CS.queue_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_10_bad/rep01`
+  - [run.log.gz](cases/CS.reorder_10_bad/rep01/run.log.gz) ([checksum](cases/CS.reorder_10_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.reorder_10_bad/rep01/command.json)
+  - [output.sha256](cases/CS.reorder_10_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_10_bad/rep02`
+  - [run.log.gz](cases/CS.reorder_10_bad/rep02/run.log.gz) ([checksum](cases/CS.reorder_10_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.reorder_10_bad/rep02/command.json)
+  - [output.sha256](cases/CS.reorder_10_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_10_bad/rep03`
+  - [run.log.gz](cases/CS.reorder_10_bad/rep03/run.log.gz) ([checksum](cases/CS.reorder_10_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.reorder_10_bad/rep03/command.json)
+  - [output.sha256](cases/CS.reorder_10_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_20_bad/rep01`
+  - [run.log.gz](cases/CS.reorder_20_bad/rep01/run.log.gz) ([checksum](cases/CS.reorder_20_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.reorder_20_bad/rep01/command.json)
+  - [output.sha256](cases/CS.reorder_20_bad/rep01/output.sha256) lists 4 unchanged output file(s)
+- `CS.reorder_20_bad/rep02`
+  - [run.log.gz](cases/CS.reorder_20_bad/rep02/run.log.gz) ([checksum](cases/CS.reorder_20_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.reorder_20_bad/rep02/command.json)
+  - [output.sha256](cases/CS.reorder_20_bad/rep02/output.sha256) lists 4 unchanged output file(s)
+- `CS.reorder_20_bad/rep03`
+  - [run.log.gz](cases/CS.reorder_20_bad/rep03/run.log.gz) ([checksum](cases/CS.reorder_20_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.reorder_20_bad/rep03/command.json)
+  - [output.sha256](cases/CS.reorder_20_bad/rep03/output.sha256) lists 4 unchanged output file(s)
+- `CS.reorder_3_bad/rep01`
+  - [run.log.gz](cases/CS.reorder_3_bad/rep01/run.log.gz) ([checksum](cases/CS.reorder_3_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.reorder_3_bad/rep01/command.json)
+  - [output.sha256](cases/CS.reorder_3_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_3_bad/rep02`
+  - [run.log.gz](cases/CS.reorder_3_bad/rep02/run.log.gz) ([checksum](cases/CS.reorder_3_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.reorder_3_bad/rep02/command.json)
+  - [output.sha256](cases/CS.reorder_3_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_3_bad/rep03`
+  - [run.log.gz](cases/CS.reorder_3_bad/rep03/run.log.gz) ([checksum](cases/CS.reorder_3_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.reorder_3_bad/rep03/command.json)
+  - [output.sha256](cases/CS.reorder_3_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_4_bad/rep01`
+  - [run.log.gz](cases/CS.reorder_4_bad/rep01/run.log.gz) ([checksum](cases/CS.reorder_4_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.reorder_4_bad/rep01/command.json)
+  - [output.sha256](cases/CS.reorder_4_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_4_bad/rep02`
+  - [run.log.gz](cases/CS.reorder_4_bad/rep02/run.log.gz) ([checksum](cases/CS.reorder_4_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.reorder_4_bad/rep02/command.json)
+  - [output.sha256](cases/CS.reorder_4_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_4_bad/rep03`
+  - [run.log.gz](cases/CS.reorder_4_bad/rep03/run.log.gz) ([checksum](cases/CS.reorder_4_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.reorder_4_bad/rep03/command.json)
+  - [output.sha256](cases/CS.reorder_4_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_5_bad/rep01`
+  - [run.log.gz](cases/CS.reorder_5_bad/rep01/run.log.gz) ([checksum](cases/CS.reorder_5_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.reorder_5_bad/rep01/command.json)
+  - [output.sha256](cases/CS.reorder_5_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_5_bad/rep02`
+  - [run.log.gz](cases/CS.reorder_5_bad/rep02/run.log.gz) ([checksum](cases/CS.reorder_5_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.reorder_5_bad/rep02/command.json)
+  - [output.sha256](cases/CS.reorder_5_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.reorder_5_bad/rep03`
+  - [run.log.gz](cases/CS.reorder_5_bad/rep03/run.log.gz) ([checksum](cases/CS.reorder_5_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.reorder_5_bad/rep03/command.json)
+  - [output.sha256](cases/CS.reorder_5_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.stack_bad/rep01`
+  - [run.log.gz](cases/CS.stack_bad/rep01/run.log.gz) ([checksum](cases/CS.stack_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.stack_bad/rep01/command.json)
+  - [output.sha256](cases/CS.stack_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.stack_bad/rep02`
+  - [run.log.gz](cases/CS.stack_bad/rep02/run.log.gz) ([checksum](cases/CS.stack_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.stack_bad/rep02/command.json)
+  - [output.sha256](cases/CS.stack_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.stack_bad/rep03`
+  - [run.log.gz](cases/CS.stack_bad/rep03/run.log.gz) ([checksum](cases/CS.stack_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.stack_bad/rep03/command.json)
+  - [output.sha256](cases/CS.stack_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.token_ring_bad/rep01`
+  - [run.log.gz](cases/CS.token_ring_bad/rep01/run.log.gz) ([checksum](cases/CS.token_ring_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.token_ring_bad/rep01/command.json)
+  - [output.sha256](cases/CS.token_ring_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.token_ring_bad/rep02`
+  - [run.log.gz](cases/CS.token_ring_bad/rep02/run.log.gz) ([checksum](cases/CS.token_ring_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.token_ring_bad/rep02/command.json)
+  - [output.sha256](cases/CS.token_ring_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.token_ring_bad/rep03`
+  - [run.log.gz](cases/CS.token_ring_bad/rep03/run.log.gz) ([checksum](cases/CS.token_ring_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.token_ring_bad/rep03/command.json)
+  - [output.sha256](cases/CS.token_ring_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.twostage_100_bad/rep01`
+  - [run.log.gz](cases/CS.twostage_100_bad/rep01/run.log.gz) ([checksum](cases/CS.twostage_100_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.twostage_100_bad/rep01/command.json)
+  - [output.sha256](cases/CS.twostage_100_bad/rep01/output.sha256) lists 4 unchanged output file(s)
+- `CS.twostage_100_bad/rep02`
+  - [run.log.gz](cases/CS.twostage_100_bad/rep02/run.log.gz) ([checksum](cases/CS.twostage_100_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.twostage_100_bad/rep02/command.json)
+  - [output.sha256](cases/CS.twostage_100_bad/rep02/output.sha256) lists 4 unchanged output file(s)
+- `CS.twostage_100_bad/rep03`
+  - [run.log.gz](cases/CS.twostage_100_bad/rep03/run.log.gz) ([checksum](cases/CS.twostage_100_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.twostage_100_bad/rep03/command.json)
+  - [output.sha256](cases/CS.twostage_100_bad/rep03/output.sha256) lists 4 unchanged output file(s)
+- `CS.twostage_bad/rep01`
+  - [run.log.gz](cases/CS.twostage_bad/rep01/run.log.gz) ([checksum](cases/CS.twostage_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.twostage_bad/rep01/command.json)
+  - [output.sha256](cases/CS.twostage_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.twostage_bad/rep02`
+  - [run.log.gz](cases/CS.twostage_bad/rep02/run.log.gz) ([checksum](cases/CS.twostage_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.twostage_bad/rep02/command.json)
+  - [output.sha256](cases/CS.twostage_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.twostage_bad/rep03`
+  - [run.log.gz](cases/CS.twostage_bad/rep03/run.log.gz) ([checksum](cases/CS.twostage_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.twostage_bad/rep03/command.json)
+  - [output.sha256](cases/CS.twostage_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.wronglock_3_bad/rep01`
+  - [run.log.gz](cases/CS.wronglock_3_bad/rep01/run.log.gz) ([checksum](cases/CS.wronglock_3_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.wronglock_3_bad/rep01/command.json)
+  - [output.sha256](cases/CS.wronglock_3_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.wronglock_3_bad/rep02`
+  - [run.log.gz](cases/CS.wronglock_3_bad/rep02/run.log.gz) ([checksum](cases/CS.wronglock_3_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.wronglock_3_bad/rep02/command.json)
+  - [output.sha256](cases/CS.wronglock_3_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.wronglock_3_bad/rep03`
+  - [run.log.gz](cases/CS.wronglock_3_bad/rep03/run.log.gz) ([checksum](cases/CS.wronglock_3_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.wronglock_3_bad/rep03/command.json)
+  - [output.sha256](cases/CS.wronglock_3_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+- `CS.wronglock_bad/rep01`
+  - [run.log.gz](cases/CS.wronglock_bad/rep01/run.log.gz) ([checksum](cases/CS.wronglock_bad/rep01/run.log.sha256))
+  - [command.json](cases/CS.wronglock_bad/rep01/command.json)
+  - [output.sha256](cases/CS.wronglock_bad/rep01/output.sha256) lists 2 unchanged output file(s)
+- `CS.wronglock_bad/rep02`
+  - [run.log.gz](cases/CS.wronglock_bad/rep02/run.log.gz) ([checksum](cases/CS.wronglock_bad/rep02/run.log.sha256))
+  - [command.json](cases/CS.wronglock_bad/rep02/command.json)
+  - [output.sha256](cases/CS.wronglock_bad/rep02/output.sha256) lists 2 unchanged output file(s)
+- `CS.wronglock_bad/rep03`
+  - [run.log.gz](cases/CS.wronglock_bad/rep03/run.log.gz) ([checksum](cases/CS.wronglock_bad/rep03/run.log.sha256))
+  - [command.json](cases/CS.wronglock_bad/rep03/command.json)
+  - [output.sha256](cases/CS.wronglock_bad/rep03/output.sha256) lists 2 unchanged output file(s)
+
+## Build records
+
+- `CS.bluetooth_driver_bad`: [build.json](cases/CS.bluetooth_driver_bad/build.json), [build.log](cases/CS.bluetooth_driver_bad/build.log)
+- `CS.carter01_bad`: [build.json](cases/CS.carter01_bad/build.json), [build.log](cases/CS.carter01_bad/build.log)
+- `CS.circular_buffer_bad`: [build.json](cases/CS.circular_buffer_bad/build.json), [build.log](cases/CS.circular_buffer_bad/build.log)
+- `CS.deadlock01_bad`: [build.json](cases/CS.deadlock01_bad/build.json), [build.log](cases/CS.deadlock01_bad/build.log)
+- `CS.lazy01_bad`: [build.json](cases/CS.lazy01_bad/build.json), [build.log](cases/CS.lazy01_bad/build.log)
+- `CS.queue_bad`: [build.json](cases/CS.queue_bad/build.json), [build.log](cases/CS.queue_bad/build.log)
+- `CS.reorder_10_bad`: [build.json](cases/CS.reorder_10_bad/build.json), [build.log](cases/CS.reorder_10_bad/build.log)
+- `CS.reorder_20_bad`: [build.json](cases/CS.reorder_20_bad/build.json), [build.log](cases/CS.reorder_20_bad/build.log)
+- `CS.reorder_3_bad`: [build.json](cases/CS.reorder_3_bad/build.json), [build.log](cases/CS.reorder_3_bad/build.log)
+- `CS.reorder_4_bad`: [build.json](cases/CS.reorder_4_bad/build.json), [build.log](cases/CS.reorder_4_bad/build.log)
+- `CS.reorder_5_bad`: [build.json](cases/CS.reorder_5_bad/build.json), [build.log](cases/CS.reorder_5_bad/build.log)
+- `CS.stack_bad`: [build.json](cases/CS.stack_bad/build.json), [build.log](cases/CS.stack_bad/build.log)
+- `CS.token_ring_bad`: [build.json](cases/CS.token_ring_bad/build.json), [build.log](cases/CS.token_ring_bad/build.log)
+- `CS.twostage_100_bad`: [build.json](cases/CS.twostage_100_bad/build.json), [build.log](cases/CS.twostage_100_bad/build.log)
+- `CS.twostage_bad`: [build.json](cases/CS.twostage_bad/build.json), [build.log](cases/CS.twostage_bad/build.log)
+- `CS.wronglock_3_bad`: [build.json](cases/CS.wronglock_3_bad/build.json), [build.log](cases/CS.wronglock_3_bad/build.log)
+- `CS.wronglock_bad`: [build.json](cases/CS.wronglock_bad/build.json), [build.log](cases/CS.wronglock_bad/build.log)
+
+## Missing raw logs
+
+None.

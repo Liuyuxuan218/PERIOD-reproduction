@@ -1,0 +1,360 @@
+cwd: /workdir/PERIOD/evaluation/RADBench/bug6
+cmd: ["bash", "-lc", "make"]
+started: 2026-11-14T04:38:36Z
+mesg: ttyname failed: Inappropriate ioctl for device
+./scripts/build-nspr.sh 
+
+Unzipping NSPR Source...
+
+Starting Building NSPR...
+creating cache ./config.cache
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking build system type... x86_64-unknown-linux-gnu
+checking for whoami... /usr/bin/whoami
+checking for gcc... wllvm
+checking whether the C compiler (wllvm  ) works... yes
+checking whether the C compiler (wllvm  ) is a cross-compiler... no
+checking whether we are using GNU C... yes
+checking whether wllvm accepts -g... yes
+checking how to run the C preprocessor... wllvm -E
+checking for ranlib... ranlib
+checking for as... /usr/bin/as
+checking for ar... /usr/bin/ar
+checking for ld... /usr/bin/ld
+checking for strip... /usr/bin/strip
+checking for windres... no
+checking for gcc -pipe support... no
+checking for visibility(hidden) attribute... yes
+checking for visibility pragma support... yes
+checking for perl5... no
+checking for perl... /usr/bin/perl
+checking for dlopen in -ldl... yes
+checking for dlfcn.h... yes
+checking whether wllvm needs -traditional... no
+checking for lchown... yes
+checking for strerror... yes
+checking for pthread_create in -lpthreads... no
+checking for pthread_create in -lpthread... yes
+checking whether wllvm accepts -pthread... yes
+updating cache ./config.cache
+creating ./config.status
+creating Makefile
+creating config/Makefile
+creating config/autoconf.mk
+creating config/nsprincl.mk
+creating config/nsprincl.sh
+creating config/nspr-config
+creating lib/Makefile
+creating lib/ds/Makefile
+creating lib/libc/Makefile
+creating lib/libc/include/Makefile
+creating lib/libc/src/Makefile
+creating lib/tests/Makefile
+creating pkg/Makefile
+creating pkg/linux/Makefile
+creating pkg/solaris/Makefile
+creating pkg/solaris/SUNWpr/Makefile
+creating pkg/solaris/SUNWprd/Makefile
+creating pr/Makefile
+creating pr/include/Makefile
+creating pr/include/md/Makefile
+creating pr/include/obsolete/Makefile
+creating pr/include/private/Makefile
+creating pr/src/Makefile
+creating pr/src/io/Makefile
+creating pr/src/linking/Makefile
+creating pr/src/malloc/Makefile
+creating pr/src/md/Makefile
+creating pr/src/md/unix/Makefile
+creating pr/src/memory/Makefile
+creating pr/src/misc/Makefile
+creating pr/src/threads/Makefile
+creating pr/tests/Makefile
+creating pr/tests/dll/Makefile
+creating pr/src/pthreads/Makefile
+make[1]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target'
+cd config; make -j1 export
+make[2]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/config'
+wllvm -o now.o -c      -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM   ../../mozilla/nsprpub/config/now.c
+wllvm  now.o   -o now
+wllvm -o nsinstall.o -c      -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM   ../../mozilla/nsprpub/config/nsinstall.c
+wllvm  nsinstall.o   -o nsinstall
+rm -f nfspwd; cp ../../mozilla/nsprpub/config/nfspwd.pl nfspwd; chmod +x nfspwd
+rm -f ../dist/bin/nspr-config
+make[2]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/config'
+cd pr; make -j1 export
+make[2]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr'
+cd include; make export
+make[3]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include'
+cd md; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include/md'
+../../../config/./nsinstall -R -m 444 ../../../../mozilla/nsprpub/pr/include/md/_nec.cfg ../../../../mozilla/nsprpub/pr/include/md/_openbsd.cfg ../../../../mozilla/nsprpub/pr/include/md/_winnt.cfg ../../../../mozilla/nsprpub/pr/include/md/_nto.cfg ../../../../mozilla/nsprpub/pr/include/md/_riscos.cfg ../../../../mozilla/nsprpub/pr/include/md/_dgux.cfg ../../../../mozilla/nsprpub/pr/include/md/_aix32.cfg ../../../../mozilla/nsprpub/pr/include/md/_hpux64.cfg ../../../../mozilla/nsprpub/pr/include/md/_os2.cfg ../../../../mozilla/nsprpub/pr/include/md/_linux.cfg ../../../../mozilla/nsprpub/pr/include/md/_qnx.cfg ../../../../mozilla/nsprpub/pr/include/md/_darwin.cfg ../../../../mozilla/nsprpub/pr/include/md/_beos.cfg ../../../../mozilla/nsprpub/pr/include/md/_irix32.cfg ../../../../mozilla/nsprpub/pr/include/md/_irix64.cfg ../../../../mozilla/nsprpub/pr/include/md/_ncr.cfg ../../../../mozilla/nsprpub/pr/include/md/_win95.cfg ../../../../mozilla/nsprpub/pr/include/md/_netbsd.cfg ../../../../mozilla/nsprpub/pr/include/md/_aix64.cfg ../../../../mozilla/nsprpub/pr/include/md/_solaris.cfg ../../../../mozilla/nsprpub/pr/include/md/_unixware.cfg ../../../../mozilla/nsprpub/pr/include/md/_freebsd.cfg ../../../../mozilla/nsprpub/pr/include/md/_scoos.cfg ../../../../mozilla/nsprpub/pr/include/md/_osf1.cfg ../../../../mozilla/nsprpub/pr/include/md/_unixware7.cfg ../../../../mozilla/nsprpub/pr/include/md/_sunos4.cfg ../../../../mozilla/nsprpub/pr/include/md/_symbian.cfg ../../../../mozilla/nsprpub/pr/include/md/_sony.cfg ../../../../mozilla/nsprpub/pr/include/md/_nextstep.cfg ../../../../mozilla/nsprpub/pr/include/md/_hpux32.cfg ../../../../mozilla/nsprpub/pr/include/md/_bsdi.cfg ../../../../mozilla/nsprpub/pr/include/md/_reliantunix.cfg ../../../dist/include/nspr/md
+../../../config/./nsinstall -R -m 444 ../../../../mozilla/nsprpub/pr/include/md/_linux.cfg ../../../dist/include/nspr
+mv -f ../../../dist/include/nspr/_linux.cfg ../../../dist/include/nspr/prcpucfg.h
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include/md'
+cd private; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include/private'
+../../../config/./nsinstall -R -m 444 ../../../../mozilla/nsprpub/pr/include/private/pprio.h ../../../../mozilla/nsprpub/pr/include/private/pprthred.h ../../../../mozilla/nsprpub/pr/include/private/prpriv.h ../../../dist/include/nspr/private
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include/private'
+cd obsolete; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include/obsolete'
+../../../config/./nsinstall -R -m 444 ../../../../mozilla/nsprpub/pr/include/obsolete/pralarm.h ../../../../mozilla/nsprpub/pr/include/obsolete/probslet.h ../../../../mozilla/nsprpub/pr/include/obsolete/protypes.h ../../../../mozilla/nsprpub/pr/include/obsolete/prsem.h ../../../dist/include/nspr/obsolete
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include/obsolete'
+../../config/./nsinstall -R -m 444 ../../../mozilla/nsprpub/pr/include/prmon.h ../../../mozilla/nsprpub/pr/include/prbit.h ../../../mozilla/nsprpub/pr/include/prrng.h ../../../mozilla/nsprpub/pr/include/prproces.h ../../../mozilla/nsprpub/pr/include/prtypes.h ../../../mozilla/nsprpub/pr/include/prcvar.h ../../../mozilla/nsprpub/pr/include/prlink.h ../../../mozilla/nsprpub/pr/include/prdtoa.h ../../../mozilla/nsprpub/pr/include/prwin16.h ../../../mozilla/nsprpub/pr/include/prtrace.h ../../../mozilla/nsprpub/pr/include/prmem.h ../../../mozilla/nsprpub/pr/include/prprf.h ../../../mozilla/nsprpub/pr/include/prsystem.h ../../../mozilla/nsprpub/pr/include/prshm.h ../../../mozilla/nsprpub/pr/include/prinrval.h ../../../mozilla/nsprpub/pr/include/prcountr.h ../../../mozilla/nsprpub/pr/include/prtime.h ../../../mozilla/nsprpub/pr/include/prerr.h ../../../mozilla/nsprpub/pr/include/prcmon.h ../../../mozilla/nsprpub/pr/include/prtpool.h ../../../mozilla/nsprpub/pr/include/prinet.h ../../../mozilla/nsprpub/pr/include/prolock.h ../../../mozilla/nsprpub/pr/include/prclist.h ../../../mozilla/nsprpub/pr/include/prlog.h ../../../mozilla/nsprpub/pr/include/prmwait.h ../../../mozilla/nsprpub/pr/include/prio.h ../../../mozilla/nsprpub/pr/include/prlock.h ../../../mozilla/nsprpub/pr/include/prlong.h ../../../mozilla/nsprpub/pr/include/pratom.h ../../../mozilla/nsprpub/pr/include/prpdce.h ../../../mozilla/nsprpub/pr/include/prenv.h ../../../mozilla/nsprpub/pr/include/prshma.h ../../../mozilla/nsprpub/pr/include/prvrsion.h ../../../mozilla/nsprpub/pr/include/nspr.h ../../../mozilla/nsprpub/pr/include/pripcsem.h ../../../mozilla/nsprpub/pr/include/prnetdb.h ../../../mozilla/nsprpub/pr/include/prinit.h ../../../mozilla/nsprpub/pr/include/prrwlock.h ../../../mozilla/nsprpub/pr/include/prthread.h ../../../mozilla/nsprpub/pr/include/prerror.h ../../dist/include/nspr
+make[3]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/include'
+cd src; make export
+make[3]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src'
+cd io; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/io'
+wllvm -o prfdcach.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prfdcach.c
+wllvm -o prmwait.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prmwait.c
+wllvm -o priometh.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/priometh.c
+wllvm -o pripv6.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/pripv6.c
+wllvm -o prmapopt.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prmapopt.c
+wllvm -o prlayer.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prlayer.c
+wllvm -o prlog.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prlog.c
+wllvm -o prmmap.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prmmap.c
+wllvm -o prpolevt.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prpolevt.c
+wllvm -o prprf.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prprf.c
+wllvm -o prscanf.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prscanf.c
+wllvm -o prstdio.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/io/prstdio.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/io'
+cd linking; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/linking'
+wllvm -o prlink.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/linking/prlink.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/linking'
+cd malloc; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/malloc'
+wllvm -o prmalloc.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/malloc/prmalloc.c
+wllvm -o prmem.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/malloc/prmem.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/malloc'
+cd md; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/md'
+cd unix; make export
+make[5]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/md/unix'
+wllvm -o unix.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/unix.c
+wllvm -o unix_errors.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/unix_errors.c
+wllvm -o uxproces.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/uxproces.c
+wllvm -o uxrng.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/uxrng.c
+wllvm -o uxshm.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/uxshm.c
+wllvm -o uxwrap.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/uxwrap.c
+wllvm -o linux.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  ../../../../../mozilla/nsprpub/pr/src/md/unix/linux.c
+wllvm -o os_Linux_x86_64.o -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../../dist/include/nspr -I../../../../../mozilla/nsprpub/pr/include -I../../../../../mozilla/nsprpub/pr/include/private  -c ../../../../../mozilla/nsprpub/pr/src/md/unix/os_Linux_x86_64.s
+clang-10: warning: argument unused during compilation: '-fvisibility=hidden' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-pthread' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-fno-inline' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-U NDEBUG' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D DEBUG_root' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D DEBUG=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D HAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D HAVE_VISIBILITY_PRAGMA=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D XP_UNIX=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D _GNU_SOURCE=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D HAVE_FCNTL_FILE_LOCKING=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D LINUX=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D HAVE_LCHOWN=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D HAVE_STRERROR=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D _REENTRANT=1' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D FORCE_PR_LOG' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D _PR_PTHREADS' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-U HAVE_CVAR_BUILT_ON_SEM' [-Wunused-command-line-argument]
+clang-10: warning: argument unused during compilation: '-D _NSPR_BUILD_' [-Wunused-command-line-argument]
+make[5]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/md/unix'
+wllvm -o prosdep.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include  ../../../../mozilla/nsprpub/pr/src/md/prosdep.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/md'
+cd memory; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/memory'
+wllvm -o prseg.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/memory/prseg.c
+wllvm -o prshm.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/memory/prshm.c
+wllvm -o prshma.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/memory/prshma.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/memory'
+cd misc; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/misc'
+wllvm -o pralarm.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/pralarm.c
+wllvm -o pratom.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/pratom.c
+wllvm -o prcountr.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prcountr.c
+wllvm -o prdtoa.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prdtoa.c
+wllvm -o prenv.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prenv.c
+../../../../mozilla/nsprpub/pr/src/misc/prenv.c:96:29: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    result = _PR_MD_PUT_ENV(string);
+                            ^~~~~~
+/usr/include/stdlib.h:644:26: note: passing argument to parameter '__string' here
+extern int putenv (char *__string) __THROW __nonnull ((1));
+                         ^
+1 warning generated.
+wllvm -o prerr.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prerr.c
+wllvm -o prerror.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prerror.c
+wllvm -o prerrortable.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prerrortable.c
+wllvm -o prinit.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prinit.c
+wllvm -o prinrval.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prinrval.c
+wllvm -o pripc.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/pripc.c
+wllvm -o prlog2.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prlog2.c
+wllvm -o prlong.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prlong.c
+wllvm -o prnetdb.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prnetdb.c
+wllvm -o prolock.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prolock.c
+wllvm -o prrng.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prrng.c
+wllvm -o prsystem.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prsystem.c
+wllvm -o prtime.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prtime.c
+wllvm -o prthinfo.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prthinfo.c
+wllvm -o prtpool.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prtpool.c
+wllvm -o prtrace.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/misc/prtrace.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/misc'
+cd threads; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/threads'
+wllvm -o prcmon.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/threads/prcmon.c
+wllvm -o prrwlock.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c
+wllvm -o prtpd.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/threads/prtpd.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/threads'
+cd pthreads; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/pthreads'
+wllvm -o ptio.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/pthreads/ptio.c
+wllvm -o ptsynch.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/pthreads/ptsynch.c
+wllvm -o ptthread.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/pthreads/ptthread.c
+wllvm -o ptmisc.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../../dist/include/nspr -I../../../../mozilla/nsprpub/pr/include -I../../../../mozilla/nsprpub/pr/include/private  ../../../../mozilla/nsprpub/pr/src/pthreads/ptmisc.c
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src/pthreads'
+wllvm -o prvrsion.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -D_NSPR_BUILD_ -I../../dist/include/nspr -I../../../mozilla/nsprpub/pr/include -I../../../mozilla/nsprpub/pr/include/private  -I. ../../../mozilla/nsprpub/pr/src/prvrsion.c
+rm -f libnspr4.a
+/usr/bin/ar cr libnspr4.a ./prvrsion.o io/./prfdcach.o io/./prmwait.o io/./prmapopt.o io/./priometh.o io/./pripv6.o io/./prlayer.o io/./prlog.o io/./prmmap.o io/./prpolevt.o io/./prprf.o io/./prscanf.o io/./prstdio.o threads/./prcmon.o threads/./prrwlock.o threads/./prtpd.o linking/./prlink.o malloc/./prmalloc.o malloc/./prmem.o md/./prosdep.o memory/./prshm.o memory/./prshma.o memory/./prseg.o misc/./pralarm.o misc/./pratom.o misc/./prcountr.o misc/./prdtoa.o misc/./prenv.o misc/./prerr.o misc/./prerror.o misc/./prerrortable.o misc/./prinit.o misc/./prinrval.o misc/./pripc.o misc/./prlog2.o misc/./prlong.o misc/./prnetdb.o misc/./prolock.o misc/./prrng.o misc/./prsystem.o misc/./prthinfo.o misc/./prtpool.o misc/./prtrace.o misc/./prtime.o pthreads/./ptsynch.o pthreads/./ptio.o pthreads/./ptthread.o pthreads/./ptmisc.o md/unix/./unix.o md/unix/./unix_errors.o md/unix/./uxproces.o md/unix/./uxrng.o md/unix/./uxshm.o md/unix/./uxwrap.o md/unix/./linux.o md/unix/./os_Linux_x86_64.o 
+ranlib libnspr4.a
+rm -f libnspr4.so
+wllvm -shared -Wl,-soname -Wl,libnspr4.so -o libnspr4.so ./prvrsion.o io/./prfdcach.o io/./prmwait.o io/./prmapopt.o io/./priometh.o io/./pripv6.o io/./prlayer.o io/./prlog.o io/./prmmap.o io/./prpolevt.o io/./prprf.o io/./prscanf.o io/./prstdio.o threads/./prcmon.o threads/./prrwlock.o threads/./prtpd.o linking/./prlink.o malloc/./prmalloc.o malloc/./prmem.o md/./prosdep.o memory/./prshm.o memory/./prshma.o memory/./prseg.o misc/./pralarm.o misc/./pratom.o misc/./prcountr.o misc/./prdtoa.o misc/./prenv.o misc/./prerr.o misc/./prerror.o misc/./prerrortable.o misc/./prinit.o misc/./prinrval.o misc/./pripc.o misc/./prlog2.o misc/./prlong.o misc/./prnetdb.o misc/./prolock.o misc/./prrng.o misc/./prsystem.o misc/./prthinfo.o misc/./prtpool.o misc/./prtrace.o misc/./prtime.o pthreads/./ptsynch.o pthreads/./ptio.o pthreads/./ptthread.o pthreads/./ptmisc.o md/unix/./unix.o md/unix/./unix_errors.o md/unix/./uxproces.o md/unix/./uxrng.o md/unix/./uxshm.o md/unix/./uxwrap.o md/unix/./linux.o md/unix/./os_Linux_x86_64.o   -lpthread -ldl
+../../config/./nsinstall -R -m 444 ./libnspr4.a ./libnspr4.so ../../dist/lib
+../../config/./nsinstall -R -m 444 ./libnspr4.so ../../dist/bin
+make[3]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr/src'
+make[2]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/pr'
+cd lib; make -j1 export
+make[2]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib'
+cd ds; make export
+make[3]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/ds'
+wllvm -o plarena.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../dist/include/nspr -I../../../mozilla/nsprpub/pr/include  ../../../mozilla/nsprpub/lib/ds/plarena.c
+wllvm -o plhash.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../dist/include/nspr -I../../../mozilla/nsprpub/pr/include  ../../../mozilla/nsprpub/lib/ds/plhash.c
+wllvm -o plvrsion.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../dist/include/nspr -I../../../mozilla/nsprpub/pr/include  -I. ../../../mozilla/nsprpub/lib/ds/plvrsion.c
+rm -f libplds4.a
+/usr/bin/ar cr libplds4.a ./plarena.o ./plhash.o ./plvrsion.o  
+ranlib libplds4.a
+rm -f libplds4.so
+wllvm -shared -Wl,-soname -Wl,libplds4.so -o libplds4.so ./plarena.o ./plhash.o ./plvrsion.o    -L../../dist/lib -lnspr4
+../../config/./nsinstall -R -m 444 ../../../mozilla/nsprpub/lib/ds/plarenas.h ../../../mozilla/nsprpub/lib/ds/plarena.h ../../../mozilla/nsprpub/lib/ds/plhash.h ../../dist/include/nspr
+../../config/./nsinstall -R -m 444 ./libplds4.a ./libplds4.so ../../dist/lib
+../../config/./nsinstall -R -m 444 ./libplds4.so ../../dist/bin
+make[3]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/ds'
+cd libc; make export
+make[3]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/libc'
+cd include; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/libc/include'
+../../../config/./nsinstall -R -m 444 ../../../../mozilla/nsprpub/lib/libc/include/plbase64.h ../../../../mozilla/nsprpub/lib/libc/include/plstr.h ../../../../mozilla/nsprpub/lib/libc/include/plresolv.h ../../../../mozilla/nsprpub/lib/libc/include/plgetopt.h ../../../../mozilla/nsprpub/lib/libc/include/plerror.h ../../../dist/include/nspr
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/libc/include'
+cd src; make export
+make[4]: Entering directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/libc/src'
+wllvm -o plvrsion.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  -I. ../../../../mozilla/nsprpub/lib/libc/src/plvrsion.c
+wllvm -o strlen.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strlen.c
+wllvm -o strcpy.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strcpy.c
+wllvm -o strdup.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strdup.c
+wllvm -o strcase.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strcase.c
+wllvm -o strcat.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strcat.c
+wllvm -o strcmp.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strcmp.c
+wllvm -o strchr.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strchr.c
+wllvm -o strpbrk.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strpbrk.c
+wllvm -o strstr.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strstr.c
+wllvm -o strtok.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/strtok.c
+wllvm -o base64.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/base64.c
+wllvm -o plerror.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/plerror.c
+wllvm -o plgetopt.o -c -fvisibility=hidden     -Wall -pthread -g -fno-inline -fPIC  -UNDEBUG -DDEBUG_root  -DDEBUG=1 -DHAVE_VISIBILITY_HIDDEN_ATTRIBUTE=1 -DHAVE_VISIBILITY_PRAGMA=1 -DXP_UNIX=1 -D_GNU_SOURCE=1 -DHAVE_FCNTL_FILE_LOCKING=1 -DLINUX=1 -DHAVE_LCHOWN=1 -DHAVE_STRERROR=1 -D_REENTRANT=1  -DFORCE_PR_LOG -D_PR_PTHREADS -UHAVE_CVAR_BUILT_ON_SEM -I../../../dist/include/nspr  ../../../../mozilla/nsprpub/lib/libc/src/plgetopt.c
+rm -f libplc4.a
+/usr/bin/ar cr libplc4.a ./plvrsion.o ./strlen.o ./strcpy.o ./strdup.o ./strcase.o ./strcat.o ./strcmp.o ./strchr.o ./strpbrk.o ./strstr.o ./strtok.o ./base64.o ./plerror.o ./plgetopt.o  
+ranlib libplc4.a
+rm -f libplc4.so
+wllvm -shared -Wl,-soname -Wl,libplc4.so -o libplc4.so ./plvrsion.o ./strlen.o ./strcpy.o ./strdup.o ./strcase.o ./strcat.o ./strcmp.o ./strchr.o ./strpbrk.o ./strstr.o ./strtok.o ./base64.o ./plerror.o ./plgetopt.o    -L../../../dist/lib -lnspr4
+../../../config/./nsinstall -R -m 444 ./libplc4.a ./libplc4.so ../../../dist/lib
+../../../config/./nsinstall -R -m 444 ./libplc4.so ../../../dist/bin
+make[4]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/libc/src'
+make[3]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib/libc'
+make[2]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/lib'
+make[1]: Leaving directory '/workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target'
+NSPR installed to /workdir/PERIOD/evaluation/RADBench/bug6/src/nspr-4.8/target/dist
+./scripts/build-testharness.sh default
+
+Building Test Harness...
+Test Harness Built!
+To Execute, you must specify the shared library path:
+  /workdir/PERIOD/evaluation/RADBench/bug6/bin/test-rw
+./scripts/build-testharness-with-DBDS.sh
+
+Building Test Harness...
+Test Harness Built!
+To Execute, you must specify the shared library path:
+  /workdir/PERIOD/evaluation/RADBench/bug6/bin/test-rw-wllvm
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/RADBench/bug6/bin
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.test-rw-wllvm
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  67K Nov 14 04:38 ConConfig.test-rw-wllvm
+-rw-r--r-- 1 root root 5.2M Nov 14 04:39 mempair.test-rw-wllvm
+-rw-r--r-- 1 root root  65M Nov 14 04:39 mempair.test-rw-wllvm.npz
+-rw-r--r-- 1 root root 1.9M Nov 14 04:38 mssa.test-rw-wllvm
+-rw-r--r-- 1 root root 850K Nov 14 04:38 so.test-rw-wllvm
+-rw-r--r-- 1 root root 1.2M Nov 14 04:38 test-rw-wllvm.bc
+/workdir/PERIOD/evaluation/RADBench/bug6/bin
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/RADBench/bug6/bin/ConConfig.test-rw-wllvm
+[DEBUG]
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:231
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:239
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:243
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:244
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:243
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:243
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:245
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:246
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:247
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:243
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:252
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:467
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:428
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:432
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:440
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:441
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:284
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:292
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:296
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:297
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:298
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:299
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:296
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:304
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:305
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:308
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:338
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:342
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:343
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:348
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:349
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:353
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:354
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:357
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:359
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:361
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:362
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:367
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:368
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:372
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:373
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:487
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:489
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:493
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:500
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:508
+[DEBUG] Instrumentation for ../../../../mozilla/nsprpub/pr/src/threads/prrwlock.c:400
+Test Harness Built!
+To Execute, you must specify the shared library path:
+  /workdir/PERIOD/evaluation/RADBench/bug6/bin/main
+cp ./src/runme.sh ./bin/	
+
+exit: 0
+ended: 2026-11-14T04:39:22Z
+elapsed_sec: 45.330

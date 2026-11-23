@@ -1,0 +1,19 @@
+{
+  "bug_depth": 3,
+  "case": "CS.token_ring_bad",
+  "command": [
+    "python3",
+    "/workdir/PERIOD/tool/DBDS/run_PDS.py",
+    "-y",
+    "-d",
+    "3",
+    "-f",
+    "10000",
+    "./token_ring_bad"
+  ],
+  "host_note": "executed inside period-sctbench",
+  "repetition": 2,
+  "schedule_limit": 10000,
+  "started": "2026-11-13T10:50:14Z",
+  "workdir": "/workdir/PERIOD/evaluation/CS/token_ring"
+}

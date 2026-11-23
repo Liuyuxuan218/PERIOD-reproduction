@@ -1,2 +1,2 @@
-program,valid_reps,detection_count,explored_mean,explored_sd,errors_mean,errors_sd,first_bug_mean,first_bug_sd,first_bug_n,timeouts_mean,paper_schedules,explored_abs_diff,explored_rel_diff
-Misc.safestack,3,0,135,0.0,0,0.0,,,0,0,6519,-6384,-0.9792913023469857
+program,valid_reps,detection_count,explored_mean,explored_sd,explored_n,errors_mean,errors_sd,errors_n,first_bug_mean,first_bug_sd,first_bug_n,timeouts_mean,timeouts_sd,timeouts_n,paper_schedules,explored_abs_diff,explored_rel_diff
+Misc.safestack,3,0,135,0.0,3,0,0.0,3,,,0,0,0.0,3,6519,-6384,-0.9792913023469857

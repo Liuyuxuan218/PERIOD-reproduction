@@ -1,0 +1,111 @@
+cwd: /workdir/PERIOD/evaluation/Chess/StateWorkStealQueue
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-14T00:40:13Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Installation completed. Everything's fine!
++ ./cleanDIR.sh
++ clang++ StateWorkStealQueue.cpp -std=c++0x -pthread -g -O0 -emit-llvm -c -o StateWorkStealQueue.bc
+In file included from StateWorkStealQueue.cpp:12:
+In file included from /usr/lib/gcc/x86_64-linux-gnu/7.5.0/../../../../include/c++/7.5.0/backward/strstream:50:
+/usr/lib/gcc/x86_64-linux-gnu/7.5.0/../../../../include/c++/7.5.0/backward/backward_warning.h:32:2: warning: This file includes at least one deprecated or antiquated header which   may be removed without further notice at a future date. Please use a   non-deprecated interface with equivalent functionality instead. For a   listing of replacement headers and interfaces, consult the file   backward_warning.h. To disable this warning use -Wno-deprecated. [-W#warnings]
+#warning \
+ ^
+StateWorkStealQueue.cpp:80:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(0, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:121:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(1, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:128:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(4, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:154:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(0, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:155:46: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                pthread_create(&handles[i], NULL, Stealer, (void*)(i+1));
+                                                           ^
+StateWorkStealQueue.cpp:158:39: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pthread_create(&m, NULL, MainThread, (void*)tid);
+                                             ^
+7 warnings generated.
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh StateWorkStealQueue
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Chess/StateWorkStealQueue
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.StateWorkStealQueue
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  769 Nov 14 00:40 ConConfig.StateWorkStealQueue
+-rw-r--r-- 1 root root 294K Nov 14 00:40 StateWorkStealQueue.bc
+-rw-rw-r-- 1 root root 4.4K Jan 16  2022 StateWorkStealQueue.cpp
+-rw-r--r-- 1 root root   70 Nov 14 00:40 mempair.StateWorkStealQueue
+-rw-r--r-- 1 root root  25K Nov 14 00:40 mempair.StateWorkStealQueue.npz
+-rw-r--r-- 1 root root 103K Nov 14 00:40 mssa.StateWorkStealQueue
+-rw-r--r-- 1 root root  67K Nov 14 00:40 so.StateWorkStealQueue
+/workdir/PERIOD/evaluation/Chess/StateWorkStealQueue
++ export Con_PATH=/workdir/PERIOD/evaluation/Chess/StateWorkStealQueue/ConConfig.StateWorkStealQueue
++ Con_PATH=/workdir/PERIOD/evaluation/Chess/StateWorkStealQueue/ConConfig.StateWorkStealQueue
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ StateWorkStealQueue.cpp -std=c++0x -pthread -g -O0 -ldl -o StateWorkStealQueue
+In file included from StateWorkStealQueue.cpp:12:
+In file included from /usr/lib/gcc/x86_64-linux-gnu/7.5.0/../../../../include/c++/7.5.0/backward/strstream:50:
+/usr/lib/gcc/x86_64-linux-gnu/7.5.0/../../../../include/c++/7.5.0/backward/backward_warning.h:32:2: warning: This file includes at least one deprecated or antiquated header which   may be removed without further notice at a future date. Please use a   non-deprecated interface with equivalent functionality instead. For a   listing of replacement headers and interfaces, consult the file   backward_warning.h. To disable this warning use -Wno-deprecated. [-W#warnings]
+#warning \
+ ^
+StateWorkStealQueue.cpp:80:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(0, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:121:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(1, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:128:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(4, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:154:32: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                state.Peek(tid).Update(0, 0, (void *) i);
+                                             ^
+StateWorkStealQueue.cpp:155:46: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+                pthread_create(&handles[i], NULL, Stealer, (void*)(i+1));
+                                                           ^
+StateWorkStealQueue.cpp:158:39: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pthread_create(&m, NULL, MainThread, (void*)tid);
+                                             ^
+7 warnings generated.
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Chess/StateWorkStealQueue/ConConfig.StateWorkStealQueue
+[DEBUG]
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:63
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:65
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:44
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:47
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:348
+[DEBUG] Instrumentation for StateWorkStealQueue.cpp:59
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:501
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:504
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:394
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:39
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:314
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:25
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:25
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:32
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:33
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:25
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:159
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:548
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:561
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:565
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:571
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:577
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:575
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:577
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:578
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:579
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:592
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:598
+[DEBUG] Instrumentation for WorkStealQueueWithState.h:442
+
+exit: 0
+ended: 2026-11-14T00:40:17Z
+elapsed_sec: 4.060

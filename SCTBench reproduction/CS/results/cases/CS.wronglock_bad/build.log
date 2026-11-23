@@ -1,0 +1,40 @@
+cwd: /workdir/PERIOD/evaluation/CS/wronglock
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T10:59:37Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CS/wronglock
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./wronglock_bad.c -o wronglock_bad.bc
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh wronglock_bad
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CS/wronglock
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.wronglock_bad
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root   95 Nov 13 10:59 ConConfig.wronglock_bad
+-rw-r--r-- 1 root root  431 Nov 13 10:59 mempair.wronglock_bad
+-rw-r--r-- 1 root root 6.0K Nov 13 10:59 mempair.wronglock_bad.npz
+-rw-r--r-- 1 root root 3.0K Nov 13 10:59 mssa.wronglock_bad
+-rw-r--r-- 1 root root 2.6K Nov 13 10:59 so.wronglock_bad
+-rw-r--r-- 1 root root  13K Nov 13 10:59 wronglock_bad.bc
+-rw-rw-r-- 1 root root 2.7K Jan 16  2022 wronglock_bad.c
+/workdir/PERIOD/evaluation/CS/wronglock
++ export Con_PATH=/workdir/PERIOD/evaluation/CS/wronglock/ConConfig.wronglock_bad
++ Con_PATH=/workdir/PERIOD/evaluation/CS/wronglock/ConConfig.wronglock_bad
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./wronglock_bad.bc -o wronglock_bad -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CS/wronglock/ConConfig.wronglock_bad
+[DEBUG]
+[DEBUG] Instrumentation for wronglock_bad.c:19
+[DEBUG] Instrumentation for wronglock_bad.c:20
+[DEBUG] Instrumentation for wronglock_bad.c:21
+[DEBUG] Instrumentation for wronglock_bad.c:98
+[DEBUG] Instrumentation for wronglock_bad.c:32
+
+exit: 0
+ended: 2026-11-13T10:59:38Z
+elapsed_sec: 0.631

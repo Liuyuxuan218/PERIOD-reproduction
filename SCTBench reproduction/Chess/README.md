@@ -12,7 +12,7 @@ The programs are `Chess.WSQ`, `Chess.IWSQ`, `Chess.SWSQ`, `Chess.IWSQWS`. Their 
 
 4 of the 4 programs have three valid repetitions. This group has 12 valid repetitions.
 
-A results cell with two or more repetitions is the mean ± the sample standard deviation, rounded to one decimal place when the value is not an integer. A single observation is the measured value, and the sample standard deviation is unavailable. `No completed run` means the program has no valid metrics file. `No error detected` means the valid runs finished without an error interleaving. A measured error count of 0 is a real zero. `Measurement unavailable` would mean a valid record omitted the field. In these records, every valid repetition of a program either recorded a bug or recorded none, so a printed first-bug number uses the same observation count as the valid-repetition count. [results/summary.csv](results/summary.csv) stores 0.0 in a standard-deviation column for a one-repetition program. That 0.0 is the script's placeholder, not a sample standard deviation.
+A results cell with two or more repetitions is the mean ± the sample standard deviation, rounded to one decimal place when the value is not an integer. A single observation is the measured value, and the sample standard deviation is unavailable. `No completed run` means the program has no valid metrics file. `No error detected` means the valid runs finished without an error interleaving. A measured error count of 0 is a real zero. `Measurement unavailable` would mean a valid record omitted the field. In these records, every valid repetition of a program either recorded a bug or recorded none, so a printed first-bug number uses the same observation count as the valid-repetition count. [results/summary.csv](results/summary.csv) leaves a standard-deviation field empty, and [results/summary.json](results/summary.json) stores null, when fewer than two observations exist. A standard deviation of 0 is retained only when at least two observations are identical. The observation counts are `explored_n`, `errors_n`, `first_bug_n`, and `timeouts_n`. The submitted metrics files are historical records. They do not contain the provenance fingerprint now required before a run can be reused. Recovered scheduler logs, checksums, and remaining error or timeout files are linked from [results/evidence.md](results/evidence.md). A submitted measurement with no recovered log is not independently verifiable from raw scheduler output. Reparsing each recovered log reproduces the submitted metrics. The logs do not record source or executable checksums, so these runs are not relabeled as newly verified.
 
 | Program | Valid repetitions | Schedules explored | Error interleavings | First bug schedule | Timeout interleavings | Elapsed time (s) |
 |---|---:|---|---|---|---|---|
@@ -23,7 +23,7 @@ A results cell with two or more repetitions is the mean ± the sample standard d
 
 4 of the 4 programs have three valid repetitions. This group contributes 12 valid repetitions. `Chess.SWSQ` and `Chess.IWSQWS` recorded a schedule total above the configured budget. The table keeps the recorded totals.
 
-The per-program records are in [results/cases/](results/cases/). The group tables are [results/summary.csv](results/summary.csv) and [results/per_run.csv](results/per_run.csv). The runner's last-attempt snapshot for these programs is [results/status.md](results/status.md); its explored column is the last attempt, not the mean. No raw scheduler log is stored here, so this report does not quote one and does not claim that a schedule was replayed.
+The per-program records are in [results/cases/](results/cases/). The group tables are [results/summary.csv](results/summary.csv) and [results/per_run.csv](results/per_run.csv). The runner's last-attempt snapshot for these programs is [results/status.md](results/status.md); its explored column is the last attempt, not the mean. Scheduler stdout for every submitted metrics file in this group was recovered unchanged. [results/evidence.md](results/evidence.md) links each `run.log.gz`, its checksum, the matching command record, and any error or timeout files that were still present. Earlier runs kept at most two files in each Errors or Timeouts directory; files removed before this repair were not reconstructed. No schedule was replayed as part of this repair.
 
 ## 3. Environment and Configuration
 
@@ -153,6 +153,8 @@ To aggregate an external cases directory without copying it, pass that directory
 python3 "${GROUP}/scripts/analyze.py" "${SCT_DATA}/sctbench/cases"
 ```
 
+
+A completed repetition is reused only when its provenance fingerprint matches the requested program source, tool commit, build command, compiler toolchain, executable checksum, workload arguments, schedule budget, bug depth, timeout, repetition, and seed. `build.ok` does not skip compilation unless `build.json` records those build identities and the executable is still present. A historical metrics file without that fingerprint stays in its original directory. A new execution is written to a separate attempt directory.
 
 ## 5. Comparison with Table 2
 

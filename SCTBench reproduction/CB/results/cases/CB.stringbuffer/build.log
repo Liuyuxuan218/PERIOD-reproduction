@@ -1,0 +1,82 @@
+cwd: /workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T10:46:36Z
+mesg: ttyname failed: Inappropriate ioctl for device
+/workdir/PERIOD
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4
++ ./cleanDIR.sh
++ CXX=wllvm++
++ make
+wllvm++ -g  -c -o stringbuffer.o stringbuffer.cpp -lpthread -ldl 
+stringbuffer.cpp:11:60: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+StringBuffer *StringBuffer::null_buffer = new StringBuffer("null");
+                                                           ^
+stringbuffer.cpp:82:11: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    str = "null";
+          ^
+2 warnings generated.
+wllvm++ -g  -o main main.cpp stringbuffer.o -lpthread -ldl 
+main.cpp:9:41: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+StringBuffer *buffer = new StringBuffer("abc");
+                                        ^
+main.cpp:14:17: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        buffer->append("abc");
+                       ^
+2 warnings generated.
++ extract-bc ./main
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh main
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.main
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  508 Nov 13 10:46 ConConfig.main
+-rwxr-xr-x 1 root root  24K Nov 13 10:46 main
+-rw-r--r-- 1 root root  27K Nov 13 10:46 main.bc
+-rw-r--r-- 1 root root  130 Nov 13 10:46 main.bc.r
+-rw-rw-r-- 1 root root  713 Jan 16  2022 main.cpp
+-rw-r--r-- 1 root root 4.9K Nov 13 10:46 mempair.main
+-rw-r--r-- 1 root root  55K Nov 13 10:46 mempair.main.npz
+-rw-r--r-- 1 root root 5.5K Nov 13 10:46 mssa.main
+-rw-r--r-- 1 root root  11K Nov 13 10:46 so.main
+/workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4
++ export Con_PATH=/workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4/ConConfig.main
++ Con_PATH=/workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4/ConConfig.main
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g -fsanitize=address ./main.bc -o main -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/CB/stringbuffer-jdk1.4/ConConfig.main
+[DEBUG]
+[DEBUG] Instrumentation for stringbuffer.cpp:80
+[DEBUG] Instrumentation for stringbuffer.cpp:86
+[DEBUG] Instrumentation for stringbuffer.cpp:87
+[DEBUG] Instrumentation for stringbuffer.cpp:89
+[DEBUG] Instrumentation for stringbuffer.cpp:90
+[DEBUG] Instrumentation for stringbuffer.cpp:121
+[DEBUG] Instrumentation for stringbuffer.cpp:129
+[DEBUG] Instrumentation for stringbuffer.cpp:130
+[DEBUG] Instrumentation for stringbuffer.cpp:131
+[DEBUG] Instrumentation for stringbuffer.cpp:132
+[DEBUG] Instrumentation for stringbuffer.cpp:41
+[DEBUG] Instrumentation for stringbuffer.cpp:42
+[DEBUG] Instrumentation for stringbuffer.cpp:49
+[DEBUG] Instrumentation for stringbuffer.cpp:53
+[DEBUG] Instrumentation for stringbuffer.cpp:59
+[DEBUG] Instrumentation for stringbuffer.cpp:64
+[DEBUG] Instrumentation for stringbuffer.cpp:70
+[DEBUG] Instrumentation for stringbuffer.cpp:71
+[DEBUG] Instrumentation for stringbuffer.cpp:73
+[DEBUG] Instrumentation for stringbuffer.cpp:74
+[DEBUG] Instrumentation for stringbuffer.cpp:96
+[DEBUG] Instrumentation for stringbuffer.cpp:99
+[DEBUG] Instrumentation for stringbuffer.cpp:100
+[DEBUG] Instrumentation for stringbuffer.cpp:106
+[DEBUG] Instrumentation for stringbuffer.cpp:107
++ cd ..
+
+exit: 0
+ended: 2026-11-13T10:46:37Z
+elapsed_sec: 1.288

@@ -1,0 +1,59 @@
+cwd: /workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T16:25:28Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Everything's fine!
++ cd /workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer
++ ./cleanDIR.sh
++ clang -g -emit-llvm -c ./boundedBuffer.c -o boundedBuffer.bc
+./boundedBuffer.c:305:48: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        status = bounded_buf_put(thread->bbuf, (void*)((int)temp));
+                                               ^
+1 warning generated.
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh boundedBuffer
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.boundedBuffer
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  360 Nov 13 16:25 ConConfig.boundedBuffer
+-rw-r--r-- 1 root root  24K Nov 13 16:25 boundedBuffer.bc
+-rw-rw-r-- 1 root root 9.0K Jan 16  2022 boundedBuffer.c
+-rw-r--r-- 1 root root 1.8K Nov 13 16:25 mempair.boundedBuffer
+-rw-r--r-- 1 root root  22K Nov 13 16:25 mempair.boundedBuffer.npz
+-rw-r--r-- 1 root root 8.2K Nov 13 16:25 mssa.boundedBuffer
+-rw-r--r-- 1 root root 9.8K Nov 13 16:25 so.boundedBuffer
+/workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer
++ export Con_PATH=/workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer/ConConfig.boundedBuffer
++ Con_PATH=/workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer/ConConfig.boundedBuffer
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ -g ./boundedBuffer.bc -o boundedBuffer -lpthread -ldl
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Inspect_benchmarks/boundedBuffer/ConConfig.boundedBuffer
+[DEBUG]
+[DEBUG] Instrumentation for boundedBuffer.c:147
+[DEBUG] Instrumentation for boundedBuffer.c:152
+[DEBUG] Instrumentation for boundedBuffer.c:154
+[DEBUG] Instrumentation for boundedBuffer.c:156
+[DEBUG] Instrumentation for boundedBuffer.c:156
+[DEBUG] Instrumentation for boundedBuffer.c:162
+[DEBUG] Instrumentation for boundedBuffer.c:166
+[DEBUG] Instrumentation for boundedBuffer.c:167
+[DEBUG] Instrumentation for boundedBuffer.c:168
+[DEBUG] Instrumentation for boundedBuffer.c:186
+[DEBUG] Instrumentation for boundedBuffer.c:190
+[DEBUG] Instrumentation for boundedBuffer.c:192
+[DEBUG] Instrumentation for boundedBuffer.c:195
+[DEBUG] Instrumentation for boundedBuffer.c:195
+[DEBUG] Instrumentation for boundedBuffer.c:203
+[DEBUG] Instrumentation for boundedBuffer.c:210
+[DEBUG] Instrumentation for boundedBuffer.c:215
+[DEBUG] Instrumentation for boundedBuffer.c:219
+[DEBUG] Instrumentation for boundedBuffer.c:220
+[DEBUG] Instrumentation for boundedBuffer.c:222
+
+exit: 0
+ended: 2026-11-13T16:25:29Z
+elapsed_sec: 0.615

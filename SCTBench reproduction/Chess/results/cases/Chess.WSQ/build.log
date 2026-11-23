@@ -1,0 +1,54 @@
+cwd: /workdir/PERIOD/evaluation/Chess/WorkStealQueue
+cmd: ["bash", "-lc", "./build.sh"]
+started: 2026-11-13T10:51:13Z
+mesg: ttyname failed: Inappropriate ioctl for device
+Installation completed. Everything's fine!
++ ./cleanDIR.sh
++ clang++ WorkStealQueue.cpp -std=c++0x -pthread -g -O0 -emit-llvm -c -o WorkStealQueue.bc
++ /workdir/PERIOD/tool/staticAnalysis/staticAnalysis.sh WorkStealQueue
+[*] Making static analysis directory
+[*] DIR: /workdir/PERIOD/evaluation/Chess/WorkStealQueue
+[*] ROOT_DIR: /workdir/PERIOD
+[*] Generating mssa.WorkStealQueue
+[*] Change format for instrumentation
+[*] Analyze Sensitive Memory Operations
+[*] Update Memory Group with Sensitive Memory Operations
+[*] Dumps mempairs and save it into .npz file
+-rw-r--r-- 1 root root  379 Nov 13 10:51 ConConfig.WorkStealQueue
+-rw-r--r-- 1 root root  59K Nov 13 10:51 WorkStealQueue.bc
+-rw-rw-r-- 1 root root 2.4K Jan 16  2022 WorkStealQueue.cpp
+-rw-rw-r-- 1 root root 9.9K Jan 16  2022 WorkStealQueue.h
+-rw-r--r-- 1 root root   60 Nov 13 10:51 mempair.WorkStealQueue
+-rw-r--r-- 1 root root  16K Nov 13 10:51 mempair.WorkStealQueue.npz
+-rw-r--r-- 1 root root 7.5K Nov 13 10:51 mssa.WorkStealQueue
+-rw-r--r-- 1 root root  18K Nov 13 10:51 so.WorkStealQueue
+/workdir/PERIOD/evaluation/Chess/WorkStealQueue
++ export Con_PATH=/workdir/PERIOD/evaluation/Chess/WorkStealQueue/ConConfig.WorkStealQueue
++ Con_PATH=/workdir/PERIOD/evaluation/Chess/WorkStealQueue/ConConfig.WorkStealQueue
++ /workdir/PERIOD/tool/staticAnalysis/DBDS-INSTRU/dbds-clang-fast++ WorkStealQueue.cpp -std=c++0x -pthread -g -O0 -ldl -o WorkStealQueue
+[DEBUG] The ConConfig file was successfully opened.
+[DEBUG] The file is /workdir/PERIOD/evaluation/Chess/WorkStealQueue/ConConfig.WorkStealQueue
+[DEBUG]
+[DEBUG] Instrumentation for WorkStealQueue.h:212
+[DEBUG] Instrumentation for WorkStealQueue.h:226
+[DEBUG] Instrumentation for WorkStealQueue.cpp:52
+[DEBUG] Instrumentation for WorkStealQueue.h:318
+[DEBUG] Instrumentation for WorkStealQueue.h:324
+[DEBUG] Instrumentation for WorkStealQueue.h:254
+[DEBUG] Instrumentation for WorkStealQueue.h:338
+[DEBUG] Instrumentation for WorkStealQueue.h:347
+[DEBUG] Instrumentation for WorkStealQueue.h:353
+[DEBUG] Instrumentation for WorkStealQueue.h:357
+[DEBUG] Instrumentation for WorkStealQueue.h:366
+[DEBUG] Instrumentation for WorkStealQueue.h:364
+[DEBUG] Instrumentation for WorkStealQueue.h:366
+[DEBUG] Instrumentation for WorkStealQueue.h:367
+[DEBUG] Instrumentation for WorkStealQueue.h:368
+[DEBUG] Instrumentation for WorkStealQueue.h:373
+[DEBUG] Instrumentation for WorkStealQueue.h:378
+[DEBUG] Instrumentation for WorkStealQueue.h:272
+[DEBUG] Instrumentation for WorkStealQueue.h:282
+
+exit: 0
+ended: 2026-11-13T10:51:14Z
+elapsed_sec: 1.145

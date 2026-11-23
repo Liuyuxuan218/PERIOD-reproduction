@@ -1,0 +1,2 @@
+[[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+circular_buffer_bad: ./circular_buffer_bad.c:84: void *t2(void *): Assertion `removeLogElement()==i' failed.
