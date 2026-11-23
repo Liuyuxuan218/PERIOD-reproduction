@@ -1,0 +1,159 @@
+{
+  "method": "IPB",
+  "scheduler_mode": "pb",
+  "implementation_repository": "https://github.com/mc-imperial/sctbench",
+  "implementation_commit": "d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2",
+  "maple_repository": "https://github.com/jieyu/maple",
+  "maple_commit_observed": "14b2769a07473f9eca6ea1bc7f57bbefe1db46f4",
+  "paper_schedule_budget": 10000,
+  "paper_repetitions": 10,
+  "executed_campaigns": 0,
+  "status": "not_started",
+  "programs": [
+    {
+      "cve": "CVE-2009-3547",
+      "program": "Linux-2.6.32-rc6",
+      "source_tree_sha256": "ae806d157661971fa19fc7d756405c088ee317e043d2f70979e066143d9b432e",
+      "bug_rows": [
+        {
+          "bug_type": "NPD",
+          "bug_depth": 1,
+          "row_index": 1
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2011-2183",
+      "program": "Linux-2.6.39-3",
+      "source_tree_sha256": "103749b3db1dbea0a4df1ee6dcb75987bffff30dbbf70400fc0fe7f9eee8725f",
+      "bug_rows": [
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 1
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2013-1792",
+      "program": "Linux-2.8.3",
+      "source_tree_sha256": "29c200be9db6fa6f343ad0c93add1f8b457e177fddc94e16ef1c12482ebc2a00",
+      "bug_rows": [
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 1
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2015-7550",
+      "program": "Linux-4.3.4",
+      "source_tree_sha256": "226528942253e934f145c5d5531aeb2a226b9356c8f7ec7646df302954966299",
+      "bug_rows": [
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 1
+        },
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 2
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-1972",
+      "program": "Firefox-45.0",
+      "source_tree_sha256": "b2253e7c66facb98efad079befcbe37b7ffb52e0381852749a32f52bb91ba93e",
+      "bug_rows": [
+        {
+          "bug_type": "UAF",
+          "bug_depth": 4,
+          "row_index": 1
+        },
+        {
+          "bug_type": "DF",
+          "bug_depth": 5,
+          "row_index": 2
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-1973",
+      "program": "Firefox-45.0",
+      "source_tree_sha256": "8b73f862aa2643c97cab58890a6990fcaa44fb908bcb4ac00f8d5f8de7e5a999",
+      "bug_rows": [
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 1
+        },
+        {
+          "bug_type": "UAF",
+          "bug_depth": 3,
+          "row_index": 2
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-7911",
+      "program": "Linux-4.6.6",
+      "source_tree_sha256": "c0e12c1224ddac6c7f44d76b056ea6c141926f749a63b06bacef3d88860abe7c",
+      "bug_rows": [
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 1
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2016-9806",
+      "program": "Linux-4.6.3",
+      "source_tree_sha256": "814795eda24b6fa308d96e183e78a5656f40fda4f9d0b1f034046cdfc0303b72",
+      "bug_rows": [
+        {
+          "bug_type": "DF",
+          "bug_depth": 2,
+          "row_index": 1
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-15265",
+      "program": "Linux-4.9.13",
+      "source_tree_sha256": "d2ef83c192e2d03004674ff46f872957a7cc52dcc8956c4b46244e0c7ac7a609",
+      "bug_rows": [
+        {
+          "bug_type": "UAF",
+          "bug_depth": 2,
+          "row_index": 1
+        },
+        {
+          "bug_type": "NPD",
+          "bug_depth": 2,
+          "row_index": 2
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2017-6346",
+      "program": "Linux-4.13.8",
+      "source_tree_sha256": "c3f27b7eb46bbd8a2f967f2c4c903511eef3b54ac64f3c90d4b42a28538f3c10",
+      "bug_rows": [
+        {
+          "bug_type": "UAF",
+          "bug_depth": 3,
+          "row_index": 1
+        },
+        {
+          "bug_type": "DF",
+          "bug_depth": 2,
+          "row_index": 2
+        }
+      ]
+    }
+  ]
+}

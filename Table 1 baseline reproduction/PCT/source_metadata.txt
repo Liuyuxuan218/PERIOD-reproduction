@@ -1,0 +1,74 @@
+Benchmark sources
+  Location checked: /home/qiuyang/period-root/workdir/PERIOD/evaluation/ConVul-CVE-Benchmarks
+  Origin named by the PERIOD README: https://github.com/mryancai/ConVul
+  The exported PERIOD tree did not return a git HEAD when rev-parse was run on 2026-11-23.
+  The image previously used for SCTBench in this repository is wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc, PERIOD commit b6f72a7b06d01ffa7114b640312873ec2578a5ea.
+  Each tree hash is SHA-256 over the sorted lines '<sha256>  <relative path>' for .c, .cpp, .h, .sh, Makefile, and build.sh.
+  build.sh and cleanDIR.sh belong to the PERIOD image. They are not an SCTBench or Maple build.
+  README.md and .gitignore were not included.
+
+CVE-2009-3547
+  2009-3547.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 ae806d157661971fa19fc7d756405c088ee317e043d2f70979e066143d9b432e
+
+CVE-2011-2183
+  2011-2183.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 103749b3db1dbea0a4df1ee6dcb75987bffff30dbbf70400fc0fe7f9eee8725f
+
+CVE-2013-1792
+  2013-1792.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 29c200be9db6fa6f343ad0c93add1f8b457e177fddc94e16ef1c12482ebc2a00
+
+CVE-2015-7550
+  2015-7550.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 226528942253e934f145c5d5531aeb2a226b9356c8f7ec7646df302954966299
+
+CVE-2016-1972
+  2016-1972.c
+  build.sh
+  cleanDIR.sh
+  tree_sha256 b2253e7c66facb98efad079befcbe37b7ffb52e0381852749a32f52bb91ba93e
+
+CVE-2016-1973
+  2016-1973.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 8b73f862aa2643c97cab58890a6990fcaa44fb908bcb4ac00f8d5f8de7e5a999
+
+CVE-2016-7911
+  2016-7911.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 c0e12c1224ddac6c7f44d76b056ea6c141926f749a63b06bacef3d88860abe7c
+
+CVE-2016-9806
+  2016-9806.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 814795eda24b6fa308d96e183e78a5656f40fda4f9d0b1f034046cdfc0303b72
+
+CVE-2017-15265
+  2017-15265.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 d2ef83c192e2d03004674ff46f872957a7cc52dcc8956c4b46244e0c7ac7a609
+
+CVE-2017-6346
+  2017-6346.cpp
+  build.sh
+  cleanDIR.sh
+  tree_sha256 c3f27b7eb46bbd8a2f967f2c4c903511eef3b54ac64f3c90d4b42a28538f3c10
+
+Scheduler implementation
+  SCTBench https://github.com/mc-imperial/sctbench commit d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2
+  Maple https://github.com/jieyu/maple commit 14b2769a07473f9eca6ea1bc7f57bbefe1db46f4
+  Neither repository was built here. The commits are the HEAD values returned by git ls-remote on 2026-11-23.
+  PERIOD README states that IPB and PCT are implemented in SCTBench and that Maple is https://github.com/jieyu/maple.

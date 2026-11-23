@@ -41,3 +41,12 @@ Contributor: 1240019547 邱洋.
 - [Misc](SCTBench%20reproduction/Misc/README.md)
 - [Splash2](SCTBench%20reproduction/Splash2/README.md)
 - [RADBench](SCTBench%20reproduction/RADBench/README.md)
+
+## Table 1 IPB and PCT columns
+
+The IPB and PCT columns of Table 1 were not executed. SCTBench supplies those schedulers and requires Intel PIN on a kernel no newer than 3.x. This machine is running WSL2 kernel 6.18.58.1, and PIN, Maple, and the previously described VirtualBox guest are not installed. The fifteen bug-type rows, the published cells, and the preflight diagnostic are in the two method directories. No detection count from this attempt is reported.
+
+Contributor: 1240019547 邱洋.
+
+- [IPB](Table%201%20baseline%20reproduction/IPB/README.md)
+- [PCT](Table%201%20baseline%20reproduction/PCT/README.md)

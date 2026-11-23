@@ -1,0 +1,297 @@
+{
+  "source": "ICSE 2022 PERIOD, Table 1, PDF page 8",
+  "schedule_limit": 10000,
+  "repetitions_stated_in_section_4_1_3": 10,
+  "ipb_total_bugs": 8,
+  "ipb_buggy_programs": 7,
+  "pct_total_bugs": 8,
+  "pct_buggy_programs": 7,
+  "blank_cell": "A null schedule cell is blank in the printed table.",
+  "rows": [
+    {
+      "cve": "CVE-2009-3547",
+      "program": "Linux-2.6.32-rc6",
+      "bug_type": "NPD",
+      "bug_depth": 1,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 3,
+        "schedules_explored": 36,
+        "buggy_schedules": 5,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 5,
+        "buggy_schedules": 3333,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2011-2183",
+      "program": "Linux-2.6.39-3",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 8,
+        "schedules_explored": 98,
+        "buggy_schedules": 11,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 5,
+        "buggy_schedules": 394,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2013-1792",
+      "program": "Linux-2.8.3",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 15,
+        "schedules_explored": 321,
+        "buggy_schedules": 18,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 61,
+        "buggy_schedules": 124,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2015-7550",
+      "program": "Linux-4.3.4",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 8,
+        "schedules_explored": 73,
+        "buggy_schedules": 11,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 3,
+        "buggy_schedules": 394,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2015-7550",
+      "program": "Linux-4.3.4",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 2,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 16,
+        "schedules_explored": null,
+        "buggy_schedules": 881,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 3,
+        "buggy_schedules": 731,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2016-1972",
+      "program": "Firefox-45.0",
+      "bug_type": "UAF",
+      "bug_depth": 4,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 91,
+        "schedules_explored": "L",
+        "buggy_schedules": 918,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 134,
+        "buggy_schedules": 15,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2016-1972",
+      "program": "Firefox-45.0",
+      "bug_type": "DF",
+      "bug_depth": 5,
+      "row_index": 2,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    },
+    {
+      "cve": "CVE-2016-1973",
+      "program": "Firefox-45.0",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    },
+    {
+      "cve": "CVE-2016-1973",
+      "program": "Firefox-45.0",
+      "bug_type": "UAF",
+      "bug_depth": 3,
+      "row_index": 2,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": "L",
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    },
+    {
+      "cve": "CVE-2016-7911",
+      "program": "Linux-4.6.6",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 8,
+        "schedules_explored": 204,
+        "buggy_schedules": 66,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 5,
+        "buggy_schedules": 511,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2016-9806",
+      "program": "Linux-4.6.3",
+      "bug_type": "DF",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": 9,
+        "schedules_explored": 226,
+        "buggy_schedules": 84,
+        "bug_reported": true
+      },
+      "pct": {
+        "schedules_to_first_bug": 3,
+        "buggy_schedules": 1135,
+        "bug_reported": true
+      }
+    },
+    {
+      "cve": "CVE-2017-15265",
+      "program": "Linux-4.9.13",
+      "bug_type": "UAF",
+      "bug_depth": 2,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": 88,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    },
+    {
+      "cve": "CVE-2017-15265",
+      "program": "Linux-4.9.13",
+      "bug_type": "NPD",
+      "bug_depth": 2,
+      "row_index": 2,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    },
+    {
+      "cve": "CVE-2017-6346",
+      "program": "Linux-4.13.8",
+      "bug_type": "UAF",
+      "bug_depth": 3,
+      "row_index": 1,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": "L",
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    },
+    {
+      "cve": "CVE-2017-6346",
+      "program": "Linux-4.13.8",
+      "bug_type": "DF",
+      "bug_depth": 2,
+      "row_index": 2,
+      "subthreads": 2,
+      "ipb": {
+        "schedules_to_first_bug": null,
+        "schedules_explored": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      },
+      "pct": {
+        "schedules_to_first_bug": null,
+        "buggy_schedules": 0,
+        "bug_reported": false
+      }
+    }
+  ]
+}

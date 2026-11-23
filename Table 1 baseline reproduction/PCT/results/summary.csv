@@ -1,0 +1,16 @@
+cve,bug_type,row_index,completed_campaigns,detected_campaigns,no_bug_campaigns,not_started,schedules_to_first_bug_mean,schedules_to_first_bug_sd,schedules_to_first_bug_n,schedules_explored_mean,schedules_explored_sd,schedules_explored_n,buggy_schedules_mean,buggy_schedules_sd,buggy_schedules_n
+CVE-2009-3547,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2011-2183,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2013-1792,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2015-7550,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2015-7550,NPD,2,0,0,0,True,,,0,,,0,,,0
+CVE-2016-1972,UAF,1,0,0,0,True,,,0,,,0,,,0
+CVE-2016-1972,DF,2,0,0,0,True,,,0,,,0,,,0
+CVE-2016-1973,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2016-1973,UAF,2,0,0,0,True,,,0,,,0,,,0
+CVE-2016-7911,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2016-9806,DF,1,0,0,0,True,,,0,,,0,,,0
+CVE-2017-15265,UAF,1,0,0,0,True,,,0,,,0,,,0
+CVE-2017-15265,NPD,2,0,0,0,True,,,0,,,0,,,0
+CVE-2017-6346,UAF,1,0,0,0,True,,,0,,,0,,,0
+CVE-2017-6346,DF,2,0,0,0,True,,,0,,,0,,,0

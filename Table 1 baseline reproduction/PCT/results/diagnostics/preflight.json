@@ -1,0 +1,14 @@
+{
+  "status": "blocked",
+  "kernel": "6.18.58.1-microsoft-standard-WSL2",
+  "pin_home": null,
+  "pin_on_path": null,
+  "sctbench_root": null,
+  "reasons": [
+    "SCTBench documents that Intel PIN in this artifact requires kernel version 3.x or older. This process sees 6.18.58.1-microsoft-standard-WSL2.",
+    "PIN_HOME is not a directory.",
+    "No pin executable is on PATH.",
+    "SCTBENCH_ROOT does not contain scripts/run_many.py."
+  ],
+  "bug_result": null
+}
