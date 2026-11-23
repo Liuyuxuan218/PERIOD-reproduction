@@ -1,52 +1,42 @@
 # Protocol
 
-This protocol was written from the PERIOD paper and the SCTBench launcher at commit `d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2`. No formal campaign was started. Nothing in this file is a measured Table 1 result.
+This file states what the paper and the SCTBench launcher each say, and which reading is being executed. Measured numbers are not in this file.
 
-## Official sources
+## Sources
 
-- Paper: https://wcventure.github.io/pdf/ICSE2022_PERIOD.pdf, Section 4.1.3 and Table 1.
-- PERIOD README: https://github.com/wcventure/PERIOD. It says IPB, IDB, DFS, PCT, and Random are implemented in SCTBench, and it points to Maple at https://github.com/jieyu/maple.
-- SCTBench: https://github.com/mc-imperial/sctbench, commit `d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2`.
-- Maple HEAD reported by `git ls-remote` on 2026-11-23: `14b2769a07473f9eca6ea1bc7f57bbefe1db46f4`. Maple was not checked out or built.
-- CVE programs: `evaluation/ConVul-CVE-Benchmarks` in the local PERIOD tree. Checksums are in `source_metadata.txt`. These ten programs are not entries in SCTBench's own benchmark list.
+- PERIOD paper, Section 4.1.3 and Table 1: https://wcventure.github.io/pdf/ICSE2022_PERIOD.pdf
+- PERIOD README: PCT is implemented in https://github.com/mc-imperial/sctbench
+- SCTBench commit `d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2`, files `scripts/run_many.py`, `scripts/run_single.py`, and `maple/script/maple/runner.py`
 
-## Commands that the launcher actually accepts
+## What the paper says
 
-From a sourced SCTBench environment, after `PIN_HOME` is set:
+Section 4.1.3 says that every controlled-concurrency technique checks bugs whose depth is no more than 5 on the CVE benchmark. Each invocation may explore up to 10,000 schedules. Each technique is invoked 10 times on each program. Table 1 prints schedules to the first bug and buggy schedules for PCT. It does not print a total-schedule column for PCT. `L` and `%` have the same meanings as in the rest of the table.
 
-```bash
-python scripts/run_many.py --mode pct --limit 10000 --timelimit 30 benchmarks/buggy.txt
-```
+An invocation is one search campaign. It is not one schedule and it is not one of the launcher's parallel jobs.
 
-`--limit` defaults to 10000 and `--timelimit` defaults to 30 seconds in `run_many.py`. The README's examples use `--timelimit 300`. The paper does not state the per-execution timeout. `buggy.txt` does not list these CVE programs, so that command is the launcher's interface, not a command that already targets Table 1.
+## What the launcher does
 
-The CVE programs in the PERIOD tree are built by that tree's `build.sh`. Those scripts are PERIOD instrumentations. They are not Maple/PIN builds, and running them would not select IPB or PCT.
+`run_many.py --mode pct` sets `bug_depth` to `--max`. The default `--max` is 5, so `pct_d=5`. The runner passes that value as `-pct_d` with `-enable_pct_scheduler 1` and `-enable_chess_scheduler 0`. `-pct_n` comes from the benchmark list's thread field, and `-pct_k` comes from that list's step field. These ten CVE programs are not in that list.
 
-## Paper settings that are explicit
+The same function sets `seed=0` in source and splits `--limit` across `--numjobs`. The default is 10 jobs of `10000/10 = 1000` schedules. Job `i` fast-forwards the random stream by `i * 1000` and then draws one 32-bit seed per execution. The jobs continue one random stream. They do not restart it, and they do not use distinct campaign seeds.
 
-Section 4.1.3 sets the schedule bound for every CCT technique so that it checks bugs of depth no more than 5 on the CVE benchmark. The footnote of Table 1 says every program has two subthreads. Each invocation may explore up to 10,000 schedules. The paper says each technique is run 10 times per program. The published hardware is an Intel Xeon Silver 4214, Ubuntu 18.04, GCC 7.5, and LLVM 10.0.
+The PCT loop does not stop when a target crashes. It runs until `limit` executions have printed `finished execution`, unless the timeout flag is set. Each execution is counted, whether or not it crashes.
 
-`L` in the table means that 10,000-schedule limit was reached. `%` means no bug was found. A blank schedule cell is blank in the PDF; it is not filled in from a neighbouring row.
+Race profiling is a separate `mode=race` execution and is not part of the PCT `finished execution` count.
 
-## Counting
+IPB's `pb_limit` and PCT's `pct_d` are different fields. The paper's word "depth" is applied to both, but the code does not implement them with the same loop.
 
-IPB's published columns are schedules to the first bug, schedules explored, and buggy schedules. PCT's published columns are schedules to the first bug and buggy schedules. Total PCT executions would be kept as supporting evidence, because the paper does not print that column.
+## Conflict and the protocol being executed
 
-A repetition is one complete search campaign. One schedule inside a campaign is not a repetition. The paper asks for 10 campaigns. This project also requires at least three. Neither number was run.
+The paper's ten invocations, each with a budget of 10,000, are not the launcher's ten jobs of 1,000 under one seed. The launcher's job split is recorded here and is not the campaign being run.
 
-For a campaign that finds a bug, the first-bug statistic is conditional on detection. A campaign that finishes without a bug stays visible as no detection. It is not replaced by zero or by 10,000. A timeout, a tool crash, a build failure, and an interrupted campaign are separate statuses. A SEGV is not classified as NPD unless the log identifies that bug type.
+The executed PCT protocol is:
 
+- Ten campaigns per program.
+- Each campaign has `limit=10000`, `pct_d=5`, `start_index=0`, and its own seed `202611231` through `202611240`.
+- `pct_n` is the number of `HandleThreadStart` lines observed in that program's race profile. For CVE-2009-3547 that number is 3, which is the main thread plus the paper's two subthreads.
+- `pct_k` is at least 64 and at least twice the `PCT NUM STEPS` value observed in a one-schedule probe. The paper does not publish `pct_k`. The probe value is a measured setting, not a published one.
+- One race-profiling execution comes first and is not counted in the 10,000.
+- The campaign does not stop at the first crash. A Pin assertion or a runner crash is a tool failure. `signal 11` is a target crash. It is not by itself classified as NPD, UAF, or DF.
 
-## PCT control flow in the official launcher
-
-`scripts/run_many.py --mode pct` sets `bug_depth` to `--max`. The default `--max` is 5. It also sets `seed` to 0 in the launcher source. The default `--numjobs` is 10, and each job receives `limit / numjobs` schedules (1,000 when the limit is 10,000). The jobs differ by `start_index`, not by seed.
-
-That split is one launcher invocation whose parts add to 10,000 schedules. Section 4.1.3 also says that each invocation has a budget of up to 10,000 schedules and that each technique is invoked 10 times. Those two readings are not the same experiment. The paper does not say which one produced Table 1, and it does not publish the PCT seeds. This protocol does not treat `--numjobs 10` as ten independent campaigns, and it does not invent seeds.
-
-The RQ3 submission used PCT depth 3 on SCTBench overhead workloads. That setting belongs to a different task and is not used here.
-
-## What was not established
-
-- The paper does not publish the `--max` value, the per-execution timeout, the PCT seeds, or the rule that turns several IPB bounds into one Table 1 cell.
-- SCTBench has no CVE manifest with `max_threads` and `max_steps` for these ten programs.
-- No PIN binary and no kernel of version 3.x or older were available, so these uncertainties were not resolved by a pilot.
+The distinct seeds are supported by `run_single.py`'s seed argument and by `runner.py`, which draws per-execution seeds from that campaign seed. They are a deliberate departure from the hardcoded `seed=0` in `run_many.py`. These campaigns are independent randomized trials under those recorded seeds. They are not ten replays of one seed.
