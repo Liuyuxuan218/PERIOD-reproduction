@@ -1,5 +1,5 @@
 cve,bug_type,row_index,completed_campaigns,detected_campaigns,no_bug_campaigns,not_started,schedules_to_first_bug_mean,schedules_to_first_bug_sd,schedules_to_first_bug_n,schedules_explored_mean,schedules_explored_sd,schedules_explored_n,buggy_schedules_mean,buggy_schedules_sd,buggy_schedules_n
-CVE-2009-3547,NPD,1,0,0,0,True,,,0,,,0,,,0
+CVE-2009-3547,NPD,1,10,10,0,False,3,0.0,10,46,0.0,10,6,0.0,10
 CVE-2011-2183,NPD,1,0,0,0,True,,,0,,,0,,,0
 CVE-2013-1792,NPD,1,0,0,0,True,,,0,,,0,,,0
 CVE-2015-7550,NPD,1,0,0,0,True,,,0,,,0,,,0

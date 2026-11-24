@@ -1,5 +1,13 @@
 cve,status,record,bug_result,row_index,bug_found,schedules_to_first_bug,schedules_explored,buggy_schedules
-CVE-2009-3547,not_started,results/cases/CVE-2009-3547/not-started/status.json,,,,,,
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep01/metrics.json,,1,True,2,10000,3350
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep02/metrics.json,,1,True,5,10000,3396
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep03/metrics.json,,1,True,4,10000,3323
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep04/metrics.json,,1,True,2,10000,3399
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep05/metrics.json,,1,True,3,10000,3382
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep06/metrics.json,,1,True,4,10000,3297
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep07/metrics.json,,1,True,8,10000,3327
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep08/metrics.json,,1,True,2,10000,3248
+CVE-2009-3547,completed,results/cases/CVE-2009-3547/rep09/metrics.json,,1,True,1,10000,3301
 CVE-2011-2183,not_started,results/cases/CVE-2011-2183/not-started/status.json,,,,,,
 CVE-2013-1792,not_started,results/cases/CVE-2013-1792/not-started/status.json,,,,,,
 CVE-2015-7550,not_started,results/cases/CVE-2015-7550/not-started/status.json,,,,,,

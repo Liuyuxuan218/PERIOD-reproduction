@@ -1,9 +1,573 @@
 [
   {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 1,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
     "cve": "CVE-2009-3547",
-    "status": "not_started",
-    "record": "results/cases/CVE-2009-3547/not-started/status.json",
-    "bug_result": null
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep01/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep01/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 2,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep02/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep02/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 3,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep03/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep03/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 4,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep04/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep04/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 5,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep05/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep05/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 6,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep06/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep06/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 7,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep07/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep07/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 8,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep08/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep08/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 9,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep09/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep09/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
+  },
+  {
+    "status": "completed",
+    "buggy_schedules": 6,
+    "schedules_to_first_bug": 3,
+    "row_index": 1,
+    "bug_type": "NPD",
+    "repetition": 10,
+    "schedules_explored": 46,
+    "bounds": [
+      {
+        "buggy": 1,
+        "executed": 3,
+        "bound": 0
+      },
+      {
+        "buggy": 1,
+        "executed": 5,
+        "bound": 1
+      },
+      {
+        "buggy": 1,
+        "executed": 8,
+        "bound": 2
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 3
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 4
+      },
+      {
+        "buggy": 1,
+        "executed": 10,
+        "bound": 5
+      }
+    ],
+    "bug_found": true,
+    "tool_assertion": false,
+    "cve": "CVE-2009-3547",
+    "method": "IPB",
+    "runner_exit": true,
+    "record": "results/cases/CVE-2009-3547/rep10/metrics.json",
+    "evidence": "results/cases/CVE-2009-3547/rep10/",
+    "pb_limits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "per_bound_limit": 10000
   },
   {
     "cve": "CVE-2011-2183",

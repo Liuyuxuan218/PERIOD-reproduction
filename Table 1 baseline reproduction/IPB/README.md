@@ -8,13 +8,15 @@ The ten programs are CVE-2009-3547, CVE-2011-2183, CVE-2013-1792, CVE-2015-7550,
 
 ## 2. Experimental Results
 
-No IPB campaign was executed. SCTBench states that this PIN toolchain requires a Linux kernel of version 3.x or older. The kernel on this machine is 6.18.58.1, and neither PIN, Maple, nor a VirtualBox guest was installed. `scripts/preflight.py` exits with status 2 and writes [results/diagnostics/preflight.json](results/diagnostics/preflight.json). That status is a missing tool, not a completed search and not a failure to find a bug.
+Ten IPB campaigns have finished for CVE-2009-3547. Every campaign found a target crash. The crash is signal 11. The benchmark source sets `i_pipe` to NULL and the other thread then uses that pointer, so the crash is counted on this program's single NPD row. There is no AddressSanitizer report. The ten campaigns are identical, because `chess.cc` calls `srand(0)`.
 
-All fifteen printed bug rows are listed below. An unstarted row has no measured value. It is not shown as zero and it is not shown as 10,000. The generated tables are [results/summary.csv](results/summary.csv) and [results/per_run.csv](results/per_run.csv). Each program has a [not-started status](results/cases/) and no `metrics.json`, because no scheduler was launched.
+The measured campaign, over preemption bounds 0 through 5, is 46 schedules, the first crash at schedule 3, and 6 buggy schedules. The sample standard deviation is 0 and the observation count is 10. Bounds 0 through 4 alone are 36 schedules and 5 buggy schedules. Bound 5 adds 10 schedules and 1 crash. The logs are under [results/cases/CVE-2009-3547/](results/cases/CVE-2009-3547/). The generated table is [results/summary.csv](results/summary.csv).
 
-| CVE | Bug type | Row | Published first / explored / buggy | Status | Measured |
+The other nine programs have not been reached. The guest is still running the remaining campaigns. Their rows stay empty. An empty cell is not zero and it is not 10,000.
+
+| CVE | Bug type | Row | Published first / explored / buggy | Status | Measured first / explored / buggy |
 |---|---|---:|---|---|---|
-| CVE-2009-3547 | NPD | 1 | 3 / 36 / 5 | Not started | not measured |
+| CVE-2009-3547 | NPD | 1 | 3 / 36 / 5 | 10/10 detected | 3 ± 0 / 46 ± 0 / 6 ± 0 |
 | CVE-2011-2183 | NPD | 1 | 8 / 98 / 11 | Not started | not measured |
 | CVE-2013-1792 | NPD | 1 | 15 / 321 / 18 | Not started | not measured |
 | CVE-2015-7550 | NPD | 1 | 8 / 73 / 11 | Not started | not measured |
@@ -40,7 +42,7 @@ SCTBench commit `d59ab26ddaedcd575ffb6a1f5e9711f7d6d2d9f2` is the launcher that 
 
 Section 4.1.3 sets a CVE bug-depth bound of 5 and a 10,000-schedule budget, and it says each technique is invoked 10 times. The launcher's default `--max` is 5 and its default `--limit` is 10000. For IPB the loop is `range(0, max)`, so a default run executes preemption bounds 0 through 4 and can accumulate more than 10,000 schedules across bounds. For PCT the same default splits one 10,000-schedule limit into ten jobs of 1,000, all with seed 0. The paper does not say which of these readings matches Table 1. No seed, timeout, or bound was selected to fill that gap.
 
-The paper's workstation was an Intel Xeon Silver 4214 with Ubuntu 18.04, GCC 7.5, and LLVM 10.0. This attempt did not reach a compiler or a guest.
+The paper's workstation was an Intel Xeon Silver 4214 with Ubuntu 18.04, GCC 7.5, and LLVM 10.0. These campaigns ran in the QEMU guest recorded in [environment.md](environment.md), with GCC 4.8.
 
 ## 4. Reproduction Instructions
 
@@ -70,10 +72,10 @@ A later run belongs in `results/cases/<CVE-ID>/<repetition>-<attempt>/` and is r
 
 ## 5. Comparison with Table 1
 
-The published cells were read from Table 1 of the ICSE 2022 PDF. `L` is the printed schedule limit of 10,000. A blank cell was blank in the PDF and is not inferred from another row. `%` in the paper is a null first-bug value here, with the printed buggy-schedule count kept beside it. For the second NPD row of CVE-2015-7550, IPB prints a first-bug schedule of 16 and 881 buggy schedules, while the explored-schedule cell is blank. That row is stored as printed.
+CVE-2009-3547 is the only program with a finished IPB measurement. The paper prints first bug 3, 36 schedules, and 5 buggy schedules. The executed campaigns, which include preemption bound 5, print first bug 3, 46 schedules, and 6 buggy schedules. The first-bug schedule matches. The difference is bound 5: bounds 0 through 4 sum to the published 36 schedules and 5 buggy schedules, and bound 5 adds the remaining 10 schedules and 1 crash. The executed protocol includes bound 5 because Section 4.1.3 says the CVE depth bound is no more than 5. The launcher's `range(0, 5)` would have stopped before that bound. Both totals are visible in the bound logs. The result was not edited down to 36.
 
-No measured column can be compared. There is no supported match and no measured discrepancy. The published IPB result is 8 bugs in 7 programs, and the published PCT result is 8 bugs in 7 programs. CVE-2016-1973, CVE-2017-15265, and CVE-2017-6346 are the three programs with no printed detection in either column. Those statements describe the paper, not a run performed here.
+The other fourteen rows have no measurement, so they are not counted as missed bugs. The paper's total of 8 bugs in 7 programs remains a published total. This run has so far confirmed the NPD crash in one program.
 
 ### Final Result
 
-The IPB column of Table 1 was not reproduced. The blocker is the missing PIN runtime on a kernel newer than the 3.x line required by SCTBench. The published numbers remain only the paper's numbers.
+CVE-2009-3547's IPB first-bug schedule matches Table 1. The full campaign total is larger by preemption bound 5. The other nine programs are still unmeasured. The guest has not finished those campaigns.

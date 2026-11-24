@@ -44,7 +44,7 @@ Contributor: 1240019547 邱洋.
 
 ## Table 1 IPB and PCT columns
 
-The IPB and PCT columns of Table 1 were not executed. SCTBench supplies those schedulers and requires Intel PIN on a kernel no newer than 3.x. This machine is running WSL2 kernel 6.18.58.1, and PIN, Maple, and the previously described VirtualBox guest are not installed. The fifteen bug-type rows, the published cells, and the preflight diagnostic are in the two method directories. No detection count from this attempt is reported.
+The IPB and PCT columns are being measured in an Ubuntu 14.04 guest with kernel 3.13.0-170 and Pin 2.12. CVE-2009-3547 has ten finished IPB campaigns and nine finished PCT campaigns. The other nine programs have not been reached. `RADBench.bug4` in the SCTBench submission still has no valid run.
 
 Contributor: 1240019547 邱洋.
 
