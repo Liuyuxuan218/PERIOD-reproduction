@@ -8,17 +8,17 @@ The ten programs are CVE-2009-3547, CVE-2011-2183, CVE-2013-1792, CVE-2015-7550,
 
 ## 2. Experimental Results
 
-Ten IPB campaigns have finished for CVE-2009-3547. Every campaign found a target crash. The crash is signal 11. The benchmark source sets `i_pipe` to NULL and the other thread then uses that pointer, so the crash is counted on this program's single NPD row. There is no AddressSanitizer report. The ten campaigns are identical, because `chess.cc` calls `srand(0)`.
+Three of the ten programs have finished both methods. The other seven have not been reached, and their rows stay empty. An empty cell is not zero and it is not 10,000. A signal 11 crash is counted on a program's single published bug row. These programs do not produce an AddressSanitizer type.
 
-The measured campaign, over preemption bounds 0 through 5, is 46 schedules, the first crash at schedule 3, and 6 buggy schedules. The sample standard deviation is 0 and the observation count is 10. Bounds 0 through 4 alone are 36 schedules and 5 buggy schedules. Bound 5 adds 10 schedules and 1 crash. The logs are under [results/cases/CVE-2009-3547/](results/cases/CVE-2009-3547/). The generated table is [results/summary.csv](results/summary.csv).
+CVE-2009-3547: 10/10 campaigns detected the signal 11 crash. Measured first / explored / buggy is 3 ± 0 / 46 ± 0 / 6 ± 0. CVE-2011-2183: 10/10 campaigns detected the signal 11 crash. Measured first / explored / buggy is 5.5 ± 2.6 / 104.5 ± 25.8 / 10 ± 4.2. CVE-2013-1792: 10/10 campaigns detected the signal 11 crash. Measured first / explored / buggy is 15 ± 0 / 321 ± 0 / 18 ± 0.
 
-The other nine programs have not been reached. The guest is still running the remaining campaigns. Their rows stay empty. An empty cell is not zero and it is not 10,000.
+The logs are under `results/cases/`. The generated table is [results/summary.csv](results/summary.csv).
 
 | CVE | Bug type | Row | Published first / explored / buggy | Status | Measured first / explored / buggy |
 |---|---|---:|---|---|---|
 | CVE-2009-3547 | NPD | 1 | 3 / 36 / 5 | 10/10 detected | 3 ± 0 / 46 ± 0 / 6 ± 0 |
-| CVE-2011-2183 | NPD | 1 | 8 / 98 / 11 | Not started | not measured |
-| CVE-2013-1792 | NPD | 1 | 15 / 321 / 18 | Not started | not measured |
+| CVE-2011-2183 | NPD | 1 | 8 / 98 / 11 | 10/10 detected | 5.5 ± 2.6 / 104.5 ± 25.8 / 10 ± 4.2 |
+| CVE-2013-1792 | NPD | 1 | 15 / 321 / 18 | 10/10 detected | 15 ± 0 / 321 ± 0 / 18 ± 0 |
 | CVE-2015-7550 | NPD | 1 | 8 / 73 / 11 | Not started | not measured |
 | CVE-2015-7550 | NPD | 2 | 16 / blank / 881 | Not started | not measured |
 | CVE-2016-1972 | UAF | 1 | 91 / L (10,000) / 918 | Not started | not measured |
@@ -72,10 +72,12 @@ A later run belongs in `results/cases/<CVE-ID>/<repetition>-<attempt>/` and is r
 
 ## 5. Comparison with Table 1
 
-CVE-2009-3547 is the only program with a finished IPB measurement. The paper prints first bug 3, 36 schedules, and 5 buggy schedules. The executed campaigns, which include preemption bound 5, print first bug 3, 46 schedules, and 6 buggy schedules. The first-bug schedule matches. The difference is bound 5: bounds 0 through 4 sum to the published 36 schedules and 5 buggy schedules, and bound 5 adds the remaining 10 schedules and 1 crash. The executed protocol includes bound 5 because Section 4.1.3 says the CVE depth bound is no more than 5. The launcher's `range(0, 5)` would have stopped before that bound. Both totals are visible in the bound logs. The result was not edited down to 36.
+CVE-2009-3547 publishes first 3, explored 36, and buggy 5. The executed bounds 0 through 5 measure 3 ± 0 / 46 ± 0 / 6 ± 0. Bounds 0 through 4 alone are 36 schedules and 5 buggy schedules. The ten campaigns use `srand(0)`, so a standard deviation of 0 is a repeated deterministic search.
+CVE-2011-2183 publishes first 8, explored 98, and buggy 11. The executed bounds 0 through 5 measure 5.5 ± 2.6 / 104.5 ± 25.8 / 10 ± 4.2. Bounds 0 through 4 alone are 61 schedules and 5 buggy schedules. The ten campaigns use `srand(0)`, so a standard deviation of 0 is a repeated deterministic search.
+CVE-2013-1792 publishes first 15, explored 321, and buggy 18. The executed bounds 0 through 5 measure 15 ± 0 / 321 ± 0 / 18 ± 0. Bounds 0 through 4 alone are 233 schedules and 13 buggy schedules. The ten campaigns use `srand(0)`, so a standard deviation of 0 is a repeated deterministic search.
 
-The other fourteen rows have no measurement, so they are not counted as missed bugs. The paper's total of 8 bugs in 7 programs remains a published total. This run has so far confirmed the NPD crash in one program.
+The other programs have no measurement, so they are not counted as missed bugs. The guest is still running those campaigns.
 
 ### Final Result
 
-CVE-2009-3547's IPB first-bug schedule matches Table 1. The full campaign total is larger by preemption bound 5. The other nine programs are still unmeasured. The guest has not finished those campaigns.
+The first three programs have finished IPB campaigns. The measured values above are the ones in the saved logs. The remaining seven programs are not part of this submission.

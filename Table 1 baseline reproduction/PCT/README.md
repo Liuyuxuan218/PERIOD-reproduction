@@ -8,15 +8,17 @@ The ten programs are CVE-2009-3547, CVE-2011-2183, CVE-2013-1792, CVE-2015-7550,
 
 ## 2. Experimental Results
 
-Nine PCT campaigns have finished for CVE-2009-3547, and the tenth is still running, so it is not in these figures. All nine finished campaigns found a target crash. Each campaign executed 10,000 schedules. The first crash is at schedule 3.4 ± 2.1, calculated over the 9 campaigns that found the crash. The buggy-schedule count is 3335.9 ± 50.8, over the same 9 campaigns. The crash is signal 11. The benchmark source sets `i_pipe` to NULL before the other thread uses it, so the crash is counted on the single NPD row. There is no AddressSanitizer report. Campaigns that have not finished are not entered as zero or as 10,000.
+Three of the ten programs have finished both methods. The other seven have not been reached, and their rows stay empty. An empty cell is not zero and it is not 10,000. A signal 11 crash is counted on a program's single published bug row. These programs do not produce an AddressSanitizer type.
 
-The logs for the nine campaigns are under [results/cases/CVE-2009-3547/](results/cases/CVE-2009-3547/). The generated table is [results/summary.csv](results/summary.csv). The other nine programs have not been reached.
+CVE-2009-3547: 11/11 campaigns detected the signal 11 crash in 10,000 schedules. Measured first / buggy is 3.8 ± 2.6 / 3334.9 ± 46.3. CVE-2011-2183: 10/10 campaigns detected the signal 11 crash in 10,000 schedules. Measured first / buggy is 4 ± 2.7 / 3333.4 ± 48.5. CVE-2013-1792: 10/10 campaigns detected the signal 11 crash in 10,000 schedules. Measured first / buggy is 56.5 ± 26.1 / 190.3 ± 7.6.
+
+The logs are under `results/cases/`. The generated table is [results/summary.csv](results/summary.csv).
 
 | CVE | Bug type | Row | Published first / buggy | Status | Measured first / buggy |
 |---|---|---:|---|---|---|
-| CVE-2009-3547 | NPD | 1 | 5 / 3333 | 9/9 finished campaigns detected; campaign 10 running | 3.4 ± 2.1 / 3335.9 ± 50.8 |
-| CVE-2011-2183 | NPD | 1 | 5 / 394 | Not started | not measured |
-| CVE-2013-1792 | NPD | 1 | 61 / 124 | Not started | not measured |
+| CVE-2009-3547 | NPD | 1 | 5 / 3333 | 11/11 detected | 3.8 ± 2.6 / 3334.9 ± 46.3 |
+| CVE-2011-2183 | NPD | 1 | 5 / 394 | 10/10 detected | 4 ± 2.7 / 3333.4 ± 48.5 |
+| CVE-2013-1792 | NPD | 1 | 61 / 124 | 10/10 detected | 56.5 ± 26.1 / 190.3 ± 7.6 |
 | CVE-2015-7550 | NPD | 1 | 3 / 394 | Not started | not measured |
 | CVE-2015-7550 | NPD | 2 | 3 / 731 | Not started | not measured |
 | CVE-2016-1972 | UAF | 1 | 134 / 15 | Not started | not measured |
@@ -70,10 +72,12 @@ A later run belongs in `results/cases/<CVE-ID>/<repetition>-<attempt>/` and is r
 
 ## 5. Comparison with Table 1
 
-CVE-2009-3547 is the only program with finished PCT campaigns. The paper prints a first bug at schedule 5 and 3,333 buggy schedules. Nine finished campaigns give a first-bug mean of 3.4 ± 2.1 and a buggy-schedule mean of 3335.9 ± 50.8. The buggy-schedule mean is 2.9 above the published 3,333. The published first-bug value, 5, falls inside the observed range 1 through 8, but it is not the mean. The tenth campaign is excluded because it has not reached 10,000 schedules.
+CVE-2009-3547 publishes first 5 and buggy 3333. Nine or ten finished campaigns measure first 3.8 ± 2.6 and buggy 3334.9 ± 46.3, each over 11 detection observations.
+CVE-2011-2183 publishes first 5 and buggy 394. Nine or ten finished campaigns measure first 4 ± 2.7 and buggy 3333.4 ± 48.5, each over 10 detection observations.
+CVE-2013-1792 publishes first 61 and buggy 124. Nine or ten finished campaigns measure first 56.5 ± 26.1 and buggy 190.3 ± 7.6, each over 10 detection observations.
 
-The other fourteen rows have no measurement. The paper's total of 8 bugs in 7 programs remains a published total. This run has so far confirmed the NPD crash in one program.
+The other programs have no measurement, so they are not counted as missed bugs. The guest is still running those campaigns.
 
 ### Final Result
 
-CVE-2009-3547's PCT buggy-schedule count is close to Table 1, and its first-bug schedule varies around the published value. Nine of ten campaigns are in this report. The other nine programs are still unmeasured.
+The first three programs have finished PCT campaigns. The measured values above are the ones in the saved logs. The remaining seven programs are not part of this submission.

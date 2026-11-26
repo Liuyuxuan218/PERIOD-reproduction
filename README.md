@@ -44,7 +44,7 @@ Contributor: 1240019547 邱洋.
 
 ## Table 1 IPB and PCT columns
 
-The IPB and PCT columns are being measured in an Ubuntu 14.04 guest with kernel 3.13.0-170 and Pin 2.12. CVE-2009-3547 has ten finished IPB campaigns and nine finished PCT campaigns. The other nine programs have not been reached. `RADBench.bug4` in the SCTBench submission still has no valid run.
+The IPB and PCT columns are being measured in an Ubuntu 14.04 guest with kernel 3.13.0-170 and Pin 2.12. Finished programs in this submission: `CVE-2009-3547`, `CVE-2011-2183`, `CVE-2013-1792`. Each has ten IPB campaigns and ten PCT campaigns. The other programs are still running and are not included yet.
 
 Contributor: 1240019547 邱洋.
 
