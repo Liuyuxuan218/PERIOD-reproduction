@@ -1,5 +1,37 @@
 # PERIOD Workload Extension Studies
 
+## Motivation
+
+PERIOD reduces the cost of controlled concurrency testing by organizing executions into periods and exploring schedules around **Key Points** and **Dynamic Key Point Slices (DKPSs)**. Its schedule generator uses the dynamic key points activated during execution to guide exploration, while feedback from previous executions helps construct schedule prefixes and avoid redundant work. The PERIOD paper also highlights a fundamental challenge: the schedule space can grow rapidly as the number of scheduling points increases. This makes the relationship between a program's execution structure, the explored schedule space, and bug-discovery cost important in practice.
+
+**Our motivation is to evaluate the robustness of PERIOD under different workload structures, and to investigate whether controlled workload perturbations can expand the observed Key Points / DKPS-related scheduling structure without simply introducing unrelated concurrency bugs.** We want to understand not only whether the recorded scheduling structure changes, but also what those changes mean for bug discovery: do they help PERIOD expose bugs earlier, lead to more error-triggering schedules, increase exploration cost, or consume more runtime without improving discovery?
+
+Inspired by PERIOD's instrumentation- and feedback-guided exploration model, we introduce **controlled, artificial workload perturbations** into benchmark programs. Rather than changing the original bug-triggering logic deliberately, we vary additional operations around worker execution and compare the resulting exploration behavior across workload levels. The three studies cover complementary workload structures:
+
+1. **Shared Mutex + Counter Workload** — adds a shared counter protected by a process-wide mutex, introducing shared writes and synchronization contention.
+2. **Thread-local Mutex Workload** — adds mutex creation and lock/unlock operations local to each worker, without sharing the added mutex between workers.
+3. **Shared Read-only Memory-access Workload** — adds reads from a shared table initialized before worker creation; workers do not write to the table and no additional mutex is introduced. This study also uses a manually added scheduling point for the read site.
+
+These perturbations are deliberately different. They let us compare the effects of shared synchronization, thread-local lock operations, and shared read-only memory access instead of treating all added work as one generic workload. For each experiment, we vary the workload level and examine PERIOD's recorded Key Points, first-error discovery round, failing schedules, search runtime, and run completion status.
+
+The central questions are:
+
+- **Structural response:** How do different workload structures affect the Key Points and the dynamic execution slices (DKPSs) that PERIOD uses to guide schedule exploration?
+- **Bug-discovery effectiveness:** Does a larger or different scheduling structure help PERIOD discover existing concurrency bugs earlier or across more schedules, or can discovery become delayed?
+- **Exploration cost:** How do workload changes affect search runtime, the number of explored/error-triggering schedules, and the ability to complete within a fixed search budget?
+- **Robustness:** Are PERIOD's results stable across workload types and benchmark programs, or are the effects benchmark-dependent?
+
+This is an **evaluation and robustness study**, not a claim that adding more Key Points or DKPS entries must improve bug detection. In particular, more recorded Key Points do not automatically mean more distinct static scheduling locations, more useful DKPSs, or better bug-discovery effectiveness. The current archived result tables report the metrics available in the experiment logs; explicit DKPS cardinality/coverage should be instrumented and reported separately in future experiments if it is not already captured by the runner.
+
+## Relationship to the Original PERIOD Paper
+
+This extension builds on the concepts in Cheng Wen et al., **"Controlled Concurrency Testing via Periodical Scheduling" (ICSE 2022)**. The original work introduces periodical execution, period-bounding, dynamic key point slices, and feedback-guided schedule generation to explore feasible thread interleavings efficiently. Our experiments do not modify or claim to reproduce the paper's original algorithmic contributions. Instead, they use controlled workload perturbations to study how changes in the program's workload and scheduling structure interact with PERIOD's exploration behavior and bug-discovery cost.
+
+Paper: [Controlled Concurrency Testing via Periodical Scheduling (ICSE 2022)](https://wcventure.github.io/pdf/ICSE2022_PERIOD.pdf).
+
+---
+
+
 Three workload-structure experiments evaluating how additional synchronization, thread-local lock lifecycle, and shared read-only memory access affect PERIOD's schedule exploration and bug-discovery behavior.
 
 ## Repository structure
