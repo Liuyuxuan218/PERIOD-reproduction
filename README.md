@@ -42,6 +42,29 @@ Contributor: 1240019547 邱洋.
 - [Splash2](SCTBench%20reproduction/Splash2/README.md)
 - [RADBench](SCTBench%20reproduction/RADBench/README.md)
 
+### Week 4 – PERIOD Workload Extension and Robustness Evaluation
+
+- Investigated the robustness of PERIOD under different workload structures. The goal was to understand how controlled workload perturbations affect Key Points and DKPS-related schedule exploration, bug-discovery behavior, and exploration cost, including first-error discovery round, failing schedules, and runtime.
+- Designed and evaluated three complementary workload extensions on 10 official CVE concurrency benchmarks:
+  - **Shared Mutex + Counter Workload:** added a process-wide mutex protecting a shared counter, introducing shared writes and synchronization contention.
+  - **Thread-local Mutex Workload:** added mutex creation and lock/unlock operations local to each worker, without sharing the added mutex across threads.
+  - **Shared Read-only Memory-access Workload:** initialized a shared table before worker creation and added worker-side read-only accesses, without worker-side writes or an additional mutex. The read source site was manually added to ConConfig as a scheduling point.
+- Used the same experiment matrix for each workload: workload levels `N = {0, 1, 2, 3, 4, 8}`, three repetitions per CVE and level (180 planned runs per workload), PERIOD depth bound 4, schedule budget 60, and a 5-second per-execution timeout. Runs used the pinned official image `wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc`.
+- Collected and analyzed initial Key Point counts, first-error discovery rounds, failing schedules, search runtime, and run-completion status. The archived datasets contain 178/180 valid runs for Shared Mutex + Counter, 166/180 for Thread-local Mutex, and 175/180 for Shared Read-only Memory.
+- Compared workload levels using benchmark-balanced summaries and matched N=0 versus N=8 runs. Across the three studies, the recorded Key Point count increased from N=0 to N=8, while the mean number of failing schedules did not increase. Search runtime also increased:
+
+  | Workload | Key Points (N=0 → N=8) | First-error round* (N=0 → N=8) | Failing schedules (N=0 → N=8) | Runtime (N=0 → N=8) |
+  |---|---:|---:|---:|---:|
+  | Shared Mutex + Counter | 11.60 → 27.60 | 5.40 → 11.59 | 7.87 → 6.13 | 2.48s → 2.90s |
+  | Thread-local Mutex | 11.60 → 21.60 | 5.37 → 9.56 | 7.87 → 6.60 | 2.51s → 3.18s |
+  | Shared Read-only Memory | 13.60 → 19.60 | 9.70 → 9.80 | 8.10 → 7.40 | 3.02s → 4.06s |
+
+  *First-error means include only benchmark groups with an observed first error; denominators can differ across workload levels. Failing schedules count error-triggering schedules/interleavings, not distinct bugs. Incomplete runs are retained and are not treated as zero.
+- The results suggest that increasing workload or the recorded Key Point structure does not automatically improve bug-discovery effectiveness. The observed effects vary by benchmark and workload type, and greater workload can increase search cost without increasing the number of failing schedules. The shared read-only experiment is specifically a memory-access workload with a manually added scheduling point; it should not be interpreted as automatic SVF discovery of additional static Key Points.
+- Organized the experiment configurations, run-level CSVs, per-CVE summaries, figures, plotting/retry scripts, and methodology in [PERIOD-workload-extension](PERIOD-workload-extension/README.md).
+
+Contributor: 1240016737 刘语萱.
+
 ## Table 1 IPB and PCT columns
 
 The IPB and PCT columns are being measured in an Ubuntu 14.04 guest with kernel 3.13.0-170 and Pin 2.12. Finished programs in this submission: `CVE-2009-3547`, `CVE-2011-2183`, `CVE-2013-1792`. Each has ten IPB campaigns and ten PCT campaigns. The other programs are still running and are not included yet.
