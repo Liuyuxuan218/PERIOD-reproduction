@@ -1,0 +1,20 @@
+{
+  "experiment": "Thread-local Mutex Workload",
+  "category": "Thread-local synchronization / lock-lifecycle workload",
+  "cves": 10,
+  "N_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    8
+  ],
+  "repetitions": 3,
+  "planned_runs": 180,
+  "depth_bound": 4,
+  "schedule_budget": 60,
+  "per_execution_timeout_seconds": 5,
+  "docker_image": "wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "intervention": "Each worker invocation creates a local pthread_mutex_t, performs N lock/unlock pairs, and destroys it; no shared counter or shared added mutex."
+}

@@ -1,0 +1,5 @@
+metric,matched_pairs,mean_N8_minus_N0,median_N8_minus_N0,N8_later_or_higher,N8_earlier_or_lower,unchanged
+initial_total_kp,24,10.0000,10.0000,24,0,0
+first_error_round,23,5.0435,5.0000,20,0,3
+error_schedules,24,-0.1667,0.0000,9,11,4
+wall_seconds,24,0.9325,0.7330,16,8,0

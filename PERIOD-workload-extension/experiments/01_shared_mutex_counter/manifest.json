@@ -1,0 +1,21 @@
+{
+  "experiment": "Shared Mutex + Counter Workload",
+  "category": "Synchronization workload",
+  "cves": 10,
+  "N_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    8
+  ],
+  "repetitions": 3,
+  "planned_runs": 180,
+  "depth_bound": 4,
+  "schedule_budget": 60,
+  "per_execution_timeout_seconds": 5,
+  "docker_image": "wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "intervention": "Process-wide pthread_mutex_t protects a shared volatile unsigned long counter; each worker performs N lock/increment/unlock iterations.",
+  "data_reuse_note": "The sweep driver creates new workload sources for 7 CVEs and reuses earlier workload data for CVE-2016-1972, CVE-2016-1973, and CVE-2016-7911."
+}

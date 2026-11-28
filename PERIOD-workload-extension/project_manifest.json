@@ -1,0 +1,40 @@
+{
+  "project": "PERIOD Workload Extension Studies",
+  "repository_target": "Liuyuxuan218/PERIOD-reproduction",
+  "branch": "main",
+  "experiments": [
+    {
+      "path": "experiments/01_shared_mutex_counter",
+      "name": "Shared Mutex + Counter Workload",
+      "valid_runs": 178,
+      "planned_runs": 180
+    },
+    {
+      "path": "experiments/02_thread_local_mutex",
+      "name": "Thread-local Mutex Workload",
+      "valid_runs": 166,
+      "planned_runs": 180
+    },
+    {
+      "path": "experiments/03_shared_readonly_memory",
+      "name": "Shared Read-only Memory-access Workload",
+      "valid_runs": 175,
+      "planned_runs": 180
+    }
+  ],
+  "common_settings": {
+    "N": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "repetitions": 3,
+    "depth": 4,
+    "schedule_budget": 60,
+    "per_execution_timeout_seconds": 5,
+    "docker_image": "wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc"
+  }
+}

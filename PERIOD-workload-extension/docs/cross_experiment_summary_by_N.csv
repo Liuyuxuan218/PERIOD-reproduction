@@ -1,0 +1,19 @@
+experiment,N,valid_runs,mean_keypoints,mean_first_error_round_detected_only,benchmarks_with_first_error,mean_failing_schedules,mean_runtime_seconds
+Shared Mutex,0,30,11.6000,5.4000,10,7.8667,2.4768
+Shared Mutex,1,30,15.6000,7.4667,10,7.8667,2.9896
+Shared Mutex,2,29,19.6000,9.7000,10,8.3000,3.2464
+Shared Mutex,3,29,23.6000,9.1111,9,6.3000,2.9344
+Shared Mutex,4,30,27.6000,10.4815,9,6.3000,2.9760
+Shared Mutex,8,30,27.6000,11.5926,9,6.1333,2.8978
+Thread-local Mutex,0,27,11.6000,5.3667,10,7.8667,2.5080
+Thread-local Mutex,1,28,15.6000,6.5556,9,7.8000,3.0834
+Thread-local Mutex,2,29,17.6000,7.4815,9,7.0667,3.1286
+Thread-local Mutex,3,27,19.6000,9.0000,9,7.4000,3.2364
+Thread-local Mutex,4,28,21.6000,9.5556,9,6.6667,3.2116
+Thread-local Mutex,8,27,21.6000,9.5556,9,6.6000,3.1841
+Shared Read-only Memory,0,30,13.6000,9.7000,10,8.1000,3.0195
+Shared Read-only Memory,1,30,19.6000,8.4444,9,7.3667,3.2784
+Shared Read-only Memory,2,29,19.6000,8.4074,9,7.4333,3.3347
+Shared Read-only Memory,3,27,19.6000,8.4074,9,7.3333,3.6033
+Shared Read-only Memory,4,29,19.6000,8.5556,9,7.4333,3.5919
+Shared Read-only Memory,8,30,19.6000,9.8000,10,7.4000,4.0612

@@ -1,0 +1,4 @@
+hash_type,benchmarks,constant_within_each_benchmark_across_N,max_unique_hashes_within_benchmark
+source_hash,10,10,1
+binary_hash,10,10,1
+config_hash,10,10,1

@@ -1,0 +1,7 @@
+N,planned_runs,valid_runs,incomplete_runs,benchmarks_with_valid_data,mean_keypoints_cve_balanced,mean_first_error_cve_balanced_detected_only,benchmarks_with_first_error,mean_failing_schedules_cve_balanced,mean_runtime_seconds_cve_balanced
+0,30,30,0,10,13.6000,9.7000,10,8.1000,3.0195
+1,30,30,0,10,19.6000,8.4444,9,7.3667,3.2784
+2,30,29,1,10,19.6000,8.4074,9,7.4333,3.3347
+3,30,27,3,10,19.6000,8.4074,9,7.3333,3.6033
+4,30,29,1,10,19.6000,8.5556,9,7.4333,3.5919
+8,30,30,0,10,19.6000,9.8000,10,7.4000,4.0612

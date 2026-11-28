@@ -1,0 +1,21 @@
+{
+  "experiment": "Shared Read-only Memory-access Workload with Manual Scheduling-point Extension",
+  "category": "Memory-access workload",
+  "cves": 10,
+  "N_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    8
+  ],
+  "repetitions": 3,
+  "planned_runs": 180,
+  "depth_bound": 4,
+  "schedule_budget": 60,
+  "per_execution_timeout_seconds": 5,
+  "docker_image": "wcventure/period@sha256:8f47d8b9148f2db579627842026e722d0f205ddeab13e70ee41a8df3dbd59fbc",
+  "intervention": "Shared volatile table initialized before pthread_create; each worker reads 8*N active entries plus one sentinel; no worker writes or added lock.",
+  "scheduling_point_note": "One static helper read line is manually appended to ConConfig after staticAnalysis.sh; this is not automatic SVF discovery."
+}
